@@ -1,0 +1,7 @@
+paper,year,control_input,context,probabilistic_dynamics,residual,residual_evolution,early_fault,open_set,attribution,source
+GDN,2021,no,no,no,indirect,no,no,no,yes,https://arxiv.org/abs/2106.06947
+TranAD,2022,no,no,no,reconstruction,no,no,no,limited,https://arxiv.org/abs/2201.07284
+CATCH,2025,no,no,no,no,no,no,no,limited,https://openreview.net/forum?id=m08aK3xxdJ
+CAROTS,2025,no,no,no,no,relation_learning,no,no,limited,https://openreview.net/forum?id=EGpueKe6TP
+CCRDL,proposed,yes,yes,yes,yes,yes,yes,planned,planned,
+

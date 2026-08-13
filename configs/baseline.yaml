@@ -1,0 +1,21 @@
+seed: 42
+dataset: synthetic_tep
+episodes: 2000
+steps_per_episode: 96
+sample_seconds: 180
+window: 16
+train_fraction: 0.70
+validation_fraction: 0.15
+batch_size: 128
+epochs: 30
+learning_rate: 0.001
+hidden_dim: 64
+embedding_dim: 32
+unsafe_pressure: 3300.0
+unsafe_temperature: 175.0
+paths:
+  raw: data/raw/tep
+  processed: data/processed/tep
+  database: db/experiment.db
+  checkpoint: checkpoints/state_encoder.pt
+  log: logs/experiment.log

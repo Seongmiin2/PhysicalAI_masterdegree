@@ -1,0 +1,21 @@
+seed: 42
+dataset: synthetic_tep_smoke
+episodes: 20
+steps_per_episode: 24
+sample_seconds: 180
+window: 8
+train_fraction: 0.70
+validation_fraction: 0.15
+batch_size: 32
+epochs: 1
+learning_rate: 0.001
+hidden_dim: 16
+embedding_dim: 8
+unsafe_pressure: 3300.0
+unsafe_temperature: 175.0
+paths:
+  raw: data/raw/tep_smoke
+  processed: data/processed/tep_smoke
+  database: db/smoke.db
+  checkpoint: checkpoints/smoke_state_encoder.pt
+  log: logs/smoke.log

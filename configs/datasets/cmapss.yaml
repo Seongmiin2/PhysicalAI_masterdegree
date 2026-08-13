@@ -1,0 +1,9 @@
+name: cmapss
+version: nasa-turbofan-v1
+raw_dir: data/raw/cmapss
+semantic_roles:
+  context: [operational_setting_1, operational_setting_2, operational_setting_3]
+  state: sensor_*
+  identifier: [unit_id, cycle]
+split_policy: official
+
