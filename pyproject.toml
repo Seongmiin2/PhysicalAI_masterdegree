@@ -16,6 +16,7 @@ dependencies = [
     "fsspec[http]>=2024.6",
     "h5py>=3.11",
     "truststore>=0.10",
+    "duckdb>=1.4",
     "torch>=2.4",
 ]
 
@@ -30,3 +31,4 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
+extend-exclude = [".tmp_fddbenchmark"]

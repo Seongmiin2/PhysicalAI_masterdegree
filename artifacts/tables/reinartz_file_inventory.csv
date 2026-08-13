@@ -1,0 +1,6 @@
+file_name,relative_path,size_bytes,row_count,column_count,description
+dataset.csv,external/fddbenchmark/reinartz_tep/dataset.csv,5247567494,5600000,54,"telemetry indexed by run_id,sample"
+labeled_train_mask.csv,external/fddbenchmark/reinartz_tep/labeled_train_mask.csv,96256433,5600000,3,per-sample labeled-training subset mask
+labels.csv,external/fddbenchmark/reinartz_tep/labels.csv,98918321,5600000,3,per-sample fault class
+test_mask.csv,external/fddbenchmark/reinartz_tep/test_mask.csv,96256424,5600000,3,per-sample testing mask
+train_mask.csv,external/fddbenchmark/reinartz_tep/train_mask.csv,96256425,5600000,3,per-sample training mask
