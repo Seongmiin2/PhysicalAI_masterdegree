@@ -96,3 +96,13 @@ review. Document retrieval plus LLM explanation is not a methodological contribu
 
 Current implementation stops after seed-42 F0/F1 smoke/full results, fault-level
 results, leakage evidence, and an H1 decision.
+
+## Phase status update — 2026-08-13
+
+- Phase 1 Information Value Gate: **complete (`PASS`)**.
+- F1 detection improvement repeated across model seeds 42, 43, and 44 using the fixed Seed 42 split.
+- XMEAS-only F0-C matched F1 model capacity within 0.60% but remained near F0 detection performance.
+- No further F0/F1 seeds, hidden dimensions, thresholds, windows, or backbones will be tested in this phase.
+- Phase 2 Literature Novelty Gate: **current (`PARTIAL_OVERLAP` preliminary)**.
+- The next research question is whether prior input-output residual monitoring and action-conditioned prediction already cover the proposed distinction between control-explainable response and temporally evolving unexplained residual.
+- No proposed model is implemented until the highest-overlap papers are compared in detail.

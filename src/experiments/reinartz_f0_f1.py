@@ -84,7 +84,7 @@ def persistence_delays(scores: np.ndarray, runs: np.ndarray, samples: np.ndarray
     return detected / n_runs, float(np.mean(delays)) if delays else float("nan"), prealarm / n_runs
 
 
-def run_model(config: dict, split, features, mean, std, variant: str, epochs: int, model_seed: int) -> tuple[dict, list[dict]]:
+def run_model(config: dict, split, features, mean, std, variant: str, epochs: int, model_seed: int, hidden_dim: int | None = None) -> tuple[dict, list[dict]]:
     torch.manual_seed(model_seed)
     use_xmv = variant == "F1"
     requested_device = str(config.get("device", "auto"))
@@ -106,7 +106,8 @@ def run_model(config: dict, split, features, mean, std, variant: str, epochs: in
     train_loader = DataLoader(train_ds, batch_size=batch, shuffle=True, num_workers=int(config["num_workers"]), generator=generator, pin_memory=use_cuda)
     val_loader = DataLoader(val_ds, batch_size=batch * 4, shuffle=False, pin_memory=use_cuda)
     test_loader = DataLoader(test_ds, batch_size=batch * 4, shuffle=False, pin_memory=use_cuda)
-    model = GRUForecaster(train_ds.input_dim, int(config["hidden_dim"]), int(config["layers"])).to(device)
+    model_hidden_dim = hidden_dim if hidden_dim is not None else int(config["hidden_dim"])
+    model = GRUForecaster(train_ds.input_dim, model_hidden_dim, int(config["layers"])).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=float(config["learning_rate"])); loss_fn = nn.MSELoss()
     parameter_count = sum(p.numel() for p in model.parameters())
     LOGGER.info("[%s] training setup: device=%s input_dim=%d parameters=%d", variant, device, train_ds.input_dim, parameter_count)
@@ -138,7 +139,7 @@ def run_model(config: dict, split, features, mean, std, variant: str, epochs: in
     auroc, auprc = binary_metrics(binary, test_scores)
     detected, delay, prealarm_rate = persistence_delays(test_scores, test_run_index, test_samples, threshold, int(config["alarm_consecutive"]))
     normal = binary == 0
-    metrics = {"variant": variant, "seed": model_seed, "split_seed": config["seed"], "epochs": epochs, "input_dim": train_ds.input_dim, "parameters": parameter_count, "mae_z": float(test_scores[normal].mean()), "rmse_z": float(np.sqrt(np.mean(test_mse[normal]))), "auroc": auroc, "auprc": auprc, "detected_run_ratio": detected, "detection_delay": delay, "prefault_sample_fpr": float((test_scores[normal] >= threshold).mean()), "prefault_run_alarm_rate": prealarm_rate, "threshold": threshold, "elapsed_seconds": time.perf_counter() - started}
+    metrics = {"variant": variant, "seed": model_seed, "split_seed": config["seed"], "epochs": epochs, "input_dim": train_ds.input_dim, "hidden_dim": model_hidden_dim, "parameters": parameter_count, "mae_z": float(test_scores[normal].mean()), "rmse_z": float(np.sqrt(np.mean(test_mse[normal]))), "auroc": auroc, "auprc": auprc, "detected_run_ratio": detected, "detection_delay": delay, "prefault_sample_fpr": float((test_scores[normal] >= threshold).mean()), "prefault_run_alarm_rate": prealarm_rate, "threshold": threshold, "elapsed_seconds": time.perf_counter() - started}
     fault_rows = []
     fault_ids = split.set_index("run_index").fault_id.to_dict()
     for fault in range(1, 29):
@@ -147,7 +148,8 @@ def run_model(config: dict, split, features, mean, std, variant: str, epochs: in
         f_auroc, f_auprc = binary_metrics(fault_binary, fault_scores)
         f_detected, f_delay, f_prealarm = persistence_delays(fault_scores, test_run_index[mask], test_samples[mask], threshold, int(config["alarm_consecutive"]))
         fault_rows.append({"variant": variant, "seed": model_seed, "split_seed": config["seed"], "fault_id": fault, "auroc": f_auroc, "auprc": f_auprc, "detected_run_ratio": f_detected, "detection_delay": f_delay, "prefault_run_alarm_rate": f_prealarm})
-    checkpoint = Path(config["paths"]["checkpoints"]) / f"reinartz_{variant.lower()}_seed_{model_seed}.pt"; checkpoint.parent.mkdir(parents=True, exist_ok=True)
+    checkpoint_slug = variant.lower().replace("-", "_")
+    checkpoint = Path(config["paths"]["checkpoints"]) / f"reinartz_{checkpoint_slug}_seed_{model_seed}.pt"; checkpoint.parent.mkdir(parents=True, exist_ok=True)
     torch.save({"state_dict": model.state_dict(), "config": config, "variant": variant, "mean": mean, "std": std}, checkpoint)
     LOGGER.info("[%s] complete: AUROC=%.4f AUPRC=%.4f delay=%.2f checkpoint=%s", variant, auroc, auprc, delay, checkpoint)
     return metrics, fault_rows
