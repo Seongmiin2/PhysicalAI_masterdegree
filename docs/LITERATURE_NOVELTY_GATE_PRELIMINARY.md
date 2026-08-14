@@ -1,5 +1,11 @@
 # Literature Novelty Gate — Preliminary Review
 
+> **SUPERSEDED — bibliographic mismatches were found.**
+>
+> Do not use this document for research claims or citations.
+>
+> See `LITERATURE_SOURCE_AUDIT.md` and `LITERATURE_NOVELTY_GATE_VERIFIED.md`.
+
 ## 범위와 판정
 
 Phase 1 통과 후 센서·제어변수 공동 사용, input/action-conditioned dynamics, prediction residual, closed-loop feedback 영향, residual 시간 변화와 조기탐지를 직접 다루는 **14편**을 우선 검토했다. 블로그와 일반 설명자료는 제외했다.

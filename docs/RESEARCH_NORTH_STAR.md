@@ -1,5 +1,17 @@
 # Research North Star
 
+## Authoritative current status — 2026-08-14
+
+- Phase 0: complete.
+- Phase 1: complete. It established limited evidence that manipulated-variable history merits follow-up study; it did not prove a forecasting method.
+- Normal future-prediction improvement was not consistent across seeds.
+- Fault-detection improvement repeated across model seeds 42–44 and was not reproduced by the one F0-C capacity control.
+- Phase 2: active. Verified literature status is `VIABLE_GAP_CANDIDATE`, with substantial overlap in input-output residual monitoring, action-conditioned prediction, and temporal residual statistics.
+- Phase 3 has not started. No proposed model should be implemented until a mathematical distinction from the highest-overlap methods is documented.
+- The next question is: what objective distinguishes a learned control-unexplained residual and its evolution from existing CCA/CVA residuals, prediction-error monitors, and CUSUM/sliding-window statistics?
+
+Any older “current phase” wording below is historical context and is superseded by this status block.
+
 ## Research problem
 
 Closed-loop CPS state changes mix normal dynamics, controller-induced responses,
