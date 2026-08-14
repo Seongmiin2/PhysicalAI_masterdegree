@@ -109,7 +109,7 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 3. residual evolution의 학습이 단순 CUSUM이나 sliding-window statistic과 어떻게 다른가?
 4. 동일한 정상 오경보 조건에서 detection delay 개선을 학습 목표 및 평가와 어떻게 연결할 것인가?
 
-예비 문헌 판정 `VIABLE_GAP_CANDIDATE`는 잠정 판정이었다. 이번 mathematical distinction gate는 `INCONCLUSIVE`이다. Patel 2018은 action-conditioned 미래 관측 예측과 prediction error를 이미 사용한다. 현재 `e_t`는 같은 종류의 조건부 prediction residual이고, `c_t`도 별도 식별 제약 없이는 두 모델의 예측 차이일 뿐이다. Chen 2016, Mercer 2002, Ji 2024의 전체 원문을 확보하지 못했으므로 Phase 3 진입을 보류한다.
+예비 문헌 판정 `VIABLE_GAP_CANDIDATE`는 잠정 판정이었다. Chen 2016 전체 원문을 추가 검증한 결과, 정적 Eq. (1)/(9)의 `r(k)=L^Ty(k)-M^Tu(k)`와 동적 Eq. (24)의 과거 input/output 및 미래 input 조건부 residual이 현재 `e_t`와 강하게 겹친다. Chen에는 두 예측기의 차이 `c_t`나 residual evolution 학습은 없지만, `c_t`를 제어 영향으로 식별하는 제약도 현재 후보에는 없다. Mercer 2002와 Ji 2024의 전체 원문은 확보하지 못했으므로 Gate는 `INCONCLUSIVE`를 유지하고 Phase 3 진입을 보류한다.
 
 ### 검증된 참고문헌
 
@@ -135,7 +135,7 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 
 ## 8. 앞으로의 연구 단계
 
-1. Chen 2016, Mercer 2002, Ji 2024의 합법적 전체 원문 확보
+1. Mercer 2002와 Ji 2024의 합법적 전체 원문 확보
 2. 네 논문의 원 수식과 목적함수를 같은 표기법으로 대조해 mathematical gate 재개
 3. `DISTINCTION_SURVIVES`일 때만 정확한 loss function 설계
 
@@ -145,7 +145,7 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 
 ### 가능성
 
-- 560만 sample 규모의 실제 공개 전처리 데이터가 확보되어 있다.
+- 560만 sample 규모의 공개 산업공정 시뮬레이션 전처리 데이터가 확보되어 있다.
 - run-safe split, train-only scaling, 정상 threshold 정책이 구현되어 있다.
 - seed 반복 가능한 baseline과 GPU 실험환경이 확보되어 있다.
 - 제어기록의 추가 정보 신호가 세 seed와 모델 크기 통제에서 확인됐다.
@@ -162,4 +162,4 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 
 ## 10. 현재 결론
 
-본 연구는 완성된 방법론을 주장하는 단계가 아니다. 공개 산업공정 시뮬레이션 데이터의 반복 예비실험은 일부 Fault에서 제어 맥락의 후속 연구 가치를 제한적으로 지지했다. 그러나 네 핵심 논문의 전체 수식 대조가 완료되지 않았고 현재 residual 정의도 기존 prediction residual과 구별되지 않아 수학적 차별성은 `INCONCLUSIVE`이다.
+본 연구는 완성된 방법론을 주장하는 단계가 아니다. 공개 산업공정 시뮬레이션 데이터의 반복 예비실험은 일부 Fault에서 제어 맥락의 후속 연구 가치를 제한적으로 지지했다. Chen 원문에서 input-conditioned residual과의 직접 중복을 확인했지만 Mercer와 Ji의 전체 수식 대조가 완료되지 않았고 현재 residual 정의도 식별 가능한 분해로 정당화되지 않아 수학적 차별성은 `INCONCLUSIVE`이다.
