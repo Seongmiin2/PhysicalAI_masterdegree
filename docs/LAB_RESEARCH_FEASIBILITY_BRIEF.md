@@ -1,4 +1,4 @@
-# 자율형 산업 시스템의 제어 맥락을 활용한 조기 고장탐지 연구
+# 폐루프 산업 시스템의 제어 맥락을 활용한 조기 고장탐지 연구
 ## 문제 정의, 예비실험 결과 및 방법론 개발 계획
 
 ## 1. 연구 배경
@@ -21,11 +21,11 @@
 1. 과거 제어기록이 실제 고장탐지에 추가 정보를 제공하는가?
 2. 제공한다면, 제어로 설명되지 않는 residual의 시간적 변화를 어떻게 정의하고 학습해야 기존 방법과 구별되는가?
 
-첫 질문은 Phase 1 예비실험으로 확인했다. 두 번째 질문은 현재 Phase 2 문헌 검증 단계에 있다.
+첫 질문은 Phase 1 예비실험에서 일부 Fault에 한해 제한적으로 지지됐다. 두 번째 질문은 현재 Phase 2 수학적 차별성 검증 단계에 있다.
 
 ## 3. 데이터
 
-예비실험에는 AIRI FDDBenchmark에 포함된 Reinartz Tennessee Eastman Process 전처리 데이터를 사용했다.
+예비실험에는 AIRI FDDBenchmark에 포함된 Reinartz Tennessee Eastman Process 공개 산업공정 시뮬레이션 전처리 데이터를 사용했다. 실제 플랜트 계측 데이터가 아니다.
 
 - 총 2,800개 run
 - run당 2,000개 시점
@@ -60,6 +60,8 @@ F0/F1은 model seed 42, 43, 44에서 비교했고 데이터 split은 Seed 42로 
 | 44 | F1 | 0.8150 | 0.9290 | 0.6786 | 24.09 |
 
 세 seed 모두에서 F1의 AUROC, AUPRC와 탐지율이 증가하고 탐지 지연이 감소했다. 반면 정상 미래예측의 MAE/RMSE는 일관되게 개선되지 않았다. 특히 Seed 43에서는 F1의 정상 예측오차가 F0보다 나빴다. 따라서 제어기록이 정상 예측을 보편적으로 개선한다고 결론 내릴 수는 없다.
+
+탐지 지연 단위는 sample이며 1 sample은 3분이다. 탐지 지연은 탐지에 성공한 Run만 대상으로 계산했으므로 탐지율과 반드시 함께 해석해야 한다.
 
 ### 4.3 모델 크기 통제
 
@@ -107,7 +109,14 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 3. residual evolution의 학습이 단순 CUSUM이나 sliding-window statistic과 어떻게 다른가?
 4. 동일한 정상 오경보 조건에서 detection delay 개선을 학습 목표 및 평가와 어떻게 연결할 것인가?
 
-현재 문헌 판정은 `VIABLE_GAP_CANDIDATE`이다. 연구 가능성은 남아 있지만 방법론 차이가 확정된 상태는 아니다.
+예비 문헌 판정 `VIABLE_GAP_CANDIDATE`는 잠정 판정이었다. 이번 mathematical distinction gate는 `INCONCLUSIVE`이다. Patel 2018은 action-conditioned 미래 관측 예측과 prediction error를 이미 사용한다. 현재 `e_t`는 같은 종류의 조건부 prediction residual이고, `c_t`도 별도 식별 제약 없이는 두 모델의 예측 차이일 뿐이다. Chen 2016, Mercer 2002, Ji 2024의 전체 원문을 확보하지 못했으므로 Phase 3 진입을 보류한다.
+
+### 검증된 참고문헌
+
+- Chen et al. (2016), DOI: 10.1016/j.conengprac.2015.10.006
+- Mercer, Martin & Morris (2002), DOI: 10.1016/S1570-7946(02)80149-3
+- Patel et al. (2018), DOI: 10.1109/IROS.2018.8593375
+- Ji et al. (2024), DOI: 10.1016/j.chemolab.2024.105189
 
 ## 7. 제안 연구 방향
 
@@ -126,13 +135,11 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 
 ## 8. 앞으로의 연구 단계
 
-1. Wang 1997, Chen 2016, Mercer 2002, Patel 2018의 원문 수식과 목적함수를 같은 표기법으로 재구성
-2. 기존 residual과 구별되는 control-unexplained residual의 수학적 정의 작성
-3. 단순 CUSUM/sliding-window와 구별되는 residual-evolution 학습 목적함수 설계
-4. 제안 방법 구현
-5. F0/F1 및 검증된 선행방법과 동일 split·threshold 정책으로 비교
-6. ablation과 반복 검증
-7. 결과가 유지될 때 논문 작성
+1. Chen 2016, Mercer 2002, Ji 2024의 합법적 전체 원문 확보
+2. 네 논문의 원 수식과 목적함수를 같은 표기법으로 대조해 mathematical gate 재개
+3. `DISTINCTION_SURVIVES`일 때만 정확한 loss function 설계
+
+현재 판정에서는 제안 방법을 구현하지 않는다.
 
 ## 9. 연구 가능성과 위험
 
@@ -155,4 +162,4 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 
 ## 10. 현재 결론
 
-본 연구는 완성된 방법론을 주장하는 단계가 아니다. 다만 실제 데이터의 반복 예비실험을 통해 제어 맥락 기반 고장탐지를 후속 연구할 근거를 확보했다. 현재 가장 중요한 과제는 새로운 모델 구현이 아니라, 기존 input-output residual monitoring과 제안 residual 정의의 수학적 차이를 명확히 하는 것이다.
+본 연구는 완성된 방법론을 주장하는 단계가 아니다. 공개 산업공정 시뮬레이션 데이터의 반복 예비실험은 일부 Fault에서 제어 맥락의 후속 연구 가치를 제한적으로 지지했다. 그러나 네 핵심 논문의 전체 수식 대조가 완료되지 않았고 현재 residual 정의도 기존 prediction residual과 구별되지 않아 수학적 차별성은 `INCONCLUSIVE`이다.

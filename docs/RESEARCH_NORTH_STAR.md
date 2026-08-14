@@ -3,56 +3,41 @@
 ## Authoritative current status — 2026-08-14
 
 - Phase 0: complete.
-- Phase 1: complete. It established limited evidence that manipulated-variable history merits follow-up study; it did not prove a forecasting method.
-- Normal future-prediction improvement was not consistent across seeds.
-- Fault-detection improvement repeated across model seeds 42–44 and was not reproduced by the one F0-C capacity control.
-- Phase 2: active. Verified literature status is `VIABLE_GAP_CANDIDATE`, with substantial overlap in input-output residual monitoring, action-conditioned prediction, and temporal residual statistics.
-- Phase 3 has not started. No proposed model should be implemented until a mathematical distinction from the highest-overlap methods is documented.
-- The next question is: what objective distinguishes a learned control-unexplained residual and its evolution from existing CCA/CVA residuals, prediction-error monitors, and CUSUM/sliding-window statistics?
+- Phase 1: complete.
+- Phase 2: mathematical distinction gate in progress. Current decision is `INCONCLUSIVE` because three of four required full texts were not obtained and the candidate residual is not yet mathematically distinguished.
+- Phase 3: not started.
 
-Any older “current phase” wording below is historical context and is superseded by this status block.
+Phase 1 established limited, fault-specific evidence that manipulated-variable history merits follow-up. It did not prove a forecasting method or causal control effect. F1's fault-detection improvement repeated across model seeds 42–44 and was not reproduced by the one F0-C capacity control, while normal future-prediction improvement was inconsistent.
 
 ## Research problem
 
-Closed-loop CPS state changes mix normal dynamics, controller-induced responses,
-and fault-induced deviations. The long-term question is whether variations that are
-explainable by control history can be separated from unexplained fault effects, and
-whether the temporal evolution of the latter enables earlier detection.
+Closed-loop CPS observations mix process dynamics, controller response and fault effects. The long-term question is whether control-history-associated variation can be separated from unexplained deviation, and whether the latter's temporal evolution enables earlier detection.
 
-> Can we separate control-explainable state variations from fault-induced
-> unexplained deviations in a closed-loop CPS, and detect faults earlier by
-> modeling the temporal evolution of the control-unexplained residual?
+> Can control-history-associated state variation and unexplained deviation be defined as identifiable components, rather than merely as differences between predictors, and can the unexplained component support earlier fault detection at a controlled false-alarm rate?
 
-## Current hypothesis — Phase 1
-
-H1: past manipulated-variable history contains useful information for modeling
-normal future system response.
-
-The Information Value Gate compares only:
+## Current candidate — not a proposed method
 
 ```text
-F0: Past XMEAS       -> same GRU -> Future XMEAS
-F1: Past XMEAS + XMV -> same GRU -> Future XMEAS
+xhat_0 = f_x(X_t)
+xhat_1 = f_xu(X_t, U_t)
+c_t    = xhat_1 - xhat_0
+e_t    = x_(t+1) - xhat_1
 ```
 
-This comparison is a baseline/hypothesis gate, not a thesis contribution.
+- `c_t` is currently only a control-history-associated prediction-difference candidate. It is not a causal control effect.
+- `e_t` is currently an ordinary conditional prediction residual.
+- The algebraic identity does not establish an identifiable residual decomposition.
+- Adding a temporal model, GRU, nonlinear network, CUSUM or sliding window is not novelty by itself.
 
-## Provisional methodological direction
+## Gate decision
 
-Working names: **Control-Disentangled Residual Evolution Learning (CDREL)** or
-**Learning Control-Unexplained Residual Dynamics for Early Fault Detection**.
+The preliminary label `VIABLE_GAP_CANDIDATE` is historical and preserved only in `RESEARCH_DECISION_LOG.md`. The current mathematical gate is `INCONCLUSIVE`:
 
-This is provisional until a literature novelty gate is passed. The repository must
-not claim “novel,” “first,” or “state of the art.” Adding XMV, using a GRU,
-forecasting residuals, infrastructure, RAG, or combining models is not novelty.
+1. Patel 2018 full text confirms strong overlap in action-conditioned future-observation prediction and prediction-error monitoring.
+2. Chen 2016, Mercer 2002 and Ji 2024 full texts were not obtained, so absence of a two-predictor difference cannot be asserted.
+3. No concrete learning constraint currently distinguishes `e_t` from existing prediction residuals or makes `c_t` identifiable.
 
-## Research phases
-
-1. Phase 0 — Infrastructure: complete.
-2. Phase 1 — Information Value Gate: current. Test H1 with F0/F1.
-3. Phase 2 — Literature Novelty Gate: only if Phase 1 supports H1.
-4. Phase 3 — Provisional method: only after Phase 2.
-5. Later validation — ablation, alternate backbones, multiple datasets.
+Phase 3 must not begin under this status.
 
 ## Data and experiment principles
 
@@ -61,60 +46,17 @@ Raw -> run split -> train-normal selection -> train-only scaler
     -> run-safe windows -> model -> prediction/residual -> evaluation
 ```
 
-Never fit on test data, tune thresholds on test faults, cross run boundaries,
-include one run in multiple splits, use future XMV, feed labels/fault IDs to a
-model, or train a normal model on post-onset samples.
+Never fit on test data, tune thresholds on test faults, cross run boundaries, include one run in multiple splits, use future XMV, feed labels/fault IDs to a model, or train a normal model on post-onset samples.
 
-XMV is called `ACTION_CANDIDATE` or `MANIPULATED_VARIABLE_HISTORY`; it is not
-assumed to be an independent causal intervention.
+XMV is `MANIPULATED_VARIABLE_HISTORY`, not an independent causal intervention. The current Reinartz TEP data are publicly distributed industrial-process simulation data, not real plant measurements.
 
-## RDBMS policy
+## Scope controls
 
-SQLite stores reproducibility metadata, not telemetry. Legacy recovery tables stay,
-while thesis-core records should represent Dataset, Variable, Run, SplitManifest,
-PreprocessProfile, Experiment, ModelRun, Metric, and Artifact. PostgreSQL migration
-is out of scope.
+- F0/F1 GRU experiments are closed; no more seeds, hidden dimensions, thresholds, windows or backbones.
+- No new model or loss is implemented while Phase 2 is inconclusive.
+- RAG, retrieval, recovery-action ranking and new datasets remain outside the current gate.
+- SQLite stores reproducibility metadata; time-series telemetry stays in Parquet/NumPy.
 
-## Dataset policy
+## Single next action
 
-- Current Phase 1: Reinartz TEP processed distribution only.
-- Later: TEP for closed-loop response, GE-UTK for explicit demand/response,
-  N-CMAPSS for gradual degradation, HAI for external CPS validation.
-- Do not add datasets during the current gate.
-
-## Methodological roadmap (conditional)
-
-Only after H1 support and novelty review:
-
-1. action-conditioned probabilistic normal dynamics;
-2. one literature-supported control-response representation;
-3. residual decomposition into control-explainable and unexplained components;
-4. uncertainty normalization;
-5. temporal/inter-variable evolution of the unexplained residual.
-
-## RAG policy
-
-RAG is outside the thesis core. Reconsider only if retrieved process knowledge
-directly changes a learning objective or representation and passes its own novelty
-review. Document retrieval plus LLM explanation is not a methodological contribution.
-
-## Current stop/pivot conditions
-
-- Clear positive F1 effect: H1 supported; proceed to literature review, not a model.
-- Prediction-only or fault-specific effect: H1 partially supported; analyze lag,
-  useful XMV, affected sensors, delta-XMV, controller response, and parameter count.
-- No effect/worse F1: H1 not supported; do not build CDREL. Revisit semantics, lag,
-  missing XMV12, processed-data limitations, and official DTU Mode 1.
-
-Current implementation stops after seed-42 F0/F1 smoke/full results, fault-level
-results, leakage evidence, and an H1 decision.
-
-## Phase status update — 2026-08-13
-
-- Phase 1 Information Value Gate: **complete (`PASS`)**.
-- F1 detection improvement repeated across model seeds 42, 43, and 44 using the fixed Seed 42 split.
-- XMEAS-only F0-C matched F1 model capacity within 0.60% but remained near F0 detection performance.
-- No further F0/F1 seeds, hidden dimensions, thresholds, windows, or backbones will be tested in this phase.
-- Phase 2 Literature Novelty Gate: **current (`PARTIAL_OVERLAP` preliminary)**.
-- The next research question is whether prior input-output residual monitoring and action-conditioned prediction already cover the proposed distinction between control-explainable response and temporally evolving unexplained residual.
-- No proposed model is implemented until the highest-overlap papers are compared in detail.
+Obtain lawful full texts for Chen 2016, Mercer 2002 and Ji 2024, then complete the equation-level comparison. Only a subsequent `DISTINCTION_SURVIVES` decision may authorize exact loss-function design.
