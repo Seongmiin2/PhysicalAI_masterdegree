@@ -4,7 +4,7 @@
 
 - Phase 0: complete.
 - Phase 1: complete.
-- Phase 2: mathematical distinction gate in progress; current decision is `INCONCLUSIVE`.
+- Phase 2: mathematical distinction gate remains `INCONCLUSIVE`; mechanism audit is complete.
 - Phase 3: not started.
 
 Phase 1 established limited, fault-specific evidence that manipulated-variable history merits follow-up. It did not prove a forecasting method or causal control effect. F1's fault-detection improvement repeated across model seeds 42–44 and was not reproduced by the one F0-C capacity control, while normal future-prediction improvement was inconsistent.
@@ -58,3 +58,13 @@ Never fit on test data, tune thresholds on test faults, cross run boundaries, us
 ## Single next action
 
 Obtain lawful full texts for Mercer 2002 and Ji 2024, then complete their equation-level comparison. Only a later `DISTINCTION_SURVIVES` decision may authorize exact loss-function design.
+
+## Mechanism and direction audit (2026-08-14)
+
+- Candidate A: `INCONCLUSIVE / NOT ADOPTED`.
+- Candidate B: `PROMISING_MODEL_CANDIDATE / NOT YET AUTHORIZED`.
+- Candidate C: technically feasible via the Python simulator, but scientific feasibility remains untested.
+- F1 mechanism: `MIXED_MECHANISM`, dominated by fault-specific XMV patterns and early-warning behavior in faults 19, 24, 25, and 26. Normal-context improvement was not supported.
+- Primary route: mechanism-first Reinartz analysis. Fallback: a small paired, same-seed Python-simulator study.
+
+The next single action is a preregistered, no-training Path-1 diagnostic protocol with run-level falsification criteria. No Candidate B/C model or loss is authorized. Mercer/Ji verification remains required before any mathematical novelty claim.

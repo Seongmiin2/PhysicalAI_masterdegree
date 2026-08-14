@@ -163,3 +163,11 @@ Phase 1의 `PASS`는 제안 방법을 증명했다는 뜻이 아니다. 다음 �
 ## 10. 현재 결론
 
 본 연구는 완성된 방법론을 주장하는 단계가 아니다. 공개 산업공정 시뮬레이션 데이터의 반복 예비실험은 일부 Fault에서 제어 맥락의 후속 연구 가치를 제한적으로 지지했다. Chen 원문에서 input-conditioned residual과의 직접 중복을 확인했지만 Mercer와 Ji의 전체 수식 대조가 완료되지 않았고 현재 residual 정의도 식별 가능한 분해로 정당화되지 않아 수학적 차별성은 `INCONCLUSIVE`이다.
+
+
+## Mechanism and simulator feasibility audit (2026-08-14)
+
+- F1 mechanism verdict: `MIXED_MECHANISM` (fault-specific XMV pattern plus early-warning behavior); this is not a causal control-effect claim.
+- Candidate A: `INCONCLUSIVE / NOT ADOPTED`; Candidate B: `PROMISING_MODEL_CANDIDATE / NOT YET AUTHORIZED`.
+- Pure-Python TEP normal/fault paired smoke test passed on Windows; simulator verdict: `SIMULATOR_READY_WITH_MINOR_WORK`.
+- Primary direction: mechanism-first Reinartz analysis. Fallback: small same-seed paired simulation. No model or loss is authorized yet.
