@@ -3,7 +3,8 @@
 ## Decision summary
 
 - Mechanism verdict: `MIXED_MECHANISM`
-- Simulator verdict: `SIMULATOR_READY_WITH_MINOR_WORK`
+- Simulator verdict: `SIMULATOR_READY_WITH_MINOR_WORK` for the pure-Python TEP only
+- COSTEP status: `LICENSE_BLOCKED / OPTIONAL_CROSS_CHECK`
 - Primary path: **Path 1 — Reinartz mechanism-first control-response analysis**
 - Fallback path: **Path 3 — paired simulator-supervised decomposition pilot**
 - Candidate B remains `PROMISING_MODEL_CANDIDATE / NOT YET AUTHORIZED`.
@@ -36,7 +37,7 @@ A bounded Windows smoke test used the Python backend only: one 0.1-hour normal r
 | Paired runs | Noise seed is configurable, so paired normal/fault design appears possible; it was not executed because the required runtime is absent. |
 | Reinartz compatibility | Potentially map-able at XMEAS/XMV level, but controller configuration, sampling, fault definitions, and preprocessing require an explicit adapter and equivalence audit. |
 
-COSTEP is therefore not the immediate implementation choice on this machine. Its richer Simulink model remains a later cross-check if a licensed runtime becomes available.
+COSTEP is excluded from the selected path as `LICENSE_BLOCKED / OPTIONAL_CROSS_CHECK`. The attempted MATLAB/Simulink download was deleted because the required school license is unavailable. No further MATLAB/COSTEP work is planned. If simulator work becomes necessary, only the already smoke-tested pure-Python TEP remains the fallback.
 
 ## Route comparison
 
