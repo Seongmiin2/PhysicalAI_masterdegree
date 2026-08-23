@@ -1,0 +1,47 @@
+device: cuda
+architectures: [tcn, transformer]
+seeds: [42, 43, 44, 45, 46]
+window: 20
+batch_size: 2048
+run_batch_size: 8
+threshold_percentile: 99.0
+alarm_consecutive: 3
+evaluation_sample_start: 400
+evaluation_sample_end: 900
+fault_onset: 600
+
+# Locked before execution from the four G3 two-architecture consensus cells.
+primary_cells:
+  - {fault_id: 4, channel: 10}
+  - {fault_id: 19, channel: 7}
+  - {fault_id: 19, channel: 8}
+  - {fault_id: 25, channel: 2}
+
+# The central stochastic-imputer choices are stress-tested without retraining.
+residual_block_lengths: [5, 10, 20]
+conditional_sample_draws: [1, 3, 10]
+
+# Architecture-cell robustness is intentionally strict and is evaluated over
+# all 3 x 3 sensitivity settings. Overall PASS requires all four cells to retain
+# two-architecture robustness.
+decision_rule:
+  required_positive_settings: 9
+  required_material_settings: 8
+  required_seed_stable_settings: 8
+  required_fpr_guardrail_settings: 9
+  required_ci_positive_settings: 8
+  material_delta_auroc: 0.02
+  positive_seeds: 4
+  fpr_guardrail: 0.005
+  required_consensus_cells: 4
+
+bootstrap_repeats: 2000
+
+paths:
+  cache: ../PhysicalAI_mini/data/processed/reinartz_f0_f1
+  split: outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv
+  scaler: outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv
+  checkpoints: outputs/architecture_gate_g2_full/checkpoints
+  loo_imputer_weights: outputs/architecture_chum_g3/normal_xmv_loo_imputer_weights.npy
+  loo_residual_bank: outputs/architecture_chum_g3/normal_xmv_loo_residual_bank.npy
+  output: outputs/chum_primary_sensitivity

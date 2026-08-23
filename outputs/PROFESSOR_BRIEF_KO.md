@@ -1,15 +1,17 @@
 ﻿# 산업 시계열 AI는 추가 Context를 실제로 활용하는가?
 
 지도교수 검토용 연구방향 및 진행 보고
-작성일: 2026년 8월 21일
-현재 상태: 실험·검증 패키지 완료, 최종 문제정의와 주장 범위 승인 대기
+작성일: 2026년 8월 23일
+현재 상태: 필수 민감도 실험까지 완료, 최종 문제정의와 주장 범위 승인 후 본문 집필 가능
+
+> 2026-08-23 갱신: 이 문서는 연구 경과 기록이다. 최종 교수 검토본은 `deliverables/CHUM_RESEARCH_PROPOSAL_KO.md`, 발표 설계는 `deliverables/CHUM_PPT_PRODUCTION_SPEC_KO.md`를 기준으로 한다.
 
 ## Executive Summary
 
 - **문제의식:** 산업 이상 탐지에서 센서에 제어 이력을 추가해 평균 성능이 올랐다는 결과만으로는 어느 사건과 채널이 실제 정보를 제공하는지 알 수 없다. 모델 크기 증가, 특정 architecture의 편향, 비현실적인 occlusion, 오경보 증가도 효과처럼 보일 수 있다.
 - **해결방안:** Control-History Utility Mapping(CHUM)은 sensor-only(F0), sensor+control(F1), capacity-matched sensor-only(F0-C)를 비교하고, 정상 분포 기반 조건부 대치·validation 임계값·FPR guardrail·seed/run 안정성·architecture consensus를 결합해 event–channel별 추가 예측 정보를 감사한다.
 - **핵심 결과:** TEP에서 fault 4, 19, 25의 핵심 channel mapping이 TCN과 compact Transformer 양쪽에서 재현됐다. Integrated Gradients도 primary 셀 8개 중 7개에서 같은 최상위 채널을 선택했다. 수정된 HAI 21.03 v2에서도 F1이 전역 AUROC·AUPRC·eTaF1에서 F0와 F0-C보다 높았고, 5개 직접 공격 event–channel 셀이 조건부 대치 기준을 통과했다.
-- **현재 결정:** 증거는 본문 집필을 시작할 수준이다. 오늘 필요한 것은 실험을 더 벌이는 것이 아니라, 논문 기여를 “새 모델”이 아닌 **제어 이력 유용성 감사 프로토콜과 architecture-robust 실증**으로 확정하고 인과·root-cause 주장을 배제하는 것이다.
+- **현재 결정:** 마지막 필수 보강인 3×3 replacement sensitivity도 4/4 locked cells에서 PASS했다. 증거는 본문 집필을 시작할 수준이며, 논문 기여를 “새 모델”이 아닌 **제어 이력 유용성 감사 프로토콜과 architecture-robust 실증**으로 확정하고 인과·root-cause 주장을 배제한다.
 
 ## 왜 이 연구가 Superintelligence 연구실에 맞는가
 
@@ -95,9 +97,9 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 
 ## 추가 실험에 대한 냉정한 결정
 
-### 최종 논문 전에 우선 수행할 좁은 필수 보강
+### 2026-08-23 완료한 마지막 필수 보강
 
-**TEP primary consensus sensitivity**를 수행한다. 전체 340-task grid를 반복하지 않고, 최종 합의 셀 `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`에 한정한다.
+**TEP primary consensus sensitivity**를 완료했다. 전체 340-task grid를 반복하지 않고, 최종 합의 셀 `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`에 한정했다.
 
 - residual block length: 5, 10, 20
 - conditional draws: 1, 3, 10
@@ -105,7 +107,7 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 - seeds: 기존 42–46 checkpoint 재사용
 - 판정: 효과 방향, ΔAUROC 크기, run CI 하한, 최대 절대 ΔFPR, consensus 유지 여부
 
-이 실험은 central method의 두 고정 선택(block length=20, draws=3)에 대한 공격을 직접 막는다. 새 학습이 아니라 기존 checkpoint 추론이므로 범위를 제한하면 현실적이다.
+결과는 **PASS**다. 4/4 locked cells가 두 architecture에서 robust했고, 8개 architecture–cell 모두 9/9 설정에서 positive·material·seed-stable·CI-positive·FPR guardrail을 통과했다. 전체 설정의 최소 ΔAUROC는 `0.053043`, 최대 절대 ΔFPR은 `0.0015`였다. 이 실험은 central method의 두 고정 선택(block length=20, draws=3)에 대한 공격을 직접 막는다.
 
 ### 교수 피드백에 따라 선택할 보강
 
@@ -250,6 +252,7 @@ F1−F0의 평균 차이는 AUROC +0.018745, AUPRC +0.030608, eTaF1 +0.026722였
 | HAI v2 외부 검증 | EXTERNAL_SUPPORT | global label 중심의 제한적 외부 지지 |
 | HAI conditional channel 검증 | EXTERNAL_CHANNEL_SUPPORT | 5개 직접 공격 셀 통과 |
 | 최종 raw evidence 검증 | PASS | 18 checks 통과 |
+| TEP primary sensitivity | PASS | 4/4 locked cells, 양 구조 9/9 설정 통과 |
 | 최종 제목·연구질문 | 미확정 | 지도교수와 사용자 승인 필요 |
 | 논문 본문 | 미착수 | 방향 승인 즉시 시작 가능 |
 
@@ -294,10 +297,10 @@ TEP의 5개 seed에서는 양측 exact sign-flip test의 최소 p값이 0.0625�
 4. **승인 후 목차 잠금**
    문제정의 → CHUM → TEP architecture robustness → channel consensus → IG → HAI → 한계 순으로 본문을 전개한다.
 
-### 선택적 보강 실험
+### 선택적 후속 확장
 
 - TEP seed 추가
-- imputer block length 및 draw-count sensitivity
+- HAI conditional block length 및 draw-count sensitivity
 - control channel이 직접 공격되지 않은 외부 데이터 검증
 
 이 항목들은 robustness와 일반성을 강화하지만 현재 핵심 결론의 선행조건은 아니다. 지도교수가 필수로 판단하지 않는 한 오늘의 전달자료와 본문 착수를 늦추지 않는다.

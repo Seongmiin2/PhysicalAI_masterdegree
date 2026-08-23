@@ -1,0 +1,25 @@
+2026-08-23 18:49:20,043 sensitivity tasks completed=0 total=390 device=cuda
+2026-08-23 18:49:24,184 cell F4/XMV10 block=5 active_models=10 max_draws=10
+2026-08-23 18:50:00,976 progress completed=60/390
+2026-08-23 18:50:00,976 cell F4/XMV10 block=10 active_models=10 max_draws=10
+2026-08-23 18:50:30,952 progress completed=90/390
+2026-08-23 18:50:30,952 cell F4/XMV10 block=20 active_models=10 max_draws=10
+2026-08-23 18:50:57,044 progress completed=120/390
+2026-08-23 18:50:57,045 cell F19/XMV7 block=5 active_models=10 max_draws=10
+2026-08-23 18:51:33,506 progress completed=150/390
+2026-08-23 18:51:33,514 cell F19/XMV7 block=10 active_models=10 max_draws=10
+2026-08-23 18:52:03,287 progress completed=180/390
+2026-08-23 18:52:03,288 cell F19/XMV7 block=20 active_models=10 max_draws=10
+2026-08-23 18:52:29,523 progress completed=210/390
+2026-08-23 18:52:29,524 cell F19/XMV8 block=5 active_models=10 max_draws=10
+2026-08-23 18:53:05,727 progress completed=240/390
+2026-08-23 18:53:05,728 cell F19/XMV8 block=10 active_models=10 max_draws=10
+2026-08-23 18:53:35,474 progress completed=270/390
+2026-08-23 18:53:35,474 cell F19/XMV8 block=20 active_models=10 max_draws=10
+2026-08-23 18:54:01,744 progress completed=300/390
+2026-08-23 18:54:01,745 cell F25/XMV2 block=5 active_models=10 max_draws=10
+2026-08-23 18:54:37,943 progress completed=330/390
+2026-08-23 18:54:37,943 cell F25/XMV2 block=10 active_models=10 max_draws=10
+2026-08-23 18:55:07,453 progress completed=360/390
+2026-08-23 18:55:07,454 cell F25/XMV2 block=20 active_models=10 max_draws=10
+2026-08-23 18:55:33,653 progress completed=390/390

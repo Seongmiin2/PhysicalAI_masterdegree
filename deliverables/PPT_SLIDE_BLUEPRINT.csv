@@ -1,0 +1,13 @@
+slide,title,takeaway,primary_visual,proof_or_guardrail
+1,"CHUM: 제어 이력의 ‘실제 정보 유용성’을 감사한다","4개 핵심 event-channel이 두 architecture와 9개 replacement 설정에서 모두 재현됐다.","Native hero metric + evidence chips","4/4; 2 datasets; 3 architectures; 18/18 checks"
+2,"최근 연구의 공통축은 ‘문맥 활용 → 신뢰성 검증 → 시스템 결정’이다","CHUM은 산업 시계열에서 이 공통축을 검증 가능한 audit protocol로 구현한다.","ppt_assets/06_PROFESSOR_FIT_MAP.png","2024–2026 official list; 65 unique titles"
+3,"Control history를 입력했다고, 모델이 유용하게 쓴 것은 아니다","평균 성능 향상에는 네 가지 대안 설명이 섞여 있다.","Native input-vs-utility diagram","capacity; architecture; OOD masking; FPR"
+4,"새 attribution 알고리즘이 아니라, 판정 가능한 audit protocol이 필요하다","CHUM은 알려진 통제를 하나의 산업 이상 탐지 decision gate로 결합한다.","Prior-work stack + CHUM formula","No universal attribution novelty claim"
+5,"다섯 단계가 대안 설명을 순서대로 제거한다","입력 통제 → 정상분포 대치 → 조건별 보정 → 사건별 효과 → 합의 판정","ppt_assets/01_CHUM_METHOD_PIPELINE.png","test label unused; causal boundary"
+6,"TEP에서 방법을 잠그고, HAI의 HIL attack으로 외부 지지를 확인했다","두 환경 모두 split-before-window, train-only scaling, validation-only threshold를 사용한다.","ppt_assets/02_DATASET_AND_SPLIT_PROTOCOL.png","43,202 exact-overlap train rows removed"
+7,"모델 크기와 inductive bias를 각각 통제했다","F1은 두 대조군을 모두 넘어야 하고 핵심 결론은 TCN과 Transformer가 합의해야 한다.","Native F0/F1/F0-C lanes + parameter table","capacity matched + architecture consensus"
+8,"각 실험은 하나의 반론을 제거하도록 설계했다","결론은 큰 숫자 하나가 아니라 여섯 개 독립 guardrail의 교집합이다.","ppt_assets/07_EVIDENCE_SCORECARD.png","Five PASS; HAI SUPPORT"
+9,"네 개 channel mapping이 TCN과 Transformer에서 모두 재현됐다","효과는 material gate의 2.65–14.5배이며 모든 셀에서 5/5 seed와 run CI가 지지한다.","ppt_assets/03_TEP_ARCHITECTURE_CONSENSUS.png","CI low > 0; |ΔFPR| ≤ 0.00125"
+10,"HAI corrected v2에서도 전역 gain과 5개 targeted channel support가 반복됐다","F1은 두 대조군보다 높았고 directly attacked cells는 모두 3/3 seed positive였다.","ppt_assets/05_HAI_EXTERNAL_SUPPORT.png","External support only; invalid v1 excluded"
+11,"결론은 block length와 stochastic draw count에 의존하지 않았다","4/4 cells × 2 architectures가 9/9 설정에서 모든 엄격 기준을 통과했다.","ppt_assets/04_PRIMARY_SENSITIVITY_RANGES.png","390 tasks; no retraining; 2,000 bootstrap"
+12,"필수 실험은 끝났다 — 이제 claim을 잠그고 집필을 시작한다","CHUM audit protocol을 주 기여로 확정하고 causal/root-cause 확장은 후속 연구로 분리한다.","Native three-card close","RQ lock; contribution lock; start writing"

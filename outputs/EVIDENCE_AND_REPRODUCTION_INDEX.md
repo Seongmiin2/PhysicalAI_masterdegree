@@ -67,6 +67,18 @@
 - 보고서 생성 코드: `experiments/build_professor_report_v2.py`
 - 결과: completeness, duplication, effect, FPR, decision 관련 18 checks 전체 PASS
 
+### TEP primary consensus sensitivity — 2026-08-23 추가
+
+- 설정: `configs/architecture_chum_sensitivity.yaml`
+- 실행: `experiments/run_architecture_chum_sensitivity.py`
+- 분석: `experiments/analyze_architecture_chum_sensitivity.py`
+- 대상: `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`
+- 교차 조건: residual block `5/10/20` × conditional draws `1/3/10` × TCN/Transformer × seeds `42–46`
+- 완료 규모: 390 model-condition tasks, 7,800 run rows, 2,000회 paired hierarchical bootstrap
+- 결론: **PASS**, 4/4 locked cells가 두 architecture에서 robust; 실제로 8개 architecture–cell 모두 9/9 설정에서 positive/material/seed-stable/CI-positive/FPR guardrail 통과
+- 전체 설정의 최소 ΔAUROC: `0.053043`; 최악 절대 pre-fault FPR 변화: `0.0015`
+- 주의: 기존 checkpoint를 재사용한 no-retraining sensitivity이며, causal effect나 독립 dataset 반복을 뜻하지 않음
+
 ## 3. 실험 조건 요약
 
 | 항목 | TEP | HAI 21.03 |
@@ -92,6 +104,7 @@
 - HAI quality-gated controls: `12/28`
 - HAI conditional accepted targeted cells: `5`
 - Final validation: `18 checks PASS`
+- Primary sensitivity: `4/4 locked cells PASS`, 모든 architecture–cell `9/9 strict settings`, 최소 ΔAUROC `0.053043`, 최대 |ΔFPR| `0.0015`
 
 ## 5. 재생성 순서
 
@@ -102,7 +115,8 @@
 3. 각 분석 스크립트로 aggregate report와 decision을 생성한다.
 4. imputer audit를 통과한 채널만 conditional decision에 포함한다.
 5. `experiments/validate_final_evidence.py`로 raw tables에서 최종 수치를 재계산한다.
-6. 새 결과가 위 요약 값과 다른 경우 코드·데이터 버전·column order·split·threshold를 먼저 점검한다.
+6. primary sensitivity는 기존 TCN/Transformer F1 checkpoint와 G3 LOO residual bank를 사용해 실행한 뒤 sensitivity analyzer로 판정한다.
+7. 새 결과가 위 요약 값과 다른 경우 코드·데이터 버전·column order·split·threshold를 먼저 점검한다.
 
 ## 6. 보존 및 복구 정책
 
@@ -114,5 +128,5 @@
 ## 7. 남은 의사결정
 
 - 최종 제목과 연구질문을 사람과 지도교수가 승인해야 한다.
-- TEP seed 추가와 imputer sensitivity는 선택적 robustness 작업이다.
+- TEP primary imputer sensitivity는 완료됐다. TEP seed 추가는 formal seed-level p-value가 필요한 경우에만 선택적으로 수행한다.
 - control channel이 직접 공격되지 않은 외부 데이터 검증은 더 강한 일반화를 위한 선택 작업이다.

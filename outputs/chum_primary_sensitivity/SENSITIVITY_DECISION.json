@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "decision": "PASS",
+  "consensus_cells": 4,
+  "required_consensus_cells": 4,
+  "decision_rule": {
+    "required_positive_settings": 9,
+    "required_material_settings": 8,
+    "required_seed_stable_settings": 8,
+    "required_fpr_guardrail_settings": 9,
+    "required_ci_positive_settings": 8,
+    "material_delta_auroc": 0.02,
+    "positive_seeds": 4,
+    "fpr_guardrail": 0.005,
+    "required_consensus_cells": 4
+  },
+  "bootstrap_repeats": 2000
+}

@@ -1,0 +1,648 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "CHUM 연구 기획 및 증거 보고서",
+    "description": "추현승 교수 검토용: 산업 시계열 control-history utility audit의 방법, 결과, 민감도와 연구실 적합성.",
+    "generatedAt": "2026-08-23T19:30:00+09:00",
+    "cards": [
+      {
+        "id": "locked_cells_card",
+        "description": "Both architectures passed for every locked primary cell.",
+        "dataset": "scorecard",
+        "sourceId": "proposal_scorecard",
+        "metrics": [
+          {
+            "label": "Locked cells PASS",
+            "field": "locked_cells",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "strict_settings_card",
+        "description": "Strict block-length and conditional-draw settings passed per architecture–cell.",
+        "dataset": "scorecard",
+        "sourceId": "proposal_scorecard",
+        "metrics": [
+          {
+            "label": "Settings per cell",
+            "field": "strict_settings",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "evidence_checks_card",
+        "description": "Independent raw-evidence completeness, duplication, effect, FPR, and decision checks.",
+        "dataset": "scorecard",
+        "sourceId": "proposal_scorecard",
+        "metrics": [
+          {
+            "label": "Evidence checks",
+            "field": "evidence_checks",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "hai_cells_card",
+        "description": "Directly attacked HAI event–control cells with stable conditional score loss.",
+        "dataset": "scorecard",
+        "sourceId": "proposal_scorecard",
+        "metrics": [
+          {
+            "label": "HAI targeted cells",
+            "field": "hai_targeted_cells",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "ig_agreement_card",
+        "description": "Share of locked architecture–fault cells where Integrated Gradients and CHUM selected the same top channel.",
+        "dataset": "scorecard",
+        "sourceId": "proposal_scorecard",
+        "metrics": [
+          {
+            "label": "IG top-1 agreement",
+            "field": "ig_top1_agreement",
+            "format": "percent"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "tep_chart",
+        "title": "TEP architecture consensus",
+        "subtitle": "Original minus normal-conditional replacement; higher means more information loss.",
+        "type": "bar",
+        "dataset": "tep_cells",
+        "sourceId": "g3_recomputation",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "cell",
+            "type": "nominal",
+            "label": "Fault / control channel"
+          },
+          "y": {
+            "field": "delta_auroc",
+            "type": "quantitative",
+            "label": "ΔAUROC"
+          },
+          "color": {
+            "field": "architecture",
+            "type": "nominal",
+            "label": "Architecture"
+          },
+          "tooltip": [
+            {
+              "field": "ci_low",
+              "type": "quantitative",
+              "label": "Run CI low",
+              "format": "number"
+            },
+            {
+              "field": "positive_seeds",
+              "type": "quantitative",
+              "label": "Positive seeds"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sensitivity_chart",
+        "title": "Worst-case sensitivity effect",
+        "subtitle": "Minimum ΔAUROC across block 5/10/20 × draws 1/3/10.",
+        "type": "bar",
+        "dataset": "sensitivity",
+        "sourceId": "sensitivity_decision",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "cell",
+            "type": "nominal",
+            "label": "Architecture · cell"
+          },
+          "y": {
+            "field": "min_delta_auroc",
+            "type": "quantitative",
+            "label": "Minimum ΔAUROC"
+          },
+          "color": {
+            "field": "architecture",
+            "type": "nominal",
+            "label": "Architecture"
+          },
+          "tooltip": [
+            {
+              "field": "max_delta_auroc",
+              "type": "quantitative",
+              "label": "Maximum ΔAUROC",
+              "format": "number"
+            },
+            {
+              "field": "worst_abs_fpr_shift",
+              "type": "quantitative",
+              "label": "Worst |ΔFPR|",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hai_chart",
+        "title": "HAI 21.03 corrected-v2 global deltas",
+        "subtitle": "All deltas were positive in 3/3 seeds; interpreted as external support.",
+        "type": "bar",
+        "dataset": "hai_long",
+        "sourceId": "hai_recomputation",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "metric",
+            "type": "nominal",
+            "label": "Metric"
+          },
+          "y": {
+            "field": "delta",
+            "type": "quantitative",
+            "label": "F1 improvement"
+          },
+          "color": {
+            "field": "contrast",
+            "type": "nominal",
+            "label": "Contrast"
+          }
+        }
+      },
+      {
+        "id": "professor_chart",
+        "title": "Recent Superintelligence Lab themes",
+        "subtitle": "Official 2024–2026 lists, 65 unique titles; rule-coded from titles.",
+        "type": "bar",
+        "dataset": "professor_counts",
+        "sourceId": "lab_publications",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "theme",
+            "type": "nominal",
+            "label": "Theme"
+          },
+          "y": {
+            "field": "unique_titles",
+            "type": "quantitative",
+            "label": "Unique titles"
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "tep_table",
+        "title": "Locked TEP cells",
+        "subtitle": "Both architectures, five seeds each.",
+        "dataset": "tep_cells",
+        "sourceId": "g3_recomputation",
+        "defaultSort": {
+          "field": "delta_auroc",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "architecture",
+            "label": "Architecture",
+            "type": "text"
+          },
+          {
+            "field": "cell",
+            "label": "Cell",
+            "type": "text"
+          },
+          {
+            "field": "delta_auroc",
+            "label": "ΔAUROC",
+            "format": "number"
+          },
+          {
+            "field": "ci_low",
+            "label": "Run CI low",
+            "format": "number"
+          },
+          {
+            "field": "max_abs_fpr_shift",
+            "label": "Max |ΔFPR|",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "sensitivity_table",
+        "title": "Sensitivity decision detail",
+        "subtitle": "Every architecture–cell passed all nine strict settings.",
+        "dataset": "sensitivity",
+        "sourceId": "sensitivity_decision",
+        "defaultSort": {
+          "field": "min_delta_auroc",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "cell",
+            "label": "Architecture · cell",
+            "type": "text"
+          },
+          {
+            "field": "min_delta_auroc",
+            "label": "Min ΔAUROC",
+            "format": "number"
+          },
+          {
+            "field": "max_delta_auroc",
+            "label": "Max ΔAUROC",
+            "format": "number"
+          },
+          {
+            "field": "worst_abs_fpr_shift",
+            "label": "Worst |ΔFPR|",
+            "format": "number"
+          },
+          {
+            "field": "strict_pass_settings",
+            "label": "Strict pass",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "proposal_scorecard",
+        "label": "Proposal evidence scorecard",
+        "path": "deliverables/report_data/scorecard.csv"
+      },
+      {
+        "id": "g3_recomputation",
+        "label": "Recomputed TEP G3 cells",
+        "path": "deliverables/report_data/tep_cells.csv"
+      },
+      {
+        "id": "hai_recomputation",
+        "label": "Recomputed HAI corrected-v2 deltas",
+        "path": "deliverables/report_data/hai_long.csv"
+      },
+      {
+        "id": "sensitivity_decision",
+        "label": "Locked primary sensitivity outputs",
+        "path": "deliverables/report_data/sensitivity.csv"
+      },
+      {
+        "id": "lab_publications",
+        "label": "Superintelligence Lab official publication theme counts",
+        "path": "deliverables/report_data/professor_counts.csv"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# CHUM 연구 기획 및 증거 보고서"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## Decision\n\n**MANUSCRIPT-READY.** Four locked TEP event–channel cells passed two-architecture consensus and the preregistered 3×3 replacement sensitivity. HAI 21.03 provides limited external support. The defensible claim is predictive context utility, not causal control or root-cause identification."
+      },
+      {
+        "id": "metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "locked_cells_card",
+          "strict_settings_card",
+          "evidence_checks_card",
+          "hai_cells_card",
+          "ig_agreement_card"
+        ]
+      },
+      {
+        "id": "fit_intro",
+        "type": "markdown",
+        "body": "## Advisor and lab fit\n\nOfficial 2024–2026 lab records show repeated work in 6G/network AI, medical AI, reliable AI/RAG, multi-model comparison, time-series prediction, and system decision-making. CHUM fits best as a trustworthy context-utilization audit rather than as a new industrial detector."
+      },
+      {
+        "id": "professor_chart_block",
+        "type": "chart",
+        "chartId": "professor_chart"
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "body": "## Method\n\nCHUM compares sensor-only (F0), sensor+control (F1), and capacity-matched sensor-only (F0-C); replaces one control history with a normal-training-distribution conditional sample; recalibrates thresholds on validation-normal data; measures event-level metric loss and pre-fault FPR shift; and accepts a cell only after imputer quality, seed/run uncertainty, and architecture consensus gates."
+      },
+      {
+        "id": "tep_chart_block",
+        "type": "chart",
+        "chartId": "tep_chart"
+      },
+      {
+        "id": "tep_table_block",
+        "type": "table",
+        "tableId": "tep_table"
+      },
+      {
+        "id": "sensitivity_text",
+        "type": "markdown",
+        "body": "## Final mandatory sensitivity experiment\n\nThe locked test crossed residual block lengths 5/10/20 with conditional draw counts 1/3/10 for TCN and Transformer at seeds 42–46, reusing checkpoints. All eight architecture–cell combinations passed 9/9 strict settings. The minimum observed ΔAUROC was 0.053043 and worst absolute pre-fault FPR shift was 0.0015."
+      },
+      {
+        "id": "sensitivity_chart_block",
+        "type": "chart",
+        "chartId": "sensitivity_chart"
+      },
+      {
+        "id": "sensitivity_table_block",
+        "type": "table",
+        "tableId": "sensitivity_table"
+      },
+      {
+        "id": "hai_chart_block",
+        "type": "chart",
+        "chartId": "hai_chart"
+      },
+      {
+        "id": "boundary",
+        "type": "markdown",
+        "body": "## Significance and boundary\n\nThe evidence supports event-specific, architecture-robust predictive utility of selected control histories on the fixed TEP distribution and limited external support on HAI corrected v2. It does not establish physical causality, controller intervention effects, root causes, or universal industrial transfer. The next action is to lock the research question and begin manuscript writing."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-23T19:30:00+09:00",
+    "status": "ready",
+    "datasets": {
+      "scorecard": [
+        {
+          "locked_cells": 4,
+          "strict_settings": 9,
+          "evidence_checks": 18,
+          "hai_targeted_cells": 5,
+          "ig_top1_agreement": 0.875
+        }
+      ],
+      "tep_cells": [
+        {
+          "architecture": "TCN",
+          "cell": "F4/XMV10",
+          "delta_auroc": 0.1652848422,
+          "ci_low": 0.1241405274,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.00025
+        },
+        {
+          "architecture": "TRANSFORMER",
+          "cell": "F4/XMV10",
+          "delta_auroc": 0.1055024086,
+          "ci_low": 0.0881871761,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.00075
+        },
+        {
+          "architecture": "TCN",
+          "cell": "F19/XMV7",
+          "delta_auroc": 0.135469863,
+          "ci_low": 0.1269553613,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.00075
+        },
+        {
+          "architecture": "TRANSFORMER",
+          "cell": "F19/XMV7",
+          "delta_auroc": 0.1236563372,
+          "ci_low": 0.1135250332,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.00075
+        },
+        {
+          "architecture": "TCN",
+          "cell": "F19/XMV8",
+          "delta_auroc": 0.0554896013,
+          "ci_low": 0.0505318812,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.0005
+        },
+        {
+          "architecture": "TRANSFORMER",
+          "cell": "F19/XMV8",
+          "delta_auroc": 0.0530555357,
+          "ci_low": 0.0466735008,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.0005
+        },
+        {
+          "architecture": "TCN",
+          "cell": "F25/XMV2",
+          "delta_auroc": 0.2899378364,
+          "ci_low": 0.284972691,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.0005
+        },
+        {
+          "architecture": "TRANSFORMER",
+          "cell": "F25/XMV2",
+          "delta_auroc": 0.2636760756,
+          "ci_low": 0.2547268625,
+          "positive_seeds": 5,
+          "max_abs_fpr_shift": 0.00125
+        }
+      ],
+      "sensitivity": [
+        {
+          "architecture": "tcn",
+          "cell": "TCN · F4/XMV10",
+          "min_delta_auroc": 0.1652696346,
+          "median_delta_auroc": 0.1653056437,
+          "max_delta_auroc": 0.165339539,
+          "worst_abs_fpr_shift": 0.00075,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "tcn",
+          "cell": "TCN · F19/XMV7",
+          "min_delta_auroc": 0.1354118065,
+          "median_delta_auroc": 0.1356025955,
+          "max_delta_auroc": 0.1357874834,
+          "worst_abs_fpr_shift": 0.0015,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "tcn",
+          "cell": "TCN · F19/XMV8",
+          "min_delta_auroc": 0.0554264867,
+          "median_delta_auroc": 0.0555076038,
+          "max_delta_auroc": 0.0555404734,
+          "worst_abs_fpr_shift": 0.0005,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "tcn",
+          "cell": "TCN · F25/XMV2",
+          "min_delta_auroc": 0.2897921055,
+          "median_delta_auroc": 0.2899378364,
+          "max_delta_auroc": 0.2901704817,
+          "worst_abs_fpr_shift": 0.00125,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "transformer",
+          "cell": "TRANSFORMER · F4/XMV10",
+          "min_delta_auroc": 0.1054972425,
+          "median_delta_auroc": 0.1055111088,
+          "max_delta_auroc": 0.1055568148,
+          "worst_abs_fpr_shift": 0.00075,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "transformer",
+          "cell": "TRANSFORMER · F19/XMV7",
+          "min_delta_auroc": 0.1235583223,
+          "median_delta_auroc": 0.1236615199,
+          "max_delta_auroc": 0.1238792982,
+          "worst_abs_fpr_shift": 0.00075,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "transformer",
+          "cell": "TRANSFORMER · F19/XMV8",
+          "min_delta_auroc": 0.0530429527,
+          "median_delta_auroc": 0.0530758555,
+          "max_delta_auroc": 0.0531003738,
+          "worst_abs_fpr_shift": 0.00075,
+          "strict_pass_settings": 9
+        },
+        {
+          "architecture": "transformer",
+          "cell": "TRANSFORMER · F25/XMV2",
+          "min_delta_auroc": 0.2634320515,
+          "median_delta_auroc": 0.2640519518,
+          "max_delta_auroc": 0.2644222467,
+          "worst_abs_fpr_shift": 0.0015,
+          "strict_pass_settings": 9
+        }
+      ],
+      "hai_long": [
+        {
+          "contrast": "F1-F0",
+          "metric": "AUROC",
+          "delta": 0.0187454097
+        },
+        {
+          "contrast": "F1-F0-C",
+          "metric": "AUROC",
+          "delta": 0.0217436115
+        },
+        {
+          "contrast": "F1-F0",
+          "metric": "AUPRC",
+          "delta": 0.0306077751
+        },
+        {
+          "contrast": "F1-F0-C",
+          "metric": "AUPRC",
+          "delta": 0.0386047133
+        },
+        {
+          "contrast": "F1-F0",
+          "metric": "eTaF1",
+          "delta": 0.0267216772
+        },
+        {
+          "contrast": "F1-F0-C",
+          "metric": "eTaF1",
+          "delta": 0.0354769653
+        }
+      ],
+      "professor_counts": [
+        {
+          "theme": "6G·네트워크 AI",
+          "unique_titles": 24
+        },
+        {
+          "theme": "의료 AI",
+          "unique_titles": 21
+        },
+        {
+          "theme": "기타 응용 AI",
+          "unique_titles": 13
+        },
+        {
+          "theme": "신뢰 AI·RAG·에이전트",
+          "unique_titles": 6
+        },
+        {
+          "theme": "산업·시계열 이상 진단",
+          "unique_titles": 1
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "proposal_scorecard",
+      "query": {
+        "engine": "duckdb",
+        "sql": "SELECT locked_cells, strict_settings, evidence_checks, hai_targeted_cells, ig_top1_agreement FROM read_csv_auto('deliverables/report_data/scorecard.csv')",
+        "description": "Loads the reviewed thesis-readiness scorecard.",
+        "executed_at": "2026-08-23T19:30:00+09:00"
+      }
+    },
+    {
+      "id": "g3_recomputation",
+      "query": {
+        "engine": "duckdb",
+        "sql": "SELECT architecture, cell, delta_auroc, ci_low, positive_seeds, max_abs_fpr_shift FROM read_csv_auto('deliverables/report_data/tep_cells.csv')",
+        "description": "Loads validated TEP primary-cell summary rows derived from commit bc6166f.",
+        "executed_at": "2026-08-23T19:30:00+09:00"
+      }
+    },
+    {
+      "id": "hai_recomputation",
+      "query": {
+        "engine": "duckdb",
+        "sql": "SELECT contrast, metric, delta FROM read_csv_auto('deliverables/report_data/hai_long.csv')",
+        "description": "Loads validated corrected-HAI-v2 global metric deltas derived from commit bc6166f.",
+        "executed_at": "2026-08-23T19:30:00+09:00"
+      }
+    },
+    {
+      "id": "sensitivity_decision",
+      "query": {
+        "engine": "duckdb",
+        "sql": "SELECT architecture, cell, min_delta_auroc, median_delta_auroc, max_delta_auroc, worst_abs_fpr_shift, strict_pass_settings FROM read_csv_auto('deliverables/report_data/sensitivity.csv')",
+        "description": "Loads the new locked 3-by-3 replacement sensitivity analysis.",
+        "executed_at": "2026-08-23T19:30:00+09:00"
+      }
+    },
+    {
+      "id": "lab_publications",
+      "query": {
+        "engine": "duckdb",
+        "sql": "SELECT theme, unique_titles FROM read_csv_auto('deliverables/report_data/professor_counts.csv')",
+        "description": "Loads rule-coded counts from the official 2024–2026 Superintelligence Lab publication lists.",
+        "executed_at": "2026-08-23T19:30:00+09:00"
+      }
+    }
+  ],
+  "package_info": {
+    "originUrl": "artifact://chum-thesis-proposal",
+    "controls": {
+      "edit": false,
+      "refresh": false
+    }
+  }
+}
