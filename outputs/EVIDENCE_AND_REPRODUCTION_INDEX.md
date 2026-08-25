@@ -23,6 +23,10 @@
 - 대치 감사: `experiments/audit_conditional_imputer.py`
 - 핵심 완료 규모: 340 tasks, 9,520 fault rows, 190,400 run rows
 - 결론: primary faults 4, 19, 25에서 두 architecture 채널 합의, 총 4개 consensus cells
+- 복원 분모: raw 308 cells(28 faults × 11 XMV), primary quality-gated 224 cells(28 × 8)
+- 복원 산출물: `outputs/architecture_chum_g3/G3_CELL_RESULTS.csv`, `G3_SELECTION_MANIFEST.json`
+- 다중비교: `outputs/chum_multiplicity/BH_FDR_RESULTS.csv`, `MULTIPLICITY_REPORT.md`; locked 4/4가 q=0.05·0.10 모두 생존
+- GRU 공개: `outputs/architecture_consensus/THREE_ARCH_COMPARISON.csv`; 4/4 raw 방향은 같지만 조건 차이로 consensus 제외
 
 ### Integrated Gradients baseline
 
@@ -74,10 +78,11 @@
 - 분석: `experiments/analyze_architecture_chum_sensitivity.py`
 - 대상: `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`
 - 교차 조건: residual block `5/10/20` × conditional draws `1/3/10` × TCN/Transformer × seeds `42–46`
-- 완료 규모: 390 model-condition tasks, 7,800 run rows, 2,000회 paired hierarchical bootstrap
+- 완료 규모: 390 model-condition tasks = 360 perturbations + 30 shared original baselines, 7,800 run rows, 2,000회 paired hierarchical bootstrap
 - 결론: **PASS**, 4/4 locked cells가 두 architecture에서 robust; 실제로 8개 architecture–cell 모두 9/9 설정에서 positive/material/seed-stable/CI-positive/FPR guardrail 통과
 - 전체 설정의 최소 ΔAUROC: `0.053043`; 최악 절대 pre-fault FPR 변화: `0.0015`
 - 주의: 기존 checkpoint를 재사용한 no-retraining sensitivity이며, causal effect나 독립 dataset 반복을 뜻하지 않음
+- 등록 감사: config·판정·결과가 Git 커밋 `63771cc`에 함께 처음 등장하므로 사전등록으로 주장하지 않고, 전 cell/setting에 동일 적용한 post-hoc rule로 보고 (`docs/PREREGISTRATION_AUDIT.md`)
 
 ## 3. 실험 조건 요약
 

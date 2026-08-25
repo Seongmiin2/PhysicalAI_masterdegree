@@ -1,0 +1,13 @@
+architecture,fault_id,channel,evaluation_condition,seeds,mean_delta_auroc,min_delta_auroc,mean_delta_auprc,positive_auroc_seeds,imputer_quality_gate_pass,run_delta_auroc_ci_low,run_delta_auroc_ci_high,raw_direction,consensus_included,exclusion_reason,source
+gru,4,10,legacy_mean_conditional,"42,43,44,45,46",0.41910146179402,0.2950582433554817,0.3268603240498934,5,false,,,POSITIVE,False,different_imputation_and_no_hierarchical_run_ci,bc6166f:GRU conditional evidence
+tcn,4,10,loo_residual_sample,"42,43,44,45,46",0.165284842192691,0.0984842815614617,0.1211450911991488,5,True,0.1241405274086378,0.205402549833887,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+transformer,4,10,loo_residual_sample,"42,43,44,45,46",0.1055024086378737,0.0767797134551494,0.088165530690457,5,True,0.0881871760797342,0.1199316777408638,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+gru,19,7,legacy_mean_conditional,"42,43,44,45,46",0.0143263953488372,0.012251204318937,0.0083662094150684,5,true,,,POSITIVE,False,different_imputation_and_no_hierarchical_run_ci,bc6166f:GRU conditional evidence
+tcn,19,7,loo_residual_sample,"42,43,44,45,46",0.1354698629568106,0.1296386627906977,0.0924891183890765,5,True,0.126955361295681,0.1438956063122923,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+transformer,19,7,loo_residual_sample,"42,43,44,45,46",0.1236563372093023,0.115697653654485,0.0852742332610412,5,True,0.1135250332225913,0.1333680440199335,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+gru,19,8,legacy_mean_conditional,"42,43,44,45,46",0.0289462790697674,0.025200103820598,0.0176361866229684,5,false,,,POSITIVE,False,different_imputation_and_no_hierarchical_run_ci,bc6166f:GRU conditional evidence
+tcn,19,8,loo_residual_sample,"42,43,44,45,46",0.0554896013289036,0.0503930024916943,0.0335125807492329,5,True,0.0505318812292358,0.0604330813953488,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+transformer,19,8,loo_residual_sample,"42,43,44,45,46",0.0530555357142857,0.0459663413621262,0.0319834063799518,5,True,0.0466735008305647,0.0601700913621262,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+gru,25,2,legacy_mean_conditional,"42,43,44,45,46",0.0217104609634551,0.0149924418604651,0.0141659453547352,5,true,,,POSITIVE,False,different_imputation_and_no_hierarchical_run_ci,bc6166f:GRU conditional evidence
+tcn,25,2,loo_residual_sample,"42,43,44,45,46",0.2899378363787376,0.2863139950166112,0.2358046337981372,5,True,0.2849726910299004,0.2945803280730896,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv
+transformer,25,2,loo_residual_sample,"42,43,44,45,46",0.2636760755813953,0.2533861295681062,0.1961382279831104,5,True,0.2547268625415282,0.2731959904485049,POSITIVE,True,,bc6166f:G3_CELL_SUMMARY.csv

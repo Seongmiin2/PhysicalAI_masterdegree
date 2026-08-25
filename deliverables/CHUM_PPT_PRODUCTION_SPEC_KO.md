@@ -370,6 +370,7 @@ F1과 F0-C 사이에 bracket `capacity matched`.
 - `ppt_assets/04_PRIMARY_SENSITIVITY_RANGES.png`를 `x=0.30, y=1.02, w=12.78, h=6.10`.
 - 우상단 hero badge:
   `390 tasks`  
+  `360 perturbation + 30 shared original`
   `no retraining`
 - 하단 우측 작은 조건 matrix:
   `block {5,10,20} × draws {1,3,10}`
@@ -380,7 +381,7 @@ F1과 F0-C 사이에 bracket `capacity matched`.
 - 범위가 매우 좁다는 사실을 강조하되, stochastic draw가 항상 영향이 없다는 보편 문장으로 확장하지 않는다.
 - material gate `+0.02` 선을 반드시 유지한다.
 
-**발표자 노트:** “이 실험은 새 모델을 학습한 것이 아니라 기존 checkpoint에서 중앙 방법의 두 고정값을 공격한 것입니다. 최악 조건의 최소 ΔAUROC도 +0.053이어서, 네 셀 모두 사전 기준을 넉넉히 통과했습니다.”  
+**발표자 노트:** “이 실험은 새 모델을 학습한 것이 아니라 기존 checkpoint에서 중앙 방법의 두 고정값을 공격한 것입니다. 390은 360개 perturbation과 세 fault에 공유되는 30개 original baseline의 합입니다. 최악 조건의 최소 ΔAUROC도 +0.053이어서 네 셀 모두 전 셀에 동일 적용한 post-hoc 기준을 넉넉히 통과했습니다.”
 **source footer:** `SENSITIVITY_DECISION.json · 2,000 paired hierarchical bootstrap repeats`
 
 ---

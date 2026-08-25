@@ -268,7 +268,7 @@ def professor_fit() -> None:
 def evidence_scorecard() -> None:
     fig, ax = canvas(
         "논문 집필 전 증거 패키지: 핵심 공격 경로를 모두 차단",
-        "모든 PASS는 raw table 재계산과 사전 고정 gate를 기준으로 한다",
+        "모든 PASS는 raw table 재계산과 전 셀 동일 gate를 기준으로 한다",
     )
     rows = [
         ("용량 효과인가?", "F1 vs F0-C", "PASS", "parameter gap 0.26% (HAI); event gain 반복"),

@@ -14,7 +14,7 @@
 
 본 연구의 기여는 새로운 최고성능 detector가 아니다. **추가 context가 실제로 사용되는지**를 사건·채널별로 감사하는 CHUM(Control-History Utility Mapping) 프로토콜과, 그 결론이 여러 모델 구조와 교란 설정을 넘어 유지되는지를 보여 주는 실증이다.
 
-논문 집필 전 필수 보강으로 정한 `TEP primary consensus sensitivity`도 완료했다. residual block length `5/10/20`, conditional draws `1/3/10`, TCN/Transformer, seed `42–46`을 교차한 390개 조건에서 네 개 locked cell이 모두 사전등록 기준을 통과했다. 따라서 **현재 남은 필수 실험은 없다.** 추가 seed나 세 번째 데이터셋은 일반성을 넓히는 후속 연구이지, 현재 주장을 성립시키는 선행조건은 아니다.
+논문 집필 전 필수 보강으로 정한 `TEP primary consensus sensitivity`도 완료했다. residual block length `5/10/20`, conditional draws `1/3/10`, TCN/Transformer, seed `42–46`을 교차한 390개 model-condition task에서 네 개 locked cell이 모두 동일한 robustness 기준을 통과했다. 390은 360개 perturbation과 세 fault에 공유되는 30개 original baseline의 합이다. 이 기준은 Git 이력상 결과보다 먼저 등록되었음을 입증할 수 없으므로 **post-hoc이지만 전 셀과 설정에 동일하게 적용한 규칙**으로 보고한다. 따라서 현재 남은 필수 실험은 없으며, 추가 seed나 세 번째 데이터셋은 일반성을 넓히는 후속 연구다.
 
 ---
 
@@ -22,7 +22,9 @@
 
 산업 시계열 이상 탐지에서는 센서 상태뿐 아니라 제어 이력까지 입력하면 성능이 향상될 수 있다. 그러나 단순한 평균 성능 비교는 어떤 사건에서 어떤 제어 채널이 실제 정보를 제공했는지, 향상이 단순한 모델 용량 증가인지, 특정 architecture의 inductive bias인지, 또는 비현실적인 feature masking이 만든 분포 이동인지 구분하지 못한다. 본 연구는 이를 해결하기 위해 **Control-History Utility Mapping(CHUM)**을 제안한다. CHUM은 sensor-only 모델(F0), sensor+control 모델(F1), capacity-matched sensor-only 모델(F0-C)을 비교하고, 정상 학습 데이터만으로 구축한 leave-one-channel-out 조건부 대치, 조건별 validation threshold, pre-fault FPR guardrail, seed/run 계층 bootstrap, cross-architecture consensus를 결합해 event–channel별 추가 예측 정보의 유용성을 판정한다.
 
-Tennessee Eastman Process(TEP)의 2,800 runs와 28 faults에서 GRU·TCN·compact Transformer를 비교한 결과, TCN과 Transformer가 동일한 7개 event-level GAIN faults를 식별했다. 더 엄격한 channel-level 판정에서는 `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`의 네 셀이 두 architecture에서 합의됐다. 기준 설정에서 ΔAUROC는 TCN `0.0555–0.2899`, Transformer `0.0531–0.2637`이었고 모든 셀에서 5/5 seed가 같은 방향이며 run-level bootstrap CI 하한이 0보다 컸다. Integrated Gradients는 locked primary architecture–fault 셀 8개 중 7개에서 CHUM과 동일한 top channel을 선택했다. HAI 21.03 corrected v2에서는 F1이 F0보다 AUROC `+0.0187`, AUPRC `+0.0306`, eTaF1 `+0.0267` 높았고, 직접 공격된 5개 event–channel 셀에서 조건부 대치 후 score 감소가 3/3 seed에서 반복됐다. 마지막으로 3개 block length와 3개 draw count를 교차한 민감도 실험에서 네 locked cell 모두 두 architecture의 9/9 설정을 통과했다.
+Tennessee Eastman Process(TEP)의 2,800 runs와 28 faults에서 GRU·TCN·compact Transformer를 비교한 결과, TCN과 Transformer가 동일한 7개 event-level GAIN faults를 식별했다. 더 엄격한 channel-level 판정에서는 `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`의 네 셀이 두 architecture에서 합의됐다. 기준 설정에서 ΔAUROC는 TCN `0.0555–0.2899`, Transformer `0.0531–0.2637`이었고 모든 셀에서 5/5 seed가 같은 방향이며 run-level bootstrap CI 하한이 0보다 컸다. 224개 quality-gated 후보 전체에 BH-FDR을 적용했을 때 네 locked cell은 q=0.05와 q=0.10에서 모두 생존했다. Integrated Gradients는 locked primary architecture–fault 셀 8개 중 7개에서 CHUM과 동일한 top channel을 선택했다. HAI 21.03 corrected v2에서는 F1이 F0보다 AUROC `+0.0187`, AUPRC `+0.0306`, eTaF1 `+0.0267` 높았고, 직접 공격된 5개 event–channel 셀에서 조건부 대치 후 score 감소가 3/3 seed에서 반복됐다. 마지막으로 3개 block length와 3개 draw count를 교차한 민감도 실험에서 네 locked cell 모두 두 architecture의 9/9 설정을 통과했다.
+
+증거 강도는 같게 취급하지 않는다. TEP는 다중 architecture·run-level CI·BH-FDR·민감도 격자를 통과한 **확립된 주 근거**이고, HAI는 3 seeds와 직접 공격 channel에 제한된 **제한적 외부 지지**다.
 
 이 결과는 제어 이력의 유용성이 사건과 채널에 따라 이질적이며, 일부 조합에서는 모델 구조와 대치 hyperparameter에 강건한 추가 정보를 제공한다는 점을 지지한다. 단, CHUM은 조건부 예측 정보의 감사 방법이며 물리적 인과, controller causality 또는 root-cause identification을 주장하지 않는다.
 
@@ -109,7 +111,7 @@ FIT·TimeSHAP·learned perturbation 연구는 conditional context와 시계열 a
 - cross-architecture consensus
 - IG 보조 삼각검증
 - 외부 HIL 데이터에서의 제한적 반복
-- 사전등록 sensitivity grid
+- 전 셀에 동일 적용한 post-hoc sensitivity grid
 
 ---
 
@@ -253,7 +255,7 @@ TEP는 방법 개발과 strict consensus의 주 근거다. HAI는 산업·HIL �
 | IG baseline | architecture–fault–channel | Integrated Gradients | 880 rows | 보조 attribution 일치 |
 | HAI external v2 | global/event | F0/F1/F0-C | 9 models, 450 event rows | 제한적 외부 지지 |
 | HAI conditional | attack–channel | LOO-sample/zero | 171 tasks, 8,550 event rows | 직접 공격 channel utility |
-| Primary sensitivity | locked cell | block 5/10/20 × draws 1/3/10 | 390 tasks, 7,800 run rows | 고정값 의존성 반증 |
+| Primary sensitivity | locked cell | block 5/10/20 × draws 1/3/10 | 390 tasks = 360 perturbation + 30 shared original, 7,800 run rows | 고정값 의존성 반증 |
 
 ### 11.2 지표
 
@@ -283,6 +285,18 @@ TCN과 Transformer는 동일한 7개 GAIN faults `4, 7, 19, 23, 24, 25, 26`을 �
 | 25 | +0.2916 | +0.2776 | 큰 공통 gain |
 | 26 | +0.3868 | +0.4154 | event gain은 크지만 channel quality gate에서 주의 |
 
+GRU의 대표 seed-42 event-level 결과도 숨기지 않는다.
+
+| GRU variant | 입력 | AUROC | AUPRC | 탐지 지연 |
+|---|---|---:|---:|---:|
+| F0 | XMEAS | 0.7508 | 0.8995 | 51.9 |
+| F1 | XMEAS+XMV | 0.8196 | 0.9312 | 24.6 |
+| F0-C | XMEAS, capacity-matched | 0.7493 | 0.8989 | 49.4 |
+
+F0→F1의 event-level 방향은 model seed 42–44에서 반복됐고 F0-C는 이득을
+재현하지 못했다. 이는 추가 예측 정보의 근거이지 인과적 controller effect의
+근거가 아니다.
+
 ### 12.2 TEP channel-level consensus
 
 | Locked cell | TCN ΔAUROC | Transformer ΔAUROC | TCN CI 하한 | Transformer CI 하한 | 기준 설정 최대 abs(ΔFPR) |
@@ -294,6 +308,40 @@ TCN과 Transformer는 동일한 7개 GAIN faults `4, 7, 19, 23, 24, 25, 26`을 �
 
 모든 architecture–cell에서 5/5 seed가 positive였다. `F26/XMV4`는 raw effect가 컸지만 imputer distribution quality를 만족하지 못해 최종 셀에서 제외했다. 즉 gate가 형식적 장식이 아니라 실제 탈락 기준으로 작동했다.
 
+#### 후보 분모와 BH-FDR
+
+G3는 28 faults × archive XMV 11개 = 308개 raw cell을 전수 계산했다.
+XMV5·XMV9는 상수이고 XMV4는 primary LOO-residual imputer quality gate를
+통과하지 못했다. 따라서 confirmatory candidate family는 28 faults ×
+8 reliable channels = **224 cells**다. 20개 held-out run을 paired cluster로
+삼아 두 architecture와 5 seeds의 delta를 평균한 뒤 200,000회 단측
+sign-flip permutation을 시행하고, 224개 p-value 전체에 BH를 적용했다.
+
+- q=0.05: 42/224 cells 생존
+- q=0.10: 48/224 cells 생존
+- 기존 locked cells: q=0.05에서 4/4, q=0.10에서 4/4 생존
+- locked cell BH q-value: 모두 `0.000056`(Monte Carlo resolution 기준)
+
+상세 결과는 `outputs/chum_multiplicity/BH_FDR_RESULTS.csv`와
+`MULTIPLICITY_REPORT.md`에 공개했다.
+
+#### GRU channel 결과 공개와 consensus 제외 사유
+
+| Locked cell | GRU conditional ΔAUROC | TCN LOO ΔAUROC | Transformer LOO ΔAUROC | GRU raw 방향 | GRU consensus 사용 |
+|---|---:|---:|---:|:---:|:---:|
+| F4/XMV10 | +0.4191 | +0.1653 | +0.1055 | 5/5 positive | 제외 |
+| F19/XMV7 | +0.0143 | +0.1355 | +0.1237 | 5/5 positive | 제외 |
+| F19/XMV8 | +0.0289 | +0.0555 | +0.0531 | 5/5 positive | 제외 |
+| F25/XMV2 | +0.0217 | +0.2899 | +0.2637 | 5/5 positive | 제외 |
+
+GRU raw 방향은 4/4 cell에서 TCN·Transformer locked 방향과 같았다. 그러나
+GRU는 legacy conditional-mean 대치이고 TCN·Transformer 확정판은 LOO
+residual sampling이다. GRU에는 동일한 paired hierarchical run CI가 없고,
+legacy imputer gate에서 XMV8·XMV10이 탈락했다. 따라서 이를 3-architecture
+consensus로 승격하지 않았다. 이는 GRU 불일치나 음성 결과 은폐가 아니라
+**조건 상이로 인한 비교 제외**다. 전량 표는
+`outputs/architecture_consensus/THREE_ARCH_COMPARISON.csv`에 있다.
+
 ### 12.3 IG 교차검증
 
 | 집합 | 셀 수 | Spearman 중앙값 | top-1 일치 |
@@ -302,6 +350,14 @@ TCN과 Transformer는 동일한 7개 GAIN faults `4, 7, 19, 23, 24, 25, 26`을 �
 | Negative/exploratory | 8 | 0.1005 | 1/8, 12.5% |
 
 IG와 CHUM은 estimand가 다르므로 동일값을 기대하지 않는다. 중요한 점은 모든 fault에서 자동으로 일치한 것이 아니라 CHUM 효과가 강한 primary 집합에서만 높은 top-1 합의가 나타났다는 것이다.
+
+불일치 1건은 **TCN/F4**다. IG는 XMV6을 top-1
+(`normalized XMV IG=0.2608`)로, CHUM은 XMV10을 top-1로 선택했다. IG에서
+XMV10도 0.2481로 근접한 2위였지만, conditional replacement의 ΔAUROC는
+XMV10 `+0.1653`, XMV6 `+0.0021`로 크게 달랐다. 즉 순간 score gradient는
+XMV6에도 민감했지만 정상 조건부 대치 후 탐지 utility는 XMV10에 집중됐다.
+상관·중복 입력에서 local sensitivity와 conditional necessity가 갈릴 수
+있다는 사례이며, IG를 보조 삼각검증으로만 사용한 이유다.
 
 ### 12.4 HAI 21.03 corrected v2
 
@@ -316,13 +372,26 @@ IG와 CHUM은 estimand가 다르므로 동일값을 기대하지 않는다. 중�
 - 모든 전역 차이는 3/3 seed에서 같은 방향
 - 직접 공격된 5개 event–channel 셀의 normalized score loss: `+0.0588–+0.2146`, 모두 3/3 seed positive
 
-HAI 결과는 external support다. attack target이 직접 control point인 셀을 포함하므로 공격받지 않은 control context의 보편적 유용성까지 입증하지 않는다.
+3개 model seed에 대한 t 기반 95% CI는 다음과 같다. 표본이 3개뿐이므로
+분포 가정에 민감한 기술적 불확실성 구간이며 독립 데이터셋 반복으로
+해석하지 않는다.
+
+| F1−F0 metric | mean delta | 95% t CI |
+|---|---:|---:|
+| AUROC | +0.018745 | [+0.008222, +0.029269] |
+| AUPRC | +0.030608 | [+0.023288, +0.037927] |
+| eTaF1 | +0.026722 | [−0.009483, +0.062926] |
+
+HAI 결과는 **제한적 외부 지지**다. AUROC/AUPRC 구간은 양수지만 eTaF1
+구간은 0을 포함하고, attack target이 직접 control point인 셀을 포함한다.
+따라서 공격받지 않은 control context의 보편적 유용성이나 TEP와 동급의
+확립된 증거로 해석하지 않는다.
 
 ---
 
 ## 13. 새로 완료한 최종 민감도 실험
 
-### 13.1 사전 고정 설계
+### 13.1 전 셀에 동일 적용한 post-hoc 설계
 
 - locked cells: `F4/XMV10`, `F19/XMV7`, `F19/XMV8`, `F25/XMV2`
 - block length: `5, 10, 20`
@@ -331,6 +400,19 @@ HAI 결과는 external support다. attack target이 직접 control point인 셀�
 - seeds: `42–46`
 - 기존 checkpoint 재사용, 재학습 없음
 - paired hierarchical bootstrap 2,000회
+
+실행 task 390개의 구성은 **360 perturbation + 30 original baseline**이다.
+360은 4 cells × 2 architectures × 5 seeds × 9 settings이고, original은
+두 F19 channel이 같은 fault baseline을 공유하므로 3 unique faults ×
+2 architectures × 5 seeds = 30이다. `SENSITIVITY_CELL_RESULTS.csv`의
+360행은 delta가 정의되는 perturbation만 담고, raw fault/run 표의 390
+task에는 공유 baseline 30개가 포함된다. 추가 30개는 negative control,
+실패 재실행 또는 누락분이 아니다.
+
+Git 이력에서는 config·판정 JSON·결과 CSV가 같은 커밋에 처음 등장해
+prospective preregistration을 입증할 수 없다. 따라서 이 절의 기준은
+post-hoc robustness rule로 보고하며, 감사 근거는
+`docs/PREREGISTRATION_AUDIT.md`에 공개한다.
 
 architecture–cell 하나가 robust하려면 다음을 요구했다.
 
@@ -371,6 +453,8 @@ architecture–cell 하나가 robust하려면 다음을 요구했다.
 - G3 340 tasks, IG 880 rows, HAI v2 9 models, HAI conditional 171 tasks를 key duplicate 없이 완료했다.
 - 기존 최종 raw evidence validator 18/18 checks가 PASS했다.
 - 새 sensitivity는 config·runner·analyzer·manifest·raw tables·2,000회 bootstrap 요약을 보존했다.
+- sensitivity 기준은 사전등록으로 주장하지 않고, 전 cell/setting에 동일 적용한 post-hoc rule로 표시했다.
+- G3 raw 308 cells와 quality-gated 224-cell 분모, BH-FDR 결과를 공개했다.
 - 연구실 publication 전수표와 분류 규칙도 코드로 재생성 가능하다.
 
 ---
@@ -379,9 +463,9 @@ architecture–cell 하나가 robust하려면 다음을 요구했다.
 
 1. **문제정의 기여:** “control을 추가하면 성능이 오르는가”를 “어떤 event–channel에서 control history가 조건부 정보를 제공하는가”로 바꾼다.
 2. **방법 기여:** capacity control, 정상분포 대치, condition calibration, FPR guardrail, hierarchical uncertainty, architecture consensus를 하나의 audit protocol로 결합한다.
-3. **실증 기여:** TEP에서 4개 architecture-robust channel cells와 7개 event-level gain faults를 확인한다.
+3. **실증 기여:** TEP에서 224-cell BH-FDR을 포함해 4개 architecture-robust channel cells와 7개 event-level gain faults를 확립한다.
 4. **강건성 기여:** 3×3 replacement sensitivity에서 4/4 locked cells가 두 architecture에서 유지됨을 보인다.
-5. **외부 지지:** HAI corrected v2에서 global gain과 5개 directly attacked control cells의 conditional support를 제시한다.
+5. **제한적 외부 지지:** HAI corrected v2의 3 seeds에서 global gain과 5개 directly attacked control cells의 conditional support를 제시하되 TEP와 동급으로 두지 않는다.
 6. **연구 관행 기여:** 실패한 imputer cell과 잘못된 HAI v1을 숨기지 않고 exclusion rule과 invalidation trail을 공개한다.
 
 ---
@@ -400,7 +484,7 @@ architecture–cell 하나가 robust하려면 다음을 요구했다.
 - conditional replacement는 observational test이며 intervention이 아니다.
 - 선택된 channel은 fault의 물리적 원인이나 최적 제어변수라는 뜻이 아니다.
 - TEP 5 seeds는 최적화 변동성 반복이지 독립 dataset 5개가 아니다. 양측 exact sign-flip test 최소 p값은 0.0625이므로 seed-level `p<0.05`를 주장하지 않는다.
-- HAI는 3 seeds이고 직접 공격 control 셀을 포함하므로 external evidence의 범위가 제한된다.
+- HAI는 3 seeds이고 직접 공격 control 셀을 포함하며 eTaF1 차이의 t 기반 95% CI가 0을 포함하므로 external evidence의 범위가 제한된다.
 - imputer quality gate를 통과하지 못하는 channel에는 CHUM의 결론을 내리지 않는다.
 - 전체 산업·통신·의료 도메인으로의 보편 일반화는 후속 검증이 필요하다.
 

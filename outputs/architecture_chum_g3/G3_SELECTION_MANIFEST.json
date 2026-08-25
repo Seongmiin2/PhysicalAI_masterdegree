@@ -1,0 +1,115 @@
+{
+  "status": "COMPLETE_RESTORED_FROM_GIT_EVIDENCE",
+  "source_commit": "bc6166f",
+  "source_cell_results": "outputs/architecture_chum_g3/G3_CELL_RESULTS.csv",
+  "primary_mode": "loo_sample",
+  "consensus_architectures": [
+    "tcn",
+    "transformer"
+  ],
+  "evaluated_faults": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "evaluated_fault_count": 28,
+  "archive_xmv_channels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "archive_xmv_count": 11,
+  "missing_archive_channel": 12,
+  "constant_channels": [
+    5,
+    9
+  ],
+  "nonconstant_channel_count": 9,
+  "quality_gate": {
+    "method": "loo_residual_sample",
+    "rules": {
+      "observed_std": "> 1e-12",
+      "std_ratio": "0.75 <= value <= 1.25",
+      "wasserstein": "<= 0.1",
+      "ks_statistic": "<= 0.1",
+      "absolute_lag1_difference": "<= 0.2"
+    },
+    "reliable_channels": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "reliable_channel_count": 8,
+    "failed_nonconstant_channels": [
+      4
+    ],
+    "failed_constant_channels": [
+      5,
+      9
+    ],
+    "failed_channel_count": 3
+  },
+  "raw_evaluated_cell_count": 308,
+  "primary_candidate_cell_formula": "28 faults x 8 reliable channels",
+  "primary_candidate_cell_count": 224,
+  "excluded_raw_cell_count": 84,
+  "locked_cells": [
+    {
+      "fault_id": 4,
+      "channel": 10
+    },
+    {
+      "fault_id": 19,
+      "channel": 7
+    },
+    {
+      "fault_id": 19,
+      "channel": 8
+    },
+    {
+      "fault_id": 25,
+      "channel": 2
+    }
+  ],
+  "locked_cell_count": 4,
+  "restored_cell_rows": 12320,
+  "restored_cell_sha256": "ad897756108573b5b42593e7add74b7b0b95945199f893461fadbba576f9db09"
+}

@@ -95,6 +95,21 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 | 데이터 누수다 | run/episode 분리와 HAI exact-overlap 제거 |
 | 실패 결과를 숨겼다 | HAI v1 명시적 invalidation과 격리 |
 
+## 다중비교 분모와 GRU 공개
+
+- G3 raw family: 28 faults × 11 archive XMV = 308 cells.
+- XMV5·XMV9는 상수, XMV4는 primary LOO imputer quality gate 탈락.
+- 최종 confirmatory family: 28 faults × 8 reliable channels = **224 cells**.
+- 20개 paired test-run cluster의 단측 sign-flip permutation p-value에 BH를
+  적용한 결과 q=0.05에서 42/224, q=0.10에서 48/224가 생존했다.
+- Locked 4 cells는 q=0.05와 q=0.10에서 모두 4/4 생존했다.
+- GRU도 네 셀 모두 5/5 seed 양의 방향이었지만 legacy conditional mean과
+  run-level CI 부재라는 조건 차이 때문에 TCN·Transformer consensus에는
+  넣지 않았다. 이는 GRU 불일치가 아니라 비교 조건 상이다.
+
+정본 산출물은 `outputs/architecture_chum_g3/G3_SELECTION_MANIFEST.json`,
+`outputs/chum_multiplicity/`, `outputs/architecture_consensus/`에 있다.
+
 ## 추가 실험에 대한 냉정한 결정
 
 ### 2026-08-23 완료한 마지막 필수 보강
@@ -108,6 +123,11 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 - 판정: 효과 방향, ΔAUROC 크기, run CI 하한, 최대 절대 ΔFPR, consensus 유지 여부
 
 결과는 **PASS**다. 4/4 locked cells가 두 architecture에서 robust했고, 8개 architecture–cell 모두 9/9 설정에서 positive·material·seed-stable·CI-positive·FPR guardrail을 통과했다. 전체 설정의 최소 ΔAUROC는 `0.053043`, 최대 절대 ΔFPR은 `0.0015`였다. 이 실험은 central method의 두 고정 선택(block length=20, draws=3)에 대한 공격을 직접 막는다.
+
+390 tasks는 360 perturbation(`4×2×5×9`)과 세 unique fault에 공유되는
+30 original baseline(`3×2×5`)의 합이다. 판정 기준은 Git 이력상 결과보다
+먼저 등록되었음을 입증할 수 없어, 사전등록이 아니라 전 cell/setting에
+동일 적용한 post-hoc robustness rule로 보고한다.
 
 ### 교수 피드백에 따라 선택할 보강
 

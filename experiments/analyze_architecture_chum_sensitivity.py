@@ -12,6 +12,25 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def markdown_table(frame: pd.DataFrame) -> str:
+    columns = list(frame.columns)
+    lines = [
+        "| " + " | ".join(columns) + " |",
+        "|" + "|".join("---" for _ in columns) + "|",
+    ]
+    for row in frame.itertuples(index=False, name=None):
+        values = []
+        for value in row:
+            if pd.isna(value):
+                values.append("")
+            elif isinstance(value, (float, np.floating)):
+                values.append(f"{float(value):.6g}")
+            else:
+                values.append(str(value))
+        lines.append("| " + " | ".join(values) + " |")
+    return "\n".join(lines)
+
+
 def attach_deltas(frame: pd.DataFrame) -> pd.DataFrame:
     keys = ["architecture", "seed", "fault_id"]
     original = frame.loc[
@@ -231,7 +250,10 @@ def main() -> None:
         "",
         "## Decision",
         "",
-        f"**{decision}**: `{consensus_cells}/{len(consensus)}` locked primary cells retained the preregistered two-architecture robustness rule across residual block lengths 5/10/20 and conditional draw counts 1/3/10.",
+        f"**{decision}**: `{consensus_cells}/{len(consensus)}` locked primary cells retained the uniformly applied post-hoc two-architecture robustness rule across residual block lengths 5/10/20 and conditional draw counts 1/3/10.",
+        "Git history does not establish prospective preregistration: the config, analyzer, decision JSON, and result CSVs first appear together in commit `63771cc`.",
+        "",
+        "The 390 executed model-condition tasks comprise 360 perturbations (`4 cells x 2 architectures x 5 seeds x 9 settings`) and 30 shared original baselines (`3 unique faults x 2 architectures x 5 seeds`). The two fault-19 channels share the same original baseline. Therefore the cell-delta table has 360 rows while the raw fault/run tables retain all 390 tasks.",
         "",
         "## Locked Decision Rule",
         "",
@@ -239,11 +261,11 @@ def main() -> None:
         "",
         "## Architecture-Cell Robustness",
         "",
-        architecture_cells.round(6).to_markdown(index=False),
+        markdown_table(architecture_cells.round(6)),
         "",
         "## Cross-Architecture Consensus",
         "",
-        consensus.round(6).to_markdown(index=False),
+        markdown_table(consensus.round(6)),
         "",
         "## Interpretation Boundary",
         "",

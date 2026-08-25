@@ -202,7 +202,7 @@ def main() -> None:
             ],
             "blocks": [
                 {"id": "title", "type": "markdown", "body": "# CHUM 연구 기획 및 증거 보고서"},
-                {"id": "summary", "type": "markdown", "body": "## Decision\n\n**MANUSCRIPT-READY.** Four locked TEP event–channel cells passed two-architecture consensus and the preregistered 3×3 replacement sensitivity. HAI 21.03 provides limited external support. The defensible claim is predictive context utility, not causal control or root-cause identification."},
+                {"id": "summary", "type": "markdown", "body": "## Decision\n\n**MANUSCRIPT-READY.** Four locked TEP event–channel cells passed two-architecture consensus and a uniformly applied post-hoc 3×3 replacement sensitivity. HAI 21.03 provides limited external support. The defensible claim is predictive context utility, not causal control or root-cause identification."},
                 {"id": "metrics", "type": "metric-strip", "cardIds": ["locked_cells_card", "strict_settings_card", "evidence_checks_card", "hai_cells_card", "ig_agreement_card"]},
                 {"id": "fit_intro", "type": "markdown", "body": "## Advisor and lab fit\n\nOfficial 2024–2026 lab records show repeated work in 6G/network AI, medical AI, reliable AI/RAG, multi-model comparison, time-series prediction, and system decision-making. CHUM fits best as a trustworthy context-utilization audit rather than as a new industrial detector."},
                 {"id": "professor_chart_block", "type": "chart", "chartId": "professor_chart"},
