@@ -4,7 +4,8 @@
   "locked_topic": null,
   "locked_research_question": null,
   "candidate_topics": [
-    "Control-History Utility Mapping (CHUM) for Industrial Time-Series Anomaly Detection"
+    "Control-Aware Predictive Anomaly Detection",
+    "FAVE-TS / Applicability-Aware Retrieval for Industrial Time Series"
   ],
   "confirmed_findings": [
     "TEP G3 completed 340 tasks and passed the locked architecture-consensus gate: primary faults 4, 19, and 25 retained channel-level conditional utility in both TCN and Transformer.",
@@ -25,7 +26,7 @@
     "Optional external validation without directly attacked control targets"
   ],
   "pending_human_approval": true,
-  "last_mission": "chum_g3_hai_external_validation_completed",
+  "last_mission": "mission_001_topic_validation",
   "active_quality_policy": "RESEARCH_QUALITY_OVERRIDE",
   "recommended_gate": "Evidence package complete; await explicit human approval before locking the final title and thesis claim, then begin manuscript drafting",
   "candidate_judgments": {
