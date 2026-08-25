@@ -1,5 +1,14 @@
 # Physical AI Thesis — CCRDL
 
+> **저장소 상태: 완료된 선행 단계 (2026-08 중순)**
+>
+> 이 저장소는 제어 이력의 fault 탐지 기여를 검증한 단계이며,
+> 결과는 재현되었으나 인과 주장은 하지 않았습니다(`MIXED_MECHANISM`).
+> 후속 연구는 event–channel utility audit으로 질문을 좁힌
+> [CHUM](https://github.com/Seongmiin2/Thesis-Orchestrator)입니다.
+>
+> 이 저장소의 GRU 결과는 CHUM의 3-architecture 비교표에 인용됩니다.
+
 Control-conditioned normal dynamics and residual evolution for early anomaly
 detection in industrial cyber-physical systems.
 

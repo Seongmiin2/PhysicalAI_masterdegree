@@ -12,6 +12,31 @@ F0: Past 41 XMEAS → Future 41 XMEAS
 F1: Past 41 XMEAS + Past 11 XMV → Future 41 XMEAS
 ```
 
+## 이 단계에서 CHUM으로 질문을 좁힌 이유
+
+F0 → F1 이득은 model seed 42–44에서 재현되었고, F1과 파라미터 수를
+0.60% 이내로 맞춘 sensors-only capacity control(F0-C)은 그 이득을
+재현하지 못했다. 그러나 다음 이유로 **제어 이력의 일반적 기전**을
+주장하지 않았다.
+
+1. 효과가 faults 4, 7, 19, 24–26에 집중되어 보편적이지 않았다.
+2. 정상 구간 미래예측 개선이 작고 seed 간 일관되지 않아, “제어가 정상
+   동역학을 설명한다”는 해석을 지지하지 못했다.
+3. setpoint, controller error, XMV12, operating mode, counterfactual
+   trajectory가 데이터에 없어 인과 식별이 불가능했다.
+4. residual decomposition(`c = x_hat_1 - x_hat_0`) 자체의 방법론적
+   신규성이 약했다.
+
+따라서 `MIXED_MECHANISM`은 음성 판정이 아니라, 재현된 예측 정보와
+식별할 수 없는 인과 기전을 구분한 보수적 판단이다. 질문을 다음과 같이
+좁혔다.
+
+> (이전) 제어 이력이 fault 탐지를 개선하는가?
+>
+> (이후) 어떤 event와 channel에서 추가 정보의 utility가 재현되는가?
+
+이 전환의 결과가 [CHUM](https://github.com/Seongmiin2/Thesis-Orchestrator)이다.
+
 ## 2. 지금까지 완료한 작업
 
 ### Synthetic pipeline
