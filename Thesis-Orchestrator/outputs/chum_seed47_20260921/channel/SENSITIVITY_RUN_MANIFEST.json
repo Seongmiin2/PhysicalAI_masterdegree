@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETE_FULL_CONFIG",
+  "config": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\configs\\chum_seed47_channel.yaml",
+  "config_sha256": "7a969c1345ff4b7e2341e4733d2300018562f685cf9874fe7a20e12adbf5e9d6",
+  "config_sha256_at_end": "7a969c1345ff4b7e2341e4733d2300018562f685cf9874fe7a20e12adbf5e9d6",
+  "device": "cuda",
+  "expected_tasks": 14,
+  "completed_tasks": 14,
+  "fault_rows": 14,
+  "run_rows": 280,
+  "test_runs_per_fault": 20,
+  "models": [
+    "tcn/seed-47",
+    "transformer/seed-47"
+  ],
+  "primary_cells": [
+    {
+      "fault_id": 4,
+      "channel": 10
+    },
+    {
+      "fault_id": 19,
+      "channel": 7
+    },
+    {
+      "fault_id": 19,
+      "channel": 8
+    },
+    {
+      "fault_id": 25,
+      "channel": 2
+    }
+  ],
+  "residual_block_lengths": [
+    20
+  ],
+  "conditional_sample_draws": [
+    3
+  ]
+}

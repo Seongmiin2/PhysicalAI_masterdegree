@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "pid": 24008,
+  "config_sha256": "8832bc2d5377bd7536b55b138f9eccab663d589c5f4ce6741fc2e3069e39347d",
+  "stage": "finished",
+  "completed_tasks": 6,
+  "updated_at": "2026-09-21T19:34:26+0900",
+  "task": "transformer_F0-C_seed47",
+  "epoch": 50,
+  "max_epochs": 50,
+  "best_epoch": 50
+}

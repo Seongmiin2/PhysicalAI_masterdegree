@@ -1,0 +1,19 @@
+{
+  "architecture": "tcn",
+  "variant": "F1",
+  "seed": 47,
+  "epochs_run": 25,
+  "best_epoch": 18,
+  "best_validation_mse": 0.5883943838573683,
+  "parameters": 9481,
+  "threshold": 0.8566739559173584,
+  "elapsed_seconds": 664.3154929000002,
+  "auroc": 0.8079461332404023,
+  "auprc": 0.9256910151583735,
+  "detected_run_ratio": 0.6803571428571429,
+  "missed_run_ratio": 0.3196428571428571,
+  "detection_delay_detected_only": 26.77690288713911,
+  "censored_delay_mean": 466.0375,
+  "prefault_sample_fpr": 0.009893905748828029,
+  "prefault_run_alarm_rate": 0.0
+}
