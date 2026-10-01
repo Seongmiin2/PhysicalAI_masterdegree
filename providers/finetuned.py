@@ -40,6 +40,9 @@ class FineTunedProvider(Provider):
         base = metadata["base_model_path"]
         self.max_length = metadata["max_length"]
         self.labels = metadata["labels"]
+        self.preprocessing = metadata.get("preprocessing", "raw")
+        if self.preprocessing not in {"raw", "normalized"}:
+            raise ValueError("Unsupported adapter preprocessing")
         if self.labels != ACTIONS:
             raise ValueError("Adapter action schema mismatch")
         self._tokenizer = AutoTokenizer.from_pretrained(base, local_files_only=True, trust_remote_code=False)
@@ -62,13 +65,14 @@ class FineTunedProvider(Provider):
             self._load()
         load_seconds = time.perf_counter() - started if cold_load else 0.0
         inference_started = time.perf_counter()
-        encoded = self._tokenizer(record_text(record), return_tensors="pt", truncation=True,
+        from .ops_features import inference_text
+        encoded = self._tokenizer(inference_text(record, self.preprocessing), return_tensors="pt", truncation=True,
                                   max_length=self.max_length).to(self.device_name)
         with torch.inference_mode():
             probabilities = self._model(**encoded).logits.float().softmax(-1)[0].cpu().tolist()
         index = max(range(len(probabilities)), key=probabilities.__getitem__)
         return {"next_action": self.labels[index], "confidence": probabilities[index],
-                "confidence_calibrated": False, "probabilities": dict(zip(self.labels, probabilities)),
+                "confidence_calibrated": False, "preprocessing": self.preprocessing, "probabilities": dict(zip(self.labels, probabilities)),
                 "needs_human_review": True, "authorizes_execution": False,
                 "provenance": "LOCAL_FINETUNED_SUGGESTION", "model": str(self.adapter_path),
                 "latency_seconds": time.perf_counter() - started,

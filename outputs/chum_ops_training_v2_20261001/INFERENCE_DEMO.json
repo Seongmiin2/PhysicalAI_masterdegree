@@ -1,0 +1,22 @@
+﻿{
+  "next_action": "MONITOR_RUNNING",
+  "confidence": 1.0,
+  "confidence_calibrated": false,
+  "preprocessing": "normalized",
+  "probabilities": {
+    "INVESTIGATE_FAILURE": 7.922432986875137e-15,
+    "MONITOR_RUNNING": 1.0,
+    "RESUME_INCOMPLETE": 9.30880569296414e-15,
+    "REVIEW_COMPLETED": 5.947777860504377e-12,
+    "REQUIRE_HUMAN_REVIEW": 1.4019625304423355e-12
+  },
+  "needs_human_review": true,
+  "authorizes_execution": false,
+  "provenance": "LOCAL_FINETUNED_SUGGESTION",
+  "model": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced",
+  "latency_seconds": 4.571949600009248,
+  "cold_load": true,
+  "load_seconds": 4.375442299991846,
+  "inference_seconds": 0.19650660001207143,
+  "retrieved_chunk_ids": []
+}

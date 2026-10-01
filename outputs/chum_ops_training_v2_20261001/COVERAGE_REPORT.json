@@ -1,0 +1,407 @@
+{
+  "status": "TRAINED_EXPERIMENTAL_NOT_PRODUCTION",
+  "task_id": "finetune-v2-5d145457502a49be90430d2645408d4b",
+  "config": {
+    "train": "outputs/chum_ops_training_v2_20261001/train_raw.jsonl",
+    "validation": "outputs/chum_ops_training_v2_20261001/validation_raw.jsonl",
+    "test": null,
+    "final_evaluation": false,
+    "base": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\qwen2.5-0.5b-instruct",
+    "output": "outputs/harness/models/chum-ops-v2-coverage",
+    "report": "outputs/chum_ops_training_v2_20261001/COVERAGE_REPORT.json",
+    "db": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\research.sqlite3",
+    "device": "cpu",
+    "variant": "coverage",
+    "preprocessing": "raw",
+    "epochs": 8,
+    "min_epochs": 3,
+    "patience": 2,
+    "max_length": 256,
+    "batch_size": 2,
+    "learning_rate": 0.0002,
+    "head_learning_rate": 0.001,
+    "cpu_threads": 4,
+    "seed": 47,
+    "rank": 8,
+    "alpha": 16,
+    "version": "chum-ops-lora-v2",
+    "class_loss_weights": [
+      1.4761456877109886,
+      0.6026339534836146,
+      1.4761456877109886,
+      0.44507467109440774,
+      0.0
+    ],
+    "dataset_hashes": {
+      "train": "5c37a500909a1707190eea1e01edbe8c283128c867519fa072b17b39e451668e",
+      "validation": "48297f4fa4015acc6218a50704dfc680069439913a05822d7b8aa5ba2338fbea"
+    },
+    "trainer_sha256": "6d177eaee82603a074381770128404b4471a91ad11a70b0f96f4303fec708447"
+  },
+  "trainable_parameters": 545152,
+  "total_parameters": 494582400,
+  "adapter_parameter_absolute_delta": 767.4147729873657,
+  "adapter_sha256": "cf5caf4ed1ce5e9768b46493e53d15bf8da6f90f610cdc461219153881504d0e",
+  "dependencies": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "peft": "0.18.0",
+    "safetensors": "0.8.0"
+  },
+  "counts": {
+    "train": {
+      "MONITOR_RUNNING": 54,
+      "REVIEW_COMPLETED": 13,
+      "INVESTIGATE_FAILURE": 1,
+      "RESUME_INCOMPLETE": 1
+    },
+    "validation": {
+      "MONITOR_RUNNING": 17,
+      "REVIEW_COMPLETED": 3
+    }
+  },
+  "missing_training_classes": [
+    "REQUIRE_HUMAN_REVIEW"
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.140243476146461,
+      "validation_accuracy": 1.0,
+      "validation_macro_f1": 0.4,
+      "validation_loss": 0.025448533892631176,
+      "elapsed_seconds": 55.7694050000282
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8419791188563619,
+      "validation_accuracy": 0.95,
+      "validation_macro_f1": 0.35428571428571426,
+      "validation_loss": 1.037828910350339,
+      "elapsed_seconds": 112.07267040002625
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9847114424105631,
+      "validation_accuracy": 0.95,
+      "validation_macro_f1": 0.35428571428571426,
+      "validation_loss": 0.23049416542053222,
+      "elapsed_seconds": 172.40973129996564
+    }
+  ],
+  "selected_epoch": 1,
+  "selection_metric": "validation macro F1; unweighted validation loss breaks ties",
+  "selected_validation": {
+    "accuracy": 1.0,
+    "macro_f1": 0.4,
+    "classwise": {
+      "INVESTIGATE_FAILURE": {
+        "support": 0,
+        "correct": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "MONITOR_RUNNING": {
+        "support": 17,
+        "correct": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "RESUME_INCOMPLETE": {
+        "support": 0,
+        "correct": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "REVIEW_COMPLETED": {
+        "support": 3,
+        "correct": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REQUIRE_HUMAN_REVIEW": {
+        "support": 0,
+        "correct": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "count": 20,
+    "predictions": [
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 2.081372205948997e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 4.311718234011753e-18,
+          "REVIEW_COMPLETED": 5.433465024794627e-23,
+          "REQUIRE_HUMAN_REVIEW": 3.424739592454241e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 5.472129631666564e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.3078017479219599e-17,
+          "REVIEW_COMPLETED": 1.310075315470211e-22,
+          "REQUIRE_HUMAN_REVIEW": 1.0211286925332173e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 6.363443542344298e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 7.895298326114515e-18,
+          "REVIEW_COMPLETED": 1.60007585657658e-22,
+          "REQUIRE_HUMAN_REVIEW": 3.401576743010779e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 2.1518291344205488e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 3.666615790713285e-18,
+          "REVIEW_COMPLETED": 6.169195201415917e-23,
+          "REQUIRE_HUMAN_REVIEW": 4.248392103494758e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 1.10448960418898e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 2.6610075637440473e-18,
+          "REVIEW_COMPLETED": 4.4960546691445325e-23,
+          "REQUIRE_HUMAN_REVIEW": 4.55453955448017e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 2.097584449646669e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 7.377328579881772e-18,
+          "REVIEW_COMPLETED": 6.091300551279498e-23,
+          "REQUIRE_HUMAN_REVIEW": 1.0903039684209202e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 3.623997046730777e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 6.529695513093065e-18,
+          "REVIEW_COMPLETED": 1.1488525937176995e-22,
+          "REQUIRE_HUMAN_REVIEW": 4.639429507579727e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 2.008857086677291e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 3.574362818537084e-18,
+          "REVIEW_COMPLETED": 3.497312586924039e-23,
+          "REQUIRE_HUMAN_REVIEW": 3.9287904719986205e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/tcn_F1_seed47",
+        "expected": "REVIEW_COMPLETED",
+        "predicted": "REVIEW_COMPLETED",
+        "confidence": 0.9999998807907104,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 1.9710699739050597e-09,
+          "MONITOR_RUNNING": 5.959122262311212e-08,
+          "RESUME_INCOMPLETE": 1.0929950278182332e-09,
+          "REVIEW_COMPLETED": 0.9999998807907104,
+          "REQUIRE_HUMAN_REVIEW": 2.6051044459650397e-13
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 9.113612614802222e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.9063495564472694e-17,
+          "REVIEW_COMPLETED": 3.0632269170234145e-22,
+          "REQUIRE_HUMAN_REVIEW": 2.344942430875523e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 1.3467350052288505e-16,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 2.6657129392995246e-17,
+          "REVIEW_COMPLETED": 1.2920887819601926e-22,
+          "REQUIRE_HUMAN_REVIEW": 8.600143918235194e-23
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 6.952233349337504e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.1019896989417222e-17,
+          "REVIEW_COMPLETED": 2.0671163485649936e-22,
+          "REQUIRE_HUMAN_REVIEW": 1.5317617643618888e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 5.194027870131541e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.6258357362460417e-17,
+          "REVIEW_COMPLETED": 2.011942659547367e-22,
+          "REQUIRE_HUMAN_REVIEW": 1.7364618291536235e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 4.880752734589538e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.606569210854579e-17,
+          "REVIEW_COMPLETED": 1.4932905957360705e-22,
+          "REQUIRE_HUMAN_REVIEW": 1.7954759454933557e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 5.819498835952288e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 1.5225088009012252e-17,
+          "REVIEW_COMPLETED": 1.7120008302045304e-22,
+          "REQUIRE_HUMAN_REVIEW": 1.327977787962169e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 7.22984111861071e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 3.6990845322714005e-17,
+          "REVIEW_COMPLETED": 2.275415891003943e-22,
+          "REQUIRE_HUMAN_REVIEW": 7.081065901269555e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 8.386602912684876e-17,
+          "MONITOR_RUNNING": 1.0,
+          "RESUME_INCOMPLETE": 2.572505731568682e-17,
+          "REVIEW_COMPLETED": 4.352179188024448e-22,
+          "REQUIRE_HUMAN_REVIEW": 3.336524180431506e-22
+        }
+      },
+      {
+        "group_id": "chum_training_budget_20260921/transformer_F1_seed47",
+        "expected": "REVIEW_COMPLETED",
+        "predicted": "REVIEW_COMPLETED",
+        "confidence": 1.0,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 1.3294869649627117e-09,
+          "MONITOR_RUNNING": 4.511792539574344e-08,
+          "RESUME_INCOMPLETE": 1.9615216118040735e-09,
+          "REVIEW_COMPLETED": 1.0,
+          "REQUIRE_HUMAN_REVIEW": 1.07467387853305e-12
+        }
+      },
+      {
+        "group_id": "harness_task/window-dry-run-ec69ebf1bd19",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING",
+        "confidence": 0.9986340403556824,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 2.0682101364855043e-07,
+          "MONITOR_RUNNING": 0.9986340403556824,
+          "RESUME_INCOMPLETE": 8.027880227245987e-08,
+          "REVIEW_COMPLETED": 0.001365634729154408,
+          "REQUIRE_HUMAN_REVIEW": 1.4343767840152566e-10
+        }
+      },
+      {
+        "group_id": "harness_task/window-dry-run-ec69ebf1bd19",
+        "expected": "REVIEW_COMPLETED",
+        "predicted": "REVIEW_COMPLETED",
+        "confidence": 0.6019362807273865,
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 8.790574611339252e-06,
+          "MONITOR_RUNNING": 0.3980497419834137,
+          "RESUME_INCOMPLETE": 5.222677373240003e-06,
+          "REVIEW_COMPLETED": 0.6019362807273865,
+          "REQUIRE_HUMAN_REVIEW": 1.2590516185184697e-08
+        }
+      }
+    ],
+    "loss": 0.025448533892631176,
+    "latency_seconds": 5.7876271000131965
+  },
+  "production_gate": false,
+  "limitations": [
+    "Rule-labeled examples are not independent human truth.",
+    "Operational generalization and confidence calibration remain unproven."
+  ],
+  "elapsed_seconds": 172.50796339998487,
+  "peak_gpu_memory_mb": null
+}

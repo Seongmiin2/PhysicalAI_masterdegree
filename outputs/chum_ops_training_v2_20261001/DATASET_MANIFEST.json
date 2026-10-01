@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-10-01T06:00:51.336973+00:00",
+  "database_event_high_watermark": 404,
+  "holdout_extracted": false,
+  "holdout_assignment_sha256": "ce5a276e844c3a859b279c3a1cbc18ad73a8d60ae9f0c096ce51754f0ff620f8",
+  "group_splits": {
+    "chum_training_budget_20260921/tcn_F0-C_seed47": "train",
+    "chum_training_budget_20260921/tcn_F0_seed47": "train",
+    "chum_training_budget_20260921/transformer_F0_seed47": "train",
+    "chum_seed47_20260921/tcn_F0_seed47": "train",
+    "chum_seed47_20260921/tcn_F1_seed47": "train",
+    "chum_seed47_20260921/tcn_F0-C_seed47": "train",
+    "chum_seed47_20260921/transformer_F0_seed47": "train",
+    "chum_seed47_20260921/transformer_F1_seed47": "train",
+    "harness_request/53410daf6aa14674b6167060fece04d5": "train",
+    "chum_window_pilot_20261001": "train",
+    "harness_task/window-smoke-4ef00198a8c5": "train",
+    "harness_task/finetune-2f69c1f884114a299cb5e73cdbca0eeb": "train",
+    "chum_training_budget_20260921/tcn_F1_seed47": "validation",
+    "chum_training_budget_20260921/transformer_F1_seed47": "validation",
+    "harness_task/window-dry-run-ec69ebf1bd19": "validation"
+  },
+  "counts": {
+    "train": {
+      "records": 69,
+      "labels": {
+        "MONITOR_RUNNING": 54,
+        "REVIEW_COMPLETED": 13,
+        "INVESTIGATE_FAILURE": 1,
+        "RESUME_INCOMPLETE": 1
+      },
+      "groups": 12
+    },
+    "validation": {
+      "records": 20,
+      "labels": {
+        "MONITOR_RUNNING": 17,
+        "REVIEW_COMPLETED": 3
+      },
+      "groups": 3
+    }
+  },
+  "source_v1_sha256": {
+    "train": "9fe3f326f7deba08df63bc83c5630556d2d03b5aaf3a20c4a6ba9bb2b04d3dee",
+    "validation": "cb2af4c03d70eaeb2274e70ff88335c56d30580e8c9b6a4354c65c05f5580446",
+    "test": "0dadbb7e256fe3ce52a12b77b66d5b1e687bcf9e69278bd5b13c90b0ef9797c9"
+  },
+  "output_sha256": {
+    "SOURCE_EVENT_SNAPSHOT.jsonl": "71d0702ef6222409760029ffed9d7f04a2fa27cd3c779c7b80adb4888a7a0999",
+    "train_normalized.jsonl": "578a4dcc6b55a01000caf20709c8b705e994ce739cb6fc008d6f998b5f5025a1",
+    "train_raw.jsonl": "5c37a500909a1707190eea1e01edbe8c283128c867519fa072b17b39e451668e",
+    "validation_normalized.jsonl": "08b356bf9cc26e5dc5b189e7427bfe34feeaaa88e5d1616c1b639237732dd8c6",
+    "validation_raw.jsonl": "48297f4fa4015acc6218a50704dfc680069439913a05822d7b8aa5ba2338fbea"
+  },
+  "lifecycle_task_assignments": {
+    "window-dry-run-ec69ebf1bd19": [
+      "validation",
+      "dry-run"
+    ],
+    "window-smoke-4ef00198a8c5": [
+      "train",
+      "smoke"
+    ],
+    "finetune-2f69c1f884114a299cb5e73cdbca0eeb": [
+      "train",
+      "finetune-v1"
+    ]
+  },
+  "human_approved_labels": false,
+  "production_ready": false,
+  "label_scope": "operational policy imitation only",
+  "limitations": [
+    "V1 inspected test is reused as training development data, not untouched evaluation.",
+    "Dry-run/smoke records represent actual software lifecycle only, not physical experiments.",
+    "Validation live-format examples come from one software dry-run, not independent physical experiments.",
+    "RESUME_INCOMPLETE has only one training incident; REQUIRE_HUMAN_REVIEW remains absent.",
+    "Epoch snapshots and adjacent live states are correlated; report group counts.",
+    "Main holdout was assigned after execution started and routine status monitoring, before V2 extraction.",
+    "Source snapshot can contain task result metadata for audit; model input projects only factual lifecycle status."
+  ]
+}

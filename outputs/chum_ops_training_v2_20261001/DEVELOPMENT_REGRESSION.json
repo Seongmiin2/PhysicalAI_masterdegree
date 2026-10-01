@@ -1,0 +1,2149 @@
+{
+  "created_at": "2026-10-01T06:12:42.628599+00:00",
+  "evaluation_role": "Consumed V1 test reused for V2 development; NOT untouched test",
+  "selection_sha256": "1ced43791eb8eea03eaa6dd078f7efe61149c3659558b78a88ae266d9ff03087",
+  "input_sha256": "0dadbb7e256fe3ce52a12b77b66d5b1e687bcf9e69278bd5b13c90b0ef9797c9",
+  "models": {
+    "v1": {
+      "accuracy": 0.4090909090909091,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 20,
+          "correct": 8,
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714285714285714
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 1,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 0.07142857142857142,
+          "recall": 1.0,
+          "f1": 0.13333333333333333
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 22,
+      "predictions": [
+        {
+          "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.4907598597346805e-05,
+            "MONITOR_RUNNING": 0.9999240636825562,
+            "RESUME_INCOMPLETE": 3.548924210061699e-10,
+            "REVIEW_COMPLETED": 6.102854240452871e-05,
+            "REQUIRE_HUMAN_REVIEW": 2.7462933260835598e-08
+          },
+          "confidence": 0.9999240636825562,
+          "latency_seconds": 0.35353109997231513,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.35352680005598813,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4dd9ab0204010aee589fe8a88daaf924e9a32e03b22a1881568175b4bb35defe",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.6681691451813094e-05,
+            "MONITOR_RUNNING": 0.9998754262924194,
+            "RESUME_INCOMPLETE": 5.870139929697871e-10,
+            "REVIEW_COMPLETED": 9.781580592971295e-05,
+            "REQUIRE_HUMAN_REVIEW": 4.1653997584489844e-08
+          },
+          "confidence": 0.9998754262924194,
+          "latency_seconds": 0.3774744999827817,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.37747070007026196,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "692dbd9f66267bb2ee58bc750643a645155af3740d56301b79c924bdfccf3992",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.5457129595451988e-05,
+            "MONITOR_RUNNING": 0.9999393224716187,
+            "RESUME_INCOMPLETE": 6.442741895540394e-10,
+            "REVIEW_COMPLETED": 3.513556293910369e-05,
+            "REQUIRE_HUMAN_REVIEW": 3.211948751413729e-08
+          },
+          "confidence": 0.9999393224716187,
+          "latency_seconds": 0.3700536999385804,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3700494000222534,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "16be39682d84e307247d4fe1c6478cde725f893e1c014cf2ee7f7df345d7cf9f",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.927873174485285e-05,
+            "MONITOR_RUNNING": 0.9999284744262695,
+            "RESUME_INCOMPLETE": 7.984993222187597e-10,
+            "REVIEW_COMPLETED": 4.218723552185111e-05,
+            "REQUIRE_HUMAN_REVIEW": 4.123038621628439e-08
+          },
+          "confidence": 0.9999284744262695,
+          "latency_seconds": 0.37060609995387495,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.37060099991504103,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "cb74c364a0f96d6d0b79665ae543f5fd675173fffd5c7310b77eb14b72c6ec9b",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.566952364053577e-05,
+            "MONITOR_RUNNING": 0.9998787641525269,
+            "RESUME_INCOMPLETE": 6.225173709850651e-10,
+            "REVIEW_COMPLETED": 8.5597021097783e-05,
+            "REQUIRE_HUMAN_REVIEW": 4.163531031053935e-08
+          },
+          "confidence": 0.9998787641525269,
+          "latency_seconds": 0.4098043000558391,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.4097998000215739,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "93f3836f308a3dfa06634c493d91ecbfe04cd6234942b0633914c38c1bc05311",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1903480956098065e-05,
+            "MONITOR_RUNNING": 0.9999568462371826,
+            "RESUME_INCOMPLETE": 5.026407068342564e-10,
+            "REVIEW_COMPLETED": 2.1213878426351584e-05,
+            "REQUIRE_HUMAN_REVIEW": 3.239642865082715e-08
+          },
+          "confidence": 0.9999568462371826,
+          "latency_seconds": 0.3689655000343919,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3689611000008881,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bca100cd18cbed89c93aaac822d924cb38e832568256252a11ba7951298b9015",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.3228177673881873e-05,
+            "MONITOR_RUNNING": 0.9999016523361206,
+            "RESUME_INCOMPLETE": 6.339194724702679e-10,
+            "REVIEW_COMPLETED": 5.5118787713581696e-05,
+            "REQUIRE_HUMAN_REVIEW": 3.7155803767063844e-08
+          },
+          "confidence": 0.9999016523361206,
+          "latency_seconds": 0.37419430003501475,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3741902000037953,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e332ce4f2b121542b8920cd56ce7162af888b50893749b51fbf2a26b4be712f3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.5624212614493445e-05,
+            "MONITOR_RUNNING": 0.9998502731323242,
+            "RESUME_INCOMPLETE": 5.411755488182735e-10,
+            "REVIEW_COMPLETED": 0.00011403944517951459,
+            "REQUIRE_HUMAN_REVIEW": 3.536165849027384e-08
+          },
+          "confidence": 0.9998502731323242,
+          "latency_seconds": 0.38167489995248616,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.38167120004072785,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "076016f03995604e9d502b1a0f8f5dc879166eacc1caddc7ee2ad4b47e8d1831",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2427950625569792e-06,
+            "MONITOR_RUNNING": 0.00022067523968871683,
+            "RESUME_INCOMPLETE": 2.160922804250731e-06,
+            "REVIEW_COMPLETED": 0.9997702240943909,
+            "REQUIRE_HUMAN_REVIEW": 4.627000635082368e-06
+          },
+          "confidence": 0.9997702240943909,
+          "latency_seconds": 0.3560080999741331,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3560038000578061,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.550673571022344e-06,
+            "MONITOR_RUNNING": 1.684498056420125e-05,
+            "RESUME_INCOMPLETE": 1.50403295151591e-07,
+            "REVIEW_COMPLETED": 0.9999734163284302,
+            "REQUIRE_HUMAN_REVIEW": 7.039808224362787e-06
+          },
+          "confidence": 0.9999734163284302,
+          "latency_seconds": 0.1933835999807343,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19337969995103776,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.6453174112029956e-07,
+            "MONITOR_RUNNING": 7.467704563168809e-05,
+            "RESUME_INCOMPLETE": 5.163973249011633e-09,
+            "REVIEW_COMPLETED": 0.9999243021011353,
+            "REQUIRE_HUMAN_REVIEW": 8.440538294962607e-07
+          },
+          "confidence": 0.9999243021011353,
+          "latency_seconds": 0.23267890000715852,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23267249995842576,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "673b52a9addb762fb2d2c31fc23d1743392b28c945d34f457b3f1b66bf313744",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.0219871998961025e-07,
+            "MONITOR_RUNNING": 9.514640987617895e-05,
+            "RESUME_INCOMPLETE": 5.263435465252542e-09,
+            "REVIEW_COMPLETED": 0.999903678894043,
+            "REQUIRE_HUMAN_REVIEW": 9.777901368579478e-07
+          },
+          "confidence": 0.999903678894043,
+          "latency_seconds": 0.21761709998827428,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21761239995248616,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9fadde34ec5e46388281801379deac467bae280ea8ef5a99d6e7c79539987299",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9304788168028608e-07,
+            "MONITOR_RUNNING": 9.005184256238863e-05,
+            "RESUME_INCOMPLETE": 5.184609186414946e-09,
+            "REVIEW_COMPLETED": 0.9999089241027832,
+            "REQUIRE_HUMAN_REVIEW": 8.713353167877358e-07
+          },
+          "confidence": 0.9999089241027832,
+          "latency_seconds": 0.2146151999477297,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21461080003064126,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "200fc4439de37311ab23240f2860925338a3c97af0441b31c6d81286ecccf7c7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.992963802877057e-07,
+            "MONITOR_RUNNING": 8.882187103154138e-05,
+            "RESUME_INCOMPLETE": 4.75424144497083e-09,
+            "REVIEW_COMPLETED": 0.9999101161956787,
+            "REQUIRE_HUMAN_REVIEW": 8.30274927920982e-07
+          },
+          "confidence": 0.9999101161956787,
+          "latency_seconds": 0.22386839997489005,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22386419994290918,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f4080920eedc61e4e45677f6f1c94c974f373ca0d9646ac0f51ea5d35bb72c04",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9458819622286683e-07,
+            "MONITOR_RUNNING": 8.487680315738544e-05,
+            "RESUME_INCOMPLETE": 4.609323145388089e-09,
+            "REVIEW_COMPLETED": 0.9999140501022339,
+            "REQUIRE_HUMAN_REVIEW": 8.031262836993847e-07
+          },
+          "confidence": 0.9999140501022339,
+          "latency_seconds": 0.2168601000448689,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21685560001060367,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7a72c9cdfea448af02ba82a40fdc7dda0432c67502340106b8c45e902a62c8f4",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.0522647048437648e-07,
+            "MONITOR_RUNNING": 8.553991938242689e-05,
+            "RESUME_INCOMPLETE": 5.759633658897201e-09,
+            "REVIEW_COMPLETED": 0.9999133348464966,
+            "REQUIRE_HUMAN_REVIEW": 9.462112871005957e-07
+          },
+          "confidence": 0.9999133348464966,
+          "latency_seconds": 0.22814979997929186,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22814589994959533,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19633221570d09131949dbe07df86034e0c4c1779462e3ccc76a6c149426c43a",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.052441487876422e-07,
+            "MONITOR_RUNNING": 9.106260404223576e-05,
+            "RESUME_INCOMPLETE": 4.785335239176902e-09,
+            "REVIEW_COMPLETED": 0.9999078512191772,
+            "REQUIRE_HUMAN_REVIEW": 8.517264404872549e-07
+          },
+          "confidence": 0.9999078512191772,
+          "latency_seconds": 0.24707029992714524,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2470665000146255,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6bacf16a57852aa866c1d50c4183576e91fefe204b3d653f3abcad5a60de191c",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2314080183605256e-07,
+            "MONITOR_RUNNING": 9.484148904448375e-05,
+            "RESUME_INCOMPLETE": 5.30220978234297e-09,
+            "REVIEW_COMPLETED": 0.9999039173126221,
+            "REQUIRE_HUMAN_REVIEW": 9.487695251664263e-07
+          },
+          "confidence": 0.9999039173126221,
+          "latency_seconds": 0.31875670002773404,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3187515999889001,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "fb0bb5e9a3077499b192a8f6967586a4db5c466a32beb6c2a32d6b7ea34e41ee",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.960266331479943e-07,
+            "MONITOR_RUNNING": 8.613754471298307e-05,
+            "RESUME_INCOMPLETE": 4.60570559468465e-09,
+            "REVIEW_COMPLETED": 0.9999128580093384,
+            "REQUIRE_HUMAN_REVIEW": 7.918088726910355e-07
+          },
+          "confidence": 0.9999128580093384,
+          "latency_seconds": 0.23893400002270937,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2389299999922514,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "3eb24b2475f026f96df58e13a450ae02cebfb09ec66f0566932340442d7c1bf7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1631460356275056e-07,
+            "MONITOR_RUNNING": 9.113284613704309e-05,
+            "RESUME_INCOMPLETE": 8.689100106096248e-09,
+            "REVIEW_COMPLETED": 0.999907374382019,
+            "REQUIRE_HUMAN_REVIEW": 1.27299915675394e-06
+          },
+          "confidence": 0.999907374382019,
+          "latency_seconds": 0.21296949998941272,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21296509995590895,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.064523923512752e-07,
+            "MONITOR_RUNNING": 6.451547233154997e-05,
+            "RESUME_INCOMPLETE": 3.8960234149953976e-08,
+            "REVIEW_COMPLETED": 0.999933123588562,
+            "REQUIRE_HUMAN_REVIEW": 2.0462148313526995e-06
+          },
+          "confidence": 0.999933123588562,
+          "latency_seconds": 0.2676562999840826,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2676522000692785,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "RESUME_INCOMPLETE",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.657272706434014e-07,
+            "MONITOR_RUNNING": 5.4234853450907394e-05,
+            "RESUME_INCOMPLETE": 1.825222817330996e-08,
+            "REVIEW_COMPLETED": 0.9999433755874634,
+            "REQUIRE_HUMAN_REVIEW": 1.7173302921946743e-06
+          },
+          "confidence": 0.9999433755874634,
+          "latency_seconds": 0.26885170000605285,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2688462999649346,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        }
+      ],
+      "macro_f1_full_five_actions": 0.14095238095238094,
+      "macro_f1_supported_classes": 0.2349206349206349,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "historical_training_epoch": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 8,
+              "correct": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 8,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "live_status_event": {
+          "accuracy": 0.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 12,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 13,
+          "macro_f1_full_five_actions": 0.0,
+          "macro_f1_supported_classes": 0.0
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_pilot_20261001": {
+          "accuracy": 0.4090909090909091,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 20,
+              "correct": 8,
+              "precision": 1.0,
+              "recall": 0.4,
+              "f1": 0.5714285714285714
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 0.07142857142857142,
+              "recall": 1.0,
+              "f1": 0.13333333333333333
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 22,
+          "macro_f1_full_five_actions": 0.14095238095238094,
+          "macro_f1_supported_classes": 0.2349206349206349
+        }
+      }
+    },
+    "selected_v2": {
+      "accuracy": 0.9545454545454546,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 20,
+          "correct": 20,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 1,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 22,
+      "predictions": [
+        {
+          "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.145559552373699e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 2.4018628882668813e-13,
+            "REVIEW_COMPLETED": 3.7300446065202664e-10,
+            "REQUIRE_HUMAN_REVIEW": 3.583361302830742e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.31389680004213005,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.31389130000025034,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4dd9ab0204010aee589fe8a88daaf924e9a32e03b22a1881568175b4bb35defe",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.5584900656688734e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.04772405000559e-14,
+            "REVIEW_COMPLETED": 1.3418213762328435e-10,
+            "REQUIRE_HUMAN_REVIEW": 1.1911713495035144e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.31860309990588576,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.31859919999260455,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "692dbd9f66267bb2ee58bc750643a645155af3740d56301b79c924bdfccf3992",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.323118089160559e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 2.6717452035474043e-13,
+            "REVIEW_COMPLETED": 2.5823471139219123e-10,
+            "REQUIRE_HUMAN_REVIEW": 4.1132995253465143e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.3292332999408245,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.32920469995588064,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "16be39682d84e307247d4fe1c6478cde725f893e1c014cf2ee7f7df345d7cf9f",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.126679501989262e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.8188053873321314e-13,
+            "REVIEW_COMPLETED": 3.605181708721261e-10,
+            "REQUIRE_HUMAN_REVIEW": 6.058782334829177e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.30421780003234744,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.30421400000341237,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "cb74c364a0f96d6d0b79665ae543f5fd675173fffd5c7310b77eb14b72c6ec9b",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.781906719659754e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 6.484633793477079e-13,
+            "REVIEW_COMPLETED": 5.1307441628623e-10,
+            "REQUIRE_HUMAN_REVIEW": 9.91490975337173e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.28180830006022006,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2818017000099644,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "93f3836f308a3dfa06634c493d91ecbfe04cd6234942b0633914c38c1bc05311",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.7217187746343625e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 5.854792562223765e-13,
+            "REVIEW_COMPLETED": 4.796758545921875e-10,
+            "REQUIRE_HUMAN_REVIEW": 1.319508454628341e-16
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.3522595999529585,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.352255699923262,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bca100cd18cbed89c93aaac822d924cb38e832568256252a11ba7951298b9015",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.611802916214185e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.751859050497689e-13,
+            "REVIEW_COMPLETED": 6.612478897771723e-10,
+            "REQUIRE_HUMAN_REVIEW": 9.286770633767133e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.31983569997828454,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.31983109994325787,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e332ce4f2b121542b8920cd56ce7162af888b50893749b51fbf2a26b4be712f3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.566327736234339e-16,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 4.4678670485520655e-13,
+            "REVIEW_COMPLETED": 4.1535216932508945e-10,
+            "REQUIRE_HUMAN_REVIEW": 6.966914812593585e-17
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.3316752000246197,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.33167019998654723,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "076016f03995604e9d502b1a0f8f5dc879166eacc1caddc7ee2ad4b47e8d1831",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.356351755365918e-15,
+            "MONITOR_RUNNING": 5.0232509238412604e-05,
+            "RESUME_INCOMPLETE": 2.2172590152802485e-11,
+            "REVIEW_COMPLETED": 0.9999498128890991,
+            "REQUIRE_HUMAN_REVIEW": 2.653692559749163e-14
+          },
+          "confidence": 0.9999498128890991,
+          "latency_seconds": 0.28223719995003194,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.28223279991652817,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.922432986875137e-15,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.30880569296414e-15,
+            "REVIEW_COMPLETED": 5.947777860504377e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.4019625304423355e-12
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1853349000448361,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.18533080001361668,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.578311514402387e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.285896518607852e-16,
+            "REVIEW_COMPLETED": 1.4363634047898262e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.018557457886475e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.22151589998975396,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.221511899959296,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "673b52a9addb762fb2d2c31fc23d1743392b28c945d34f457b3f1b66bf313744",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.114853682549758e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.174350220388341e-16,
+            "REVIEW_COMPLETED": 1.4735618731080355e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0079012751902476e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1874507999746129,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.18744609993882477,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9fadde34ec5e46388281801379deac467bae280ea8ef5a99d6e7c79539987299",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.464312021506038e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.543416024406702e-16,
+            "REVIEW_COMPLETED": 1.7490269825439116e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.617708648935666e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1917383000254631,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19173389999195933,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "200fc4439de37311ab23240f2860925338a3c97af0441b31c6d81286ecccf7c7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.93533040982835e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.197788896215782e-16,
+            "REVIEW_COMPLETED": 1.8810080988466982e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0100181799320256e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19753420003689826,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19752980000339448,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f4080920eedc61e4e45677f6f1c94c974f373ca0d9646ac0f51ea5d35bb72c04",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.4866086173335334e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.208557430577476e-16,
+            "REVIEW_COMPLETED": 2.462983430488036e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.407332565388761e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2007125000236556,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2007080001058057,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7a72c9cdfea448af02ba82a40fdc7dda0432c67502340106b8c45e902a62c8f4",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.80336863234654e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1004281473813446e-15,
+            "REVIEW_COMPLETED": 2.27000662462052e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.1388171628585672e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1995926999952644,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1995881999609992,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19633221570d09131949dbe07df86034e0c4c1779462e3ccc76a6c149426c43a",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.90856134005619e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1821598387695698e-15,
+            "REVIEW_COMPLETED": 2.94349607350957e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.1333349115140532e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21200990001671016,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2120054999832064,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6bacf16a57852aa866c1d50c4183576e91fefe204b3d653f3abcad5a60de191c",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.172205985942098e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.11869401839236e-16,
+            "REVIEW_COMPLETED": 1.748713410946838e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0299232847859122e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2004181999946013,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20041380007751286,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "fb0bb5e9a3077499b192a8f6967586a4db5c466a32beb6c2a32d6b7ea34e41ee",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.443024470858114e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.199678623093613e-16,
+            "REVIEW_COMPLETED": 2.226992597493052e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.695018514329363e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19729939999524504,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19729489996097982,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "3eb24b2475f026f96df58e13a450ae02cebfb09ec66f0566932340442d7c1bf7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.139158845656147e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1103373740730359e-15,
+            "REVIEW_COMPLETED": 4.743207644144695e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.858171985298743e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1897711999481544,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1897675999207422,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.5595673327591032e-15,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 6.145851514337275e-14,
+            "REVIEW_COMPLETED": 3.182679897406615e-09,
+            "REQUIRE_HUMAN_REVIEW": 1.2603532800747885e-11
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.22396109998226166,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22395620006136596,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "RESUME_INCOMPLETE",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.2395677539966954e-10,
+            "MONITOR_RUNNING": 0.9818076491355896,
+            "RESUME_INCOMPLETE": 4.373552201286657e-06,
+            "REVIEW_COMPLETED": 0.01818796619772911,
+            "REQUIRE_HUMAN_REVIEW": 3.537794723840193e-09
+          },
+          "confidence": 0.9818076491355896,
+          "latency_seconds": 0.31790949997957796,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.31790599995292723,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        }
+      ],
+      "macro_f1_full_five_actions": 0.3951219512195122,
+      "macro_f1_supported_classes": 0.6585365853658537,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "historical_training_epoch": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 8,
+              "correct": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 8,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "live_status_event": {
+          "accuracy": 0.9230769230769231,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 12,
+              "correct": 12,
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.96
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 13,
+          "macro_f1_full_five_actions": 0.192,
+          "macro_f1_supported_classes": 0.48
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_pilot_20261001": {
+          "accuracy": 0.9545454545454546,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 20,
+              "correct": 20,
+              "precision": 0.9523809523809523,
+              "recall": 1.0,
+              "f1": 0.975609756097561
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 22,
+          "macro_f1_full_five_actions": 0.3951219512195122,
+          "macro_f1_supported_classes": 0.6585365853658537
+        }
+      }
+    }
+  },
+  "baselines": {
+    "majority_train": {
+      "label": "MONITOR_RUNNING",
+      "training_counts": {
+        "MONITOR_RUNNING": 54,
+        "REVIEW_COMPLETED": 13,
+        "INVESTIGATE_FAILURE": 1,
+        "RESUME_INCOMPLETE": 1
+      },
+      "accuracy": 0.9090909090909091,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 20,
+          "correct": 20,
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1": 0.9523809523809523
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 1,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 22,
+      "predictions": [
+        {
+          "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4dd9ab0204010aee589fe8a88daaf924e9a32e03b22a1881568175b4bb35defe",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "692dbd9f66267bb2ee58bc750643a645155af3740d56301b79c924bdfccf3992",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "16be39682d84e307247d4fe1c6478cde725f893e1c014cf2ee7f7df345d7cf9f",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "cb74c364a0f96d6d0b79665ae543f5fd675173fffd5c7310b77eb14b72c6ec9b",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "93f3836f308a3dfa06634c493d91ecbfe04cd6234942b0633914c38c1bc05311",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bca100cd18cbed89c93aaac822d924cb38e832568256252a11ba7951298b9015",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e332ce4f2b121542b8920cd56ce7162af888b50893749b51fbf2a26b4be712f3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "076016f03995604e9d502b1a0f8f5dc879166eacc1caddc7ee2ad4b47e8d1831",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "673b52a9addb762fb2d2c31fc23d1743392b28c945d34f457b3f1b66bf313744",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9fadde34ec5e46388281801379deac467bae280ea8ef5a99d6e7c79539987299",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "200fc4439de37311ab23240f2860925338a3c97af0441b31c6d81286ecccf7c7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f4080920eedc61e4e45677f6f1c94c974f373ca0d9646ac0f51ea5d35bb72c04",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7a72c9cdfea448af02ba82a40fdc7dda0432c67502340106b8c45e902a62c8f4",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19633221570d09131949dbe07df86034e0c4c1779462e3ccc76a6c149426c43a",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6bacf16a57852aa866c1d50c4183576e91fefe204b3d653f3abcad5a60de191c",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "fb0bb5e9a3077499b192a8f6967586a4db5c466a32beb6c2a32d6b7ea34e41ee",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "3eb24b2475f026f96df58e13a450ae02cebfb09ec66f0566932340442d7c1bf7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "RESUME_INCOMPLETE",
+          "predicted": "MONITOR_RUNNING"
+        }
+      ],
+      "macro_f1_full_five_actions": 0.19047619047619047,
+      "macro_f1_supported_classes": 0.31746031746031744,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "historical_training_epoch": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 8,
+              "correct": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 8,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "live_status_event": {
+          "accuracy": 0.9230769230769231,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 12,
+              "correct": 12,
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.96
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 13,
+          "macro_f1_full_five_actions": 0.192,
+          "macro_f1_supported_classes": 0.48
+        },
+        "published_final_result": {
+          "accuracy": 0.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.0,
+          "macro_f1_supported_classes": 0.0
+        }
+      },
+      "by_group": {
+        "chum_window_pilot_20261001": {
+          "accuracy": 0.9090909090909091,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 20,
+              "correct": 20,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 22,
+          "macro_f1_full_five_actions": 0.19047619047619047,
+          "macro_f1_supported_classes": 0.31746031746031744
+        }
+      }
+    },
+    "observed_state_rule": {
+      "latency_seconds": 0.00031379994470626116,
+      "limitation": "Reproduces rule-generated labels on structured records; not independent human decision ground truth.",
+      "accuracy": 1.0,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 20,
+          "correct": 20,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 1,
+          "correct": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 22,
+      "predictions": [
+        {
+          "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4dd9ab0204010aee589fe8a88daaf924e9a32e03b22a1881568175b4bb35defe",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "692dbd9f66267bb2ee58bc750643a645155af3740d56301b79c924bdfccf3992",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "16be39682d84e307247d4fe1c6478cde725f893e1c014cf2ee7f7df345d7cf9f",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "cb74c364a0f96d6d0b79665ae543f5fd675173fffd5c7310b77eb14b72c6ec9b",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "93f3836f308a3dfa06634c493d91ecbfe04cd6234942b0633914c38c1bc05311",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bca100cd18cbed89c93aaac822d924cb38e832568256252a11ba7951298b9015",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e332ce4f2b121542b8920cd56ce7162af888b50893749b51fbf2a26b4be712f3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "historical_training_epoch",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "076016f03995604e9d502b1a0f8f5dc879166eacc1caddc7ee2ad4b47e8d1831",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED"
+        },
+        {
+          "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "673b52a9addb762fb2d2c31fc23d1743392b28c945d34f457b3f1b66bf313744",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9fadde34ec5e46388281801379deac467bae280ea8ef5a99d6e7c79539987299",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "200fc4439de37311ab23240f2860925338a3c97af0441b31c6d81286ecccf7c7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f4080920eedc61e4e45677f6f1c94c974f373ca0d9646ac0f51ea5d35bb72c04",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7a72c9cdfea448af02ba82a40fdc7dda0432c67502340106b8c45e902a62c8f4",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19633221570d09131949dbe07df86034e0c4c1779462e3ccc76a6c149426c43a",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6bacf16a57852aa866c1d50c4183576e91fefe204b3d653f3abcad5a60de191c",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "fb0bb5e9a3077499b192a8f6967586a4db5c466a32beb6c2a32d6b7ea34e41ee",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "3eb24b2475f026f96df58e13a450ae02cebfb09ec66f0566932340442d7c1bf7",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+          "group_id": "chum_window_pilot_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "RESUME_INCOMPLETE",
+          "predicted": "RESUME_INCOMPLETE"
+        }
+      ],
+      "macro_f1_full_five_actions": 0.6,
+      "macro_f1_supported_classes": 1.0,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "historical_training_epoch": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 8,
+              "correct": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 8,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "live_status_event": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 12,
+              "correct": 12,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 13,
+          "macro_f1_full_five_actions": 0.4,
+          "macro_f1_supported_classes": 1.0
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_pilot_20261001": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 20,
+              "correct": 20,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 22,
+          "macro_f1_full_five_actions": 0.6,
+          "macro_f1_supported_classes": 1.0
+        }
+      }
+    }
+  },
+  "production_gate": false,
+  "authorizes_execution": false,
+  "needs_human_review": true,
+  "limitations": [
+    "Policy-imitation labels are not independent human ground truth.",
+    "Adjacent event snapshots are correlated; report independent source groups.",
+    "No confidence calibration or production/generalization claim.",
+    "Holdout assignment occurred after execution began and routine monitoring; it is not a fully prospective unseen experiment.",
+    "CPU model timing includes cold/warm differences; a small sample is not a latency benchmark."
+  ]
+}

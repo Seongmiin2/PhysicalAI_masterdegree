@@ -1,0 +1,18 @@
+﻿{
+    "assigned_before_physical_run_started":  false,
+    "schema_version":  1,
+    "grouping":  "entire experiment root and all children, aliases and DB events",
+    "validation_roots":  [
+                             "v1 validation",
+                             "preexisting dry-run task lifecycle"
+                         ],
+    "prior_status_monitoring_disclosed":  true,
+    "assigned_at_utc":  "2026-10-01T05:58:29.3890077Z",
+    "holdout_root":  "outputs/chum_window_extension_20261001",
+    "test_use":  "once after v2 checkpoint selection; no tuning on holdout",
+    "training_roots":  [
+                           "v1 train",
+                           "v1 inspected test now development"
+                       ],
+    "assigned_before_v2_extraction":  true
+}

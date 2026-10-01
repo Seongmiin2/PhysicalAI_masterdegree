@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-01T06:11:15.566594+00:00",
+  "selection_rule": "Highest selected_validation full-five-action macro_f1, then lower loss, then report path.",
+  "candidates": [
+    {
+      "report": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\COVERAGE_REPORT.json",
+      "report_sha256": "9648f0b74b44e961b1c5174ca8ee988beddf736df183b0dab9f62ec55043ebeb",
+      "adapter": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-coverage",
+      "files": {
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-coverage\\adapter_model.safetensors": "cf5caf4ed1ce5e9768b46493e53d15bf8da6f90f610cdc461219153881504d0e",
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-coverage\\adapter_config.json": "e9ee153360747dd8c60c2188cff789191d74cbe9389e7432bfda6aaa53a3d58c",
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-coverage\\router_config.json": "90e7f24923861a1d257028cc8812ed2e234e93a32161386a0a5199146501ad59"
+      },
+      "validation_macro_f1": 0.4,
+      "validation_loss": 0.025448533892631176,
+      "selected_epoch": 1
+    },
+    {
+      "report": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\BALANCED_REPORT.json",
+      "report_sha256": "e592d7e22a4453e5c048a165b4231ce969707655c977b5d76265ab134ba0ff39",
+      "adapter": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced",
+      "files": {
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\adapter_model.safetensors": "79fcefb6a5dcbdb28f1b3d2e29ec2aa1a4d4050097e3d2649f479327ac3a952a",
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\adapter_config.json": "e9ee153360747dd8c60c2188cff789191d74cbe9389e7432bfda6aaa53a3d58c",
+        "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\router_config.json": "7b1cbb6555b536253a4ea57a44b967792852535208d548f86d32cf99c6cdcd5f"
+      },
+      "validation_macro_f1": 0.4,
+      "validation_loss": 2.2649738866675763e-07,
+      "selected_epoch": 4
+    }
+  ],
+  "selected": {
+    "report": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\BALANCED_REPORT.json",
+    "report_sha256": "e592d7e22a4453e5c048a165b4231ce969707655c977b5d76265ab134ba0ff39",
+    "adapter": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced",
+    "files": {
+      "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\adapter_model.safetensors": "79fcefb6a5dcbdb28f1b3d2e29ec2aa1a4d4050097e3d2649f479327ac3a952a",
+      "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\adapter_config.json": "e9ee153360747dd8c60c2188cff789191d74cbe9389e7432bfda6aaa53a3d58c",
+      "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-v2-balanced\\router_config.json": "7b1cbb6555b536253a4ea57a44b967792852535208d548f86d32cf99c6cdcd5f"
+    },
+    "validation_macro_f1": 0.4,
+    "validation_loss": 2.2649738866675763e-07,
+    "selected_epoch": 4
+  },
+  "v1_adapter": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora",
+  "v1_files": {
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora\\adapter_model.safetensors": "7cf054d1dec5c83f3441c387047053156f917719662b89475aced648790f1481",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora\\adapter_config.json": "e9ee153360747dd8c60c2188cff789191d74cbe9389e7432bfda6aaa53a3d58c",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora\\router_config.json": "ffda40f213b261c3a65f3ff50dd2471591ae93c99c9e087c0fe35b52ce8ee885"
+  },
+  "data_files": {
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\train_raw.jsonl": "5c37a500909a1707190eea1e01edbe8c283128c867519fa072b17b39e451668e",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\validation_raw.jsonl": "48297f4fa4015acc6218a50704dfc680069439913a05822d7b8aa5ba2338fbea",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\train_normalized.jsonl": "578a4dcc6b55a01000caf20709c8b705e994ce739cb6fc008d6f998b5f5025a1",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\validation_normalized.jsonl": "08b356bf9cc26e5dc5b189e7427bfe34feeaaa88e5d1616c1b639237732dd8c6",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\DATASET_MANIFEST.json": "e4ed952b0915dc533d16e22cf57d6fff57ab9a7c67b12c0bb6fbcf19cb1393ef",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\HOLDOUT_ASSIGNMENT.json": "ce5a276e844c3a859b279c3a1cbc18ad73a8d60ae9f0c096ce51754f0ff620f8",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_v2_20261001\\HOLDOUT_INCLUSION_POLICY.json": "2e7959eb81d2aa7b77d333241c65dfdbe0869f6be67f257d69b96cb968a2f7e3"
+  },
+  "code_files": {
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\evaluate_chum_ops_v2.py": "f422f29b2a648de3f980849f0a5420a8a5ef94f8c98451a39c0a4977528f2485",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\providers\\finetuned.py": "a6060f4620197c344d28dc0f66242ddafd074f3704036531f1a65350a148e9c4",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\providers\\ops_features.py": "9e185a6253ec0fc5d79cd3091f3aabf4cceef6fe816e5f7bcf5f294b6da6d5ae",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\build_chum_ops_v2_dataset.py": "ee4724bd518ca86932fc9bdf4b599a01cb0b1c69d913b34490066c6f3b51dd88",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\finetune_chum_ops_v2.py": "6d177eaee82603a074381770128404b4471a91ad11a70b0f96f4303fec708447"
+  },
+  "test_opened_for_selection": false,
+  "production_gate": false
+}

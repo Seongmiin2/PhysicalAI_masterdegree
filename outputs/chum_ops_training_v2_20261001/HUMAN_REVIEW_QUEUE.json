@@ -1,0 +1,40 @@
+{
+  "purpose": "Unresolved development errors for human review; no human approval inferred. Do not tune on the new heldout run.",
+  "records": [
+    {
+      "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+      "observation": {
+        "artifact_type": "live_status_event",
+        "best_epoch": 10,
+        "completed_tasks": 1,
+        "epoch": 10,
+        "stage": "task_budget_reached",
+        "status": "PARTIAL",
+        "task": "tcn_F0_seed47_window20"
+      },
+      "model_action": "MONITOR_RUNNING",
+      "model_confidence_uncalibrated": 0.9818076491355896,
+      "rule_proposed_action": "RESUME_INCOMPLETE",
+      "human_label": null,
+      "review_status": "PENDING",
+      "source_provenance": {
+        "group_id": "chum_window_pilot_20261001",
+        "human_approved": false,
+        "kind": "OBSERVED_REAL_EVENT",
+        "label_origin": "deterministic_operational_policy_v1",
+        "locator": "events.id=171",
+        "scientific_ground_truth": false,
+        "source_path": "outputs\\harness\\research.sqlite3",
+        "source_sha256": "0871acc3f9a9c4ac383feabdd0ade78d6fdfbd0bf9bcbab3922b6d1248ed1667",
+        "synthetic": false
+      },
+      "evaluation_role": "consumed development data; not new test"
+    }
+  ],
+  "next_data_priority": [
+    "Independent actual partial/interrupted runs",
+    "Independent failure/recovery incidents",
+    "Genuine ambiguous cases with human-authored labels"
+  ],
+  "production_gate": false
+}

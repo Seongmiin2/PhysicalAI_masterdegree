@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-01T06:11:28.599382+00:00",
+  "database_event_high_watermark": 517,
+  "count": 71,
+  "labels": {
+    "MONITOR_RUNNING": 70,
+    "REVIEW_COMPLETED": 1
+  },
+  "independent_groups": 1,
+  "inclusion_policy_sha256": "2e7959eb81d2aa7b77d333241c65dfdbe0869f6be67f257d69b96cb968a2f7e3",
+  "output_sha256": {
+    "test_raw.jsonl": "d77adeaae06d3b8d581d43d1646796e4522cc27fd703b64a9fe5b7fe1015fef6",
+    "test_normalized.jsonl": "572755000f4b715bb23c051d44505385eb8983347957c040f0701edf2333c68e"
+  }
+}

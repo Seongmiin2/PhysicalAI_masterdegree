@@ -114,3 +114,23 @@ python -m harness run pilot --profile main --python $researchPython --max-tasks 
 강제 종료나 전원 장애 후에는 잠금이 남을 수 있다. 잠금의 PID와 실제 실행 중인 프로세스를 먼저 확인하고, 자식 학습 프로세스가 종료됐음을 확인한 뒤에만 stale 파일 및 해당 DB resource lock을 정리한다. 살아 있는 작업의 잠금을 시간 경과만으로 해제하지 않는다.
 
 DB와 모델 가중치는 Git에 넣지 않는다. Git에는 코드, 설정, 검증 요약, 현재 상태를 보관한다. 로컬 DB 손실 시 문서는 다시 색인할 수 있지만 사람의 피드백과 이벤트 이력은 DB 백업 없이는 복원되지 않는다.
+
+
+## 운영 판단 모델 v2 개선 절차
+
+v1의 40.9%는 운영 판단 분류기의 기존 평가 정확도이며, 논문의 고장 탐지 AUROC와 다른 지표다. 실제 실행 상태 형식이 학습에 없었던 문제를 먼저 보정한다. v1에서 이미 분석한 test는 v2의 개발·학습 자료로 명시적으로 편입하고, 현재 main 실행 전체를 새로운 평가 그룹으로 분리한다. main 실행을 시작한 뒤 상태를 모니터링한 사실은 HOLDOUT_ASSIGNMENT.json에 공개한다.
+
+학습 69건(12그룹), 검증 20건(3그룹)을 사용한다. coverage 조건은 실제 로그 형식을 보강하고, balanced 조건은 여기에 식별자·경로·시각을 제외한 사실 필드 정규화, 실행 그룹 균형 샘플링, 클래스별 손실 가중치를 함께 적용한다. 두 조건 모두 LoRA와 분류 head를 실제로 학습하며, head 학습률을 별도로 설정하고 validation macro-F1 및 손실로 checkpoint를 선택한다. 여러 변경을 묶은 비교이므로 개별 기법의 인과적 효과를 분리했다고 주장하지 않는다.
+
+검증에 존재하는 행동은 실행 모니터링·완료 검토의 두 종류뿐이다. 5개 행동 전체를 분모로 쓰는 macro-F1은 두 행동을 모두 맞혀도 0.4이며, 지원되는 클래스만의 macro-F1과 함께 읽어야 한다. 사람 검토 필요 사례는 학습에 없고, 실패·재개 사례도 부족하다. 모든 모델 출력은 사람 검토가 필요한 제안이며 자동 실행 권한을 주지 않는다.
+
+`experiments/finetune_chum_ops_v2.py`는 일반 학습에서 test를 읽지 않는다. `experiments/evaluate_chum_ops_v2.py`로 검증 기반 선택 및 파일 해시를 고정한 뒤에만 main holdout을 추출하고, v1과 선택된 v2를 같은 자료에서 비교한다. 같은 실행의 인접 상태들은 상관되어 있으므로 기록 수와 독립 실행 그룹 수를 구분한다. 학습·추론 입력의 정규화 계약은 어댑터의 router_config.json으로 관리한다. v1 어댑터와 기존 평가 결과는 보존한다.
+
+재학습 명령의 예시는 다음과 같다. 기존 출력은 덮어쓰지 않으므로 재실행할 때마다 새 어댑터와 보고서 경로를 지정한다. 현재 데이터는 실제로 이미 생성되어 있다.
+
+```powershell
+$trainPython = "$env:TEMP/cg/Scripts/python.exe"
+& $trainPython experiments/finetune_chum_ops_v2.py --train outputs/chum_ops_training_v2_20261001/train_normalized.jsonl --validation outputs/chum_ops_training_v2_20261001/validation_normalized.jsonl --output outputs/harness/models/chum-ops-v2-new-run --report outputs/chum_ops_training_v2_20261001/NEW_RUN_REPORT.json --device cpu --variant balanced --preprocessing normalized --epochs 8 --min-epochs 3 --patience 2 --cpu-threads 4
+```
+
+실제 채택된 어댑터는 `outputs/chum_ops_training_v2_20261001/MODEL_SELECTION.json`의 `selected.adapter`에 저장된다. 이 값을 `CHUM_FINETUNED_ADAPTER` 환경 변수에 지정하면 기존 `python -m harness route`에서 동일한 전처리와 모델을 사용한다. `--query`로 RAG 내용을 추가하는 입력 모드는 이번 평가에 포함하지 않았다. RAG 검색·근거 제공 기능과 분류 정확도는 별도로 검증해야 한다.

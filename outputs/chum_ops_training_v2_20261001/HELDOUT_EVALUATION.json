@@ -1,0 +1,4721 @@
+{
+  "created_at": "2026-10-01T06:12:42.614538+00:00",
+  "evaluation_role": "Post-selection heldout operational snapshot",
+  "selection_sha256": "1ced43791eb8eea03eaa6dd078f7efe61149c3659558b78a88ae266d9ff03087",
+  "input_sha256": "d77adeaae06d3b8d581d43d1646796e4522cc27fd703b64a9fe5b7fe1015fef6",
+  "models": {
+    "v1": {
+      "accuracy": 0.014084507042253521,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 70,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 0.014084507042253521,
+          "recall": 1.0,
+          "f1": 0.027777777777777776
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 71,
+      "predictions": [
+        {
+          "record_id": "20eaa898e7567374b4b977a9af50712f5e9be5a3dcc6fffdbd7a3641eadeb746",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.550673571022344e-06,
+            "MONITOR_RUNNING": 1.684498056420125e-05,
+            "RESUME_INCOMPLETE": 1.50403295151591e-07,
+            "REVIEW_COMPLETED": 0.9999734163284302,
+            "REQUIRE_HUMAN_REVIEW": 7.039808224362787e-06
+          },
+          "confidence": 0.9999734163284302,
+          "latency_seconds": 4.732847200008109,
+          "cold_load": true,
+          "load_seconds": 4.525278400047682,
+          "inference_seconds": 0.20756869995966554,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "37b13da80a049becc234ffe9464720828f0469890c4304c204ab0003a216cd71",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.6453174112029956e-07,
+            "MONITOR_RUNNING": 7.467704563168809e-05,
+            "RESUME_INCOMPLETE": 5.163973249011633e-09,
+            "REVIEW_COMPLETED": 0.9999243021011353,
+            "REQUIRE_HUMAN_REVIEW": 8.440538294962607e-07
+          },
+          "confidence": 0.9999243021011353,
+          "latency_seconds": 0.26334309997037053,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26333840005099773,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "439d254be67e968fb1c21409b62d01fe782c0baaf6a5a514796e03fd46cdfe6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.0219871998961025e-07,
+            "MONITOR_RUNNING": 9.514640987617895e-05,
+            "RESUME_INCOMPLETE": 5.263435465252542e-09,
+            "REVIEW_COMPLETED": 0.999903678894043,
+            "REQUIRE_HUMAN_REVIEW": 9.777901368579478e-07
+          },
+          "confidence": 0.999903678894043,
+          "latency_seconds": 0.2715739000122994,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2715691999765113,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "fd915bf061908b9ccaded39e896ddf66bb3e4ba84fc16c38b49d64f4ab521dfc",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9304788168028608e-07,
+            "MONITOR_RUNNING": 9.005184256238863e-05,
+            "RESUME_INCOMPLETE": 5.184609186414946e-09,
+            "REVIEW_COMPLETED": 0.9999089241027832,
+            "REQUIRE_HUMAN_REVIEW": 8.713353167877358e-07
+          },
+          "confidence": 0.9999089241027832,
+          "latency_seconds": 0.2928316000616178,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.29282589990179986,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8c3c716767eb8fd30c346fe5cde9f48ff2495d989a3a2f45672af22f2518a47b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.992963802877057e-07,
+            "MONITOR_RUNNING": 8.882187103154138e-05,
+            "RESUME_INCOMPLETE": 4.75424144497083e-09,
+            "REVIEW_COMPLETED": 0.9999101161956787,
+            "REQUIRE_HUMAN_REVIEW": 8.30274927920982e-07
+          },
+          "confidence": 0.9999101161956787,
+          "latency_seconds": 0.21948679990600795,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21948289999272674,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "67cdbfd5891fde449ccc3943a8ffd42404fde6fed8a5e8ef13561a0f56608baa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9458819622286683e-07,
+            "MONITOR_RUNNING": 8.487680315738544e-05,
+            "RESUME_INCOMPLETE": 4.609323145388089e-09,
+            "REVIEW_COMPLETED": 0.9999140501022339,
+            "REQUIRE_HUMAN_REVIEW": 8.031262836993847e-07
+          },
+          "confidence": 0.9999140501022339,
+          "latency_seconds": 0.2388972999760881,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2388921999372542,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7c2bdd7198cb032ece2ce759438709152ccbf4f02052b309cdaed16b72e0b4c9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.0522647048437648e-07,
+            "MONITOR_RUNNING": 8.553991938242689e-05,
+            "RESUME_INCOMPLETE": 5.759633658897201e-09,
+            "REVIEW_COMPLETED": 0.9999133348464966,
+            "REQUIRE_HUMAN_REVIEW": 9.462112871005957e-07
+          },
+          "confidence": 0.9999133348464966,
+          "latency_seconds": 0.3156257000518963,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3156208998989314,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a0b7facc00a6eb0452cfbe7c4f6d4695292f34714ce320d07d8c6ca6f117b866",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.052441487876422e-07,
+            "MONITOR_RUNNING": 9.106260404223576e-05,
+            "RESUME_INCOMPLETE": 4.785335239176902e-09,
+            "REVIEW_COMPLETED": 0.9999078512191772,
+            "REQUIRE_HUMAN_REVIEW": 8.517264404872549e-07
+          },
+          "confidence": 0.9999078512191772,
+          "latency_seconds": 0.2413191000232473,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24131469998974353,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "09a00edcae3fdb2f106210ea961b41f4d18f3cc6cfbf9235b89a7c6b304cf0f4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2314080183605256e-07,
+            "MONITOR_RUNNING": 9.484148904448375e-05,
+            "RESUME_INCOMPLETE": 5.30220978234297e-09,
+            "REVIEW_COMPLETED": 0.9999039173126221,
+            "REQUIRE_HUMAN_REVIEW": 9.487695251664263e-07
+          },
+          "confidence": 0.9999039173126221,
+          "latency_seconds": 0.21482750005088747,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21482280001509935,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7630bfc0b1c2fb959a3fce425eac9cfff383b4d591cea549dc6e9554e1ccae54",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.960266331479943e-07,
+            "MONITOR_RUNNING": 8.613754471298307e-05,
+            "RESUME_INCOMPLETE": 4.60570559468465e-09,
+            "REVIEW_COMPLETED": 0.9999128580093384,
+            "REQUIRE_HUMAN_REVIEW": 7.918088726910355e-07
+          },
+          "confidence": 0.9999128580093384,
+          "latency_seconds": 0.2354734999826178,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2354692000662908,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8791a42d6c131d125a2daf8be15f808545b02eb1d534417c1a32b8c27ca106d3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1631460356275056e-07,
+            "MONITOR_RUNNING": 9.113284613704309e-05,
+            "RESUME_INCOMPLETE": 8.689100106096248e-09,
+            "REVIEW_COMPLETED": 0.999907374382019,
+            "REQUIRE_HUMAN_REVIEW": 1.27299915675394e-06
+          },
+          "confidence": 0.999907374382019,
+          "latency_seconds": 0.22502669994719326,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2250231000361964,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "90e3f38dfc9718ec0be91851c16955972a029c3754455d53dfe211ab19dbc982",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1942756234238914e-07,
+            "MONITOR_RUNNING": 9.558315650792792e-05,
+            "RESUME_INCOMPLETE": 8.306688670245421e-09,
+            "REVIEW_COMPLETED": 0.9999029636383057,
+            "REQUIRE_HUMAN_REVIEW": 1.2000721199001418e-06
+          },
+          "confidence": 0.9999029636383057,
+          "latency_seconds": 0.2242870000191033,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22428220009896904,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f23f0f51b7a80634ff828ec1bd52bd0076a00316301d0138a1589979ba87814c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2832726642718626e-07,
+            "MONITOR_RUNNING": 9.647433034842834e-05,
+            "RESUME_INCOMPLETE": 7.830974091405096e-09,
+            "REVIEW_COMPLETED": 0.9999021291732788,
+            "REQUIRE_HUMAN_REVIEW": 1.1685111758197309e-06
+          },
+          "confidence": 0.9999021291732788,
+          "latency_seconds": 0.2150747999548912,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21507119992747903,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2c7f5a0b1bb55695258248628a0e6b30d26a7b6cbbd5ddbdf3c77d1fabe749a2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2867070015308855e-07,
+            "MONITOR_RUNNING": 9.930417581927031e-05,
+            "RESUME_INCOMPLETE": 7.530119638943233e-09,
+            "REVIEW_COMPLETED": 0.9998992681503296,
+            "REQUIRE_HUMAN_REVIEW": 1.1406830253690714e-06
+          },
+          "confidence": 0.9998992681503296,
+          "latency_seconds": 0.2413368000416085,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24133280001115054,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6882d4305a160a6674c47e40e08eda1e5326c9117f5700bd0231f75d61e1eec9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2227592921808537e-07,
+            "MONITOR_RUNNING": 9.303236583946273e-05,
+            "RESUME_INCOMPLETE": 7.266514057135964e-09,
+            "REVIEW_COMPLETED": 0.9999057054519653,
+            "REQUIRE_HUMAN_REVIEW": 1.1108106718893396e-06
+          },
+          "confidence": 0.9999057054519653,
+          "latency_seconds": 0.21789000008720905,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21788570005446672,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f74083b9629e8e5a5695f22efa9ccb37cf9db2246906ee67319a7d71e93c75db",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3127232395836472e-07,
+            "MONITOR_RUNNING": 9.857861732598394e-05,
+            "RESUME_INCOMPLETE": 9.108826581893936e-09,
+            "REVIEW_COMPLETED": 0.9998997449874878,
+            "REQUIRE_HUMAN_REVIEW": 1.3753602843280532e-06
+          },
+          "confidence": 0.9998997449874878,
+          "latency_seconds": 0.31085359991993755,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.31084950000513345,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4c5556132209e160ebaa0674813a6d481372d8d3ed2a6f7de494a596ff675ccd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.216523569131823e-07,
+            "MONITOR_RUNNING": 9.719251829665154e-05,
+            "RESUME_INCOMPLETE": 8.82927952972068e-09,
+            "REVIEW_COMPLETED": 0.9999011754989624,
+            "REQUIRE_HUMAN_REVIEW": 1.4642316727986326e-06
+          },
+          "confidence": 0.9999011754989624,
+          "latency_seconds": 0.22138720005750656,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2213826000224799,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ca5424fe35221bcd73d657992f0e7e0afddb24cc7a3c2b300333a8afb1068850",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3476543731248967e-07,
+            "MONITOR_RUNNING": 0.00010160991951124743,
+            "RESUME_INCOMPLETE": 8.285499397686635e-09,
+            "REVIEW_COMPLETED": 0.9998970031738281,
+            "REQUIRE_HUMAN_REVIEW": 1.2362454526737565e-06
+          },
+          "confidence": 0.9998970031738281,
+          "latency_seconds": 0.27901810000184923,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.279013599967584,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "d1a00a8828e6a7114683d14b34ed3879a830ccd1ee726b52ed9b09abdbcc3ce4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3882105892880645e-07,
+            "MONITOR_RUNNING": 9.5057584985625e-05,
+            "RESUME_INCOMPLETE": 9.17356146601378e-09,
+            "REVIEW_COMPLETED": 0.9999033212661743,
+            "REQUIRE_HUMAN_REVIEW": 1.273177190341812e-06
+          },
+          "confidence": 0.9999033212661743,
+          "latency_seconds": 0.2840624999953434,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2840586999664083,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bdfdbaede0d07fcf1ac5e3d51288339f521c4498486cbd9154139e0373462c02",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2186939929724758e-07,
+            "MONITOR_RUNNING": 9.306285210186616e-05,
+            "RESUME_INCOMPLETE": 9.781217613635818e-09,
+            "REVIEW_COMPLETED": 0.9999052286148071,
+            "REQUIRE_HUMAN_REVIEW": 1.3761367654296919e-06
+          },
+          "confidence": 0.9999052286148071,
+          "latency_seconds": 0.23578690004069358,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23578220000490546,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "25b90582ef0d1c556ea219a2df0b0b8c932f5a3cee775e2550ab407353a234ff",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.4859124891918327e-07,
+            "MONITOR_RUNNING": 9.65981962508522e-05,
+            "RESUME_INCOMPLETE": 1.1259682075603905e-08,
+            "REVIEW_COMPLETED": 0.999901533126831,
+            "REQUIRE_HUMAN_REVIEW": 1.5459402220585616e-06
+          },
+          "confidence": 0.999901533126831,
+          "latency_seconds": 0.252473899978213,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2524695999454707,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "eaa68d18809a34713257267f3dba1fde63e7ae0c92d0cc9be9bf8589587de6ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.4940487719504745e-07,
+            "MONITOR_RUNNING": 9.360790136270225e-05,
+            "RESUME_INCOMPLETE": 1.0457444687972384e-08,
+            "REVIEW_COMPLETED": 0.9999047517776489,
+            "REQUIRE_HUMAN_REVIEW": 1.4673053101432743e-06
+          },
+          "confidence": 0.9999047517776489,
+          "latency_seconds": 0.21217529999557883,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2121707999613136,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c5cb19ec7cd8cd78f115dc5f6e06a893439b7b112e127f5d36cd3a93292178aa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.480057048614981e-07,
+            "MONITOR_RUNNING": 9.57802330958657e-05,
+            "RESUME_INCOMPLETE": 8.397377015967322e-09,
+            "REVIEW_COMPLETED": 0.9999027252197266,
+            "REQUIRE_HUMAN_REVIEW": 1.2009968486381695e-06
+          },
+          "confidence": 0.9999027252197266,
+          "latency_seconds": 0.20354989997576922,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.203545399941504,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c564af575c5da917406655352d5c8dad9f6858fd1d8fb9d8aff45f1eaadfee56",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.5384051127730345e-07,
+            "MONITOR_RUNNING": 9.947599028237164e-05,
+            "RESUME_INCOMPLETE": 8.922166117031338e-09,
+            "REVIEW_COMPLETED": 0.9998989105224609,
+            "REQUIRE_HUMAN_REVIEW": 1.2693550388576114e-06
+          },
+          "confidence": 0.9998989105224609,
+          "latency_seconds": 0.24612869997508824,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2461245000595227,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bcd5184ceccf7567ca2af462df47c95c4a106a8f2af1b36919e9f2f402171858",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.4835424028424313e-07,
+            "MONITOR_RUNNING": 9.611564018996432e-05,
+            "RESUME_INCOMPLETE": 8.993477074170642e-09,
+            "REVIEW_COMPLETED": 0.9999022483825684,
+            "REQUIRE_HUMAN_REVIEW": 1.2944607306053513e-06
+          },
+          "confidence": 0.9999022483825684,
+          "latency_seconds": 0.21971810003742576,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21971359988674521,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c490fbe041d4f878d25d3d625c563a1eeaa7fc8611932caf6393bcf8ea20e415",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.436839565689297e-07,
+            "MONITOR_RUNNING": 9.062215394806117e-05,
+            "RESUME_INCOMPLETE": 9.669003375734064e-09,
+            "REVIEW_COMPLETED": 0.9999078512191772,
+            "REQUIRE_HUMAN_REVIEW": 1.2860991773777641e-06
+          },
+          "confidence": 0.9999078512191772,
+          "latency_seconds": 0.27657270000781864,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.27656840009149164,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e33a411de92c84b7fbe93840fa49f73a1ac39873a3e28b5cfb093fce89119e32",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.418882729671168e-07,
+            "MONITOR_RUNNING": 9.208705159835517e-05,
+            "RESUME_INCOMPLETE": 8.770296489046814e-09,
+            "REVIEW_COMPLETED": 0.9999064207077026,
+            "REQUIRE_HUMAN_REVIEW": 1.1966043302891194e-06
+          },
+          "confidence": 0.9999064207077026,
+          "latency_seconds": 0.2618938999949023,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26188869995530695,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4f96712fa4d9b5d71ad93c7e23fd8788a5b699a1947bb8bda98c025843b69e40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.4185521851904923e-07,
+            "MONITOR_RUNNING": 9.527213114779443e-05,
+            "RESUME_INCOMPLETE": 8.8180227564294e-09,
+            "REVIEW_COMPLETED": 0.9999033212661743,
+            "REQUIRE_HUMAN_REVIEW": 1.2001584082099725e-06
+          },
+          "confidence": 0.9999033212661743,
+          "latency_seconds": 0.24619579990394413,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24619139998685569,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e2a0110756b2794682c08b0a871c0c6364a2cb03dc72a36449e45cddc948ebf3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3602552801094134e-07,
+            "MONITOR_RUNNING": 9.105060598812997e-05,
+            "RESUME_INCOMPLETE": 8.225986114496209e-09,
+            "REVIEW_COMPLETED": 0.9999076128005981,
+            "REQUIRE_HUMAN_REVIEW": 1.1316774362057913e-06
+          },
+          "confidence": 0.9999076128005981,
+          "latency_seconds": 0.2851296999724582,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2851242999313399,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ec562479e063847ee47dcfa5c2b693ceb43d6e27c2c810f20d59f933be13fb05",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3402542126405024e-07,
+            "MONITOR_RUNNING": 9.628618863644078e-05,
+            "RESUME_INCOMPLETE": 8.048579580588466e-09,
+            "REVIEW_COMPLETED": 0.9999022483825684,
+            "REQUIRE_HUMAN_REVIEW": 1.1334869896018063e-06
+          },
+          "confidence": 0.9999022483825684,
+          "latency_seconds": 0.2610082000028342,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26100339996628463,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "eaad4ee599c34001568e93c71a9b9408d687a719f300ff2dedf034f3f09b87d2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2037993119283783e-07,
+            "MONITOR_RUNNING": 8.859774243319407e-05,
+            "RESUME_INCOMPLETE": 9.512820753343476e-09,
+            "REVIEW_COMPLETED": 0.9999098777770996,
+            "REQUIRE_HUMAN_REVIEW": 1.277750698136515e-06
+          },
+          "confidence": 0.9999098777770996,
+          "latency_seconds": 0.26742529997136444,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2674213999416679,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "1ffcc368f4e01c9c1a5848d0b9ddd58e83f59e0ec4f67def3e9915d29977afc8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2220076800749666e-07,
+            "MONITOR_RUNNING": 8.95212942850776e-05,
+            "RESUME_INCOMPLETE": 9.514480758809896e-09,
+            "REVIEW_COMPLETED": 0.9999089241027832,
+            "REQUIRE_HUMAN_REVIEW": 1.2851589872298064e-06
+          },
+          "confidence": 0.9999089241027832,
+          "latency_seconds": 0.22299309994559735,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2229874999029562,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "dd88978b12f64fbbaa3de38c755036fc4aa6de1f3a896f8c99fb9ed79d1d1240",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2380179132142075e-07,
+            "MONITOR_RUNNING": 9.509603842161596e-05,
+            "RESUME_INCOMPLETE": 8.388610694964882e-09,
+            "REVIEW_COMPLETED": 0.9999034404754639,
+            "REQUIRE_HUMAN_REVIEW": 1.1927635341635323e-06
+          },
+          "confidence": 0.9999034404754639,
+          "latency_seconds": 0.23863529996015131,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23863060004077852,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ed907e7165a0fe1b1ce1cdceeecd5bbe75a4f7b0a92e440ab4c3ab7d923a14fb",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1851344911283377e-07,
+            "MONITOR_RUNNING": 8.93903779797256e-05,
+            "RESUME_INCOMPLETE": 8.366241033286315e-09,
+            "REVIEW_COMPLETED": 0.9999092817306519,
+            "REQUIRE_HUMAN_REVIEW": 1.0777715715448721e-06
+          },
+          "confidence": 0.9999092817306519,
+          "latency_seconds": 0.2910969000076875,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.29109209997113794,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2ab5442c9cfd44f50e618215b7755dd1ae13d2d4b67ed3d62602b4697973ba63",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.15040785178644e-07,
+            "MONITOR_RUNNING": 8.461349352728575e-05,
+            "RESUME_INCOMPLETE": 8.519339900203704e-09,
+            "REVIEW_COMPLETED": 0.9999140501022339,
+            "REQUIRE_HUMAN_REVIEW": 1.1018528311979026e-06
+          },
+          "confidence": 0.9999140501022339,
+          "latency_seconds": 0.23464380006771535,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23463920003268868,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2655a800c986c6a7af38f196574530e2a5212b4d404c20bd8d1526dd9e3bed58",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2047925085644238e-07,
+            "MONITOR_RUNNING": 8.925205474952236e-05,
+            "RESUME_INCOMPLETE": 8.691802833027396e-09,
+            "REVIEW_COMPLETED": 0.9999094009399414,
+            "REQUIRE_HUMAN_REVIEW": 1.1241133961448213e-06
+          },
+          "confidence": 0.9999094009399414,
+          "latency_seconds": 0.27457879995927215,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2745745999272913,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "b24305144030747ab2b4cbf4dd4f29d306573625682897a00b2ddb23f858450a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.239340233245457e-07,
+            "MONITOR_RUNNING": 8.624321344541386e-05,
+            "RESUME_INCOMPLETE": 9.37120425703597e-09,
+            "REVIEW_COMPLETED": 0.9999123811721802,
+            "REQUIRE_HUMAN_REVIEW": 1.1882259514095495e-06
+          },
+          "confidence": 0.9999123811721802,
+          "latency_seconds": 0.2206008000066504,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22059689997695386,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "835d571646d6c86acbc07eead0ae0311919a03048a486cc43d4cb2810e120158",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.135602414909954e-07,
+            "MONITOR_RUNNING": 8.795547910267487e-05,
+            "RESUME_INCOMPLETE": 7.870724516578775e-09,
+            "REVIEW_COMPLETED": 0.999910831451416,
+            "REQUIRE_HUMAN_REVIEW": 1.012630718832952e-06
+          },
+          "confidence": 0.999910831451416,
+          "latency_seconds": 0.26635120005812496,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2663466000230983,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "467cea73aa54ea4b14bee4dc6cb2a54fb02561fea6937747ae830d02b46ddaf0",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2383702003025974e-07,
+            "MONITOR_RUNNING": 9.139480971498415e-05,
+            "RESUME_INCOMPLETE": 7.736976392891393e-09,
+            "REVIEW_COMPLETED": 0.9999072551727295,
+            "REQUIRE_HUMAN_REVIEW": 1.0274109172314638e-06
+          },
+          "confidence": 0.9999072551727295,
+          "latency_seconds": 0.23192150006070733,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23191670002415776,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "cbd109f150d3764d2023111db2d872f114ed02233f7a6a36e9c739c8e9b61d6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1230300717434147e-07,
+            "MONITOR_RUNNING": 8.910986798582599e-05,
+            "RESUME_INCOMPLETE": 8.471291224054767e-09,
+            "REVIEW_COMPLETED": 0.9999096393585205,
+            "REQUIRE_HUMAN_REVIEW": 1.0861587043109466e-06
+          },
+          "confidence": 0.9999096393585205,
+          "latency_seconds": 0.26594970002770424,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26594589999876916,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f7dfbf411d934581ff336921f987cea3cd206e558ce13e1772e59c5fe94191ed",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3149989658577397e-07,
+            "MONITOR_RUNNING": 8.912295015761629e-05,
+            "RESUME_INCOMPLETE": 7.928058209927258e-09,
+            "REVIEW_COMPLETED": 0.999909520149231,
+            "REQUIRE_HUMAN_REVIEW": 1.0556505003478378e-06
+          },
+          "confidence": 0.999909520149231,
+          "latency_seconds": 0.20181540003977716,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2018112000077963,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4307bff55a463443dfa92979154f410c5ef63eb27cf32601e5dfd634b8badb39",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2481991379663668e-07,
+            "MONITOR_RUNNING": 8.443279511993751e-05,
+            "RESUME_INCOMPLETE": 7.996039386171105e-09,
+            "REVIEW_COMPLETED": 0.999914288520813,
+            "REQUIRE_HUMAN_REVIEW": 1.0322758043912472e-06
+          },
+          "confidence": 0.999914288520813,
+          "latency_seconds": 0.21009419998154044,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21008989994879812,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19f7e296ef924efdde0a6603d22c79628d4838fbe6e8715dbbaf54450bf2a01b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1651172232850513e-07,
+            "MONITOR_RUNNING": 8.65744732436724e-05,
+            "RESUME_INCOMPLETE": 7.087963549423648e-09,
+            "REVIEW_COMPLETED": 0.9999122619628906,
+            "REQUIRE_HUMAN_REVIEW": 9.702142733658548e-07
+          },
+          "confidence": 0.9999122619628906,
+          "latency_seconds": 0.2136748000048101,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21366939996369183,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7f31cf36e2adc4c5d9b97b455ab55fa3527cfffd6d1e294b609b0daf7e8df785",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2351356676608702e-07,
+            "MONITOR_RUNNING": 8.716294541954994e-05,
+            "RESUME_INCOMPLETE": 7.1020194170046125e-09,
+            "REVIEW_COMPLETED": 0.9999116659164429,
+            "REQUIRE_HUMAN_REVIEW": 9.414141004526755e-07
+          },
+          "confidence": 0.9999116659164429,
+          "latency_seconds": 0.2217889999737963,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2217845000559464,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "65a9c717590fc166e531a0887680d7d9c7e150ebef9323ee3c0b725f9b5f21bf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.215592473930883e-07,
+            "MONITOR_RUNNING": 8.487210288876668e-05,
+            "RESUME_INCOMPLETE": 7.154352665850183e-09,
+            "REVIEW_COMPLETED": 0.9999139308929443,
+            "REQUIRE_HUMAN_REVIEW": 9.381780046169297e-07
+          },
+          "confidence": 0.9999139308929443,
+          "latency_seconds": 0.25872169993817806,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2587177000241354,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "39535d4ab031da4907001e879932e7a7c84d4cd237d8667a534ccc5b13a1e70d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.216604855220794e-07,
+            "MONITOR_RUNNING": 8.671591785969213e-05,
+            "RESUME_INCOMPLETE": 7.838687920980192e-09,
+            "REVIEW_COMPLETED": 0.9999120235443115,
+            "REQUIRE_HUMAN_REVIEW": 1.0327047448299709e-06
+          },
+          "confidence": 0.9999120235443115,
+          "latency_seconds": 0.24639079999178648,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24638629995752126,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2d046fc12940d6964bcfb575ea38a05c5515503c9d140549c262d38881f4e349",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.0657039101479313e-07,
+            "MONITOR_RUNNING": 8.541129500372335e-05,
+            "RESUME_INCOMPLETE": 6.900759519368194e-09,
+            "REVIEW_COMPLETED": 0.9999134540557861,
+            "REQUIRE_HUMAN_REVIEW": 9.208567348650831e-07
+          },
+          "confidence": 0.9999134540557861,
+          "latency_seconds": 0.2874413999961689,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.28743759996723384,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19ce9e1fe1dd86090548ea55d1c84ca82a0f98d7fa837a49dd49c0464d4ba8cf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.8981420168984187e-07,
+            "MONITOR_RUNNING": 7.0999885792844e-05,
+            "RESUME_INCOMPLETE": 7.4313839526496395e-09,
+            "REVIEW_COMPLETED": 0.9999278783798218,
+            "REQUIRE_HUMAN_REVIEW": 8.992687412501255e-07
+          },
+          "confidence": 0.9999278783798218,
+          "latency_seconds": 0.26552229991648346,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26551820000167936,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7105ef60baf82450ba9ac26424a4d949c2ca70db7f9ab30a0216a2d3add94b3a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.2680745814795955e-07,
+            "MONITOR_RUNNING": 8.892464393284172e-05,
+            "RESUME_INCOMPLETE": 7.646447919285038e-09,
+            "REVIEW_COMPLETED": 0.9999097585678101,
+            "REQUIRE_HUMAN_REVIEW": 1.023980075842701e-06
+          },
+          "confidence": 0.9999097585678101,
+          "latency_seconds": 0.24221890000626445,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24221399996895343,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f3447903cb15c217c90868494ef23db48667bbe3f78bef47759fd15e37af5d40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1923538895407546e-07,
+            "MONITOR_RUNNING": 8.876908395905048e-05,
+            "RESUME_INCOMPLETE": 8.051758371152573e-09,
+            "REVIEW_COMPLETED": 0.9999098777770996,
+            "REQUIRE_HUMAN_REVIEW": 1.066793515747122e-06
+          },
+          "confidence": 0.9999098777770996,
+          "latency_seconds": 0.22746530000586063,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2274607999715954,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ba182fb8e4edb1fa49309b6862a5f048cea77cd100644275871a674a21d0eda8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.3006975879980018e-07,
+            "MONITOR_RUNNING": 8.516849629813805e-05,
+            "RESUME_INCOMPLETE": 8.104867887936962e-09,
+            "REVIEW_COMPLETED": 0.9999134540557861,
+            "REQUIRE_HUMAN_REVIEW": 1.1188344615220558e-06
+          },
+          "confidence": 0.9999134540557861,
+          "latency_seconds": 0.27897890005260706,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2789747000206262,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e007d08b327bdf92a7a324f98dbbeb348bb011d5ff09fa0a3d2f6bec8bd6055a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.3489612860648776e-07,
+            "MONITOR_RUNNING": 5.9456069720909e-05,
+            "RESUME_INCOMPLETE": 3.361477141083924e-08,
+            "REVIEW_COMPLETED": 0.9999383687973022,
+            "REQUIRE_HUMAN_REVIEW": 1.7705955315250321e-06
+          },
+          "confidence": 0.9999383687973022,
+          "latency_seconds": 0.26430969999637455,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.264305500080809,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c24b9301da73d3f7271142e5b80c0933d70d68f5150fe5c6a27c35c306fb428f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.875913646174013e-07,
+            "MONITOR_RUNNING": 5.396131018642336e-05,
+            "RESUME_INCOMPLETE": 3.5194236858160366e-08,
+            "REVIEW_COMPLETED": 0.9999433755874634,
+            "REQUIRE_HUMAN_REVIEW": 2.146566657756921e-06
+          },
+          "confidence": 0.9999433755874634,
+          "latency_seconds": 0.3247261999640614,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3247221999336034,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "279a573a7373c7d95651f435e21601bc040d54da6c61705f181a78ae7b2a8e44",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.956293651048327e-07,
+            "MONITOR_RUNNING": 8.324551163241267e-05,
+            "RESUME_INCOMPLETE": 1.2952008887623379e-07,
+            "REVIEW_COMPLETED": 0.9999089241027832,
+            "REQUIRE_HUMAN_REVIEW": 7.094645752658835e-06
+          },
+          "confidence": 0.9999089241027832,
+          "latency_seconds": 0.3042212000582367,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3042167000239715,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "04a9cc6bd795c8ca4301974b106ec388a90246fd8c6b46715e18de812379d247",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.11170185291121e-07,
+            "MONITOR_RUNNING": 9.640783537179232e-05,
+            "RESUME_INCOMPLETE": 1.3079935001769627e-07,
+            "REVIEW_COMPLETED": 0.999895453453064,
+            "REQUIRE_HUMAN_REVIEW": 7.456135335814906e-06
+          },
+          "confidence": 0.999895453453064,
+          "latency_seconds": 0.24546440003905445,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24545689998194575,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f4b001b0ce7c87281f34a5821f27a22aa7a6c8d92a65968341e91a5ab8edf065",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.180281732464209e-07,
+            "MONITOR_RUNNING": 9.318818774772808e-05,
+            "RESUME_INCOMPLETE": 1.3959383693418204e-07,
+            "REVIEW_COMPLETED": 0.9998987913131714,
+            "REQUIRE_HUMAN_REVIEW": 7.36412221158389e-06
+          },
+          "confidence": 0.9998987913131714,
+          "latency_seconds": 0.24597849999554455,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.245974300079979,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e1c72b45372ea283aeaba83b46d2d4ae118633b0831732c2822d9b875678452a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.241280405243742e-07,
+            "MONITOR_RUNNING": 9.040208533406258e-05,
+            "RESUME_INCOMPLETE": 1.390139345858188e-07,
+            "REVIEW_COMPLETED": 0.9999016523361206,
+            "REQUIRE_HUMAN_REVIEW": 7.295742761925794e-06
+          },
+          "confidence": 0.9999016523361206,
+          "latency_seconds": 0.26495999994222075,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2649518999969587,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "69a7e07766aa11ca019690de83d7918440462e662bf21d248a36784c96781d55",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.948935838910984e-07,
+            "MONITOR_RUNNING": 7.711040962021798e-05,
+            "RESUME_INCOMPLETE": 1.2684671446550055e-07,
+            "REVIEW_COMPLETED": 0.9999158382415771,
+            "REQUIRE_HUMAN_REVIEW": 6.477745046140626e-06
+          },
+          "confidence": 0.9999158382415771,
+          "latency_seconds": 0.2690238000359386,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26901940000243485,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9450c565a0340b1cb23bf43fd0bb4d8f5d43a305ba02953c12ba07f0b1579e0d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.237054097051441e-07,
+            "MONITOR_RUNNING": 8.55641410453245e-05,
+            "RESUME_INCOMPLETE": 1.5609619197221036e-07,
+            "REVIEW_COMPLETED": 0.9999055862426758,
+            "REQUIRE_HUMAN_REVIEW": 8.13729093351867e-06
+          },
+          "confidence": 0.9999055862426758,
+          "latency_seconds": 0.28384040005039424,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.28383520001079887,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "d89ef2c74c2c5d96022476f9a9d2d6cbaeebf79c8242b451fb9368a35e41941c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.090976173960371e-07,
+            "MONITOR_RUNNING": 8.569302008254454e-05,
+            "RESUME_INCOMPLETE": 1.3564785206199304e-07,
+            "REVIEW_COMPLETED": 0.9999067783355713,
+            "REQUIRE_HUMAN_REVIEW": 6.890307759022107e-06
+          },
+          "confidence": 0.9999067783355713,
+          "latency_seconds": 0.27309040003456175,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2730862000025809,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "56f4bba5e7c9deafb7cf5ab09b05ef1b054c2c2b88727834097221dbb909dd10",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.75609931274812e-07,
+            "MONITOR_RUNNING": 9.660231444286183e-05,
+            "RESUME_INCOMPLETE": 1.3703315460134036e-07,
+            "REVIEW_COMPLETED": 0.9998955726623535,
+            "REQUIRE_HUMAN_REVIEW": 7.143664333852939e-06
+          },
+          "confidence": 0.9998955726623535,
+          "latency_seconds": 0.29584650008473545,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2958429000573233,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4020d47f4c531f1d6b3183cdbe1acbdd96a0415815305ac0c01c46e6d5bd2ece",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.183342750569864e-07,
+            "MONITOR_RUNNING": 9.171669807983562e-05,
+            "RESUME_INCOMPLETE": 1.2819630512694857e-07,
+            "REVIEW_COMPLETED": 0.9999010562896729,
+            "REQUIRE_HUMAN_REVIEW": 6.536409728141734e-06
+          },
+          "confidence": 0.9999010562896729,
+          "latency_seconds": 0.3363231000257656,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3363186001079157,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "661f60f89ee72b78ce4d8cf555983e56af493321ad805968e38cf8788cec046e",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.699608891518437e-07,
+            "MONITOR_RUNNING": 7.453589932993054e-05,
+            "RESUME_INCOMPLETE": 1.390976080983819e-07,
+            "REVIEW_COMPLETED": 0.9999188184738159,
+            "REQUIRE_HUMAN_REVIEW": 5.936954494245583e-06
+          },
+          "confidence": 0.9999188184738159,
+          "latency_seconds": 0.3542014999547973,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.35419609991367906,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7561b9b74b3c61701c0c4976acdc040034a0faba118c51a8cccbff05129445fa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.504826958713238e-07,
+            "MONITOR_RUNNING": 7.329784421017393e-05,
+            "RESUME_INCOMPLETE": 1.4664097136574128e-07,
+            "REVIEW_COMPLETED": 0.9999203681945801,
+            "REQUIRE_HUMAN_REVIEW": 5.592739853454987e-06
+          },
+          "confidence": 0.9999203681945801,
+          "latency_seconds": 0.22628659999463707,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22628309996798635,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8e6135061bc0dcf8311d9801fcd3e6fed951b0248c022819fcf16976ec622200",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.645961778100173e-07,
+            "MONITOR_RUNNING": 7.510069553973153e-05,
+            "RESUME_INCOMPLETE": 1.3876315563265962e-07,
+            "REVIEW_COMPLETED": 0.9999184608459473,
+            "REQUIRE_HUMAN_REVIEW": 5.7335032579430845e-06
+          },
+          "confidence": 0.9999184608459473,
+          "latency_seconds": 0.2558839999837801,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2558785999426618,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "383e7ffb8f01330100ea313d8b8e7ab71b00c0f61f9d8cf8826f58dcae2295d8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.573886028287234e-07,
+            "MONITOR_RUNNING": 7.370374805759639e-05,
+            "RESUME_INCOMPLETE": 1.4307785534128925e-07,
+            "REVIEW_COMPLETED": 0.999920129776001,
+            "REQUIRE_HUMAN_REVIEW": 5.426098596217344e-06
+          },
+          "confidence": 0.999920129776001,
+          "latency_seconds": 0.29296510003041476,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.29296079999767244,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9b51f0bacfaf3df6452307156dac2f129657141c22c01c32b3d8f79ecc43e994",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.734111141464382e-07,
+            "MONITOR_RUNNING": 7.164741691667587e-05,
+            "RESUME_INCOMPLETE": 1.4603135412016854e-07,
+            "REVIEW_COMPLETED": 0.9999220371246338,
+            "REQUIRE_HUMAN_REVIEW": 5.565910214500036e-06
+          },
+          "confidence": 0.9999220371246338,
+          "latency_seconds": 0.26505609997548163,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.265052100061439,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a82a00146ba22a00fdf33ac60f80e5623e62e7521c490695b02e263644771182",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.7905299399863e-07,
+            "MONITOR_RUNNING": 7.324517355300486e-05,
+            "RESUME_INCOMPLETE": 1.5386207508072403e-07,
+            "REVIEW_COMPLETED": 0.9999197721481323,
+            "REQUIRE_HUMAN_REVIEW": 6.156353265396319e-06
+          },
+          "confidence": 0.9999197721481323,
+          "latency_seconds": 0.5625722999684513,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.5625684999395162,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "0f8df2a84e778c35781c9bbc0eb745b5f00f8b28cdd4614c6cf149d5a2df73bd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.775540330432705e-07,
+            "MONITOR_RUNNING": 7.301044388441369e-05,
+            "RESUME_INCOMPLETE": 1.6276078440569108e-07,
+            "REVIEW_COMPLETED": 0.9999198913574219,
+            "REQUIRE_HUMAN_REVIEW": 6.351983302010922e-06
+          },
+          "confidence": 0.9999198913574219,
+          "latency_seconds": 0.2453915000660345,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24538580002263188,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "3f3d0f8e7e6168867f1ecaef419552f4e94d61a35f05c0b695ee3bd6db46d5e7",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.822441266900569e-07,
+            "MONITOR_RUNNING": 7.490900316042826e-05,
+            "RESUME_INCOMPLETE": 1.490163157313873e-07,
+            "REVIEW_COMPLETED": 0.9999185800552368,
+            "REQUIRE_HUMAN_REVIEW": 5.707007403543685e-06
+          },
+          "confidence": 0.9999185800552368,
+          "latency_seconds": 0.2300060000270605,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23000189999584109,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a89790a652ecc9106ee26ef22d76c643a1a8eddaf7eb4d032ffe991ece8a84ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.9121267743903445e-06,
+            "MONITOR_RUNNING": 0.00020180910360068083,
+            "RESUME_INCOMPLETE": 2.6302500373276416e-06,
+            "REVIEW_COMPLETED": 0.9997863173484802,
+            "REQUIRE_HUMAN_REVIEW": 6.292689249676187e-06
+          },
+          "confidence": 0.9997863173484802,
+          "latency_seconds": 0.3469729999778792,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.34696899994742125,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        }
+      ],
+      "macro_f1_full_five_actions": 0.005555555555555555,
+      "macro_f1_supported_classes": 0.013888888888888888,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "live_status_event": {
+          "accuracy": 0.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 70,
+          "macro_f1_full_five_actions": 0.0,
+          "macro_f1_supported_classes": 0.0
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_extension_20261001": {
+          "accuracy": 0.014084507042253521,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 0.014084507042253521,
+              "recall": 1.0,
+              "f1": 0.027777777777777776
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 71,
+          "macro_f1_full_five_actions": 0.005555555555555555,
+          "macro_f1_supported_classes": 0.013888888888888888
+        }
+      }
+    },
+    "selected_v2": {
+      "accuracy": 1.0,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 70,
+          "correct": 70,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 71,
+      "predictions": [
+        {
+          "record_id": "20eaa898e7567374b4b977a9af50712f5e9be5a3dcc6fffdbd7a3641eadeb746",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.922432986875137e-15,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.30880569296414e-15,
+            "REVIEW_COMPLETED": 5.947777860504377e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.4019625304423355e-12
+          },
+          "confidence": 1.0,
+          "latency_seconds": 1.3748085000552237,
+          "cold_load": true,
+          "load_seconds": 1.1432760000461712,
+          "inference_seconds": 0.23153250000905246,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "37b13da80a049becc234ffe9464720828f0469890c4304c204ab0003a216cd71",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.578311514402387e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.285896518607852e-16,
+            "REVIEW_COMPLETED": 1.4363634047898262e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.018557457886475e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2506008999189362,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2505959999980405,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "439d254be67e968fb1c21409b62d01fe782c0baaf6a5a514796e03fd46cdfe6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.114853682549758e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.174350220388341e-16,
+            "REVIEW_COMPLETED": 1.4735618731080355e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0079012751902476e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2731171000050381,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.273113299976103,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "fd915bf061908b9ccaded39e896ddf66bb3e4ba84fc16c38b49d64f4ab521dfc",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.464312021506038e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.543416024406702e-16,
+            "REVIEW_COMPLETED": 1.7490269825439116e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.617708648935666e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2315705999499187,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2315627000061795,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8c3c716767eb8fd30c346fe5cde9f48ff2495d989a3a2f45672af22f2518a47b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.93533040982835e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.197788896215782e-16,
+            "REVIEW_COMPLETED": 1.8810080988466982e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0100181799320256e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.193521200097166,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19351690006442368,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "67cdbfd5891fde449ccc3943a8ffd42404fde6fed8a5e8ef13561a0f56608baa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.4866086173335334e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.208557430577476e-16,
+            "REVIEW_COMPLETED": 2.462983430488036e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.407332565388761e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19815199996810406,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19816149992402643,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7c2bdd7198cb032ece2ce759438709152ccbf4f02052b309cdaed16b72e0b4c9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.80336863234654e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1004281473813446e-15,
+            "REVIEW_COMPLETED": 2.27000662462052e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.1388171628585672e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20583129988517612,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2058240999467671,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a0b7facc00a6eb0452cfbe7c4f6d4695292f34714ce320d07d8c6ca6f117b866",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.90856134005619e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1821598387695698e-15,
+            "REVIEW_COMPLETED": 2.94349607350957e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.1333349115140532e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2015695000300184,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20156439999118447,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "09a00edcae3fdb2f106210ea961b41f4d18f3cc6cfbf9235b89a7c6b304cf0f4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.172205985942098e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.11869401839236e-16,
+            "REVIEW_COMPLETED": 1.748713410946838e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0299232847859122e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1990112999919802,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1989966999972239,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7630bfc0b1c2fb959a3fce425eac9cfff383b4d591cea549dc6e9554e1ccae54",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.443024470858114e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.199678623093613e-16,
+            "REVIEW_COMPLETED": 2.226992597493052e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.695018514329363e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19234660000074655,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19234249996952713,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8791a42d6c131d125a2daf8be15f808545b02eb1d534417c1a32b8c27ca106d3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.139158845656147e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1103373740730359e-15,
+            "REVIEW_COMPLETED": 4.743207644144695e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.858171985298743e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1857571000000462,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.18575299996882677,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "90e3f38dfc9718ec0be91851c16955972a029c3754455d53dfe211ab19dbc982",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.422939020435383e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.263862942795825e-15,
+            "REVIEW_COMPLETED": 5.785288562229138e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.324016710630934e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21029910002835095,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21029469999484718,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f23f0f51b7a80634ff828ec1bd52bd0076a00316301d0138a1589979ba87814c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.653654168937142e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.112486826055812e-15,
+            "REVIEW_COMPLETED": 4.4907101718867984e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.530452718172061e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.18498980009462684,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.18498490005731583,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2c7f5a0b1bb55695258248628a0e6b30d26a7b6cbbd5ddbdf3c77d1fabe749a2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.939008882012373e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.4819745619885178e-15,
+            "REVIEW_COMPLETED": 5.521834888205096e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.48545610817992e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19843779993243515,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1984332000138238,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "6882d4305a160a6674c47e40e08eda1e5326c9117f5700bd0231f75d61e1eec9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.429609852528855e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.5263135604037283e-15,
+            "REVIEW_COMPLETED": 4.747841930805713e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0181029400069784e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20966749999206513,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20966380008030683,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f74083b9629e8e5a5695f22efa9ccb37cf9db2246906ee67319a7d71e93c75db",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.872230177570661e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2807233453691587e-15,
+            "REVIEW_COMPLETED": 4.113203850328144e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.401089932567497e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20345929998438805,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20345489995088428,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4c5556132209e160ebaa0674813a6d481372d8d3ed2a6f7de494a596ff675ccd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.309426150577907e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.6485199800226713e-15,
+            "REVIEW_COMPLETED": 4.0695813147313686e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.895800372444318e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19715869997162372,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19715450005605817,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ca5424fe35221bcd73d657992f0e7e0afddb24cc7a3c2b300333a8afb1068850",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.73323213741945e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.5357516250185093e-15,
+            "REVIEW_COMPLETED": 5.796377917574591e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.671506895044327e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21631269995123148,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21630810003262013,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "d1a00a8828e6a7114683d14b34ed3879a830ccd1ee726b52ed9b09abdbcc3ce4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.928799968103525e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.4986945688508441e-15,
+            "REVIEW_COMPLETED": 5.758789305880876e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0679399869311691e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20996250002644956,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20995889999903738,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bdfdbaede0d07fcf1ac5e3d51288339f521c4498486cbd9154139e0373462c02",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.884405035416523e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1987350029979155e-15,
+            "REVIEW_COMPLETED": 4.9292025268345835e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.111795880104913e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19229969999287277,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1922855000011623,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "25b90582ef0d1c556ea219a2df0b0b8c932f5a3cee775e2550ab407353a234ff",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.930202154409546e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.753533134884972e-16,
+            "REVIEW_COMPLETED": 2.7859318516942726e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.199513031779918e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1943205000134185,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19431639998219907,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "eaa68d18809a34713257267f3dba1fde63e7ae0c92d0cc9be9bf8589587de6ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.397280176256551e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1299326342748169e-15,
+            "REVIEW_COMPLETED": 3.802793041400576e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.449229034793952e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19266369997058064,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19265909993555397,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c5cb19ec7cd8cd78f115dc5f6e06a893439b7b112e127f5d36cd3a93292178aa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.004379460672495e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1154231716465875e-15,
+            "REVIEW_COMPLETED": 4.0068934227446146e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.554091187895936e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1820615999167785,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.18205719999969006,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c564af575c5da917406655352d5c8dad9f6858fd1d8fb9d8aff45f1eaadfee56",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.310317851278239e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1653559756454653e-15,
+            "REVIEW_COMPLETED": 3.616055480222535e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.856540074074232e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2019602000946179,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.20195600006263703,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "bcd5184ceccf7567ca2af462df47c95c4a106a8f2af1b36919e9f2f402171858",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.684331023177822e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2778245868654177e-15,
+            "REVIEW_COMPLETED": 3.268404359549164e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.699629761694215e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.23268729995470494,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23268259991891682,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c490fbe041d4f878d25d3d625c563a1eeaa7fc8611932caf6393bcf8ea20e415",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.275116617509457e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.747737841338977e-16,
+            "REVIEW_COMPLETED": 2.194595789546238e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.58592627868879e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19471579999662936,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19471129996236414,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e33a411de92c84b7fbe93840fa49f73a1ac39873a3e28b5cfb093fce89119e32",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.358109187560384e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.0315269934407724e-15,
+            "REVIEW_COMPLETED": 3.132881120867549e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.186256966155389e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19411019992548972,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19410600000992417,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4f96712fa4d9b5d71ad93c7e23fd8788a5b699a1947bb8bda98c025843b69e40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 9.52187620880614e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.0857547838778216e-15,
+            "REVIEW_COMPLETED": 3.5392627955981026e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.473727768727388e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2220382000086829,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22203300008550286,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e2a0110756b2794682c08b0a871c0c6364a2cb03dc72a36449e45cddc948ebf3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.462762125876805e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.61773363640761e-16,
+            "REVIEW_COMPLETED": 2.42525641361074e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.682552409179772e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19481859996449202,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19480990001466125,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ec562479e063847ee47dcfa5c2b693ceb43d6e27c2c810f20d59f933be13fb05",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 9.889407444214476e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.3179648429610885e-15,
+            "REVIEW_COMPLETED": 4.3048409888862826e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.796193533011949e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19828330003656447,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19827900000382215,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "eaad4ee599c34001568e93c71a9b9408d687a719f300ff2dedf034f3f09b87d2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.466347712993531e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.277461129244383e-16,
+            "REVIEW_COMPLETED": 4.969388480357759e-14,
+            "REQUIRE_HUMAN_REVIEW": 7.946283740603924e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21844419999979436,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21843989996705204,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "1ffcc368f4e01c9c1a5848d0b9ddd58e83f59e0ec4f67def3e9915d29977afc8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.756459897777989e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.5823452133810739e-15,
+            "REVIEW_COMPLETED": 1.2256428510992734e-13,
+            "REQUIRE_HUMAN_REVIEW": 1.0483274472572642e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1854713000357151,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.1854670998873189,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "dd88978b12f64fbbaa3de38c755036fc4aa6de1f3a896f8c99fb9ed79d1d1240",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.0010132151261726e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1084751721384973e-15,
+            "REVIEW_COMPLETED": 3.7922180044606957e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.042835332195547e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19195120001677424,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19194649998098612,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ed907e7165a0fe1b1ce1cdceeecd5bbe75a4f7b0a92e440ab4c3ab7d923a14fb",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.7098960975248726e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.770165371585633e-16,
+            "REVIEW_COMPLETED": 3.6007485784261134e-14,
+            "REQUIRE_HUMAN_REVIEW": 6.568403386844092e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2043493000091985,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2043444000883028,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2ab5442c9cfd44f50e618215b7755dd1ae13d2d4b67ed3d62602b4697973ba63",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.69610549156367e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.0927896042630053e-15,
+            "REVIEW_COMPLETED": 4.911146494904553e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.070865346486086e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20315219997428358,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2031475999392569,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2655a800c986c6a7af38f196574530e2a5212b4d404c20bd8d1526dd9e3bed58",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.665370619512368e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.713275991870074e-16,
+            "REVIEW_COMPLETED": 4.0093552393025145e-14,
+            "REQUIRE_HUMAN_REVIEW": 6.9745539909866344e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.25561900006141514,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2556147000286728,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "b24305144030747ab2b4cbf4dd4f29d306573625682897a00b2ddb23f858450a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.207997941835986e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2138002251186621e-15,
+            "REVIEW_COMPLETED": 4.2991462169753025e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.05630008918995e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.24814030004199594,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24813580000773072,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "835d571646d6c86acbc07eead0ae0311919a03048a486cc43d4cb2810e120158",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.5502778346849156e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.3612287448079964e-15,
+            "REVIEW_COMPLETED": 6.134491786075058e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.581466124453398e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21184440003708005,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21184020000509918,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "467cea73aa54ea4b14bee4dc6cb2a54fb02561fea6937747ae830d02b46ddaf0",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.459558041774081e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1261974307356622e-15,
+            "REVIEW_COMPLETED": 5.28118639043975e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.220980234795131e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2160623000236228,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21605729998555034,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "cbd109f150d3764d2023111db2d872f114ed02233f7a6a36e9c739c8e9b61d6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.503618230692024e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.230462104344983e-15,
+            "REVIEW_COMPLETED": 4.8263822138069207e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.575085425261732e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2100233999080956,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2100192999932915,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f7dfbf411d934581ff336921f987cea3cd206e558ce13e1772e59c5fe94191ed",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.699246859151122e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 7.593739310594264e-16,
+            "REVIEW_COMPLETED": 3.114886752936079e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.523343891910604e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2564735999330878,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.25646890001371503,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4307bff55a463443dfa92979154f410c5ef63eb27cf32601e5dfd634b8badb39",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.31987276374512e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.825492190899238e-16,
+            "REVIEW_COMPLETED": 4.628791111255942e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.912802017761606e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2413953000213951,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24139009998179972,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19f7e296ef924efdde0a6603d22c79628d4838fbe6e8715dbbaf54450bf2a01b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.2916091911228668e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.818747691056726e-16,
+            "REVIEW_COMPLETED": 4.626160904548128e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.298066980238901e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.1973909999942407,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19738669996149838,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7f31cf36e2adc4c5d9b97b455ab55fa3527cfffd6d1e294b609b0daf7e8df785",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.677178392421076e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.858719175837656e-16,
+            "REVIEW_COMPLETED": 3.965185181608634e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.532860832841105e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.24814070004504174,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24813640001229942,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "65a9c717590fc166e531a0887680d7d9c7e150ebef9323ee3c0b725f9b5f21bf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.521820638493817e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.55539879500826e-16,
+            "REVIEW_COMPLETED": 3.5339539318978916e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.359812001717051e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.24163080006837845,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24162600003182888,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "39535d4ab031da4907001e879932e7a7c84d4cd237d8667a534ccc5b13a1e70d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.653411839061203e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.1343378408752497e-15,
+            "REVIEW_COMPLETED": 5.16239137484005e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0231448189222149e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19731890002731234,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19731489999685436,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "2d046fc12940d6964bcfb575ea38a05c5515503c9d140549c262d38881f4e349",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.0481578600115675e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2452276885606384e-15,
+            "REVIEW_COMPLETED": 4.4586621721076636e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0458668165454904e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2321034000487998,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2320987000130117,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "19ce9e1fe1dd86090548ea55d1c84ca82a0f98d7fa837a49dd49c0464d4ba8cf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.110734404223449e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2255294079766476e-15,
+            "REVIEW_COMPLETED": 5.948895347683558e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0551397944388516e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.24390939995646477,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24390480003785342,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7105ef60baf82450ba9ac26424a4d949c2ca70db7f9ab30a0216a2d3add94b3a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 8.674960721198822e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 8.37461792587682e-16,
+            "REVIEW_COMPLETED": 3.223648155055783e-14,
+            "REQUIRE_HUMAN_REVIEW": 9.741710679778658e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.19843890005722642,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.19843290001153946,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f3447903cb15c217c90868494ef23db48667bbe3f78bef47759fd15e37af5d40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.0216339000797484e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2192808459247527e-15,
+            "REVIEW_COMPLETED": 4.210191494481014e-14,
+            "REQUIRE_HUMAN_REVIEW": 1.0292673424715584e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.26925829995889217,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2692542999284342,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "ba182fb8e4edb1fa49309b6862a5f048cea77cd100644275871a674a21d0eda8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.809478567897625e-18,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 5.389329712617843e-16,
+            "REVIEW_COMPLETED": 3.134877408117638e-14,
+            "REQUIRE_HUMAN_REVIEW": 8.389298912676868e-15
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.20425650000106543,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2042521999683231,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e007d08b327bdf92a7a324f98dbbeb348bb011d5ff09fa0a3d2f6bec8bd6055a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.1875612656225858e-15,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 3.822602431531423e-14,
+            "REVIEW_COMPLETED": 4.281081711354773e-09,
+            "REQUIRE_HUMAN_REVIEW": 1.4441176553192658e-11
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.26721309998538345,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.26720899995416403,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "c24b9301da73d3f7271142e5b80c0933d70d68f5150fe5c6a27c35c306fb428f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9910126501949294e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 9.831276282434506e-14,
+            "REVIEW_COMPLETED": 1.5000532066489214e-11,
+            "REQUIRE_HUMAN_REVIEW": 4.220323905883977e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2246375000104308,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22463349997997284,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "279a573a7373c7d95651f435e21601bc040d54da6c61705f181a78ae7b2a8e44",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.3156426756664113e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.902944896927869e-14,
+            "REVIEW_COMPLETED": 1.5143744548293259e-12,
+            "REQUIRE_HUMAN_REVIEW": 4.708558236777953e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2030357999028638,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2030314999865368,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "04a9cc6bd795c8ca4301974b106ec388a90246fd8c6b46715e18de812379d247",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.6794171876047766e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 2.2808393289829552e-14,
+            "REVIEW_COMPLETED": 1.5494827643180997e-12,
+            "REQUIRE_HUMAN_REVIEW": 5.1208691421392866e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.23181949998252094,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2318155999528244,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "f4b001b0ce7c87281f34a5821f27a22aa7a6c8d92a65968341e91a5ab8edf065",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.2231835700815615e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 2.4732647164018087e-14,
+            "REVIEW_COMPLETED": 1.7139601370119717e-12,
+            "REQUIRE_HUMAN_REVIEW": 4.4345752655931825e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.23752119997516274,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23751690005883574,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "e1c72b45372ea283aeaba83b46d2d4ae118633b0831732c2822d9b875678452a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.9065676012567384e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 2.4547714460644056e-14,
+            "REVIEW_COMPLETED": 1.3222623950620571e-12,
+            "REQUIRE_HUMAN_REVIEW": 5.66686929044484e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.26204539998434484,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2620408999500796,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "69a7e07766aa11ca019690de83d7918440462e662bf21d248a36784c96781d55",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 1.528706865231085e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.8618224637782094e-14,
+            "REVIEW_COMPLETED": 9.604089442130648e-13,
+            "REQUIRE_HUMAN_REVIEW": 4.600291840712624e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21172490005847067,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21172100002877414,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9450c565a0340b1cb23bf43fd0bb4d8f5d43a305ba02953c12ba07f0b1579e0d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 3.777341443047082e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 4.8377829384637847e-14,
+            "REVIEW_COMPLETED": 1.5465183387380899e-12,
+            "REQUIRE_HUMAN_REVIEW": 7.142242797620463e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.42567270004656166,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.42566740000620484,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "d89ef2c74c2c5d96022476f9a9d2d6cbaeebf79c8242b451fb9368a35e41941c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.4010169144053804e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 6.62041629200319e-14,
+            "REVIEW_COMPLETED": 2.3799792431972167e-12,
+            "REQUIRE_HUMAN_REVIEW": 8.850127526443749e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21937270008493215,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21936059999279678,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "56f4bba5e7c9deafb7cf5ab09b05ef1b054c2c2b88727834097221dbb909dd10",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.578925116980779e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 4.912767377152419e-14,
+            "REVIEW_COMPLETED": 1.6807449529365748e-12,
+            "REQUIRE_HUMAN_REVIEW": 6.610850918336436e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2465432999888435,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.24653930007480085,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "4020d47f4c531f1d6b3183cdbe1acbdd96a0415815305ac0c01c46e6d5bd2ece",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.183911963773226e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 6.335018366008041e-14,
+            "REVIEW_COMPLETED": 3.1022847051670466e-12,
+            "REQUIRE_HUMAN_REVIEW": 7.286181478039638e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.23001599998679012,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23001139995176345,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "661f60f89ee72b78ce4d8cf555983e56af493321ad805968e38cf8788cec046e",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 4.7314899782878144e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.0346393609483168e-13,
+            "REVIEW_COMPLETED": 3.745368598595533e-12,
+            "REQUIRE_HUMAN_REVIEW": 8.541202413305665e-14
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21734370000194758,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2173392999684438,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "7561b9b74b3c61701c0c4976acdc040034a0faba118c51a8cccbff05129445fa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 5.86290530403213e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2577752153599547e-13,
+            "REVIEW_COMPLETED": 5.598589734173709e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.2423821194908202e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2307168000843376,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23071290005464107,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "8e6135061bc0dcf8311d9801fcd3e6fed951b0248c022819fcf16976ec622200",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.24522156570924e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2960588006462326e-13,
+            "REVIEW_COMPLETED": 5.329520678942767e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.209323033423207e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.2511216999264434,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2511176000116393,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "383e7ffb8f01330100ea313d8b8e7ab71b00c0f61f9d8cf8826f58dcae2295d8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 6.273755988119869e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2644187996971312e-13,
+            "REVIEW_COMPLETED": 5.2627598459698e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.2609386462487243e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.23258020007051528,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.23257570003625005,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "9b51f0bacfaf3df6452307156dac2f129657141c22c01c32b3d8f79ecc43e994",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.298424317558707e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2255306361744212e-13,
+            "REVIEW_COMPLETED": 4.959375791979692e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.318692876249583e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.21560500003397465,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21560140000656247,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a82a00146ba22a00fdf33ac60f80e5623e62e7521c490695b02e263644771182",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.255618713475823e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.2725940906534866e-13,
+            "REVIEW_COMPLETED": 4.126558903611022e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.237255333992951e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.22328899998683482,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.2232840999495238,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "0f8df2a84e778c35781c9bbc0eb745b5f00f8b28cdd4614c6cf149d5a2df73bd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.956041507216734e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.4376028850422023e-13,
+            "REVIEW_COMPLETED": 4.9630091703001256e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.2480108905945503e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.22485809994395822,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.22485390002839267,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "3f3d0f8e7e6168867f1ecaef419552f4e94d61a35f05c0b695ee3bd6db46d5e7",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 7.234282747627875e-17,
+            "MONITOR_RUNNING": 1.0,
+            "RESUME_INCOMPLETE": 1.3591131529672867e-13,
+            "REVIEW_COMPLETED": 4.733497014491883e-12,
+            "REQUIRE_HUMAN_REVIEW": 1.1669986266400756e-13
+          },
+          "confidence": 1.0,
+          "latency_seconds": 0.218727600062266,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.21872330002952367,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        },
+        {
+          "record_id": "a89790a652ecc9106ee26ef22d76c643a1a8eddaf7eb4d032ffe991ece8a84ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED",
+          "probabilities": {
+            "INVESTIGATE_FAILURE": 2.440597747296468e-15,
+            "MONITOR_RUNNING": 0.00020550204499159008,
+            "RESUME_INCOMPLETE": 2.145631936012471e-11,
+            "REVIEW_COMPLETED": 0.9997945427894592,
+            "REQUIRE_HUMAN_REVIEW": 4.941137898687754e-15
+          },
+          "confidence": 0.9997945427894592,
+          "latency_seconds": 0.30882649996783584,
+          "cold_load": false,
+          "load_seconds": 0.0,
+          "inference_seconds": 0.3088227000553161,
+          "needs_human_review": true,
+          "authorizes_execution": false
+        }
+      ],
+      "macro_f1_full_five_actions": 0.4,
+      "macro_f1_supported_classes": 1.0,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "live_status_event": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 70,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_extension_20261001": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 71,
+          "macro_f1_full_five_actions": 0.4,
+          "macro_f1_supported_classes": 1.0
+        }
+      }
+    }
+  },
+  "baselines": {
+    "majority_train": {
+      "label": "MONITOR_RUNNING",
+      "training_counts": {
+        "MONITOR_RUNNING": 54,
+        "REVIEW_COMPLETED": 13,
+        "INVESTIGATE_FAILURE": 1,
+        "RESUME_INCOMPLETE": 1
+      },
+      "accuracy": 0.9859154929577465,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 70,
+          "correct": 70,
+          "precision": 0.9859154929577465,
+          "recall": 1.0,
+          "f1": 0.9929078014184397
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 71,
+      "predictions": [
+        {
+          "record_id": "20eaa898e7567374b4b977a9af50712f5e9be5a3dcc6fffdbd7a3641eadeb746",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "37b13da80a049becc234ffe9464720828f0469890c4304c204ab0003a216cd71",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "439d254be67e968fb1c21409b62d01fe782c0baaf6a5a514796e03fd46cdfe6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "fd915bf061908b9ccaded39e896ddf66bb3e4ba84fc16c38b49d64f4ab521dfc",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8c3c716767eb8fd30c346fe5cde9f48ff2495d989a3a2f45672af22f2518a47b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "67cdbfd5891fde449ccc3943a8ffd42404fde6fed8a5e8ef13561a0f56608baa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7c2bdd7198cb032ece2ce759438709152ccbf4f02052b309cdaed16b72e0b4c9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a0b7facc00a6eb0452cfbe7c4f6d4695292f34714ce320d07d8c6ca6f117b866",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "09a00edcae3fdb2f106210ea961b41f4d18f3cc6cfbf9235b89a7c6b304cf0f4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7630bfc0b1c2fb959a3fce425eac9cfff383b4d591cea549dc6e9554e1ccae54",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8791a42d6c131d125a2daf8be15f808545b02eb1d534417c1a32b8c27ca106d3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "90e3f38dfc9718ec0be91851c16955972a029c3754455d53dfe211ab19dbc982",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f23f0f51b7a80634ff828ec1bd52bd0076a00316301d0138a1589979ba87814c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2c7f5a0b1bb55695258248628a0e6b30d26a7b6cbbd5ddbdf3c77d1fabe749a2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6882d4305a160a6674c47e40e08eda1e5326c9117f5700bd0231f75d61e1eec9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f74083b9629e8e5a5695f22efa9ccb37cf9db2246906ee67319a7d71e93c75db",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4c5556132209e160ebaa0674813a6d481372d8d3ed2a6f7de494a596ff675ccd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ca5424fe35221bcd73d657992f0e7e0afddb24cc7a3c2b300333a8afb1068850",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "d1a00a8828e6a7114683d14b34ed3879a830ccd1ee726b52ed9b09abdbcc3ce4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bdfdbaede0d07fcf1ac5e3d51288339f521c4498486cbd9154139e0373462c02",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "25b90582ef0d1c556ea219a2df0b0b8c932f5a3cee775e2550ab407353a234ff",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "eaa68d18809a34713257267f3dba1fde63e7ae0c92d0cc9be9bf8589587de6ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c5cb19ec7cd8cd78f115dc5f6e06a893439b7b112e127f5d36cd3a93292178aa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c564af575c5da917406655352d5c8dad9f6858fd1d8fb9d8aff45f1eaadfee56",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bcd5184ceccf7567ca2af462df47c95c4a106a8f2af1b36919e9f2f402171858",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c490fbe041d4f878d25d3d625c563a1eeaa7fc8611932caf6393bcf8ea20e415",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e33a411de92c84b7fbe93840fa49f73a1ac39873a3e28b5cfb093fce89119e32",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4f96712fa4d9b5d71ad93c7e23fd8788a5b699a1947bb8bda98c025843b69e40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e2a0110756b2794682c08b0a871c0c6364a2cb03dc72a36449e45cddc948ebf3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ec562479e063847ee47dcfa5c2b693ceb43d6e27c2c810f20d59f933be13fb05",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "eaad4ee599c34001568e93c71a9b9408d687a719f300ff2dedf034f3f09b87d2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "1ffcc368f4e01c9c1a5848d0b9ddd58e83f59e0ec4f67def3e9915d29977afc8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "dd88978b12f64fbbaa3de38c755036fc4aa6de1f3a896f8c99fb9ed79d1d1240",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ed907e7165a0fe1b1ce1cdceeecd5bbe75a4f7b0a92e440ab4c3ab7d923a14fb",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2ab5442c9cfd44f50e618215b7755dd1ae13d2d4b67ed3d62602b4697973ba63",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2655a800c986c6a7af38f196574530e2a5212b4d404c20bd8d1526dd9e3bed58",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "b24305144030747ab2b4cbf4dd4f29d306573625682897a00b2ddb23f858450a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "835d571646d6c86acbc07eead0ae0311919a03048a486cc43d4cb2810e120158",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "467cea73aa54ea4b14bee4dc6cb2a54fb02561fea6937747ae830d02b46ddaf0",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "cbd109f150d3764d2023111db2d872f114ed02233f7a6a36e9c739c8e9b61d6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f7dfbf411d934581ff336921f987cea3cd206e558ce13e1772e59c5fe94191ed",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4307bff55a463443dfa92979154f410c5ef63eb27cf32601e5dfd634b8badb39",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19f7e296ef924efdde0a6603d22c79628d4838fbe6e8715dbbaf54450bf2a01b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7f31cf36e2adc4c5d9b97b455ab55fa3527cfffd6d1e294b609b0daf7e8df785",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "65a9c717590fc166e531a0887680d7d9c7e150ebef9323ee3c0b725f9b5f21bf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "39535d4ab031da4907001e879932e7a7c84d4cd237d8667a534ccc5b13a1e70d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2d046fc12940d6964bcfb575ea38a05c5515503c9d140549c262d38881f4e349",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19ce9e1fe1dd86090548ea55d1c84ca82a0f98d7fa837a49dd49c0464d4ba8cf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7105ef60baf82450ba9ac26424a4d949c2ca70db7f9ab30a0216a2d3add94b3a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f3447903cb15c217c90868494ef23db48667bbe3f78bef47759fd15e37af5d40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ba182fb8e4edb1fa49309b6862a5f048cea77cd100644275871a674a21d0eda8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e007d08b327bdf92a7a324f98dbbeb348bb011d5ff09fa0a3d2f6bec8bd6055a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c24b9301da73d3f7271142e5b80c0933d70d68f5150fe5c6a27c35c306fb428f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "279a573a7373c7d95651f435e21601bc040d54da6c61705f181a78ae7b2a8e44",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "04a9cc6bd795c8ca4301974b106ec388a90246fd8c6b46715e18de812379d247",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f4b001b0ce7c87281f34a5821f27a22aa7a6c8d92a65968341e91a5ab8edf065",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e1c72b45372ea283aeaba83b46d2d4ae118633b0831732c2822d9b875678452a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "69a7e07766aa11ca019690de83d7918440462e662bf21d248a36784c96781d55",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9450c565a0340b1cb23bf43fd0bb4d8f5d43a305ba02953c12ba07f0b1579e0d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "d89ef2c74c2c5d96022476f9a9d2d6cbaeebf79c8242b451fb9368a35e41941c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "56f4bba5e7c9deafb7cf5ab09b05ef1b054c2c2b88727834097221dbb909dd10",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4020d47f4c531f1d6b3183cdbe1acbdd96a0415815305ac0c01c46e6d5bd2ece",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "661f60f89ee72b78ce4d8cf555983e56af493321ad805968e38cf8788cec046e",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7561b9b74b3c61701c0c4976acdc040034a0faba118c51a8cccbff05129445fa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8e6135061bc0dcf8311d9801fcd3e6fed951b0248c022819fcf16976ec622200",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "383e7ffb8f01330100ea313d8b8e7ab71b00c0f61f9d8cf8826f58dcae2295d8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9b51f0bacfaf3df6452307156dac2f129657141c22c01c32b3d8f79ecc43e994",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a82a00146ba22a00fdf33ac60f80e5623e62e7521c490695b02e263644771182",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "0f8df2a84e778c35781c9bbc0eb745b5f00f8b28cdd4614c6cf149d5a2df73bd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "3f3d0f8e7e6168867f1ecaef419552f4e94d61a35f05c0b695ee3bd6db46d5e7",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a89790a652ecc9106ee26ef22d76c643a1a8eddaf7eb4d032ffe991ece8a84ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "MONITOR_RUNNING"
+        }
+      ],
+      "macro_f1_full_five_actions": 0.19858156028368795,
+      "macro_f1_supported_classes": 0.49645390070921985,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "live_status_event": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 70,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "published_final_result": {
+          "accuracy": 0.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.0,
+          "macro_f1_supported_classes": 0.0
+        }
+      },
+      "by_group": {
+        "chum_window_extension_20261001": {
+          "accuracy": 0.9859154929577465,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 0.9859154929577465,
+              "recall": 1.0,
+              "f1": 0.9929078014184397
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 71,
+          "macro_f1_full_five_actions": 0.19858156028368795,
+          "macro_f1_supported_classes": 0.49645390070921985
+        }
+      }
+    },
+    "observed_state_rule": {
+      "latency_seconds": 0.0008538999827578664,
+      "limitation": "Reproduces rule-generated labels on structured records; not independent human decision ground truth.",
+      "accuracy": 1.0,
+      "classwise": {
+        "INVESTIGATE_FAILURE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MONITOR_RUNNING": {
+          "support": 70,
+          "correct": 70,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "RESUME_INCOMPLETE": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REVIEW_COMPLETED": {
+          "support": 1,
+          "correct": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REQUIRE_HUMAN_REVIEW": {
+          "support": 0,
+          "correct": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "count": 71,
+      "predictions": [
+        {
+          "record_id": "20eaa898e7567374b4b977a9af50712f5e9be5a3dcc6fffdbd7a3641eadeb746",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "37b13da80a049becc234ffe9464720828f0469890c4304c204ab0003a216cd71",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "439d254be67e968fb1c21409b62d01fe782c0baaf6a5a514796e03fd46cdfe6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "fd915bf061908b9ccaded39e896ddf66bb3e4ba84fc16c38b49d64f4ab521dfc",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8c3c716767eb8fd30c346fe5cde9f48ff2495d989a3a2f45672af22f2518a47b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "67cdbfd5891fde449ccc3943a8ffd42404fde6fed8a5e8ef13561a0f56608baa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7c2bdd7198cb032ece2ce759438709152ccbf4f02052b309cdaed16b72e0b4c9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a0b7facc00a6eb0452cfbe7c4f6d4695292f34714ce320d07d8c6ca6f117b866",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "09a00edcae3fdb2f106210ea961b41f4d18f3cc6cfbf9235b89a7c6b304cf0f4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7630bfc0b1c2fb959a3fce425eac9cfff383b4d591cea549dc6e9554e1ccae54",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8791a42d6c131d125a2daf8be15f808545b02eb1d534417c1a32b8c27ca106d3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "90e3f38dfc9718ec0be91851c16955972a029c3754455d53dfe211ab19dbc982",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f23f0f51b7a80634ff828ec1bd52bd0076a00316301d0138a1589979ba87814c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2c7f5a0b1bb55695258248628a0e6b30d26a7b6cbbd5ddbdf3c77d1fabe749a2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "6882d4305a160a6674c47e40e08eda1e5326c9117f5700bd0231f75d61e1eec9",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f74083b9629e8e5a5695f22efa9ccb37cf9db2246906ee67319a7d71e93c75db",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4c5556132209e160ebaa0674813a6d481372d8d3ed2a6f7de494a596ff675ccd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ca5424fe35221bcd73d657992f0e7e0afddb24cc7a3c2b300333a8afb1068850",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "d1a00a8828e6a7114683d14b34ed3879a830ccd1ee726b52ed9b09abdbcc3ce4",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bdfdbaede0d07fcf1ac5e3d51288339f521c4498486cbd9154139e0373462c02",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "25b90582ef0d1c556ea219a2df0b0b8c932f5a3cee775e2550ab407353a234ff",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "eaa68d18809a34713257267f3dba1fde63e7ae0c92d0cc9be9bf8589587de6ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c5cb19ec7cd8cd78f115dc5f6e06a893439b7b112e127f5d36cd3a93292178aa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c564af575c5da917406655352d5c8dad9f6858fd1d8fb9d8aff45f1eaadfee56",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "bcd5184ceccf7567ca2af462df47c95c4a106a8f2af1b36919e9f2f402171858",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c490fbe041d4f878d25d3d625c563a1eeaa7fc8611932caf6393bcf8ea20e415",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e33a411de92c84b7fbe93840fa49f73a1ac39873a3e28b5cfb093fce89119e32",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4f96712fa4d9b5d71ad93c7e23fd8788a5b699a1947bb8bda98c025843b69e40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e2a0110756b2794682c08b0a871c0c6364a2cb03dc72a36449e45cddc948ebf3",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ec562479e063847ee47dcfa5c2b693ceb43d6e27c2c810f20d59f933be13fb05",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "eaad4ee599c34001568e93c71a9b9408d687a719f300ff2dedf034f3f09b87d2",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "1ffcc368f4e01c9c1a5848d0b9ddd58e83f59e0ec4f67def3e9915d29977afc8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "dd88978b12f64fbbaa3de38c755036fc4aa6de1f3a896f8c99fb9ed79d1d1240",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ed907e7165a0fe1b1ce1cdceeecd5bbe75a4f7b0a92e440ab4c3ab7d923a14fb",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2ab5442c9cfd44f50e618215b7755dd1ae13d2d4b67ed3d62602b4697973ba63",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2655a800c986c6a7af38f196574530e2a5212b4d404c20bd8d1526dd9e3bed58",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "b24305144030747ab2b4cbf4dd4f29d306573625682897a00b2ddb23f858450a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "835d571646d6c86acbc07eead0ae0311919a03048a486cc43d4cb2810e120158",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "467cea73aa54ea4b14bee4dc6cb2a54fb02561fea6937747ae830d02b46ddaf0",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "cbd109f150d3764d2023111db2d872f114ed02233f7a6a36e9c739c8e9b61d6f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f7dfbf411d934581ff336921f987cea3cd206e558ce13e1772e59c5fe94191ed",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4307bff55a463443dfa92979154f410c5ef63eb27cf32601e5dfd634b8badb39",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19f7e296ef924efdde0a6603d22c79628d4838fbe6e8715dbbaf54450bf2a01b",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7f31cf36e2adc4c5d9b97b455ab55fa3527cfffd6d1e294b609b0daf7e8df785",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "65a9c717590fc166e531a0887680d7d9c7e150ebef9323ee3c0b725f9b5f21bf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "39535d4ab031da4907001e879932e7a7c84d4cd237d8667a534ccc5b13a1e70d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "2d046fc12940d6964bcfb575ea38a05c5515503c9d140549c262d38881f4e349",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "19ce9e1fe1dd86090548ea55d1c84ca82a0f98d7fa837a49dd49c0464d4ba8cf",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7105ef60baf82450ba9ac26424a4d949c2ca70db7f9ab30a0216a2d3add94b3a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f3447903cb15c217c90868494ef23db48667bbe3f78bef47759fd15e37af5d40",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "ba182fb8e4edb1fa49309b6862a5f048cea77cd100644275871a674a21d0eda8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e007d08b327bdf92a7a324f98dbbeb348bb011d5ff09fa0a3d2f6bec8bd6055a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "c24b9301da73d3f7271142e5b80c0933d70d68f5150fe5c6a27c35c306fb428f",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "279a573a7373c7d95651f435e21601bc040d54da6c61705f181a78ae7b2a8e44",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "04a9cc6bd795c8ca4301974b106ec388a90246fd8c6b46715e18de812379d247",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "f4b001b0ce7c87281f34a5821f27a22aa7a6c8d92a65968341e91a5ab8edf065",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "e1c72b45372ea283aeaba83b46d2d4ae118633b0831732c2822d9b875678452a",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "69a7e07766aa11ca019690de83d7918440462e662bf21d248a36784c96781d55",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9450c565a0340b1cb23bf43fd0bb4d8f5d43a305ba02953c12ba07f0b1579e0d",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "d89ef2c74c2c5d96022476f9a9d2d6cbaeebf79c8242b451fb9368a35e41941c",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "56f4bba5e7c9deafb7cf5ab09b05ef1b054c2c2b88727834097221dbb909dd10",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "4020d47f4c531f1d6b3183cdbe1acbdd96a0415815305ac0c01c46e6d5bd2ece",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "661f60f89ee72b78ce4d8cf555983e56af493321ad805968e38cf8788cec046e",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "7561b9b74b3c61701c0c4976acdc040034a0faba118c51a8cccbff05129445fa",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "8e6135061bc0dcf8311d9801fcd3e6fed951b0248c022819fcf16976ec622200",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "383e7ffb8f01330100ea313d8b8e7ab71b00c0f61f9d8cf8826f58dcae2295d8",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "9b51f0bacfaf3df6452307156dac2f129657141c22c01c32b3d8f79ecc43e994",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a82a00146ba22a00fdf33ac60f80e5623e62e7521c490695b02e263644771182",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "0f8df2a84e778c35781c9bbc0eb745b5f00f8b28cdd4614c6cf149d5a2df73bd",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "3f3d0f8e7e6168867f1ecaef419552f4e94d61a35f05c0b695ee3bd6db46d5e7",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "live_status_event",
+          "expected": "MONITOR_RUNNING",
+          "predicted": "MONITOR_RUNNING"
+        },
+        {
+          "record_id": "a89790a652ecc9106ee26ef22d76c643a1a8eddaf7eb4d032ffe991ece8a84ab",
+          "group_id": "chum_window_extension_20261001",
+          "artifact_type": "published_final_result",
+          "expected": "REVIEW_COMPLETED",
+          "predicted": "REVIEW_COMPLETED"
+        }
+      ],
+      "macro_f1_full_five_actions": 0.4,
+      "macro_f1_supported_classes": 1.0,
+      "independent_groups": 1,
+      "by_artifact_type": {
+        "live_status_event": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 70,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        },
+        "published_final_result": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 1,
+          "macro_f1_full_five_actions": 0.2,
+          "macro_f1_supported_classes": 1.0
+        }
+      },
+      "by_group": {
+        "chum_window_extension_20261001": {
+          "accuracy": 1.0,
+          "classwise": {
+            "INVESTIGATE_FAILURE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "MONITOR_RUNNING": {
+              "support": 70,
+              "correct": 70,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "RESUME_INCOMPLETE": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "REVIEW_COMPLETED": {
+              "support": 1,
+              "correct": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "REQUIRE_HUMAN_REVIEW": {
+              "support": 0,
+              "correct": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "count": 71,
+          "macro_f1_full_five_actions": 0.4,
+          "macro_f1_supported_classes": 1.0
+        }
+      }
+    }
+  },
+  "production_gate": false,
+  "authorizes_execution": false,
+  "needs_human_review": true,
+  "limitations": [
+    "Policy-imitation labels are not independent human ground truth.",
+    "Adjacent event snapshots are correlated; report independent source groups.",
+    "No confidence calibration or production/generalization claim.",
+    "Holdout assignment occurred after execution began and routine monitoring; it is not a fully prospective unseen experiment.",
+    "CPU model timing includes cold/warm differences; a small sample is not a latency benchmark."
+  ]
+}
