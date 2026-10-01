@@ -1,0 +1,26 @@
+{
+  "kind": "synthetic_gpu_resource_probe",
+  "research_result": false,
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA GeForce RTX 5060 Ti",
+  "results": [
+    {
+      "architecture": "tcn",
+      "batch": 512,
+      "window": 120,
+      "peak_allocated_mb": 213.51318359375,
+      "peak_reserved_mb": 304.0,
+      "two_steps_seconds": 0.40670430008322,
+      "loss": 1.012573480606079
+    },
+    {
+      "architecture": "transformer",
+      "batch": 512,
+      "window": 120,
+      "peak_allocated_mb": 336.50146484375,
+      "peak_reserved_mb": 406.0,
+      "two_steps_seconds": 0.0512887000804767,
+      "loss": 1.3286106586456299
+    }
+  ]
+}

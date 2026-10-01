@@ -1,0 +1,185 @@
+{
+  "v1_adapter_unchanged": true,
+  "no_retraining_after_test": true,
+  "token_diagnostics": {
+    "train": {
+      "records": 43,
+      "min_tokens": 48,
+      "max_tokens": 92,
+      "truncated_at_256": 0,
+      "artifact_types": {
+        "historical_training_epoch": 32,
+        "published_final_result": 4,
+        "published_final_metrics": 6,
+        "agent_failure_event": 1
+      }
+    },
+    "validation": {
+      "records": 18,
+      "min_tokens": 69,
+      "max_tokens": 91,
+      "truncated_at_256": 0,
+      "artifact_types": {
+        "historical_training_epoch": 16,
+        "published_final_result": 2
+      }
+    },
+    "test": {
+      "records": 22,
+      "min_tokens": 23,
+      "max_tokens": 94,
+      "truncated_at_256": 0,
+      "artifact_types": {
+        "historical_training_epoch": 8,
+        "published_final_result": 1,
+        "live_status_event": 13
+      }
+    }
+  },
+  "test_by_artifact_type": {
+    "historical_training_epoch": {
+      "support": 8,
+      "correct": 8,
+      "predictions": {
+        "MONITOR_RUNNING": 8
+      }
+    },
+    "published_final_result": {
+      "support": 1,
+      "correct": 1,
+      "predictions": {
+        "REVIEW_COMPLETED": 1
+      }
+    },
+    "live_status_event": {
+      "support": 13,
+      "correct": 0,
+      "predictions": {
+        "REVIEW_COMPLETED": 13
+      }
+    }
+  },
+  "deterministic_observed_state_rule_baseline": {
+    "accuracy": 1.0,
+    "predictions": [
+      {
+        "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "4dd9ab0204010aee589fe8a88daaf924e9a32e03b22a1881568175b4bb35defe",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "692dbd9f66267bb2ee58bc750643a645155af3740d56301b79c924bdfccf3992",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "16be39682d84e307247d4fe1c6478cde725f893e1c014cf2ee7f7df345d7cf9f",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "cb74c364a0f96d6d0b79665ae543f5fd675173fffd5c7310b77eb14b72c6ec9b",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "93f3836f308a3dfa06634c493d91ecbfe04cd6234942b0633914c38c1bc05311",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "bca100cd18cbed89c93aaac822d924cb38e832568256252a11ba7951298b9015",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "e332ce4f2b121542b8920cd56ce7162af888b50893749b51fbf2a26b4be712f3",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "076016f03995604e9d502b1a0f8f5dc879166eacc1caddc7ee2ad4b47e8d1831",
+        "expected": "REVIEW_COMPLETED",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "673b52a9addb762fb2d2c31fc23d1743392b28c945d34f457b3f1b66bf313744",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "9fadde34ec5e46388281801379deac467bae280ea8ef5a99d6e7c79539987299",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "200fc4439de37311ab23240f2860925338a3c97af0441b31c6d81286ecccf7c7",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "f4080920eedc61e4e45677f6f1c94c974f373ca0d9646ac0f51ea5d35bb72c04",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "7a72c9cdfea448af02ba82a40fdc7dda0432c67502340106b8c45e902a62c8f4",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "19633221570d09131949dbe07df86034e0c4c1779462e3ccc76a6c149426c43a",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "6bacf16a57852aa866c1d50c4183576e91fefe204b3d653f3abcad5a60de191c",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "fb0bb5e9a3077499b192a8f6967586a4db5c466a32beb6c2a32d6b7ea34e41ee",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "3eb24b2475f026f96df58e13a450ae02cebfb09ec66f0566932340442d7c1bf7",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+        "expected": "RESUME_INCOMPLETE",
+        "predicted": "RESUME_INCOMPLETE"
+      }
+    ],
+    "limitation": "This reproduces the label-generating policy on structured evidence; not independent human decision ground truth."
+  },
+  "findings": [
+    "No examples exceed 256 tokens; truncation is ruled out for this dataset.",
+    "Compare artifact type coverage: held-out live-status format absent from training. Rule-labeled epochs and source run snapshots are related observations, not independent incidents.",
+    "Two routing actions have no training examples, including RESUME_INCOMPLETE appearing in held-out data.",
+    "Validation source formats overlap training and therefore failed to expose the held-out format shift."
+  ],
+  "follow_up": "Keep v1 immutable and optional. Future v2 needs genuinely new human-reviewed records across all actions and formats; current inspected test is development data for v2. Preserve future run groups as untouched holdout. Structured state routing should continue using explicit rules."
+}

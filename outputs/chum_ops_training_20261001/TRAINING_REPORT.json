@@ -1,0 +1,225 @@
+{
+  "status": "TRAINED_EXPERIMENTAL_NOT_PRODUCTION",
+  "task_id": "finetune-2f69c1f884114a299cb5e73cdbca0eeb",
+  "config": {
+    "train": "outputs/chum_ops_training_20261001/train.jsonl",
+    "validation": "outputs/chum_ops_training_20261001/validation.jsonl",
+    "test": "outputs/chum_ops_training_20261001/test.jsonl",
+    "base": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\qwen2.5-0.5b-instruct",
+    "output": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora",
+    "report": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_20261001\\TRAINING_REPORT.json",
+    "db": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\research.sqlite3",
+    "epochs": 3,
+    "max_length": 256,
+    "batch_size": 2,
+    "seed": 47,
+    "rank": 8,
+    "alpha": 16,
+    "dataset_hashes": {
+      "train": "9fe3f326f7deba08df63bc83c5630556d2d03b5aaf3a20c4a6ba9bb2b04d3dee",
+      "validation": "cb2af4c03d70eaeb2274e70ff88335c56d30580e8c9b6a4354c65c05f5580446",
+      "test": "0dadbb7e256fe3ce52a12b77b66d5b1e687bcf9e69278bd5b13c90b0ef9797c9"
+    }
+  },
+  "base": "Qwen/Qwen2.5-0.5B-Instruct",
+  "trainable_parameters": 545152,
+  "total_parameters": 494582400,
+  "adapter_parameter_absolute_delta": 613.8881359100342,
+  "adapter_sha256": "7cf054d1dec5c83f3441c387047053156f917719662b89475aced648790f1481",
+  "counts": {
+    "train": {
+      "MONITOR_RUNNING": 32,
+      "REVIEW_COMPLETED": 10,
+      "INVESTIGATE_FAILURE": 1
+    },
+    "validation": {
+      "MONITOR_RUNNING": 16,
+      "REVIEW_COMPLETED": 2
+    },
+    "test": {
+      "MONITOR_RUNNING": 20,
+      "REVIEW_COMPLETED": 1,
+      "RESUME_INCOMPLETE": 1
+    }
+  },
+  "missing_training_classes": [
+    "REQUIRE_HUMAN_REVIEW",
+    "RESUME_INCOMPLETE"
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.03471101955934,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 2,
+      "loss": 0.25856333158232947,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 3,
+      "loss": 0.0006621452895077792,
+      "validation_accuracy": 1.0
+    }
+  ],
+  "selected_validation_accuracy": 1.0,
+  "heldout_test": {
+    "accuracy": 0.4090909090909091,
+    "count": 22,
+    "latency_seconds": 0.37294520006980747,
+    "predictions": [
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "MONITOR_RUNNING"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "REVIEW_COMPLETED",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "MONITOR_RUNNING",
+        "predicted": "REVIEW_COMPLETED"
+      },
+      {
+        "group_id": "chum_window_pilot_20261001",
+        "expected": "RESUME_INCOMPLETE",
+        "predicted": "REVIEW_COMPLETED"
+      }
+    ],
+    "classwise": {
+      "INVESTIGATE_FAILURE": {
+        "support": 0,
+        "correct": 0
+      },
+      "MONITOR_RUNNING": {
+        "support": 20,
+        "correct": 8
+      },
+      "RESUME_INCOMPLETE": {
+        "support": 1,
+        "correct": 0
+      },
+      "REVIEW_COMPLETED": {
+        "support": 1,
+        "correct": 1
+      },
+      "REQUIRE_HUMAN_REVIEW": {
+        "support": 0,
+        "correct": 0
+      }
+    }
+  },
+  "majority_baseline_test_accuracy": 0.9090909090909091,
+  "deterministic_label_rule_baseline": "Labels are generated by observed-state rules. On covered states their generating rule is an oracle baseline; learned model cannot claim an advantage over it.",
+  "elapsed_seconds": 10.500326200039126,
+  "peak_gpu_memory_mb": 1247.337890625,
+  "limitations": [
+    "Small source-run grouped project dataset; no operational generalization claim.",
+    "Confidence uncalibrated; human review always required.",
+    "No efficiency improvement established over deterministic rules."
+  ],
+  "production_gate": false,
+  "production_gate_reason": "Held-out accuracy below majority baseline and two absent training classes; opt-in experimental suggestions only.",
+  "dependencies": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "peft": "0.18.0",
+    "accelerate": "1.12.0",
+    "safetensors": "0.8.0"
+  },
+  "base_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+}

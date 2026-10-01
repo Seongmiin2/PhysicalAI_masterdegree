@@ -1,0 +1,44 @@
+{
+  "event": {
+    "id": 232,
+    "created_at": "2026-10-01T05:40:23.054Z",
+    "kind": "finetuned_routing_completed",
+    "task_id": null,
+    "payload": {
+      "input_sha256": "4eb8c5e393653828cc3d96fa9e608b64aa27ec24fe5dc176bb108077e2606d81",
+      "result": {
+        "authorizes_execution": false,
+        "cold_load": true,
+        "confidence": 0.9987183809280396,
+        "confidence_calibrated": false,
+        "inference_seconds": 1.575931700062938,
+        "latency_seconds": 9.501628800062463,
+        "load_seconds": 7.925695099984296,
+        "model": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora",
+        "needs_human_review": true,
+        "next_action": "REQUIRE_HUMAN_REVIEW",
+        "probabilities": {
+          "INVESTIGATE_FAILURE": 0.0011848717695102096,
+          "MONITOR_RUNNING": 1.3398885130300187e-06,
+          "REQUIRE_HUMAN_REVIEW": 0.9987183809280396,
+          "RESUME_INCOMPLETE": 9.067142673302442e-05,
+          "REVIEW_COMPLETED": 4.7044850361999124e-06
+        },
+        "provenance": "LOCAL_FINETUNED_SUGGESTION",
+        "retrieved_chunk_ids": [
+          "43403fb9b84fc3a568d0ed8527d48ea3946e1e0802adf30e9bdc33a2302e9d57",
+          "b0de8ccf0cb0ede938ad4cdae71556be37b04b18e11db9291f63831fdbfcb34b",
+          "a509270af9773a6557c530037755c9be2c7b74cbefd5ff6d1ab3024fce56912d"
+        ]
+      },
+      "retrieved_chunk_ids": [
+        "43403fb9b84fc3a568d0ed8527d48ea3946e1e0802adf30e9bdc33a2302e9d57",
+        "b0de8ccf0cb0ede938ad4cdae71556be37b04b18e11db9291f63831fdbfcb34b",
+        "a509270af9773a6557c530037755c9be2c7b74cbefd5ff6d1ab3024fce56912d"
+      ],
+      "row": 9,
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\chum_ops_training_20261001\\test.jsonl"
+    }
+  },
+  "scope": "End-to-end CPU adapter + retrieval plumbing only; not an accuracy evaluation. Generated confidence is uncalibrated."
+}

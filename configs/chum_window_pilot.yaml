@@ -1,0 +1,21 @@
+device: cuda
+windows: [20, 60, 120]
+max_window: 120
+hidden_dim: 32
+tcn_layers: 6
+transformer_layers: 2
+epochs: 10
+min_epochs: 10
+patience: 7
+min_delta: 0.0001
+batch_size: 512
+learning_rate: 0.001
+threshold_percentile: 99.0
+alarm_consecutive: 3
+architectures: [tcn, transformer]
+variants: [F0, F1, F0-C]
+model_seeds: [47]
+evaluate_test: false
+paths:
+  cache: C:/Users/FORYOUCOM/Desktop/master_degree/PhysicalAI_mini/data/processed/reinartz_f0_f1
+  output: outputs/chum_window_pilot_20261001

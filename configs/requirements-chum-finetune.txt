@@ -1,0 +1,18 @@
+# Tested additive LoRA dependency pins; install into the verified requirements-research-gpu environment.
+# CUDA torch==2.14.1+cu130 and pandas==2.2.3 must remain pinned by that environment.
+transformers==4.57.6
+peft==0.18.0
+accelerate==1.12.0
+huggingface-hub==0.36.2
+safetensors==0.8.0
+tokenizers==0.22.2
+packaging==26.3
+regex==2026.9.29
+requests==2.34.2
+tqdm==4.70.1
+psutil==7.2.2
+colorama==0.4.6
+charset-normalizer==3.5.2
+idna==3.20
+urllib3==2.8.0
+certifi==2026.7.22

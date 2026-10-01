@@ -27,4 +27,4 @@ testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.setuptools]
-packages = ["agents", "providers"]
+packages = ["agents", "providers", "harness"]

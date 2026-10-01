@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-01T05:32:41.584773+00:00",
+  "purpose": "Operational policy imitation from project artifacts; not scientific decision correctness.",
+  "labels": [
+    "INVESTIGATE_FAILURE",
+    "MONITOR_RUNNING",
+    "RESUME_INCOMPLETE",
+    "REVIEW_COMPLETED",
+    "REQUIRE_HUMAN_REVIEW"
+  ],
+  "label_definitions": {
+    "INVESTIGATE_FAILURE": "A real error or failed task event requires investigation.",
+    "MONITOR_RUNNING": "An explicit running observation, or an epoch-only historical snapshot without finalization, requires monitoring.",
+    "RESUME_INCOMPLETE": "An explicit PARTIAL task-budget stop indicates remaining work to resume.",
+    "REVIEW_COMPLETED": "A completed task or published final result requires result review, not scientific acceptance.",
+    "REQUIRE_HUMAN_REVIEW": "An explicit pending human decision requires human review; no such reliable labeled samples are invented."
+  },
+  "counts": {
+    "train": {
+      "records": 43,
+      "labels": {
+        "MONITOR_RUNNING": 32,
+        "REVIEW_COMPLETED": 10,
+        "INVESTIGATE_FAILURE": 1
+      },
+      "provenance_kinds": {
+        "DERIVED_FROM_REAL_ARTIFACT": 32,
+        "OBSERVED_REAL_ARTIFACT": 10,
+        "OBSERVED_REAL_EVENT": 1
+      }
+    },
+    "validation": {
+      "records": 18,
+      "labels": {
+        "MONITOR_RUNNING": 16,
+        "REVIEW_COMPLETED": 2
+      },
+      "provenance_kinds": {
+        "DERIVED_FROM_REAL_ARTIFACT": 16,
+        "OBSERVED_REAL_ARTIFACT": 2
+      }
+    },
+    "test": {
+      "records": 22,
+      "labels": {
+        "MONITOR_RUNNING": 20,
+        "REVIEW_COMPLETED": 1,
+        "RESUME_INCOMPLETE": 1
+      },
+      "provenance_kinds": {
+        "DERIVED_FROM_REAL_ARTIFACT": 8,
+        "OBSERVED_REAL_ARTIFACT": 1,
+        "OBSERVED_REAL_EVENT": 13
+      }
+    }
+  },
+  "group_splits": {
+    "chum_training_budget_20260921/tcn_F0-C_seed47": "train",
+    "chum_training_budget_20260921/tcn_F0_seed47": "train",
+    "chum_training_budget_20260921/tcn_F1_seed47": "validation",
+    "chum_training_budget_20260921/transformer_F0_seed47": "train",
+    "chum_training_budget_20260921/transformer_F1_seed47": "validation",
+    "chum_window_pilot_20261001": "test",
+    "chum_seed47_20260921/tcn_F0_seed47": "train",
+    "chum_seed47_20260921/tcn_F1_seed47": "train",
+    "chum_seed47_20260921/tcn_F0-C_seed47": "train",
+    "chum_seed47_20260921/transformer_F0_seed47": "train",
+    "chum_seed47_20260921/transformer_F1_seed47": "train",
+    "harness_request/53410daf6aa14674b6167060fece04d5": "train"
+  },
+  "split_unit": "whole model run; entire current pilot held out",
+  "source_files": {
+    "outputs\\chum_training_budget_20260921\\tcn_F0-C_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "8e8739967242c3507fef4468e4f9c5fb90a6e6f475cda56f6422fb002118d774",
+      "size_bytes": 2065
+    },
+    "outputs\\chum_training_budget_20260921\\tcn_F0-C_seed47\\RESULT.json": {
+      "sha256": "91cf143a33c3b482cb4891b4e510d3abf57bec60f71a08f0a9d9a28c17be5099",
+      "size_bytes": 589
+    },
+    "outputs\\chum_training_budget_20260921\\tcn_F0_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "603dd86708cbc1dd3d7475a3337e4b04efa6789a14183b81a83205f22a44fd2d",
+      "size_bytes": 1668
+    },
+    "outputs\\chum_training_budget_20260921\\tcn_F0_seed47\\RESULT.json": {
+      "sha256": "030a7bea95b3ce6aa1a5e90a4a4056bd39ddc35da3bbbe82aeec3421fe19c03a",
+      "size_bytes": 588
+    },
+    "outputs\\chum_training_budget_20260921\\tcn_F1_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "bed57472452034434f0e5ba0902c5dcf0755da84810ae8bf7c08b80ed1b4d698",
+      "size_bytes": 1682
+    },
+    "outputs\\chum_training_budget_20260921\\tcn_F1_seed47\\RESULT.json": {
+      "sha256": "7f7c8e79e9faf1873a463c80ffe5ebbf5a41c0587d1aa2673c96f3e3fb5648ee",
+      "size_bytes": 578
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F0-C_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "2b0889a322859dc58ca328d6cc5531bd52002d323aaca89074bfd5310be470b8",
+      "size_bytes": 3307
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F0-C_seed47\\RESULT.json": {
+      "sha256": "92cca6c26e2ba3f606e2f0813223f064d688df2cf31d1fe83f0ac498c634c67f",
+      "size_bytes": 599
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F0_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "39cd28c6e779e056117b7abb3238a0239228485187a5911b17c60104f1adfdc4",
+      "size_bytes": 3290
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F0_seed47\\RESULT.json": {
+      "sha256": "40b2d6878ad9d79095493c6123c005ef80797198c13aed2a2d9a467fd1459708",
+      "size_bytes": 597
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F1_seed47\\TRAINING_HISTORY.csv": {
+      "sha256": "39e43c399a98756af3f3432e71552982e8578bf6ec5fa640401f2abcca1a53e3",
+      "size_bytes": 3296
+    },
+    "outputs\\chum_training_budget_20260921\\transformer_F1_seed47\\RESULT.json": {
+      "sha256": "859dba4f2d0668eda1bfbc08ea47bc42b15b036a4571a88d3f3295e0b5fac083",
+      "size_bytes": 586
+    },
+    "outputs\\chum_window_pilot_20261001\\tcn_F0_seed47_window20\\TRAINING_HISTORY.csv": {
+      "sha256": "35e13909e8ef19705ab72f68bc1ffd92b1d240c3048302c2f10a632d226f10c9",
+      "size_bytes": 675
+    },
+    "outputs\\chum_window_pilot_20261001\\tcn_F0_seed47_window20\\RESULT.json": {
+      "sha256": "af5d40c1b5462180cc4275d05a81b7095ed6a66dc88215bba6bdbe2d8acbab18",
+      "size_bytes": 467
+    },
+    "outputs\\chum_seed47_20260921\\training\\G2_METRICS.csv": {
+      "sha256": "15f4172449a5411949d78674db1c93efa81f98e35e5e0cff646b66619f54d97f",
+      "size_bytes": 1456
+    },
+    "outputs\\chum_window_pilot_20261001\\LIVE_STATUS.json": {
+      "sha256": "b869dd60d53bbb2bc9d58a724517ee013568bb51685e0cecf18629dc5dae0716",
+      "size_bytes": 2476
+    }
+  },
+  "output_sha256": {
+    "train.jsonl": "9fe3f326f7deba08df63bc83c5630556d2d03b5aaf3a20c4a6ba9bb2b04d3dee",
+    "validation.jsonl": "cb2af4c03d70eaeb2274e70ff88335c56d30580e8c9b6a4354c65c05f5580446",
+    "test.jsonl": "0dadbb7e256fe3ce52a12b77b66d5b1e687bcf9e69278bd5b13c90b0ef9797c9"
+  },
+  "database_event_high_watermark": 185,
+  "synthetic_records": 0,
+  "human_approved_labels": false,
+  "max_epoch_snapshots_per_model_run": 8,
+  "production_ready": false,
+  "limitations": [
+    "Small correlated operational corpus; accuracy is not evidence of scientific judgment.",
+    "Historical epoch records are DERIVED_FROM_REAL_ARTIFACT policy cases, not actual historical live statuses.",
+    "Labels are deterministic heuristic policy assignments, not user or supervisor approvals.",
+    "No reliable REQUIRE_HUMAN_REVIEW examples; RESUME_INCOMPLETE may appear only in held-out pilot.",
+    "Missing/rare training classes cannot be claimed learned; all outputs require deterministic policy gating.",
+    "Temporal pilot holdout is a single run, not independent broad operational generalization.",
+    "Identical Transformer F0/F0-C initialization family kept in one split; no copied partial metrics included."
+  ]
+}

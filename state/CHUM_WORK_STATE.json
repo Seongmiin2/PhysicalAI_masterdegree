@@ -1,0 +1,71 @@
+{
+  "record_type": "CHUM_CURRENT_WORK_STATE",
+  "updated_on": "2026-10-01",
+  "completed": {
+    "seed47_extension": {
+      "status": "COMPLETE",
+      "source": "outputs/chum_seed47_20260921/LIVE_STATUS.json"
+    },
+    "stage_1A_training_budget": {
+      "status": "COMPLETE",
+      "models": 6,
+      "source": "outputs/chum_training_budget_20260921/LIVE_STATUS.json",
+      "finding": "Longer training did not improve F1 AUROC in either architecture for seed47; do not repeat stage 1A by default.",
+      "analysis": "outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json"
+    }
+  },
+  "next_authorized_work": {
+    "stage": "1B",
+    "action": "Compare windows 20/60/120 using identical model capacity and common target samples within this new experiment.",
+    "config": "configs/chum_window_extension.yaml",
+    "status": "MAIN_RUNNING",
+    "execution_order": [
+      "unit tests",
+      "synthetic smoke",
+      "bounded real-data pilot",
+      "full 18-task comparison"
+    ],
+    "blocker": null
+  },
+  "decision_rules": [
+    "Use this operational state before dated historical narrative; cite its source record.",
+    "Model output is a proposal, never execution permission or scientific evidence.",
+    "Do not claim stage 1B performance improvement before real results exist.",
+    "Existing test is a development benchmark, not a new holdout.",
+    "Human review is required for changes to thesis claims or contradictory evidence.",
+    "A new local model profile is not a fine-tuned or newly trained foundation model."
+  ],
+  "metric_audit": "Stage 1B uses a tie-aware AUROC/AP helper. The impact of the old helper on historical reported metrics has not been quantified.",
+  "live_experiments": {
+    "pilot": {
+      "status": "PARTIAL",
+      "stage": "task_budget_reached",
+      "completed_tasks": 1,
+      "task": "tcn_F0_seed47_window20",
+      "epoch": 10,
+      "updated_at": "2026-10-01T14:30:20+0900",
+      "source": "outputs\\chum_window_pilot_20261001\\LIVE_STATUS.json"
+    },
+    "main": {
+      "status": "RUNNING",
+      "stage": "training",
+      "completed_tasks": 0,
+      "task": "tcn_F0_seed47_window20",
+      "epoch": 18,
+      "updated_at": "2026-10-01T14:45:11+0900",
+      "source": "outputs\\chum_window_extension_20261001\\LIVE_STATUS.json"
+    }
+  },
+  "local_model": {
+    "requested_adaptation": "PROJECT_DATA_FINE_TUNING",
+    "status": "TRAINED_EXPERIMENTAL_NOT_PRODUCTION",
+    "base": "Qwen/Qwen2.5-0.5B-Instruct",
+    "adapter": "outputs/harness/models/chum-ops-lora",
+    "report": "outputs/chum_ops_training_20261001/TRAINING_REPORT.json",
+    "heldout_accuracy": 0.4090909090909091,
+    "majority_baseline_accuracy": 0.9090909090909091,
+    "production_gate": false,
+    "next_step": "Review four live-state annotation cases and collect unseen run groups before version 2.",
+    "human_review_queue": "outputs/chum_ops_training_20261001/HUMAN_REVIEW_QUEUE.json"
+  }
+}

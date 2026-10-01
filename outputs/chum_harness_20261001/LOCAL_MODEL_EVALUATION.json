@@ -1,0 +1,122 @@
+{
+  "evaluated_at": "2026-10-01T05:22:18.727560+00:00",
+  "model": "chum-ops:latest",
+  "base_model": "qwen3.5:2b",
+  "adaptation": "System prompt and inference settings; existing weights, not fine-tuning.",
+  "evaluation_scope": "One targeted planner/reviewer scenario; not a benchmark, autonomous decision certification, or scientific evidence.",
+  "current_state_sha256": "6888d74d08dd65ef21a3b9aa1b24a487c5ed4b29f425773d60d93b1fe4d6feb0",
+  "current_state_at_evaluation": {
+    "record_type": "CHUM_CURRENT_WORK_STATE",
+    "updated_on": "2026-10-01",
+    "completed": {
+      "seed47_extension": {
+        "status": "COMPLETE",
+        "source": "outputs/chum_seed47_20260921/LIVE_STATUS.json"
+      },
+      "stage_1A_training_budget": {
+        "status": "COMPLETE",
+        "models": 6,
+        "source": "outputs/chum_training_budget_20260921/LIVE_STATUS.json",
+        "finding": "Longer training did not improve F1 AUROC in either architecture for seed47; do not repeat stage 1A by default.",
+        "analysis": "outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json"
+      }
+    },
+    "next_authorized_work": {
+      "stage": "1B",
+      "action": "Compare windows 20/60/120 using identical model capacity and common target samples within this new experiment.",
+      "config": "configs/chum_window_extension.yaml",
+      "status": "IMPLEMENTED_PENDING_ENVIRONMENT_VALIDATION",
+      "execution_order": [
+        "unit tests",
+        "synthetic smoke",
+        "bounded real-data pilot",
+        "full 18-task comparison"
+      ],
+      "blocker": "Old PyTorch environment blocked by Windows application control; isolated replacement environment being validated."
+    },
+    "decision_rules": [
+      "Use this operational state before dated historical narrative; cite its source record.",
+      "Model output is a proposal, never execution permission or scientific evidence.",
+      "Do not claim stage 1B performance improvement before real results exist.",
+      "Existing test is a development benchmark, not a new holdout.",
+      "Human review is required for changes to thesis claims or contradictory evidence.",
+      "A new local model profile is not a fine-tuned or newly trained foundation model."
+    ],
+    "metric_audit": "Stage 1B uses a tie-aware AUROC/AP helper. The impact of the old helper on historical reported metrics has not been quantified."
+  },
+  "prior_without_current_state": {
+    "status": "FAIL_SEMANTIC_CHECK",
+    "planner_latency_seconds": 7.051440400071442,
+    "reviewer_latency_seconds": 6.795077399932779,
+    "finding": "Planner repeated already-completed training-budget expansion; reviewer copied it. Schema and citation validation had passed.",
+    "planner": {
+      "summary": "학습 길이 비교 실험을 위해 TCN/Transformer 구조를 유지하며 window 과 채널 선택 변수 변경.",
+      "recommendation": "1A 기준 모델과 동일 seed·split 조건에서 학습 길이를 20 단계씩 증가시키며 validation MSE 개선 확인.",
+      "needs_human_review": false,
+      "citations": [
+        "8331ba1031c07c2b59047ba070836e4f8e3fee74a45e9543b1d50043771ba4e8",
+        "46f157d8553488826aa16337e79a43f8a7b7714ba97eeeae09a07cbeb88ae5b5"
+      ],
+      "agent": "planner",
+      "model": "chum-ops:latest",
+      "provenance": "LOCAL_MODEL_SUGGESTION"
+    },
+    "reviewer": {
+      "summary": "학습 길이 비교 실험을 위해 TCN/Transformer 구조를 유지하며 window 과 채널 선택 변수 변경.",
+      "recommendation": "1A 기준 모델과 동일 seed·split 조건에서 학습 길이를 20 단계씩 증가시키며 validation MSE 개선 확인.",
+      "needs_human_review": false,
+      "citations": [
+        "8331ba1031c07c2b59047ba070836e4f8e3fee74a45e9543b1d50043771ba4e8",
+        "46f157d8553488826aa16337e79a43f8a7b7714ba97eeeae09a07cbeb88ae5b5"
+      ],
+      "agent": "reviewer",
+      "model": "chum-ops:latest",
+      "provenance": "LOCAL_MODEL_SUGGESTION"
+    }
+  },
+  "with_current_state": {
+    "status": "PASS_TARGETED_STAGE_CHECK_REQUIRES_HUMAN_REVIEW",
+    "request_id": "0ef9100f964445c5b24bf624fde5a9fc",
+    "question": "The training-budget experiment stage 1A is already completed. Based on current_state, what is the next bounded planned experiment? Do not claim results from experiments that have not run.",
+    "total_latency_seconds": 13.580422200029716,
+    "agents": [
+      {
+        "summary": "Stage 1A completed; proceed to Stage 1B with window extension comparison.",
+        "recommendation": "Execute bounded real-data pilot for Stage 1B using Windows 20/60/120 windows with identical model capacity and common target samples.",
+        "needs_human_review": true,
+        "citations": [
+          "b552f8621166c262fd17516321669ca66389148161f802869397679a564036d6",
+          "63d7966e7c1ccd24ffb33025d2010c8b81935c98ff96785735bf659adf87072b"
+        ],
+        "agent": "planner",
+        "model": "chum-ops:latest",
+        "provenance": "LOCAL_MODEL_SUGGESTION",
+        "latency_seconds": 7.172047200030647
+      },
+      {
+        "summary": "Stage 1A 완료, Stage 1B 실행 계획에 대한 검토 필요.",
+        "recommendation": "현재 환경의 Windows 제어 문제 해결 후, 실제 데이터 시뮬레이션 기반의 Stage 1B 제한 실험을 수행해야 합니다.",
+        "needs_human_review": true,
+        "citations": [
+          "b552f8621166c262fd17516321669ca66389148161f802869397679a564036d6",
+          "63d7966e7c1ccd24ffb33025d2010c8b81935c98ff96785735bf659adf87072b"
+        ],
+        "agent": "reviewer",
+        "model": "chum-ops:latest",
+        "provenance": "LOCAL_MODEL_SUGGESTION",
+        "latency_seconds": 6.32555319997482
+      }
+    ],
+    "manual_checks": {
+      "recognizes_stage_1A_complete": "PASS: both roles explicitly identify completed stage 1A.",
+      "next_stage_1B_window_comparison": "PASS: planner proposes windows 20/60/120 with common samples and equal capacity.",
+      "does_not_invent_stage_1B_results": "PASS: neither role claims measured results or improvement.",
+      "grounds_environment_blocker": "PASS: reviewer asks to resolve the Windows application-control blocker recorded in current_state.",
+      "schema_and_citation_membership": "PASS: enforced by LocalProvider before results were stored.",
+      "prerequisite_sequence": "PARTIAL: planner jumps to pilot without listing pending synthetic smoke/environment validation; reviewer requests blocker resolution.",
+      "language_and_precision": "PARTIAL: planner replied in English and used Windows for window length; reviewer real-data simulation wording is ambiguous."
+    }
+  },
+  "operational_decision": "Keep advisory-only; use explicit current state, deterministic allowed experiment queue, and human review. No generated instructions executed.",
+  "performance_caution": "Observed wall times include model load/unload for a single local run; no percentile latency or throughput claim."
+}

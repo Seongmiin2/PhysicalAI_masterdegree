@@ -1,0 +1,2 @@
+architecture,variant,seed,window,parameters,epochs_run,best_epoch,best_validation_mse,threshold,evaluation_role,common_first_sample,test_evaluated,run_fingerprint,elapsed_seconds
+tcn,F0,47,20,20841,10,10,0.6497042794834014,0.8497244119644165,development_benchmark,121,False,e81212062d225e167030ec92e0b7561ae614af5fb0a6a1fcfaf3028bab662e42,276.78552739997394

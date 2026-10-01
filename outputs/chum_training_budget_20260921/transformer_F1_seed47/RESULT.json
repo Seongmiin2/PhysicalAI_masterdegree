@@ -1,0 +1,19 @@
+{
+  "architecture": "transformer",
+  "variant": "F1",
+  "seed": 47,
+  "epochs_run": 50,
+  "best_epoch": 50,
+  "best_validation_mse": 0.5357573698725312,
+  "parameters": 20841,
+  "threshold": 0.8187839388847351,
+  "elapsed_seconds": 1616.1505531000003,
+  "auroc": 0.8043565302536084,
+  "auprc": 0.924659661523031,
+  "detected_run_ratio": 0.6785714285714286,
+  "missed_run_ratio": 0.3214285714285714,
+  "detection_delay_detected_only": 24.210526315789473,
+  "censored_delay_mean": 466.75,
+  "prefault_sample_fpr": 0.009872316802368615,
+  "prefault_run_alarm_rate": 0.0
+}

@@ -14,3 +14,13 @@ Thumbs.db
 # Microsoft Office temporary lock files
 ~$*
 
+
+# Local harness state and experiment checkpoints
+outputs/harness/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+outputs/chum_window_extension_*/**/*.pt
+.venv-research/
+outputs/chum_window_pilot_*/**/*.pt
+.harness-execution.lock

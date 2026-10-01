@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "records": 83,
+  "groups": 12,
+  "checks": [
+    "output_hashes",
+    "label_consistency",
+    "no_label_in_input",
+    "unique_record_ids",
+    "whole_run_split_disjoint",
+    "pilot_held_out",
+    "source_file_hashes",
+    "no_synthetic_records",
+    "no_human_approval_attribution"
+  ],
+  "production_ready": false
+}

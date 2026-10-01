@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-10-01T05:45:38.322289+00:00",
+  "scope": "Multi-agent harness, persistent local evidence/RAG, HITL feedback, actual project-data LoRA fine-tuning, Stage 1B pilot and ongoing full comparison.",
+  "database": "outputs/harness/research.sqlite3",
+  "pilot": {
+    "completed_new_models": 1,
+    "planned_grid": 18,
+    "result": {
+      "architecture": "tcn",
+      "variant": "F0",
+      "seed": 47,
+      "window": 20,
+      "parameters": 20841,
+      "epochs_run": 10,
+      "best_epoch": 10,
+      "best_validation_mse": 0.6497042794834014,
+      "threshold": 0.8497244119644165,
+      "evaluation_role": "development_benchmark",
+      "common_first_sample": 121,
+      "test_evaluated": false,
+      "run_fingerprint": "e81212062d225e167030ec92e0b7561ae614af5fb0a6a1fcfaf3028bab662e42",
+      "elapsed_seconds": 276.78552739997394
+    },
+    "test_evaluated": false
+  },
+  "full_comparison": {
+    "status": "RUNNING",
+    "harness_pid": 28248,
+    "task_id": "window-pilot-defa074b9e24",
+    "profile": "main",
+    "requested_new_tasks": 18,
+    "timeout_seconds": 43200,
+    "live_status": "outputs/chum_window_extension_20261001/LIVE_STATUS.json",
+    "stdout": "outputs/harness/main_stdout.log",
+    "stderr": "outputs/harness/main_stderr.log"
+  },
+  "fine_tuning": {
+    "requested_adaptation": "PROJECT_DATA_FINE_TUNING",
+    "status": "TRAINED_EXPERIMENTAL_NOT_PRODUCTION",
+    "base": "Qwen/Qwen2.5-0.5B-Instruct",
+    "adapter": "outputs/harness/models/chum-ops-lora",
+    "report": "outputs/chum_ops_training_20261001/TRAINING_REPORT.json",
+    "heldout_accuracy": 0.4090909090909091,
+    "majority_baseline_accuracy": 0.9090909090909091,
+    "production_gate": false,
+    "next_step": "Review four live-state annotation cases and collect unseen run groups before version 2.",
+    "human_review_queue": "outputs/chum_ops_training_20261001/HUMAN_REVIEW_QUEUE.json"
+  },
+  "sources_of_truth": [
+    "state/CHUM_WORK_STATE.json",
+    "outputs/chum_window_extension_20261001/LIVE_STATUS.json",
+    "outputs/chum_ops_training_20261001/TRAINING_REPORT.json"
+  ],
+  "no_claims": [
+    "Full window comparison complete",
+    "Fine-tuned router production ready",
+    "New detector accuracy improvement",
+    "Supervisor or publication approval"
+  ]
+}

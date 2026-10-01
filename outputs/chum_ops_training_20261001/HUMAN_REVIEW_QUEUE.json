@@ -1,0 +1,111 @@
+{
+  "purpose": "Human annotation candidates for a future model version; no approvals inferred.",
+  "records": [
+    {
+      "record_id": "2c80f50a94623d0eb5c1ae815ba9a98a899a2d5e6b19d7ed978e97b73dcf04a8",
+      "observation": {
+        "artifact_type": "live_status_event",
+        "completed_tasks": 0,
+        "stage": "initializing",
+        "status": "RUNNING"
+      },
+      "model_action": "REVIEW_COMPLETED",
+      "rule_proposed_action": "MONITOR_RUNNING",
+      "human_label": null,
+      "review_status": "PENDING",
+      "source_provenance": {
+        "group_id": "chum_window_pilot_20261001",
+        "human_approved": false,
+        "kind": "OBSERVED_REAL_EVENT",
+        "label_origin": "deterministic_operational_policy_v1",
+        "locator": "events.id=120",
+        "scientific_ground_truth": false,
+        "source_path": "outputs\\harness\\research.sqlite3",
+        "source_sha256": "52e02cc0cde28bb9fe9bca22bc4a45d5e6ce47f103acbe17e65af25ef7579a56",
+        "synthetic": false
+      }
+    },
+    {
+      "record_id": "6bc53398ce5255b58ec84c6021683ba3cd0d5bd6acc391669d1fe6909954ef30",
+      "observation": {
+        "artifact_type": "live_status_event",
+        "completed_tasks": 0,
+        "epoch": 1,
+        "stage": "training",
+        "status": "RUNNING",
+        "task": "tcn_F0_seed47_window20"
+      },
+      "model_action": "REVIEW_COMPLETED",
+      "rule_proposed_action": "MONITOR_RUNNING",
+      "human_label": null,
+      "review_status": "PENDING",
+      "source_provenance": {
+        "group_id": "chum_window_pilot_20261001",
+        "human_approved": false,
+        "kind": "OBSERVED_REAL_EVENT",
+        "label_origin": "deterministic_operational_policy_v1",
+        "locator": "events.id=122",
+        "scientific_ground_truth": false,
+        "source_path": "outputs\\harness\\research.sqlite3",
+        "source_sha256": "dc8b9c631d236beea06e5847e382b1fd83e172eb838d2d5b86a413171ec68e97",
+        "synthetic": false
+      }
+    },
+    {
+      "record_id": "5ddd0be58a18c562f8c46d9fa6ea2dca10a703be3c0a8fdf72d3212d33a0cb41",
+      "observation": {
+        "artifact_type": "live_status_event",
+        "best_epoch": 10,
+        "completed_tasks": 0,
+        "epoch": 10,
+        "stage": "calibration",
+        "status": "RUNNING",
+        "task": "tcn_F0_seed47_window20"
+      },
+      "model_action": "REVIEW_COMPLETED",
+      "rule_proposed_action": "MONITOR_RUNNING",
+      "human_label": null,
+      "review_status": "PENDING",
+      "source_provenance": {
+        "group_id": "chum_window_pilot_20261001",
+        "human_approved": false,
+        "kind": "OBSERVED_REAL_EVENT",
+        "label_origin": "deterministic_operational_policy_v1",
+        "locator": "events.id=167",
+        "scientific_ground_truth": false,
+        "source_path": "outputs\\harness\\research.sqlite3",
+        "source_sha256": "9e9fdf15f02f1171b4b8a7bd001d8a4b1349c99f719bbe46bd48a58ce40554ef",
+        "synthetic": false
+      }
+    },
+    {
+      "record_id": "7e67411f6973d1120170bd28df2ab7f69225077556372afcc94400c565c718c3",
+      "observation": {
+        "artifact_type": "live_status_event",
+        "best_epoch": 10,
+        "completed_tasks": 1,
+        "epoch": 10,
+        "stage": "task_budget_reached",
+        "status": "PARTIAL",
+        "task": "tcn_F0_seed47_window20"
+      },
+      "model_action": "REVIEW_COMPLETED",
+      "rule_proposed_action": "RESUME_INCOMPLETE",
+      "human_label": null,
+      "review_status": "PENDING",
+      "source_provenance": {
+        "group_id": "chum_window_pilot_20261001",
+        "human_approved": false,
+        "kind": "OBSERVED_REAL_EVENT",
+        "label_origin": "deterministic_operational_policy_v1",
+        "locator": "events.id=171",
+        "scientific_ground_truth": false,
+        "source_path": "outputs\\harness\\research.sqlite3",
+        "source_sha256": "0871acc3f9a9c4ac383feabdd0ade78d6fdfbd0bf9bcbab3922b6d1248ed1667",
+        "synthetic": false
+      }
+    }
+  ],
+  "v1_test_reuse_rule": "These records have now been inspected; any v2 uses them as development/training only and needs a fresh heldout run group.",
+  "automatic_retraining": false
+}

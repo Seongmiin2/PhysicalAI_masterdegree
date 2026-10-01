@@ -1,0 +1,16 @@
+{
+  "architecture": "tcn",
+  "variant": "F0",
+  "seed": 47,
+  "window": 20,
+  "parameters": 20841,
+  "epochs_run": 10,
+  "best_epoch": 10,
+  "best_validation_mse": 0.6497042794834014,
+  "threshold": 0.8497244119644165,
+  "evaluation_role": "development_benchmark",
+  "common_first_sample": 121,
+  "test_evaluated": false,
+  "run_fingerprint": "e81212062d225e167030ec92e0b7561ae614af5fb0a6a1fcfaf3028bab662e42",
+  "elapsed_seconds": 276.78552739997394
+}

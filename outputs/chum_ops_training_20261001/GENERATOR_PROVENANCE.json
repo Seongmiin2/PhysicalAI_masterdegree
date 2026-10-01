@@ -1,0 +1,10 @@
+{
+  "dataset_version": "V1 frozen; not regenerated after builder correction",
+  "generator_snapshot": "BUILD_DATASET_SOURCE_V1.py",
+  "generator_snapshot_sha256": "ec255784d13a6488111f5028c393989f4009543209ff7c407fafaf2ea22b132a",
+  "dataset_manifest_sha256": "08478c7c20eaceb34f0941eda3fb8b0e427d58e84460341a02b868a1c973672d",
+  "snapshot_timing": "Archived unchanged generator bytes before correcting future event selection.",
+  "correction": "Future builds accept pilot status events only from exact pilot LIVE_STATUS path, not task ID prefix.",
+  "scope": "Existing V1 train/validation/test/manifest/source event snapshots remain byte-identical.",
+  "label_provenance": "Deterministic policy labels; no user approval or scientific correctness attribution."
+}

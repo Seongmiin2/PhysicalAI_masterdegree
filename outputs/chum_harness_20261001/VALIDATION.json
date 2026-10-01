@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "tests": 102,
+  "elapsed_seconds": 11.96,
+  "python": "C:/Users/FORYOUCOM/AppData/Local/Temp/cr/Scripts/python.exe",
+  "coverage": [
+    "persistent store and retrieval",
+    "multi-agent advisory and human feedback",
+    "process failure timeout and shared resource exclusion",
+    "actual model input schema and teacher exclusion",
+    "real LoRA data source grouping and immutable artifacts",
+    "new window architecture and common samples",
+    "tie-aware metrics",
+    "existing training budget and sensitivity logic"
+  ],
+  "excluded": [
+    "expensive unchanged mock orchestrator reference-tree hashing",
+    "full 18-task comparison completion"
+  ],
+  "research_result_claim": false
+}

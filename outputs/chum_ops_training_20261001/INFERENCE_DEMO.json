@@ -1,0 +1,45 @@
+{
+  "record_id": "a6b2663a59f7c154ce2f2d8d6f067aa7909f20f853074168c2f49ad783552fb8",
+  "expected": "MONITOR_RUNNING",
+  "cold": {
+    "next_action": "MONITOR_RUNNING",
+    "confidence": 0.9999240636825562,
+    "confidence_calibrated": false,
+    "probabilities": {
+      "INVESTIGATE_FAILURE": 1.4907598597346805e-05,
+      "MONITOR_RUNNING": 0.9999240636825562,
+      "RESUME_INCOMPLETE": 3.548924210061699e-10,
+      "REVIEW_COMPLETED": 6.102854240452871e-05,
+      "REQUIRE_HUMAN_REVIEW": 2.7462933260835598e-08
+    },
+    "needs_human_review": true,
+    "authorizes_execution": false,
+    "provenance": "LOCAL_FINETUNED_SUGGESTION",
+    "model": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora",
+    "latency_seconds": 5.281523099984042,
+    "cold_load": true,
+    "load_seconds": 4.841618700069375,
+    "inference_seconds": 0.439904399914667
+  },
+  "warm": {
+    "next_action": "MONITOR_RUNNING",
+    "confidence": 0.9999240636825562,
+    "confidence_calibrated": false,
+    "probabilities": {
+      "INVESTIGATE_FAILURE": 1.4907598597346805e-05,
+      "MONITOR_RUNNING": 0.9999240636825562,
+      "RESUME_INCOMPLETE": 3.548924210061699e-10,
+      "REVIEW_COMPLETED": 6.102854240452871e-05,
+      "REQUIRE_HUMAN_REVIEW": 2.7462933260835598e-08
+    },
+    "needs_human_review": true,
+    "authorizes_execution": false,
+    "provenance": "LOCAL_FINETUNED_SUGGESTION",
+    "model": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\harness\\models\\chum-ops-lora",
+    "latency_seconds": 0.4252284000394866,
+    "cold_load": false,
+    "load_seconds": 0.0,
+    "inference_seconds": 0.42522079998161644
+  },
+  "limitation": "Two inference calls on one held-out record, not a latency benchmark. Model remains opt-in because held-out quality gate failed."
+}

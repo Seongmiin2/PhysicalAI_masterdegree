@@ -1,0 +1,41 @@
+{
+  "status": "PLANNED_NOT_EXECUTED",
+  "v1_preserved": true,
+  "basis": {
+    "diagnosis_path": "V1_FAILURE_DIAGNOSIS.json",
+    "diagnosis_sha256": "ec9ba0238297df09d66956186bd1650b0c35db9c6b3cfff1230356a7f310f590",
+    "training_report_path": "TRAINING_REPORT.json",
+    "training_report_sha256": "7f740a38bf45c9cda82686f79c7c7c50962fe5c242bedb0ac02551783e6008cb",
+    "test_correct": 9,
+    "test_total": 22,
+    "learned_accuracy": 0.4090909090909091,
+    "majority_accuracy": 0.9090909090909091,
+    "deterministic_policy_reproduction_accuracy": 1.0,
+    "observed_failure": "All 13 live_status_event test records were predicted REVIEW_COMPLETED; train had zero live_status_event records.",
+    "not_a_cause": "Token truncation: maximum input length was 94 tokens, below 256."
+  },
+  "scope": "Operational routing only; no scientific outcome judgments or autonomous command execution.",
+  "collection_plan": [
+    "Collect genuine live status snapshots and execution outcomes across multiple new physical experiment runs and profiles.",
+    "Include actual running, completed, partial-budget, failure and explicit human-decision records only as they naturally occur; never manufacture failures or approvals to balance labels.",
+    "Retain source paths, exact payload hashes, event IDs, timestamps, task profile and configuration/run fingerprint for every record.",
+    "Distinguish OBSERVED_REAL_EVENT from DERIVED_FROM_REAL_ARTIFACT; report separate metrics for both, and do not count adjacent epochs as independent incidents.",
+    "Use exact output artifact roots and run fingerprint/profile for grouping; task ID prefix alone is not a trustworthy profile identifier.",
+    "Have an operator inspect ambiguous labels when such records exist; never mark automatic policy labels human-approved."
+  ],
+  "split_plan": [
+    "V1 inspected test is now development evidence for any V2 design; it must not be reported as untouched V2 evaluation.",
+    "Preassign new whole physical runs to train, validation and a future untouched holdout before extracting epochs or formatting examples.",
+    "Keep overlapping histories, status snapshots, final artifacts and copied aliases from each run in the same group.",
+    "Ensure validation contains genuine live-status formats as well as epoch/result formats; with insufficient run groups, postpone a learned-router generalization claim.",
+    "Preserve all V1 files and adapters, publish V2 to a new versioned directory, and never overwrite a published corpus."
+  ],
+  "evaluation_plan": [
+    "Compare learned predictions with majority class and exact deterministic observed-state policy baselines.",
+    "Report confusion matrix, recall per action, performance per artifact type, uncertainty/abstention and run-level support counts.",
+    "Missing action classes and poor live-format coverage are explicit production-gate failures, regardless of overall validation accuracy.",
+    "Continue deterministic routing for structured lifecycle states; learned model remains advisory until independently evaluated on supported tasks."
+  ],
+  "new_training_started": false,
+  "new_data_fabricated": false
+}

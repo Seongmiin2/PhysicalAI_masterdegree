@@ -1,0 +1,83 @@
+{
+  "review_date": "2026-10-01",
+  "source_files": [
+    "outputs/chum_seed47_20260921/training/G2_METRICS.csv",
+    "outputs/chum_training_budget_20260921/METRICS.csv"
+  ],
+  "rows": [
+    {
+      "architecture": "tcn",
+      "variant": "F0",
+      "seed": "47",
+      "epochs_run": "25",
+      "best_epoch": "24",
+      "auroc_10_epochs": 0.7463387110476271,
+      "auroc_extended": 0.7456132779433091,
+      "delta_auroc": -0.0007254331043179407,
+      "delta_auprc": -0.00034023128371440947,
+      "delta_detected_run_ratio": 0.0
+    },
+    {
+      "architecture": "tcn",
+      "variant": "F1",
+      "seed": "47",
+      "epochs_run": "25",
+      "best_epoch": "18",
+      "auroc_10_epochs": 0.8096645499080313,
+      "auroc_extended": 0.8079461332404023,
+      "delta_auroc": -0.0017184166676289525,
+      "delta_auprc": -0.0006813431994527885,
+      "delta_detected_run_ratio": 0.0
+    },
+    {
+      "architecture": "tcn",
+      "variant": "F0-C",
+      "seed": "47",
+      "epochs_run": "31",
+      "best_epoch": "24",
+      "auroc_10_epochs": 0.7461966412335109,
+      "auroc_extended": 0.7454332556747333,
+      "delta_auroc": -0.0007633855587776406,
+      "delta_auprc": -0.0003623368583757225,
+      "delta_detected_run_ratio": -0.0035714285714285587
+    },
+    {
+      "architecture": "transformer",
+      "variant": "F0",
+      "seed": "47",
+      "epochs_run": "50",
+      "best_epoch": "50",
+      "auroc_10_epochs": 0.7489307788833304,
+      "auroc_extended": 0.7492746585360409,
+      "delta_auroc": 0.00034387965271054366,
+      "delta_auprc": 0.00020599570808166323,
+      "delta_detected_run_ratio": -0.0017857142857142794
+    },
+    {
+      "architecture": "transformer",
+      "variant": "F1",
+      "seed": "47",
+      "epochs_run": "50",
+      "best_epoch": "50",
+      "auroc_10_epochs": 0.807394110544117,
+      "auroc_extended": 0.8043565302536084,
+      "delta_auroc": -0.0030375802905086013,
+      "delta_auprc": -0.0010190448288389664,
+      "delta_detected_run_ratio": -0.0017857142857142794
+    },
+    {
+      "architecture": "transformer",
+      "variant": "F0-C",
+      "seed": "47",
+      "epochs_run": "50",
+      "best_epoch": "50",
+      "auroc_10_epochs": 0.7489307788833304,
+      "auroc_extended": 0.7492746585360409,
+      "delta_auroc": 0.00034387965271054366,
+      "delta_auprc": 0.00020599570808166323,
+      "delta_detected_run_ratio": -0.0017857142857142794
+    }
+  ],
+  "interpretation": "Longer training did not improve F1 AUROC for either architecture on seed47. Existing test is a development benchmark; normal validation MSE is not detection performance. Transformer best checkpoint at epoch50 does not establish convergence. Next compare windows under shared architecture and target ranges.",
+  "new_experimental_evidence": false
+}
