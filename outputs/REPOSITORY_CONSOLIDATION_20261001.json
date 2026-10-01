@@ -352,7 +352,20 @@
   "validation": {
     "project_tests": 139,
     "imported_engine_tests": 12,
-    "editable_install": "PASS"
+    "finalizer_tests": 11,
+    "editable_install": "PASS",
+    "ancestry_both_repositories": "PASS"
   },
-  "remote_status": "PENDING_PUBLICATION"
+  "remote_status": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW",
+  "history_merge_commit": "8e16e3a",
+  "verified_main_commit": "5ae570f",
+  "source_snapshots_byte_hash_verified": 8,
+  "remote_rejection": "Exact public payload approval required for consolidated main publication.",
+  "remote_deletion_status": "NOT_ATTEMPTED_UNTIL_CANONICAL_MAIN_VERIFIED",
+  "deferred_local_migration": {
+    "worker_pid": 29340,
+    "status_file": "outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json",
+    "waits_for_pid": 19476,
+    "waits_for_resource": "compute:gpu0"
+  }
 }

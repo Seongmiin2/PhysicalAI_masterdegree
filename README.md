@@ -39,7 +39,7 @@ python experiments/run_chum_window_extension.py --config configs/chum_window_ext
 
 2026-10-01 기준 최신 개발은 Thesis-Orchestrator에 있었지만 PhysicalAI에 학습 엔진과 고유 결과가 있었습니다. 엔진과 고유 문서 7개를 통합하고, 양쪽 Git 이력을 보존합니다. 이전 상태·provider 파일로 최신 구현을 덮어쓰지 않았습니다. [통합 파일 manifest](outputs/REPOSITORY_CONSOLIDATION_20261001.json)를 참고합니다.
 
-DeMo-Med, FAVE-Med, FAVE-RAG, 외부 reference/export checkout과 전체 Git bundle은 작업 폴더 밖 `../master_degree_archive_20261001`이 아니라 **작업 공간(master_degree)의 형제 폴더 `master_degree_archive_20261001`**에 보관합니다. 다른 프로젝트의 미커밋 변경도 유지합니다. 이 프로젝트에서 더 이상 자동 export용 nested 저장소를 만들지 않습니다.
+DeMo-Med, FAVE-Med, FAVE-RAG, 외부 reference/export checkout과 전체 Git bundle은 작업 공간의 형제 폴더 `C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001`에 보관합니다. 다른 프로젝트의 미커밋 변경도 유지합니다. 이 프로젝트에서 더 이상 자동 export용 nested 저장소를 만들지 않습니다.
 
 현재 GPU 작업은 이전 PhysicalAI 데이터 파일을 메모리 매핑하고 있습니다. 작업 종료 전에는 데이터를 옮기지 않고 `physical_ai/data`, `physical_ai/checkpoints`의 임시 junction으로 같은 파일을 사용합니다. `experiments/finalize_workspace_consolidation.py --wait`가 실행 잠금 해제 후 데이터를 프로젝트 안으로 옮기고 구 PhysicalAI 폴더를 바깥으로 보관합니다. 진행 상태는 `outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json`입니다.
 

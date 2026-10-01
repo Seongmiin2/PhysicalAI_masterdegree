@@ -49,23 +49,32 @@
     "main": {
       "status": "RUNNING",
       "stage": "training",
-      "completed_tasks": 0,
-      "task": "tcn_F0_seed47_window20",
-      "epoch": 18,
-      "updated_at": "2026-10-01T14:45:11+0900",
-      "source": "outputs\\chum_window_extension_20261001\\LIVE_STATUS.json"
+      "completed_tasks": 3,
+      "task": "tcn_F1_seed47_window20",
+      "epoch": 15,
+      "updated_at": "2026-10-01T16:01:59+0900",
+      "source": "outputs/chum_window_extension_20261001/LIVE_STATUS.json"
     }
   },
   "local_model": {
     "requested_adaptation": "PROJECT_DATA_FINE_TUNING",
     "status": "TRAINED_EXPERIMENTAL_NOT_PRODUCTION",
     "base": "Qwen/Qwen2.5-0.5B-Instruct",
-    "adapter": "outputs/harness/models/chum-ops-lora",
-    "report": "outputs/chum_ops_training_20261001/TRAINING_REPORT.json",
-    "heldout_accuracy": 0.4090909090909091,
-    "majority_baseline_accuracy": 0.9090909090909091,
+    "adapter": "outputs/harness/models/chum-ops-v2-balanced",
+    "report": "outputs/chum_ops_training_v2_20261001/HELDOUT_EVALUATION.json",
+    "heldout_accuracy": 1.0,
+    "majority_baseline_accuracy": 0.9859154929577465,
     "production_gate": false,
-    "next_step": "Review four live-state annotation cases and collect unseen run groups before version 2.",
-    "human_review_queue": "outputs/chum_ops_training_20261001/HUMAN_REVIEW_QUEUE.json"
+    "next_step": "Collect independent failure, resume, and human-reviewed ambiguous cases; high-confidence PARTIAL error remains.",
+    "human_review_queue": "outputs/chum_ops_training_v2_20261001/HUMAN_REVIEW_QUEUE.json",
+    "heldout_records": 71,
+    "heldout_independent_groups": 1,
+    "heldout_supported_classes": 2
+  },
+  "repository": {
+    "url": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
+    "branch": "main",
+    "local_folder_name": "Thesis-Orchestrator",
+    "remote_publication": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW"
   }
 }
