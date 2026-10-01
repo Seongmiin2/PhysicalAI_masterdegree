@@ -315,7 +315,7 @@
     "missing_already_in_thesis_history": 40,
     "new_imports": 7
   },
-  "preservation": "Both complete repository histories saved as verified bundles outside workspace; source parent will be merged into main.",
+  "preservation": "Both complete repository histories are preserved in main and in verified bundles outside the workspace.",
   "legacy_documents": "Original older PhysicalAI docs/artifacts remain in its preserved git history and archived checkout.",
   "canonical_repository": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
   "canonical_branch": "main",
@@ -356,16 +356,36 @@
     "editable_install": "PASS",
     "ancestry_both_repositories": "PASS"
   },
-  "remote_status": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW",
+  "remote_status": "PUBLISHED",
   "history_merge_commit": "8e16e3a",
-  "verified_main_commit": "5ae570f",
+  "verified_main_commit": "c21f3650d1a82332af1047b7809714dbb4a5d66a",
   "source_snapshots_byte_hash_verified": 8,
-  "remote_rejection": "Exact public payload approval required for consolidated main publication.",
-  "remote_deletion_status": "NOT_ATTEMPTED_UNTIL_CANONICAL_MAIN_VERIFIED",
+  "remote_deletion_status": "WAITING_FOR_GITHUB_DELETE_REPO_SCOPE",
   "deferred_local_migration": {
     "worker_pid": 29340,
     "status_file": "outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json",
     "waits_for_pid": 19476,
     "waits_for_resource": "compute:gpu0"
+  },
+  "remote_default_branch": "main",
+  "remote_branches": [
+    "main"
+  ],
+  "deleted_remote_branches": [
+    "master",
+    "agent/thesis-final-gate"
+  ],
+  "remote_deletion_target": "Seongmiin2/Thesis-Orchestrator",
+  "remote_deletion_error": "GitHub HTTP 403: authenticated token needs delete_repo scope; user approved deletion; gh auth refresh started.",
+  "legacy_assets_archived": {
+    "count": 22,
+    "destination": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/PhysicalAI_legacy_assets",
+    "journal": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/PHYSICALAI_LEGACY_ASSET_MOVES.json",
+    "remaining_until_experiment_finishes": [
+      "checkpoints",
+      "configs",
+      "data",
+      "src"
+    ]
   }
 }

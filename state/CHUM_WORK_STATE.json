@@ -75,6 +75,11 @@
     "url": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
     "branch": "main",
     "local_folder_name": "Thesis-Orchestrator",
-    "remote_publication": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW"
+    "remote_publication": "PUBLISHED",
+    "remote_default_branch": "main",
+    "remote_branches": [
+      "main"
+    ],
+    "legacy_remote_deletion": "WAITING_FOR_GITHUB_DELETE_REPO_SCOPE"
   }
 }
