@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
 FAULTS = (4, 7, 19, 24, 25, 26)
 WINDOW = 20
 BANK_ENDPOINTS = (300, 450, 580)
@@ -139,8 +141,8 @@ def evaluate(scores: np.ndarray, meta: np.ndarray, thresholds: dict[str, float],
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--physical-root", type=Path, default=Path("../PhysicalAI_mini"))
-    parser.add_argument("--output", type=Path, default=Path("outputs/methodology/g0"))
+    parser.add_argument("--physical-root", type=Path, default=ROOT / "physical_ai")
+    parser.add_argument("--output", type=Path, default=ROOT / "outputs/methodology/g0")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     root = args.physical_root.resolve()

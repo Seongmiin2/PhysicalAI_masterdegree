@@ -13,8 +13,8 @@ import torch
 from torch.utils.data import DataLoader
 
 
-ROOT = Path(__file__).resolve().parents[2]
-PHYSICALAI = ROOT / "PhysicalAI_mini"
+ROOT = Path(__file__).resolve().parents[1]
+PHYSICALAI = ROOT / "physical_ai"
 if str(PHYSICALAI) not in sys.path:
     sys.path.insert(0, str(PHYSICALAI))
 
@@ -345,8 +345,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
     args = parser.parse_args()
-    config = load_config(args.config)
-    output = ROOT / "Thesis-Orchestrator" / "outputs" / "final_gate_exp1"
+    config = load_config(ROOT / args.config)
+    config["paths"] = {key: str(ROOT / value) for key, value in config["paths"].items()}
+    output = ROOT / "outputs" / "final_gate_exp1"
     output.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
     split = pd.read_csv(output / "artifacts" / "reinartz_split_manifest.csv")

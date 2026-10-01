@@ -1,0 +1,37 @@
+{
+  "experiment": "new optimization seed extension",
+  "seed": 47,
+  "architectures": [
+    "tcn",
+    "transformer"
+  ],
+  "variants": [
+    "F0",
+    "F1",
+    "F0-C"
+  ],
+  "epochs": 10,
+  "channel_cells": [
+    {
+      "fault_id": 4,
+      "channel": 10
+    },
+    {
+      "fault_id": 19,
+      "channel": 7
+    },
+    {
+      "fault_id": 19,
+      "channel": 8
+    },
+    {
+      "fault_id": 25,
+      "channel": 2
+    }
+  ],
+  "block_length": 20,
+  "draws": 3,
+  "purpose": "Train six new models, then measure original-minus-replacement utility for the four existing primary cells. One additional seed alone does not establish statistical significance.",
+  "training_config": "configs/chum_seed47_training.yaml",
+  "channel_config": "configs/chum_seed47_channel.yaml"
+}

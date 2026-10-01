@@ -136,7 +136,7 @@ def run_task(cfg, architecture, variant, seed, split, features, mean, std, outpu
     test_ds = dataset('test', np.arange(window, experiment.N_SAMPLES))
     test_loader = DataLoader(test_ds, batch_size=batch*4, shuffle=False, num_workers=0, pin_memory=True)
     scores, _, runs, samples = experiment.evaluate_scores(model, test_loader, device, task+' test')
-    with np.load(Path(cfg['paths']['cache'])/'metadata.npz') as metadata:
+    with np.load((ROOT / cfg['paths']['cache'])/'metadata.npz') as metadata:
         labels = (metadata['labels'][runs, samples-1] != 0).astype(np.int8)
     def metrics(mask):
         s, r, p, y = scores[mask], runs[mask], samples[mask], labels[mask]
@@ -181,7 +181,7 @@ def main():
         split=pd.read_csv(ROOT/'outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv')
         scaler=pd.read_csv(ROOT/'outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv')
         mean,std=scaler['mean'].to_numpy(np.float32),scaler['std'].to_numpy(np.float32)
-        features=np.load(Path(cfg['paths']['cache'])/'features.npy',mmap_mode='r')
+        features=np.load((ROOT / cfg['paths']['cache'])/'features.npy',mmap_mode='r')
         results=[]
         for architecture in cfg['architectures']:
             for seed in cfg['model_seeds']:

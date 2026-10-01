@@ -24,3 +24,13 @@ outputs/chum_window_extension_*/**/*.pt
 .venv-research/
 outputs/chum_window_pilot_*/**/*.pt
 .harness-execution.lock
+
+# Consolidated local datasets, model weights and transient experiment files
+physical_ai/data/
+physical_ai/checkpoints/
+*.pt
+*.safetensors
+*.log
+*.partial.csv
+outputs/chum_window_extension_*/LIVE_STATUS.json
+outputs/chum_window_extension_*/LIVE_STATUS.tmp

@@ -1,0 +1,21 @@
+{
+  "chum_training_budget.yaml": {
+    "executed_sha256": "8832bc2d5377bd7536b55b138f9eccab663d589c5f4ce6741fc2e3069e39347d"
+  },
+  "chum_seed47_training.yaml": {
+    "executed_sha256": "2d56dfb05719ab2efbd2f6bc6739b907fb09871963d8eba89c1e38876938971b"
+  },
+  "chum_seed47_channel.yaml": {
+    "executed_sha256": "7a969c1345ff4b7e2341e4733d2300018562f685cf9874fe7a20e12adbf5e9d6"
+  },
+  "source_code": {
+    "experiments/run_chum_training_budget.py": "2f5519664b4fa29baf7415fdd7eaff8815c86ff9a61a19d5ddf5ee209b2922c3",
+    "experiments/run_chum_seed47_extension.py": "fa56bd39df9b0d4ebe42c18568032cc45bc573b5df66455f6d32d9084ffa36cc",
+    "experiments/run_architecture_gate_g2.py": "bfc5d0c1fccc1f214e27571c10c048305dc60357dce4788c33850082e4a18dcc",
+    "experiments/run_architecture_chum_sensitivity.py": "af89d89b56ac07d0df6382193a2e4567c288317086b1fd3e43450ba67aa14841",
+    "experiments/run_architecture_chum_g3.py": "d425eb8f12a6ab68e330d26ce9a10822468e17cec27bf6a9f90b2d4d34eb2d54",
+    "experiments/run_mechanism_gate_exp2.py": "aba8aefe02f9a9c9d991602b6fadb78c56c3683b3a64d428d89ab3b24bfc7357",
+    "experiments/conditional_imputer.py": "06449bfb8af1c3942e9b4cf25070be4e60cbc459bd7d720cfbfdbf611bb3fe1d",
+    "tests/test_chum_training_budget.py": "7c2a4b601717de7dc90b4e4b3217b5f457a70c620e870aa0b2450c9c382cc31c"
+  }
+}

@@ -4,3 +4,6 @@
 - Before integrating history, verify ancestry and preserve uncommitted work. Delete only branches whose complete history is already reachable from main; never use force deletion to hide unmerged work.
 - Commit the completed, relevant work to main. Do not silently include unrelated drafts, running experiment artifacts, databases, or model weights.
 - Remote publication is distinct from local integration. Respect any approval-review rejection and disclose a blocked push; do not bypass it or claim local commits were pushed.
+
+- Canonical remote: https://github.com/Seongmiin2/PhysicalAI_masterdegree.git. The local folder name Thesis-Orchestrator is retained for running-process compatibility; do not create a second repository or nested export checkout.
+- PhysicalAI source is in physical_ai/src. Use project-relative data paths. Until deferred consolidation finishes, physical_ai/data and checkpoints are compatibility junctions; never move open experiment data or delete their targets.

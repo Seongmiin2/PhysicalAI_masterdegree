@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-21",
+  "status": "REVALIDATED_REVIEW_DRAFT_READY",
+  "document_checks": "PASS",
+  "word_tables": 12,
+  "numbered_chapters": 13,
+  "bh_candidates": 224,
+  "sensitivity_settings": 72,
+  "submission_complete": false,
+  "remaining": [
+    "Supervisor review of title, scope and manuscript",
+    "Institutional formatting and author metadata",
+    "Rendered page review and submission PDF"
+  ]
+}

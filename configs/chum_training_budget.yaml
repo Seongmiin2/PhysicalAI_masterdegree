@@ -12,7 +12,7 @@ num_workers: 0
 hidden_dim: 32
 layers: 2
 paths:
-  cache: C:/Users/FORYOUCOM/Desktop/master_degree/PhysicalAI_mini/data/processed/reinartz_f0_f1
+  cache: physical_ai/data/processed/reinartz_f0_f1
   output: outputs/chum_training_budget_20260921
 min_epochs: 10
 patience: 7

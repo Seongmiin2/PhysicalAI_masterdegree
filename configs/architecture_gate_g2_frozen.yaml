@@ -12,7 +12,7 @@ num_workers: 0
 hidden_dim: 32
 layers: 2
 paths:
-  cache: C:/Users/FORYOUCOM/Desktop/master_degree/PhysicalAI_mini/data/processed/reinartz_f0_f1
-  artifacts: C:/Users/FORYOUCOM/Desktop/master_degree/Thesis-Orchestrator/outputs/architecture_gate_g2_full
-  checkpoints: C:/Users/FORYOUCOM/Desktop/master_degree/Thesis-Orchestrator/outputs/architecture_gate_g2_full/checkpoints
-  logs: C:/Users/FORYOUCOM/Desktop/master_degree/Thesis-Orchestrator/outputs/architecture_gate_g2_full/logs
+  cache: physical_ai/data/processed/reinartz_f0_f1
+  artifacts: outputs/architecture_gate_g2_full
+  checkpoints: outputs/architecture_gate_g2_full/checkpoints
+  logs: outputs/architecture_gate_g2_full/logs

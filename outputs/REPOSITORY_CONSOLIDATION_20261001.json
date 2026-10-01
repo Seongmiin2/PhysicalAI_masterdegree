@@ -1,0 +1,358 @@
+{
+  "source_repository": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
+  "source_commit": "97df46449d3062662b3d34b76744fb699adf1ce1",
+  "retained_latest_thesis_commit": "1ef85733fa6e37b181d02d1268d71b3b8d905e4b",
+  "imports": [
+    {
+      "source": ".env.example",
+      "destination": "physical_ai/.env.example",
+      "sha256": "885882e391b758134daeb09fe3673350574d10da5a62a2b6e807de5954535b4c"
+    },
+    {
+      "source": ".gitignore",
+      "destination": "physical_ai/.gitignore",
+      "sha256": "cb8cbcdf28c88cb9f5cbd9950a22219eeb2f99548ce0a8fc4fa49663810bdf8b"
+    },
+    {
+      "source": "README.md",
+      "destination": "physical_ai/README.md",
+      "sha256": "b31d54ea2110b2aaf4c32dc04a7a1a5ffbe840ea49cc51d931c7939fa1231d22"
+    },
+    {
+      "source": "configs/baseline.yaml",
+      "destination": "physical_ai/configs/baseline.yaml",
+      "sha256": "c1bc9a2b5fe2fe88f61a2eb7ddce980f23554e718c839a1902bfeb2330be0838"
+    },
+    {
+      "source": "configs/datasets/cmapss.yaml",
+      "destination": "physical_ai/configs/datasets/cmapss.yaml",
+      "sha256": "ed0884342c0c983572aef188ee3edc2aae6dc481d7c1268ee1da4bc1542a6863"
+    },
+    {
+      "source": "configs/reinartz_f0_f1.yaml",
+      "destination": "physical_ai/configs/reinartz_f0_f1.yaml",
+      "sha256": "98461c3bbbe1d071e2a944db59e8bbe8b57d42b4bb72aefade38988b40d7017e"
+    },
+    {
+      "source": "configs/smoke.yaml",
+      "destination": "physical_ai/configs/smoke.yaml",
+      "sha256": "43c3bc7c0d60af6a55f045685d52366bae2fbc11642592503016a2a981086eba"
+    },
+    {
+      "source": "configs/tep_file_catalog.csv",
+      "destination": "physical_ai/configs/tep_file_catalog.csv",
+      "sha256": "09576c3eacd5379a671ae94f2f1d146774c818520e671a997bd641a6f3261132"
+    },
+    {
+      "source": "docker-compose.yml",
+      "destination": "physical_ai/docker-compose.yml",
+      "sha256": "41fdf387f7f33cd892289f89f1918a5b9d059ae1d746cf4ede624022eed97446"
+    },
+    {
+      "source": "pyproject.toml",
+      "destination": "physical_ai/pyproject.toml",
+      "sha256": "f619c556e8a4c3e8fafc2f983273ca0eac956a17ac330b278ded044c0845e7f1"
+    },
+    {
+      "source": "scripts/run_experiment.ps1",
+      "destination": "physical_ai/scripts/run_experiment.ps1",
+      "sha256": "ed914d4566aedcbd730d305d10db97cf80eb4e24d928a88a34a745971e3ce9d3"
+    },
+    {
+      "source": "scripts/run_reinartz_capacity_control.ps1",
+      "destination": "physical_ai/scripts/run_reinartz_capacity_control.ps1",
+      "sha256": "3873e0fc8d132ac2673134d806f284002719c0a017207d4472a0d3f799b98158"
+    },
+    {
+      "source": "scripts/run_reinartz_experiment.ps1",
+      "destination": "physical_ai/scripts/run_reinartz_experiment.ps1",
+      "sha256": "376d333e1c1b397021d77da4ab30875b0f08c2ee6037340293699ce128a32b06"
+    },
+    {
+      "source": "scripts/setup.ps1",
+      "destination": "physical_ai/scripts/setup.ps1",
+      "sha256": "784c7b7933dd7f93c36926c19182ea27bb69adfa0de4bd38d2fa4c9215b6943c"
+    },
+    {
+      "source": "sql/migrations/001_metadata.sql",
+      "destination": "physical_ai/sql/migrations/001_metadata.sql",
+      "sha256": "308376a75c3f07ba72280f7ea9d5e1d5b1b770d398f9b49c0c2410454cf6c150"
+    },
+    {
+      "source": "src/__init__.py",
+      "destination": "physical_ai/src/__init__.py",
+      "sha256": "50a47d5ed24f98eb273f0c9b6651baf3528561a1b4197f1542d98e6ab6650897"
+    },
+    {
+      "source": "src/analysis/__init__.py",
+      "destination": "physical_ai/src/analysis/__init__.py",
+      "sha256": "00d4564c6bb4e8bd61c0f6f4dd0768e5fb9af59f6a9d667aafb9ddb2ca738288"
+    },
+    {
+      "source": "src/analysis/reinartz_f1_mechanism.py",
+      "destination": "physical_ai/src/analysis/reinartz_f1_mechanism.py",
+      "sha256": "63d3c9938f9b35ad6c17c3b73f17c77083fb360dc601a4d97fa471749736cfb0"
+    },
+    {
+      "source": "src/config.py",
+      "destination": "physical_ai/src/config.py",
+      "sha256": "2d954a9afa0a1d42a040eb16e3ffb07448c67235bca80c2c971de128a5a24e32"
+    },
+    {
+      "source": "src/data/__init__.py",
+      "destination": "physical_ai/src/data/__init__.py",
+      "sha256": "cbbb9a246381f6741cf0e7616f6b6c8069aad511c0accc456a1d27b23422ef90"
+    },
+    {
+      "source": "src/data/audit_reinartz_masks.py",
+      "destination": "physical_ai/src/data/audit_reinartz_masks.py",
+      "sha256": "3f76974b0df452494adaa142aeb9a1a562724d2dd15b540672a97230e9af41a3"
+    },
+    {
+      "source": "src/data/catalog_tep.py",
+      "destination": "physical_ai/src/data/catalog_tep.py",
+      "sha256": "b3545c05369fe6e07c4e9b0655372df980029c899329fda66957d05aeefdfc74"
+    },
+    {
+      "source": "src/data/cmapss.py",
+      "destination": "physical_ai/src/data/cmapss.py",
+      "sha256": "3029f515d8dfd54bea7e3889c03845c95016a6effe39d4e7fc554164f9d62b2e"
+    },
+    {
+      "source": "src/data/download.py",
+      "destination": "physical_ai/src/data/download.py",
+      "sha256": "96cb54e44abfb6e92048d2fdff3937f007b0b3903a2ba6cfa3616931fffae427"
+    },
+    {
+      "source": "src/data/download_cmapss.py",
+      "destination": "physical_ai/src/data/download_cmapss.py",
+      "sha256": "f26eb4d24ec638b901f57f05da964c22982f42389bf5fe8ee4c3c365cfe62b2a"
+    },
+    {
+      "source": "src/data/download_tep_docs.py",
+      "destination": "physical_ai/src/data/download_tep_docs.py",
+      "sha256": "4de59b1ab0c9477270cc5321533a3be30c22b0cd332f324be0ef563c22d2fa7e"
+    },
+    {
+      "source": "src/data/inspect_reinartz.py",
+      "destination": "physical_ai/src/data/inspect_reinartz.py",
+      "sha256": "0406d41ebe297a234635cb3591c94633edd2f67e22b34461da97ec5a39445f0b"
+    },
+    {
+      "source": "src/data/inspect_tep_remote.py",
+      "destination": "physical_ai/src/data/inspect_tep_remote.py",
+      "sha256": "d04f5be48327fc6578a20d424cd0d6dd6170ba3a43a7ea067d42827684205765"
+    },
+    {
+      "source": "src/data/preprocess.py",
+      "destination": "physical_ai/src/data/preprocess.py",
+      "sha256": "46a388972be2cb656be6db99fd5aed6869f5888e031735b712c4eeadb9857e62"
+    },
+    {
+      "source": "src/data/reinartz.py",
+      "destination": "physical_ai/src/data/reinartz.py",
+      "sha256": "a32421cb5b0b9bbb98fb931b4778e13f4a05c35caf0159c0c08b8f1bf323058e"
+    },
+    {
+      "source": "src/data/reinartz_f0_f1.py",
+      "destination": "physical_ai/src/data/reinartz_f0_f1.py",
+      "sha256": "eac7fb24aa54a9df8bbab589982a3ae5465f7de9b800e843bced7e5819e3c7fb"
+    },
+    {
+      "source": "src/data/tep.py",
+      "destination": "physical_ai/src/data/tep.py",
+      "sha256": "7f9e317df2c4c398fee108783669fdd78e0cbf6c359842ce324e599d8c18f1ce"
+    },
+    {
+      "source": "src/data/tep_quality.py",
+      "destination": "physical_ai/src/data/tep_quality.py",
+      "sha256": "35ecb52b81274ab7eb8c8cc3a5e83054e7508cea8f396d1df2d1a84ff2951b75"
+    },
+    {
+      "source": "src/data/validate.py",
+      "destination": "physical_ai/src/data/validate.py",
+      "sha256": "c2226e5d0e0681d6202f02f0541bb1f732f42c0ca00e9c838298953baaaf5d9c"
+    },
+    {
+      "source": "src/db.py",
+      "destination": "physical_ai/src/db.py",
+      "sha256": "686d9d80720b5d654a8d53bfbe1eff441f0c44c7e1a9031ebfac523f53b13ed7"
+    },
+    {
+      "source": "src/experiments/__init__.py",
+      "destination": "physical_ai/src/experiments/__init__.py",
+      "sha256": "d9d920e9607fb4bd87c26f7f247596dcafd85384f08f104add504c32c8eeb58b"
+    },
+    {
+      "source": "src/experiments/reinartz_capacity_control.py",
+      "destination": "physical_ai/src/experiments/reinartz_capacity_control.py",
+      "sha256": "6f22f01a6d9ea92be196bf66c700cfa02e00b94fdd0d0678dd9c747986f72999"
+    },
+    {
+      "source": "src/experiments/reinartz_f0_f1.py",
+      "destination": "physical_ai/src/experiments/reinartz_f0_f1.py",
+      "sha256": "83b8f49c15f4eb7b1b15bff209e617a7f6dc51f6d4a490e549b81f33e7ce9ba7"
+    },
+    {
+      "source": "src/experiments/run_baseline.py",
+      "destination": "physical_ai/src/experiments/run_baseline.py",
+      "sha256": "f8732a39d26276cdd806023040e300218db89fa75d195d1de17288b699bab678"
+    },
+    {
+      "source": "src/models/__init__.py",
+      "destination": "physical_ai/src/models/__init__.py",
+      "sha256": "22caad0bc44c9647650595242abfeaa14d466efd0bd9ff2c08879697b585b920"
+    },
+    {
+      "source": "src/models/reinartz_forecaster.py",
+      "destination": "physical_ai/src/models/reinartz_forecaster.py",
+      "sha256": "16db32a2024c00a017ea1f76bea795c5c0407d7b19b2eba4b8c4cb5010bde5fb"
+    },
+    {
+      "source": "src/models/state_encoder.py",
+      "destination": "physical_ai/src/models/state_encoder.py",
+      "sha256": "e301300c514760301bae8e9b281e065fd65ca99472d90ca0e6efe58ad582d6d0"
+    },
+    {
+      "source": "src/retrieval/__init__.py",
+      "destination": "physical_ai/src/retrieval/__init__.py",
+      "sha256": "527c423b641dafb2c414dc62c29d006414d70da9fcba65c385f63650aff18be9"
+    },
+    {
+      "source": "src/retrieval/vanilla_retrieval.py",
+      "destination": "physical_ai/src/retrieval/vanilla_retrieval.py",
+      "sha256": "761821ac38fc6fbe251b6715fb4c605abf78fe352b5c482585ba713192d71b5f"
+    },
+    {
+      "source": "src/simulator/__init__.py",
+      "destination": "physical_ai/src/simulator/__init__.py",
+      "sha256": "5fb3bba9c98a740508271b416c5c53b5e94f90e308b8aab4b06d2e8725f4653d"
+    },
+    {
+      "source": "src/simulator/generate_episode.py",
+      "destination": "physical_ai/src/simulator/generate_episode.py",
+      "sha256": "fa1f344748a585ab063f5ab38f0ced6473fba622e5bec7f102e7407094cabe17"
+    },
+    {
+      "source": "tests/test_cmapss.py",
+      "destination": "physical_ai/tests/test_cmapss.py",
+      "sha256": "d9a5026aea8f357e638bc2149c6ec053bcce3b6b3bd4831c3ac4bf4538be6657"
+    },
+    {
+      "source": "tests/test_recovery_pipeline.py",
+      "destination": "physical_ai/tests/test_recovery_pipeline.py",
+      "sha256": "fa65b803c4adf3bc85cc96afbf73bf5c692217aeabebfcae552909821ae701c5"
+    },
+    {
+      "source": "tests/test_reinartz_capacity_control.py",
+      "destination": "physical_ai/tests/test_reinartz_capacity_control.py",
+      "sha256": "fc186c80374e5ac29b9a5cced45cca2b04c7fa93b705dd0fc4ab84f68fabfa65"
+    },
+    {
+      "source": "tests/test_reinartz_experiment.py",
+      "destination": "physical_ai/tests/test_reinartz_experiment.py",
+      "sha256": "29c1b4ae04f52435755a752f374860177d7026bd34c5683d9dc69b6968186a37"
+    },
+    {
+      "source": "tests/test_reinartz_loader.py",
+      "destination": "physical_ai/tests/test_reinartz_loader.py",
+      "sha256": "17a10bca905e7990c33d393b354371a245a91522e77b01d89874662a82fe5644"
+    },
+    {
+      "source": "tests/test_reinartz_mapping.py",
+      "destination": "physical_ai/tests/test_reinartz_mapping.py",
+      "sha256": "790d9d3a20b8e7409ddeed836b1ee4203324caaf2a62032612b096db5be83349"
+    },
+    {
+      "source": "tests/test_tep_catalog.py",
+      "destination": "physical_ai/tests/test_tep_catalog.py",
+      "sha256": "b8fd76d1a49e976d2eb1146808aebb881ab344d43040fe21c9e1d87f78e7cd05"
+    },
+    {
+      "source": "tests/test_tep_loader.py",
+      "destination": "physical_ai/tests/test_tep_loader.py",
+      "sha256": "e51551d4bae452028f2f6fb898deec286465380f724654a50ba72f436d987a8e"
+    },
+    {
+      "source": "Thesis-Orchestrator/CHUM_EXPERIMENTS_20260921.md",
+      "destination": "CHUM_EXPERIMENTS_20260921.md",
+      "sha256": "c52298171b50a2044c5a620a09437312f04676bed5f3bddb150a065c94b909ce"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/EXPORT_PROVENANCE.json",
+      "destination": "outputs/chum_training_budget_20260921/EXPORT_PROVENANCE.json",
+      "sha256": "c0a4bc9c579149642ed05f90d0432cfe92bccb324d10bab9d9f07257eea0bedb"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/RESULT_SUMMARY.md",
+      "destination": "outputs/chum_training_budget_20260921/RESULT_SUMMARY.md",
+      "sha256": "24a7367d48f5608e5f136d5cabe36425b1998fd9215fa6e0f888845107f8d619"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/TRAINING_BUDGET_COMPARISON.csv",
+      "destination": "outputs/chum_training_budget_20260921/TRAINING_BUDGET_COMPARISON.csv",
+      "sha256": "bf279b4622b8c1cc7a1561381930c41ec1a8c52faa440a75befd79e7de8c4dbc"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/executed_configs/chum_seed47_channel.yaml",
+      "destination": "outputs/chum_training_budget_20260921/executed_configs/chum_seed47_channel.yaml",
+      "sha256": "e30ed9e47ea6bacc5cb498204efa2c1e193d8a8ef4f027f0a7380626e9a9cf87"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/executed_configs/chum_seed47_training.yaml",
+      "destination": "outputs/chum_training_budget_20260921/executed_configs/chum_seed47_training.yaml",
+      "sha256": "c32b65d806cfcf63cf289a24811d785fbfbde3da3a979b7937793f8bef97155e"
+    },
+    {
+      "source": "Thesis-Orchestrator/outputs/chum_training_budget_20260921/executed_configs/chum_training_budget.yaml",
+      "destination": "outputs/chum_training_budget_20260921/executed_configs/chum_training_budget.yaml",
+      "sha256": "a6ecb83bff335ac2f8be10d0015079f4cb65ee384f1140a2ae7cd7995df92484"
+    }
+  ],
+  "duplicate_nested_comparison": {
+    "same": 81,
+    "different_keep_latest": 13,
+    "missing_already_in_thesis_history": 40,
+    "new_imports": 7
+  },
+  "preservation": "Both complete repository histories saved as verified bundles outside workspace; source parent will be merged into main.",
+  "legacy_documents": "Original older PhysicalAI docs/artifacts remain in its preserved git history and archived checkout.",
+  "canonical_repository": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
+  "canonical_branch": "main",
+  "archive_root": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001",
+  "moved_projects": [
+    {
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\DeMo-Med",
+      "destination": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\DeMo-Med",
+      "moved": true
+    },
+    {
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\FAVE-Med",
+      "destination": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\FAVE-Med",
+      "moved": true
+    },
+    {
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\FAVE-RAG",
+      "destination": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\FAVE-RAG",
+      "moved": true
+    },
+    {
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\external",
+      "destination": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\external",
+      "moved": true
+    },
+    {
+      "source": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\.pytest_cache",
+      "destination": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\.pytest_cache",
+      "moved": true
+    }
+  ],
+  "legacy_git_archived": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\repository_backups\\PhysicalAI_mini.git",
+  "data_migration": "DEFERRED_UNTIL_RUNNING_EXPERIMENT_RELEASES_FILES",
+  "validation": {
+    "project_tests": 139,
+    "imported_engine_tests": 12,
+    "editable_install": "PASS"
+  },
+  "remote_status": "PENDING_PUBLICATION"
+}

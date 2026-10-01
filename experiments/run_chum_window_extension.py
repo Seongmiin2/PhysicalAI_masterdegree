@@ -162,7 +162,7 @@ def run_task(cfg, architecture, variant, seed, window, split, features, mean, st
     if cfg.get('evaluate_test', False):
         update(task=task, stage='evaluate_selected_checkpoint')
         scores, _, runs, samples = experiment.evaluate_scores(model, loader('test'), device, task+' development test')
-        with np.load(Path(cfg['paths']['cache'])/'metadata.npz') as metadata:
+        with np.load((ROOT / cfg['paths']['cache'])/'metadata.npz') as metadata:
             labels = (metadata['labels'][runs, samples-1] != 0).astype(np.int8)
         auroc, auprc = binary_metrics(labels, scores)
         detected, delay, prealarm = experiment.persistence_delays(scores, runs, samples, threshold, cfg['alarm_consecutive'])
@@ -217,11 +217,11 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     source_paths = (Path(__file__).resolve(), ROOT/'experiments/run_chum_training_budget.py',
                     ROOT/'experiments/run_architecture_gate_g2.py', ROOT/'experiments/window_metrics.py',
-                    Path(experiment.__file__).resolve(), ROOT.parent/'PhysicalAI_mini/src/data/reinartz_f0_f1.py',
+                    Path(experiment.__file__).resolve(), Path(experiment.__file__).resolve().parents[1]/'data/reinartz_f0_f1.py',
                     ROOT/'outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv',
                     ROOT/'outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv')
     source_hashes = {str(path): hashlib.sha256(path.read_bytes()).hexdigest() for path in source_paths}
-    cache = Path(cfg['paths']['cache'])
+    cache = (ROOT / cfg['paths']['cache'])
     features = np.load(cache/'features.npy', mmap_mode='r')
     stat = (cache/'features.npy').stat()
     cache_identity = {'path': str(cache.resolve()), 'shape': list(features.shape), 'dtype': str(features.dtype),

@@ -13,7 +13,7 @@ import torch
 from torch import nn
 
 ROOT = Path(__file__).resolve().parents[1]
-PHYSICAL = ROOT.parent / "PhysicalAI_mini"
+PHYSICAL = ROOT / "physical_ai"
 sys.path.insert(0, str(PHYSICAL))
 
 from src.experiments import reinartz_f0_f1 as experiment  # noqa: E402
@@ -76,6 +76,7 @@ def main() -> None:
     args = parser.parse_args()
     import yaml
     cfg = yaml.safe_load((ROOT / args.config).read_text(encoding="utf-8")); epochs = args.epochs or int(cfg["epochs"])
+    cfg["paths"] = {key: str(ROOT / value) for key, value in cfg["paths"].items()}
     split = pd.read_csv(ROOT / "outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv")
     scaler = pd.read_csv(ROOT / "outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv")
     mean, std = scaler["mean"].to_numpy(np.float32), scaler["std"].to_numpy(np.float32)

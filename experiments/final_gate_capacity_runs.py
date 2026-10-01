@@ -4,11 +4,16 @@ import argparse
 import json
 import logging
 import random
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import torch
+
+ROOT = Path(__file__).resolve().parents[1]
+PHYSICAL = ROOT / "physical_ai"
+sys.path.insert(0, str(PHYSICAL))
 
 from src.config import load_config
 from src.experiments.reinartz_f0_f1 import run_model
@@ -19,7 +24,8 @@ def main() -> None:
     parser.add_argument("--config", required=True)
     parser.add_argument("--seeds", nargs="+", type=int, required=True)
     args = parser.parse_args()
-    config = load_config(args.config)
+    config = load_config(ROOT / args.config)
+    config["paths"] = {key: str(ROOT / value) for key, value in config["paths"].items()}
     artifacts = Path(config["paths"]["artifacts"])
     split = pd.read_csv(artifacts / "reinartz_split_manifest.csv")
     scaler = pd.read_csv(artifacts / "reinartz_scaler_parameters.csv")

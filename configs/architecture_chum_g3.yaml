@@ -14,7 +14,7 @@ channels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 conditional_sample_draws: 3
 residual_block_length: 20
 paths:
-  cache: ../PhysicalAI_mini/data/processed/reinartz_f0_f1
+  cache: physical_ai/data/processed/reinartz_f0_f1
   split: outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv
   scaler: outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv
   checkpoints: outputs/architecture_gate_g2_full/checkpoints

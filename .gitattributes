@@ -1,0 +1,2 @@
+# Preserve byte-exact executed-source snapshots and hash manifests.
+outputs/chum_window_extension_20261001/EXECUTED_SOURCES/** -text

@@ -1,0 +1,15 @@
+{
+  "requested_on": "2026-09-21",
+  "repository": "https://github.com/Seongmiin2/PhysicalAI_masterdegree.git",
+  "branch": "main",
+  "target_directory": ".",
+  "trigger": "chum_training_budget_20260921 reaches COMPLETE with six unique model results",
+  "authorized_by_user": true,
+  "uploader": null,
+  "status_file": "outputs/chum_training_budget_20260921/PUBLISH_STATUS.json",
+  "scope": "Experiment code, portable and executed configs, roadmap, seed47 and training-budget results, checkpoints, comparison summary; excludes raw dataset and draft-writing work",
+  "failure_behavior": "Stop without force push; record error in status file",
+  "status": "SUPERSEDED_BY_SINGLE_MAIN_REPOSITORY",
+  "superseded_on": "2026-10-01",
+  "current_workflow": "Commit reviewed work directly to canonical main; obsolete export script archived outside workspace."
+}

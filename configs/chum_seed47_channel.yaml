@@ -1,0 +1,36 @@
+device: cuda
+architectures:
+- tcn
+- transformer
+seeds:
+- 47
+window: 20
+batch_size: 2048
+run_batch_size: 8
+threshold_percentile: 99.0
+alarm_consecutive: 3
+evaluation_sample_start: 400
+evaluation_sample_end: 900
+fault_onset: 600
+primary_cells:
+- fault_id: 4
+  channel: 10
+- fault_id: 19
+  channel: 7
+- fault_id: 19
+  channel: 8
+- fault_id: 25
+  channel: 2
+residual_block_lengths:
+- 20
+conditional_sample_draws:
+- 3
+bootstrap_repeats: 2000
+paths:
+  cache: physical_ai/data/processed/reinartz_f0_f1
+  split: outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv
+  scaler: outputs/final_gate_exp1/artifacts/reinartz_scaler_parameters.csv
+  checkpoints: outputs/chum_seed47_20260921/training/checkpoints
+  loo_imputer_weights: outputs/architecture_chum_g3/normal_xmv_loo_imputer_weights.npy
+  loo_residual_bank: outputs/architecture_chum_g3/normal_xmv_loo_residual_bank.npy
+  output: outputs/chum_seed47_20260921/channel

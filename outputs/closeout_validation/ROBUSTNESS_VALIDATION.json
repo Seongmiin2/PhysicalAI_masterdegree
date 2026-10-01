@@ -1,0 +1,29 @@
+{
+  "bh_matches_retained_table": true,
+  "permutation_repeats": 200000,
+  "sensitivity_decision_matches": true,
+  "sensitivity_bootstrap_repeats": 2000,
+  "hai_intervals": [
+    {
+      "metric": "auroc",
+      "mean": 0.018745409745426083,
+      "ci_low": 0.008222184583790594,
+      "ci_high": 0.029268634907061573,
+      "seeds": 3
+    },
+    {
+      "metric": "auprc",
+      "mean": 0.030607775143286442,
+      "ci_low": 0.023288235137160176,
+      "ci_high": 0.03792731514941271,
+      "seeds": 3
+    },
+    {
+      "metric": "etaf1",
+      "mean": 0.02672167721428324,
+      "ci_low": -0.009482932404876711,
+      "ci_high": 0.06292628683344319,
+      "seeds": 3
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "architectures": [
+    "tcn",
+    "transformer"
+  ],
+  "seeds": [
+    47
+  ],
+  "epochs": 10
+}

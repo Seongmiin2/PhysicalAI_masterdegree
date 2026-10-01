@@ -20,6 +20,12 @@ research = [
     "tabulate>=0.9",
     "torch>=2.4",
     "opencv-python-headless>=4.10",
+    "requests>=2.32",
+    "h5py>=3.11",
+    "pyarrow>=17.0",
+    "fsspec[http]>=2024.6",
+    "truststore>=0.10",
+    "duckdb>=1.4",
 ]
 
 [tool.pytest.ini_options]
@@ -27,4 +33,7 @@ testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.setuptools]
-packages = ["agents", "providers", "harness"]
+packages = ["agents", "providers", "harness", "src", "src.analysis", "src.data", "src.experiments", "src.models", "src.retrieval", "src.simulator"]
+
+[tool.setuptools.package-dir]
+src = "physical_ai/src"

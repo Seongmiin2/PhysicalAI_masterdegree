@@ -1,10 +1,13 @@
-﻿# 산업 시계열 AI는 추가 Context를 실제로 활용하는가?
+> 2026-10-01 저장소 통합: 현재 공식 프로젝트는 `Seongmiin2/PhysicalAI_masterdegree`의 `main`입니다. 최신 방법론 논의는 [도메인 간 검토안](../deliverables/CHUM_CROSS_DOMAIN_METHODS_20261001_KO.md), 실행 순서는 [로드맵](../state/CHUM_EXPERIMENT_ROADMAP_KO.md)을 참고하세요. 아래 본문은 작성 시점의 연구 경과를 보존합니다.
+# 산업 시계열 AI는 추가 Context를 실제로 활용하는가?
 
 지도교수 검토용 연구방향 및 진행 보고
 작성일: 2026년 8월 23일
-현재 상태: 필수 민감도 실험까지 완료, 최종 문제정의와 주장 범위 승인 후 본문 집필 가능
+현재 상태: 연구 확장 실험 진행 중 — 충분히 학습한 기준 모델 → 채널 선택 재학습 → 적응적 제어 결합 → 경쟁 방법 비교 → 새로운 조건에서 평가. 실행 이유와 기준: [실험 로드맵](../state/CHUM_EXPERIMENT_ROADMAP_KO.md).
 
 > 2026-08-23 갱신: 이 문서는 연구 경과 기록이다. 최종 교수 검토본은 `deliverables/CHUM_RESEARCH_PROPOSAL_KO.md`, 발표 설계는 `deliverables/CHUM_PPT_PRODUCTION_SPEC_KO.md`를 기준으로 한다.
+
+> 2026-09-21 마무리: [논문 초안](../deliverables/CHUM_THESIS_DRAFT_KO.md), [Word](../deliverables/CHUM_THESIS_DRAFT_KO.docx), [검증 및 남은 제출 작업](../deliverables/CHUM_CLOSEOUT_KO.md). 아래 본문은 기존 연구 경과 기록이다.
 
 ## Executive Summary
 
@@ -274,7 +277,7 @@ F1−F0의 평균 차이는 AUROC +0.018745, AUPRC +0.030608, eTaF1 +0.026722였
 | 최종 raw evidence 검증 | PASS | 18 checks 통과 |
 | TEP primary sensitivity | PASS | 4/4 locked cells, 양 구조 9/9 설정 통과 |
 | 최종 제목·연구질문 | 미확정 | 지도교수와 사용자 승인 필요 |
-| 논문 본문 | 미착수 | 방향 승인 즉시 시작 가능 |
+| 논문 본문 | 검토용 초안 작성 | 2026-09-21 Markdown·Word 생성, 최종 제출본은 미완료 |
 
 현재는 **추가 탐색 단계가 아니라 논문 주장과 목차를 잠그는 단계**다.
 

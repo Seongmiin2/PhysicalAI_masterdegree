@@ -1,0 +1,132 @@
+{
+  "source_commit": "bc6166f792e3faceb060a50de6219dddca393fd6",
+  "validator_sha256": "0afab32b1374a0f3cd9fbcf281dd1e13729b828a0f4b9b83851e281bb5a1f8e8",
+  "inputs": [
+    {
+      "path": "outputs/architecture_chum_g3/RUN_MANIFEST.json",
+      "bytes": 783,
+      "sha256": "cf86745b2192e0248d8bd0ff21973cb138dcd93eefa3f258cc3d8d948742a8c3"
+    },
+    {
+      "path": "outputs/architecture_chum_g3/G3_ANALYSIS_MANIFEST.json",
+      "bytes": 385,
+      "sha256": "3de5a3cdab1d914a26a1fbee55099dff39fbdffe71921220dc7819eef20bd489"
+    },
+    {
+      "path": "outputs/architecture_chum_g3/G3_FAULT_RESULTS.csv",
+      "bytes": 1136049,
+      "sha256": "fb8aa30972607a905e6f9363c96e1ed63e262a5d7109645dae56ff23f8ccc14c"
+    },
+    {
+      "path": "outputs/architecture_chum_g3/G3_RUN_RESULTS.csv",
+      "bytes": 17886695,
+      "sha256": "862d16c80b40af3eade92b7e7683639730dab0d97cfc87cac6a5ceb39b795867"
+    },
+    {
+      "path": "outputs/architecture_chum_g3/G3_CELL_SUMMARY.csv",
+      "bytes": 768205,
+      "sha256": "7b4d359efdf3766c3c0e5bfa908db6fd8b2fc44942fe5d37cff7e39cc5305ddb"
+    },
+    {
+      "path": "outputs/architecture_chum_g3/G3_ARCHITECTURE_CONSENSUS.csv",
+      "bytes": 31746,
+      "sha256": "32efb5a016503dad11ba6db61be7b9bb0c5d59c2b0950bf9cefbad7935b65602"
+    },
+    {
+      "path": "outputs/integrated_gradients_baseline/RUN_MANIFEST.json",
+      "bytes": 437,
+      "sha256": "438d618fd8d728c9dd60e3a33ecf140e46db2794cd6278ebac82472584c9d103"
+    },
+    {
+      "path": "outputs/integrated_gradients_baseline/ANALYSIS_MANIFEST.json",
+      "bytes": 193,
+      "sha256": "adcf67f70ed81cbf02805920a7eb9102ada200b0664e67b8b809c2316669247e"
+    },
+    {
+      "path": "outputs/integrated_gradients_baseline/INTEGRATED_GRADIENTS.csv",
+      "bytes": 108861,
+      "sha256": "0e9f5a361c95b469f45b9a127b60000cfacf27f5873a3c48890a20a89602ac69"
+    },
+    {
+      "path": "outputs/integrated_gradients_baseline/IG_CHUM_RANK_AGREEMENT.csv",
+      "bytes": 1449,
+      "sha256": "2dda64b175fb1ffa7605d60cfabf1e85b6c12d88ded21f508eb0fd593f353adb"
+    },
+    {
+      "path": "outputs/hai_2103_prepared/HAI_2103_PREPARATION_MANIFEST.json",
+      "bytes": 1181,
+      "sha256": "8dae63329aeda49f8613c69e5e485bf853328500e2662daf00395e39a8d3225c"
+    },
+    {
+      "path": "outputs/hai_2103_prepared/HAI_2103_ROLE_MANIFEST.json",
+      "bytes": 2291,
+      "sha256": "458163e3d0fc8d72c75872ef51d862a5d4f18c8e00bacd4fcd2f68a282d281fb"
+    },
+    {
+      "path": "outputs/hai_2103_prepared/HAI_2103_ATTACK_TARGET_MANIFEST.json",
+      "bytes": 361,
+      "sha256": "4ce534fbffcad186932de211cb12ef07f41bee2f6d9673b7e6a4a550b5060321"
+    },
+    {
+      "path": "outputs/hai_external_validation/RUN_MANIFEST.json",
+      "bytes": 1211,
+      "sha256": "225a305481a721cf5c7a6b9e9c88179017f7cb6a916dadf4562bd1c739fdb45f"
+    },
+    {
+      "path": "outputs/hai_external_validation_v2/RUN_MANIFEST.json",
+      "bytes": 2551,
+      "sha256": "81f865d90784050020cbf1d1b917005f8c000524935c772eccbd387413e7dbda"
+    },
+    {
+      "path": "outputs/hai_external_validation_v2/HAI_EXTERNAL_ANALYSIS_MANIFEST.json",
+      "bytes": 220,
+      "sha256": "3b0f16e33fdaca5b6dcdfe26aa68cbea5de671a96de961c3f4ce491be8f6d462"
+    },
+    {
+      "path": "outputs/hai_external_validation_v2/HAI_EXTERNAL_METRICS.csv",
+      "bytes": 8399,
+      "sha256": "ad6c0e4206e98fa08fa7c031cf9f9ffbaaea8143576350e19ed799b4e6a58d85"
+    },
+    {
+      "path": "outputs/hai_external_validation_v2/HAI_EXTERNAL_TARGET_EVENTS.csv",
+      "bytes": 55961,
+      "sha256": "7fd14cf6304a78db6a28bcd78e35cbc0405e698662eaeaab1b265451da9b5da0"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/RUN_MANIFEST.json",
+      "bytes": 980,
+      "sha256": "1d2a65b1679b636d8421a5cbc72ad594301b02b5e45d59d628a4d2a6824e2b82"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_IMPUTER_MANIFEST.json",
+      "bytes": 772,
+      "sha256": "7287f8437f6cedf86ab0949a963811f289ce550fc1ae6a3e04833e2683d6125f"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_CONDITIONAL_ANALYSIS_MANIFEST.json",
+      "bytes": 367,
+      "sha256": "e20a16ee96f4df41cbd54307b5386bdb251346a4c01baec6e25bdefe5c0dc7a7"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_IMPUTER_QUALITY.csv",
+      "bytes": 5620,
+      "sha256": "990d106909e9a1c4507550fda56f5db1efc66e94ce1d1d12543c52d3c107711c"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_CONDITIONAL_METRICS.csv",
+      "bytes": 33889,
+      "sha256": "4f9e32947054a47e782e83fce6dba1b0d92020a72342a69d3f20da68aeac41de"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_CONDITIONAL_EVENTS.csv",
+      "bytes": 1518192,
+      "sha256": "68b43f061ff342a58e4d282d467e0bd0f31b5e79ba4fc94d2af2391201de5b60"
+    },
+    {
+      "path": "outputs/hai_conditional_chum/HAI_CONDITIONAL_TARGETED_SUMMARY.csv",
+      "bytes": 17909,
+      "sha256": "d1da516d1d53cda0392dc339649ff63f3c51dda42f0497352fa3fb0772830bb5"
+    }
+  ],
+  "scope": "Archived result-table and manifest validation; no model retraining, raw telemetry reprocessing, or fresh confidence-interval estimation."
+}

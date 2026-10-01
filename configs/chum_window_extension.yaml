@@ -17,5 +17,5 @@ variants: [F0, F1, F0-C]
 model_seeds: [47]
 evaluate_test: true
 paths:
-  cache: C:/Users/FORYOUCOM/Desktop/master_degree/PhysicalAI_mini/data/processed/reinartz_f0_f1
+  cache: physical_ai/data/processed/reinartz_f0_f1
   output: outputs/chum_window_extension_20261001

@@ -1,88 +1,48 @@
-﻿# Thesis Orchestrator
+# PhysicalAI 석사 연구 — CHUM
 
-A small, mock-first research orchestration MVP for evaluating two master's-thesis directions grounded in the read-only `PhysicalAI_mini` and `FAVE-RAG` projects.
+산업 시계열에서 제어 이력이 언제 탐지에 도움이 되는지 연구하는 단일 프로젝트입니다. 최신 Thesis-Orchestrator와 PhysicalAI 학습 엔진을 통합했습니다.
 
-It does **not** write a thesis automatically, fabricate citations, execute experiments, call a paid API, or lock a research topic. Its job is to preserve evidence provenance, structure competing arguments, and stop at a human approval gate.
+- **공식 저장소:** https://github.com/Seongmiin2/PhysicalAI_masterdegree
+- **작업 브랜치:** `main` 하나
+- **현재 로컬 작업 폴더:** `Thesis-Orchestrator` — 실행 중 실험과 IDE 경로를 유지하기 위한 이름이며 별도 프로젝트가 아닙니다.
+- **연구 방향과 다음 실험:** [로드맵](state/CHUM_EXPERIMENT_ROADMAP_KO.md), [도메인 간 방법론 검토](deliverables/CHUM_CROSS_DOMAIN_METHODS_20261001_KO.md)
+- **실제 진행 상태:** [1B LIVE_STATUS](outputs/chum_window_extension_20261001/LIVE_STATUS.json). 실행 중인 로컬 파일은 Git 배포본에 없을 수 있습니다.
+- **운영 하네스:** [사용 방법](docs/CHUM_HARNESS_KO.md), [운영 모델 v2 평가](outputs/chum_ops_training_v2_20261001/IMPROVEMENT_REPORT_KO.md)
+- **논문 자료:** [교수 브리프](outputs/PROFESSOR_BRIEF_KO.md), [초안](deliverables/CHUM_THESIS_DRAFT_KO.md). 작성일과 현재 실험 상태를 구분합니다.
 
-## Architecture
+## 구조
 
 ```text
-Mission + Research State
-          |
-          v
- Research Orchestrator
-   |       |       |
- Literature  Methodology  Reviewer
-   \_______ shared Provider _______/
-          |
-  report + state + decision log
-          |
- WAITING_FOR_USER_APPROVAL
+physical_ai/     # 통합된 학습 엔진(src), 원본 데이터 준비 코드와 테스트
+experiments/     # CHUM/TEP/HAI 연구 실행 및 평가
+configs/        # 현재 실행 설정; 프로젝트 내부 경로 사용
+harness/        # SQLite 작업 기록, 실행 잠금, 근거 검색
+providers/      # 운영 모델 인터페이스
+outputs/        # 결과와 실행 근거
+state/          # 로드맵·판정 기록
+deliverables/   # 논문 및 방법론 검토 문서
+tests/          # 프로젝트 테스트
 ```
 
-- `ResearchOrchestrator`: loads mission/state, delegates bounded tasks, aggregates disagreements, logs the proposed decision, and enforces the approval gate.
-- `LiteratureAgent`: generates literature-verification questions and novelty risks. In mock mode it invents no papers or citations.
-- `MethodologyAgent`: emits a falsifiable design with variables, datasets, baselines, ablations, metrics, experiments and alternative explanations.
-- `ReviewerAgent`: independently attacks novelty, leakage, causal claims, weak baselines, evaluation and reproducibility.
-- `Provider`: isolates agent logic from `MockProvider`, future local inference, and a deliberately disabled OpenAI adapter.
-
-## Run
-
-From this directory with Python 3.11+:
+새 clone에서는 Python 3.11 이상 환경에서 `python -m pip install -e ".[dev,research]"`로 설치합니다. 운영 모델 파인튜닝 의존성은 `configs/requirements-chum-finetune.txt`에 별도로 있습니다. GPU 환경은 `configs/requirements-research-gpu.txt`를 참고합니다. 버전·장치 가용성을 확인하고 설치 환경에 맞게 사용합니다.
 
 ```powershell
-python -m pip install -e ".[dev]"
-$env:LLM_BACKEND = "mock"
-python main.py
-pytest -q
+python -m pytest -q
+python -m harness status
+python -m harness index
+python experiments/run_chum_window_extension.py --config configs/chum_window_extension.yaml --dry-run
 ```
 
-Generated experiment artifacts are intentionally not retained in the current tree. The professor-facing report is `outputs/PROFESSOR_BRIEF_KO.md`, and provenance/reproduction guidance is in `outputs/EVIDENCE_AND_REPRODUCTION_INDEX.md`. The state must end in `WAITING_FOR_USER_APPROVAL`, with both lock fields set to `null`.
+실제 데이터·모델 가중치·SQLite DB는 Git에서 제외합니다. 데이터 준비 후 `physical_ai/data/`와 `physical_ai/checkpoints/`를 사용합니다. 기존 엔진의 독립 실행 설정은 `physical_ai` 디렉터리에서 사용하는 경로입니다. 다른 clone에 데이터가 자동으로 생겼다고 가정하지 않습니다.
 
-## Research experiments
+## 통합과 보관
 
-The frozen TEP/CHUM experiments use a separate optional environment because PyTorch is not required by the mock-first orchestrator itself.
+2026-10-01 기준 최신 개발은 Thesis-Orchestrator에 있었지만 PhysicalAI에 학습 엔진과 고유 결과가 있었습니다. 엔진과 고유 문서 7개를 통합하고, 양쪽 Git 이력을 보존합니다. 이전 상태·provider 파일로 최신 구현을 덮어쓰지 않았습니다. [통합 파일 manifest](outputs/REPOSITORY_CONSOLIDATION_20261001.json)를 참고합니다.
 
-```powershell
-python -m venv ..\.venv-research
-..\.venv-research\Scripts\python.exe -m pip install -e ".[research]"
-..\.venv-research\Scripts\python.exe experiments\audit_conditional_imputer.py
-..\.venv-research\Scripts\python.exe experiments\run_architecture_chum_g3.py
-..\.venv-research\Scripts\python.exe experiments\analyze_architecture_chum_g3.py
-..\.venv-research\Scripts\python.exe experiments\run_integrated_gradients_baseline.py
-..\.venv-research\Scripts\python.exe experiments\analyze_integrated_gradients_baseline.py
-..\.venv-research\Scripts\python.exe experiments\prepare_hai_2103.py
-..\.venv-research\Scripts\python.exe experiments\validate_hai_2103_roles.py
-..\.venv-research\Scripts\python.exe experiments\validate_hai_2103_attack_targets.py
-..\.venv-research\Scripts\python.exe experiments\run_hai_external_validation.py
-..\.venv-research\Scripts\python.exe experiments\analyze_hai_external_validation.py
-..\.venv-research\Scripts\python.exe experiments\audit_hai_conditional_imputer.py
-..\.venv-research\Scripts\python.exe experiments\run_hai_conditional_chum.py
-..\.venv-research\Scripts\python.exe experiments\analyze_hai_conditional_chum.py
-..\.venv-research\Scripts\python.exe experiments\validate_final_evidence.py
-..\.venv-research\Scripts\python.exe experiments\build_professor_report_v2.py
-```
+DeMo-Med, FAVE-Med, FAVE-RAG, 외부 reference/export checkout과 전체 Git bundle은 작업 폴더 밖 `../master_degree_archive_20261001`이 아니라 **작업 공간(master_degree)의 형제 폴더 `master_degree_archive_20261001`**에 보관합니다. 다른 프로젝트의 미커밋 변경도 유지합니다. 이 프로젝트에서 더 이상 자동 export용 nested 저장소를 만들지 않습니다.
 
-`run_architecture_chum_g3.py` writes resumable partial CSVs after every architecture/seed/condition task. Its analysis command refuses to run until every task in `configs/architecture_chum_g3.yaml` is complete.
+현재 GPU 작업은 이전 PhysicalAI 데이터 파일을 메모리 매핑하고 있습니다. 작업 종료 전에는 데이터를 옮기지 않고 `physical_ai/data`, `physical_ai/checkpoints`의 임시 junction으로 같은 파일을 사용합니다. `experiments/finalize_workspace_consolidation.py --wait`가 실행 잠금 해제 후 데이터를 프로젝트 안으로 옮기고 구 PhysicalAI 폴더를 바깥으로 보관합니다. 진행 상태는 `outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json`입니다.
 
-HAI commands expect the official `icsdataset/hai` repository at `../HAI` and the official `saurf4ng/eTaPR` repository at `../eTaPR`. The first HAI run was invalidated by a feature-column-order bug and must not be cited. Only the corrected v2 and conditional-CHUM evidence summarized in the retained report is usable.
+통합 전 실행 소스는 `outputs/chum_window_extension_20261001/EXECUTED_SOURCES`에 해시와 함께 보존했습니다. 현재 실행은 메모리에 로드한 원본으로 계속됩니다. 경로가 바뀐 코드로 기존 output에 재개하면 fingerprint 검증이 거부하는 것이 정상이며, 새 실행에는 새 output 디렉터리를 사용합니다.
 
-The current tree retains exactly two curated output documents: `outputs/PROFESSOR_BRIEF_KO.md` and `outputs/EVIDENCE_AND_REPRODUCTION_INDEX.md`. Removed raw artifacts remain recoverable from Git commit `bc6166f`.
-
-The HAI conditional runner must reuse only corrected v2 F1 checkpoints, recalibrate each perturbation on validation-normal data, and write resumable partial CSVs after every seed/mode/channel task. The locked protocol and accepted evidence are summarized in the retained report and reproduction index.
-
-## Evidence rules
-
-- `CONFIRMED_FACT`: traceable to inspected code, documentation, CSV, or logs.
-- `INTERPRETATION`: a bounded reading of confirmed findings.
-- `HYPOTHESIS`: not yet experimentally or bibliographically verified.
-- Every mock agent response carries `provenance: MOCK` and is never appended to `EVIDENCE_LEDGER.jsonl`.
-- The reference projects are never modified. A test hashes their files before and after a mission.
-
-## Provider policy
-
-`LLM_BACKEND=mock` is the default. `local` and `openai` are interface placeholders only. The OpenAI adapter raises immediately and neither requests an API key nor sends network traffic.
-
-## Human approval gate
-
-Explicit approval is required before changing the thesis topic, research question, main hypothesis, contribution, experiment-retirement decision, research direction, or paper claim. Mission 001 only recommends; it never locks.
+원격의 이전 Thesis-Orchestrator 저장소는 통합된 main이 게시되고 양쪽 commit ancestry가 확인된 뒤에만 정리합니다. 원격 작업 결과는 통합 manifest와 Git remote 상태를 확인합니다.
