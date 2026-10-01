@@ -360,7 +360,7 @@
   "history_merge_commit": "8e16e3a",
   "verified_main_commit": "c21f3650d1a82332af1047b7809714dbb4a5d66a",
   "source_snapshots_byte_hash_verified": 8,
-  "remote_deletion_status": "WAITING_FOR_GITHUB_DELETE_REPO_SCOPE",
+  "remote_deletion_status": "DELETED",
   "deferred_local_migration": {
     "worker_pid": 29340,
     "status_file": "outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json",
@@ -376,7 +376,6 @@
     "agent/thesis-final-gate"
   ],
   "remote_deletion_target": "Seongmiin2/Thesis-Orchestrator",
-  "remote_deletion_error": "GitHub HTTP 403: authenticated token needs delete_repo scope; user approved deletion; gh auth refresh started.",
   "legacy_assets_archived": {
     "count": 22,
     "destination": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/PhysicalAI_legacy_assets",
@@ -387,5 +386,8 @@
       "data",
       "src"
     ]
-  }
+  },
+  "remote_deleted_at": "2026-10-01T17:58:16+09:00",
+  "remote_deletion_verification": "gh repo delete succeeded; old repository API returns HTTP 404; canonical PhysicalAI_masterdegree remains accessible with default branch main.",
+  "legacy_remote_backup": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/repository_backups/Thesis-Orchestrator.bundle"
 }

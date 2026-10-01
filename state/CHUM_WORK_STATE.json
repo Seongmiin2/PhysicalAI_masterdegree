@@ -80,6 +80,6 @@
     "remote_branches": [
       "main"
     ],
-    "legacy_remote_deletion": "WAITING_FOR_GITHUB_DELETE_REPO_SCOPE"
+    "legacy_remote_deletion": "DELETED"
   }
 }

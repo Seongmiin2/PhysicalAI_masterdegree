@@ -45,4 +45,4 @@ DeMo-Med, FAVE-Med, FAVE-RAG, 외부 reference/export checkout과 전체 Git bun
 
 통합 전 실행 소스는 `outputs/chum_window_extension_20261001/EXECUTED_SOURCES`에 해시와 함께 보존했습니다. 현재 실행은 메모리에 로드한 원본으로 계속됩니다. 경로가 바뀐 코드로 기존 output에 재개하면 fingerprint 검증이 거부하는 것이 정상이며, 새 실행에는 새 output 디렉터리를 사용합니다.
 
-2026-10-01 통합 `main`을 공식 저장소에 게시하고 기본 브랜치를 `main`으로 변경했습니다. 양쪽 Git 이력을 확인한 뒤 옛 원격 브랜치 `master`, `agent/thesis-final-gate`를 삭제했습니다. 중복 `Seongmiin2/Thesis-Orchestrator` 저장소 삭제는 사용자 승인을 받았으나 GitHub 토큰의 `delete_repo` 권한 추가 인증을 기다리고 있습니다. 옛 가상환경과 중복 문서 등 22개 항목은 작업 공간 밖 `PhysicalAI_legacy_assets`에 보관했습니다. 원격 작업 결과는 통합 manifest와 Git remote 상태를 확인합니다.
+2026-10-01 통합 `main`을 공식 저장소에 게시하고 기본 브랜치를 `main`으로 변경했습니다. 양쪽 Git 이력을 확인한 뒤 옛 원격 브랜치 `master`, `agent/thesis-final-gate`를 삭제했습니다. 사용자 승인 후 중복 `Seongmiin2/Thesis-Orchestrator` 원격 저장소를 삭제하고 GitHub API의 404 응답을 확인했습니다. 해당 저장소의 모든 브랜치 이력은 공식 `main`과 별도 Git bundle에 보존되어 있습니다. 옛 가상환경과 중복 문서 등 22개 항목은 작업 공간 밖 `PhysicalAI_legacy_assets`에 보관했습니다. 원격 작업 결과는 통합 manifest와 Git remote 상태를 확인합니다.
