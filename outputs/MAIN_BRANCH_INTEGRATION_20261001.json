@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-01T06:25:01.956631+00:00",
+  "repository": "https://github.com/Seongmiin2/Thesis-Orchestrator.git",
+  "current_branch": "main",
+  "local_branches": [
+    "main"
+  ],
+  "main_at_audit": "593771121f6f1439c3b7c43b8b4893ed24aa0231",
+  "origin_main_at_audit": "22ebd1e50cd648b2af253f0551ba664f33d00a2d",
+  "integrated_topics": {
+    "docs/consolidate-research-evidence": {
+      "former_tip": "63771cc93884f3d2a26f0fa69055bb0995402814",
+      "reachable_from_main": true,
+      "local_branch_deleted": true,
+      "remote_branch_deleted": false
+    },
+    "research/control-history-chum": {
+      "former_tip": "bc6166f792e3faceb060a50de6219dddca393fd6",
+      "reachable_from_main": true,
+      "local_branch_deleted": true,
+      "remote_branch_deleted": false
+    }
+  },
+  "merge_required": false,
+  "reason": "Both topic tips are already ancestors of main; no unique commits remain to merge.",
+  "remote_publication_status": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW",
+  "rejection_reason": "Remote main publication of project payload requires explicit destination and payload approval. No retry or remote branch deletion performed.",
+  "uncommitted_prior_work_preserved": true,
+  "workflow": "Main only unless user explicitly changes instruction."
+}
