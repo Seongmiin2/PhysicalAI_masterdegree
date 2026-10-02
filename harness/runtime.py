@@ -30,7 +30,7 @@ def refresh_work_state(root: Path = ROOT):
             live[name]["source"] = str(source.relative_to(root))
     state["live_experiments"] = live
     active = live.get("main", live.get("pilot"))
-    if active:
+    if active and state.get("next_authorized_work", {}).get("stage") == "1B":
         state["next_authorized_work"]["status"] = ("MAIN_" if "main" in live else "PILOT_") + active["status"]
         if active["status"] in {"RUNNING", "PARTIAL", "COMPLETE"}:
             state["next_authorized_work"]["blocker"] = None

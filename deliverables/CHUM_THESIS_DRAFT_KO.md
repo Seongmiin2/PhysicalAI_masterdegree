@@ -2,7 +2,7 @@
 
 CHUM: Architecture-Robust Auditing of Control-History Utility for Industrial Time-Series Anomaly Detection
 
-검토용 논문 초안 · 2026-09-21
+검토용 논문 초안 · 2026-09-21 작성 / 2026-10-02 후속 결과·범위 보충
 
 기존 연구의 방법과 결과를 논문 순서로 재구성한 초안이다. 제목과 최종 주장에 대한 지도교수 승인 또는 학교 제출 완료를 뜻하지 않는다. 2026-09-21에 보존 원자료 기반 18개 검증, 224-cell 다중비교, 민감도 bootstrap을 재실행했다. 모델 재학습과 원시 telemetry 전처리는 재실행하지 않았다.
 
@@ -100,7 +100,7 @@ TEP는 방법 개발과 strict consensus의 주 근거다. HAI는 산업·HIL �
 2. scaler와 imputer는 training 정상 데이터에만 fit한다.
 3. threshold는 validation 정상 score percentile로만 정한다.
 4. 각 perturbation condition의 score distribution에 맞춰 validation threshold를 다시 보정한다.
-5. test label은 metric 계산에만 사용하고 training·scaling·imputation·threshold selection에 사용하지 않는다.
+5. test label은 metric 계산에만 사용하고 training·scaling·imputation·threshold selection에 사용하지 않는다. 이 구분이 미사용 평가를 뜻하지는 않는다. 기존 TEP test는 후속 방법 개발에서 반복 관찰되었으므로 후속 결과에서는 개발 벤치마크이며 새로운 holdout이 아니다.
 
 ### 6.2 TEP
 
@@ -164,7 +164,7 @@ TEP는 방법 개발과 strict consensus의 주 근거다. HAI는 산업·HIL �
 
 ### 9.1 TEP event-level architecture robustness
 
-TCN과 Transformer는 동일한 7개 GAIN faults `4, 7, 19, 23, 24, 25, 26`을 식별했다. 모든 fault에서 두 architecture 모두 5/5 seed가 같은 방향이었다.
+TCN과 Transformer는 동일한 7개 GAIN faults `4, 7, 19, 23, 24, 25, 26`을 식별했다. 해당 일곱 GAIN fault에서 두 architecture 모두 5/5 seed가 같은 방향이었다.
 
 | Fault | TCN F1−F0-C ΔAUROC | Transformer F1−F0-C ΔAUROC | 해석 |
 | ---: | ---: | ---: | --- |
@@ -278,6 +278,25 @@ HAI 결과는 **제한적 외부 지지**다. AUROC/AUPRC 구간은 양수지만
 따라서 공격받지 않은 control context의 보편적 유용성이나 TEP와 동급의
 확립된 증거로 해석하지 않는다.
 
+
+### 9.5 후속 학습 길이·window 개발 실험 (2026-10-02 보충)
+
+기존 핵심 결과와 구분하여 seed47의 후속 개발 실험을 보고한다. 1A에서는 정상 validation으로 checkpoint를 선택하며 학습 길이를 늘렸지만 F1 AUROC가 개선되지 않았다. TCN은 0.809665에서 0.807946로, Transformer는 0.807394에서 0.804357로 변했다. 근거는 `outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json`이며, 정상 예측 MSE 개선을 탐지력 개선으로 간주하지 않는다.
+
+1B는 두 구조 × F0/F1/F0-C × window 20/60/120의 18/18 작업을 완료했다. 아래 F1 여섯 행은 `outputs/chum_window_extension_20261001/METRICS.csv`에서 직접 생성했다. 동일한 기존 test 560 runs를 개발 벤치마크로 사용하고 window 사이의 평가 시작 sample을 121로 맞췄다. 지연 단위는 sample이며, 탐지된 run의 평균 지연과 미탐에 1,401 sample의 패널티를 부여한 평균을 구분한다. 후자는 생존분석의 검열 추정량이 아니다. AP는 non-interpolated average precision이며 분류 정확도가 아니다. 평가 구간의 이상 sample 비율은 약 74.52%이다.
+
+| 구조 | Window | AUROC | AP (저장 필드 auprc) | 탐지 run 비율 | 탐지된 run 지연 | 미탐 패널티 포함 평균 지연 | 고장 이전 sample FPR |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| tcn | 20 | 0.823312 | 0.942033 | 0.687500 | 32.584416 | 460.214286 | 0.009875 |
+| tcn | 60 | 0.821922 | 0.941448 | 0.680357 | 23.467192 | 463.785714 | 0.010163 |
+| tcn | 120 | 0.821554 | 0.941471 | 0.682143 | 27.204188 | 463.875000 | 0.010192 |
+| transformer | 20 | 0.806122 | 0.935994 | 0.678571 | 24.084211 | 466.664286 | 0.009972 |
+| transformer | 60 | 0.809442 | 0.937495 | 0.682143 | 27.560209 | 464.117857 | 0.010140 |
+| transformer | 120 | 0.806637 | 0.936276 | 0.678571 | 24.442105 | 466.907143 | 0.009950 |
+
+F1의 탐지 run 비율은 약 67.86–68.75%로 미탐 run도 약 31–32% 남았다. 고장 이전 sample FPR은 약 0.99–1.02%이다. 3연속 경보의 고장 이전 run alarm 비율이 0이라는 결과는 sample FPR이 0이라는 뜻이 아니다. 정상 validation을 checkpoint 선택과 threshold 설정에 함께 사용했으며 별도 독립 calibration 자료를 둔 실험은 아니다.
+
+긴 window가 일관된 이득을 주지는 않았다. 이 표만으로 최적 window나 새로운 방법의 성능 우위를 확정하지 않는다. 1B는 단일 model seed47이고 이미 관찰한 개발 run을 재사용했으므로 독립적인 일반화 검증이나 새로운 통계적 유의성의 근거가 아니다. Transformer F0와 F0-C는 동일 구조이므로 독립적인 두 구조의 지지로 세지 않는다. 1B의 TCN은 1A의 두 층에서 여섯 층으로 바뀌었고 공통 평가 구간도 조정되었으므로 1A와 1B의 직접 수치 차이를 window만의 인과적 효과로 해석할 수 없다. 이 보충 결과는 학습 조건의 한계를 공개하는 자료이며 기존 채널 감사 결과의 수치를 대체하지 않는다.
 
 ## 10. 대치 민감도 분석
 

@@ -3,18 +3,51 @@
 
 지도교수 검토용 연구방향 및 진행 보고
 작성일: 2026년 8월 23일
-현재 상태: 연구 확장 실험 진행 중 — 충분히 학습한 기준 모델 → 채널 선택 재학습 → 적응적 제어 결합 → 경쟁 방법 비교 → 새로운 조건에서 평가. 실행 이유와 기준: [실험 로드맵](../state/CHUM_EXPERIMENT_ROADMAP_KO.md).
+현재 상태: 검토용 초안 및 1A·1B 후속 실험 완료. 주장 범위의 교수 검토와 실제 제출·심사 요건 확인이 필요합니다. 연구 확장 후보는 [실험 로드맵](../state/CHUM_EXPERIMENT_ROADMAP_KO.md)에 보존합니다.
 
 > 2026-08-23 갱신: 이 문서는 연구 경과 기록이다. 최종 교수 검토본은 `deliverables/CHUM_RESEARCH_PROPOSAL_KO.md`, 발표 설계는 `deliverables/CHUM_PPT_PRODUCTION_SPEC_KO.md`를 기준으로 한다.
 
 > 2026-09-21 마무리: [논문 초안](../deliverables/CHUM_THESIS_DRAFT_KO.md), [Word](../deliverables/CHUM_THESIS_DRAFT_KO.docx), [검증 및 남은 제출 작업](../deliverables/CHUM_CLOSEOUT_KO.md). 아래 본문은 기존 연구 경과 기록이다.
+
+## 2026-10-02 교수 검토용 현재 상태
+
+**논문 초안과 기존 검증은 갖춰져 있고, 후속 1A·1B 실험도 완료됐습니다. 현재 할 일은 주장 범위 검토와 제출·심사 준비입니다. 학위 요건 충족이나 지도교수 승인은 아직 확인되지 않았습니다.**
+
+- 검토 원고: [국문 초안](../deliverables/CHUM_THESIS_DRAFT_KO.md), [편집용 Word](../deliverables/CHUM_THESIS_DRAFT_KO.docx), [검토용 PDF](../deliverables/CHUM_THESIS_DRAFT_KO.pdf). 13장·13표이며 §9.5에 후속 실험과 한계를 반영했습니다. PDF 16페이지를 확인했으며 학교 제출 양식은 별도 적용이 필요합니다.
+- 기여 제안: 제어 이력이 언제 추가 예측 정보를 제공하는지 정상 기반 대치·오경보·반복성·구조 간 일관성으로 감사하는 프로토콜과 실증. 인과적 제어 효과·물리적 원인 규명·SOTA 탐지 성능을 주장하지 않습니다.
+- 1B는 2026-10-01 22:46 KST에 18/18 작업 완료. 아래는 seed 47, 기존 TEP 개발 평가 run 560개의 F1 결과입니다. 독립적인 미사용 평가 결과가 아닙니다.
+
+| 모델 | 입력 길이 | AUROC | AP | run 탐지율 | 정상 구간 sample FPR |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| tcn | 20 | 0.8233 | 0.9420 | 68.75% | 0.988% |
+| tcn | 60 | 0.8219 | 0.9414 | 68.04% | 1.016% |
+| tcn | 120 | 0.8216 | 0.9415 | 68.21% | 1.019% |
+| transformer | 20 | 0.8061 | 0.9360 | 67.86% | 0.997% |
+| transformer | 60 | 0.8094 | 0.9375 | 68.21% | 1.014% |
+| transformer | 120 | 0.8066 | 0.9363 | 67.86% | 0.995% |
+
+제어 정보를 포함한 F1의 AUROC는 여섯 조건 모두 F0보다 높았습니다(차이 +0.0543~+0.0618). 반면 입력 길이를 늘렸을 때의 효과는 작고 단조롭지 않았습니다. Transformer의 F0와 F0-C는 동일 구조·결과이므로 독립적인 두 대조군으로 세지 않습니다. AP 약 0.94는 정확도 94%가 아니며, run의 약 31~32%는 탐지하지 못했습니다. 창별 최고 test 점수로 최종 구성을 선택하거나 새로운 통계적 유의성을 주장하지 않습니다.
+
+[원본 결과](chum_window_extension_20261001/METRICS.csv)와 [저장 산출물 검토](chum_window_extension_20261001/REVIEW_20261002.json)를 대조했습니다. 이는 모델 재학습이나 원시 score 재계산이 아닙니다. 기존 1A에서도 학습 시간을 늘린 F1 AUROC는 두 구조 모두 개선되지 않았습니다. 1A와 1B는 구조·평가 구간 등이 달라 그 차이를 window만의 효과로 해석할 수 없습니다.
+
+**교수님께 확인할 결정 세 가지:**
+
+1. 현재의 감사 프로토콜·실증 범위와 제목으로 심사를 준비할 수 있는가?
+2. 추가 실험이 필수라면 어떤 주장에 어떤 증거가 부족한가? 필요한 비교와 종료 기준을 구체적으로 정한다.
+3. 심사·제출 일정, 학교 양식, 필수 논문 실적은 무엇인가?
+
+졸업 준비에서는 원고·표·근거 연결, 학교 양식과 PDF 검수, 발표 자료와 예상 질의응답을 우선할 것을 제안합니다. 새 gate, foundation model, 운영 LoRA 추가 학습은 교수 검토에서 필요성이 정해지기 전까지 후속 연구 후보로 둡니다. 상세 작업은 [마무리 현황](../deliverables/CHUM_CLOSEOUT_KO.md)을 따릅니다.
+
+---
+
+아래는 기존 연구 경과와 상세 근거입니다. 최신 상태 판단은 위의 2026-10-02 검토와 현재 작업 상태를 우선합니다.
 
 ## Executive Summary
 
 - **문제의식:** 산업 이상 탐지에서 센서에 제어 이력을 추가해 평균 성능이 올랐다는 결과만으로는 어느 사건과 채널이 실제 정보를 제공하는지 알 수 없다. 모델 크기 증가, 특정 architecture의 편향, 비현실적인 occlusion, 오경보 증가도 효과처럼 보일 수 있다.
 - **해결방안:** Control-History Utility Mapping(CHUM)은 sensor-only(F0), sensor+control(F1), capacity-matched sensor-only(F0-C)를 비교하고, 정상 분포 기반 조건부 대치·validation 임계값·FPR guardrail·seed/run 안정성·architecture consensus를 결합해 event–channel별 추가 예측 정보를 감사한다.
 - **핵심 결과:** TEP에서 fault 4, 19, 25의 핵심 channel mapping이 TCN과 compact Transformer 양쪽에서 재현됐다. Integrated Gradients도 primary 셀 8개 중 7개에서 같은 최상위 채널을 선택했다. 수정된 HAI 21.03 v2에서도 F1이 전역 AUROC·AUPRC·eTaF1에서 F0와 F0-C보다 높았고, 5개 직접 공격 event–channel 셀이 조건부 대치 기준을 통과했다.
-- **현재 결정:** 마지막 필수 보강인 3×3 replacement sensitivity도 4/4 locked cells에서 PASS했다. 증거는 본문 집필을 시작할 수준이며, 논문 기여를 “새 모델”이 아닌 **제어 이력 유용성 감사 프로토콜과 architecture-robust 실증**으로 확정하고 인과·root-cause 주장을 배제한다.
+- **현재 검토안:** 3×3 replacement sensitivity는 4/4 locked cells에서 PASS했고 검토용 본문 초안을 작성했다. **제어 이력 유용성 감사 프로토콜과 architecture-robust 실증**을 기여 범위로 제안하며 인과·root-cause 주장은 배제한다. 제목과 최종 주장 범위에 대한 지도교수 승인은 아직 확인되지 않았다.
 
 ## 왜 이 연구가 Superintelligence 연구실에 맞는가
 
@@ -27,7 +60,7 @@
 | Medical Vision AI | 모델이 올바른 근거를 사용하는지 설명을 신뢰할 수 있는가 | IG 단독 설명이 아니라 성능 저하·분포 보존·모델 간 합의로 설명을 검증 |
 | 통신·전기전자 AI | 시계열·상태·제어 context가 시스템 판단에 어떤 정보를 주는가 | 센서 상태와 제어 이력을 분리한 industrial multivariate time-series 실증 |
 
-RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯, 본 연구도 “제어 이력 입력”과 “제어 이력의 실제 활용”을 구분한다. Medical XAI에서 heatmap 하나만으로 근거를 신뢰할 수 없듯, 본 연구도 단일 attribution map이 아니라 **distribution-preserving perturbation, 성능 변화, FPR, architecture consensus**를 함께 요구한다.
+RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯, 본 연구도 “제어 이력 입력”과 “제어 이력의 실제 활용”을 구분한다. Medical XAI에서 heatmap 하나만으로 근거를 신뢰할 수 없듯, 본 연구도 단일 attribution map이 아니라 **정상 데이터 기반 대치와 분포 품질 진단, 성능 변화, FPR, architecture consensus**를 함께 요구한다.
 
 따라서 교수님께는 다음과 같이 설명하는 것이 가장 정확하다.
 
@@ -50,7 +83,7 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 
 따라서 가장 방어 가능한 신규성 문장은 다음과 같다.
 
-> **본 연구는 새로운 범용 attribution 알고리즘을 주장하지 않는다. 산업 이상 탐지에서 control context의 event–channel utility를 capacity-matched baselines, distribution-preserving replacement, condition-specific calibration, FPR guardrails, hierarchical uncertainty, cross-architecture consensus로 판정하는 통합 평가 프로토콜과 실증을 제시한다.**
+> **본 연구는 새로운 범용 attribution 알고리즘을 주장하지 않는다. 산업 이상 탐지에서 control context의 event–channel utility를 capacity-matched baselines, normal-data-based replacement with quality diagnostics, condition-specific calibration, FPR guardrails, hierarchical uncertainty, cross-architecture consensus로 판정하는 통합 평가 프로토콜과 실증을 제시한다.**
 
 이 포지셔닝은 과도한 알고리즘 신규성 주장을 피하면서도, 기존 시계열 XAI 논문이 각각 따로 다룬 문제를 산업 이상 탐지의 재현 가능한 decision gate로 결합했다는 기여를 분명히 한다.
 
@@ -83,7 +116,7 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 - **연구 무결성:** feature-order bug가 있던 HAI v1 전체 무효화, corrected v2만 최종 validator에 포함
 - **최종 QA:** completeness, duplicates, effect, FPR, decision 관련 18개 raw-table 재계산 검사 통과
 
-이 구성의 강점은 모델 수가 많다는 사실 자체가 아니라, **가능한 대안 설명을 하나씩 차단했다는 것**이다.
+이 구성의 강점은 모델 수가 많다는 사실 자체가 아니라, **평가한 조건에서 주요 대안 설명의 위험을 점검했다는 것**이다.
 
 | 대안 설명 | 대응 통제 |
 | --- | --- |
@@ -125,7 +158,7 @@ RAG가 “검색 성공”과 “검색 문서 활용”을 구분해야 하듯,
 - seeds: 기존 42–46 checkpoint 재사용
 - 판정: 효과 방향, ΔAUROC 크기, run CI 하한, 최대 절대 ΔFPR, consensus 유지 여부
 
-결과는 **PASS**다. 4/4 locked cells가 두 architecture에서 robust했고, 8개 architecture–cell 모두 9/9 설정에서 positive·material·seed-stable·CI-positive·FPR guardrail을 통과했다. 전체 설정의 최소 ΔAUROC는 `0.053043`, 최대 절대 ΔFPR은 `0.0015`였다. 이 실험은 central method의 두 고정 선택(block length=20, draws=3)에 대한 공격을 직접 막는다.
+결과는 **PASS**다. 4/4 locked cells가 두 architecture에서 robust했고, 8개 architecture–cell 모두 9/9 설정에서 positive·material·seed-stable·CI-positive·FPR guardrail을 통과했다. 전체 설정의 최소 ΔAUROC는 `0.053043`, 최대 절대 ΔFPR은 `0.0015`였다. 이 실험은 central method의 두 고정 선택(block length=20, draws=3)에 대한 해당 설정 범위에서의 강건성을 지지한다.
 
 390 tasks는 360 perturbation(`4×2×5×9`)과 세 unique fault에 공유되는
 30 original baseline(`3×2×5`)의 합이다. 판정 기준은 Git 이력상 결과보다

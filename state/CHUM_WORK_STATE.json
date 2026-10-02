@@ -1,6 +1,6 @@
 {
   "record_type": "CHUM_CURRENT_WORK_STATE",
-  "updated_on": "2026-10-01",
+  "updated_on": "2026-10-02",
   "completed": {
     "seed47_extension": {
       "status": "COMPLETE",
@@ -12,20 +12,24 @@
       "source": "outputs/chum_training_budget_20260921/LIVE_STATUS.json",
       "finding": "Longer training did not improve F1 AUROC in either architecture for seed47; do not repeat stage 1A by default.",
       "analysis": "outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json"
+    },
+    "stage_1B_window_comparison": {
+      "status": "COMPLETE",
+      "models": 18,
+      "training_seed": 47,
+      "finished_at": "2026-10-01T22:46:44+0900",
+      "source": "outputs/chum_window_extension_20261001/METRICS.csv",
+      "review": "outputs/chum_window_extension_20261001/REVIEW_20261002.json",
+      "finding": "F1 AUROC shows no monotonic improvement with longer windows. F1 exceeds F0 at all six architecture/window settings; descriptive development-benchmark evidence only."
     }
   },
   "next_authorized_work": {
-    "stage": "1B",
-    "action": "Compare windows 20/60/120 using identical model capacity and common target samples within this new experiment.",
-    "config": "configs/chum_window_extension.yaml",
-    "status": "MAIN_RUNNING",
-    "execution_order": [
-      "unit tests",
-      "synthetic smoke",
-      "bounded real-data pilot",
-      "full 18-task comparison"
-    ],
-    "blocker": null
+    "stage": "GRADUATION_DRAFT_REVIEW",
+    "action": "Integrate completed 1A/1B results and limitations into the review draft, reconcile evidence wording, and identify actual advisor/school requirements.",
+    "status": "AWAITING_ADVISOR_AND_SUBMISSION_REQUIREMENTS",
+    "source": "deliverables/CHUM_CLOSEOUT_KO.md",
+    "new_experiment_launched": false,
+    "scope_note": "Expanded methods remain proposals; do not infer that an improved detector is a formal graduation requirement."
   },
   "decision_rules": [
     "Use this operational state before dated historical narrative; cite its source record.",
@@ -47,13 +51,13 @@
       "source": "outputs\\chum_window_pilot_20261001\\LIVE_STATUS.json"
     },
     "main": {
-      "status": "RUNNING",
-      "stage": "training",
-      "completed_tasks": 3,
-      "task": "tcn_F1_seed47_window20",
-      "epoch": 15,
-      "updated_at": "2026-10-01T16:01:59+0900",
-      "source": "outputs/chum_window_extension_20261001/LIVE_STATUS.json"
+      "status": "COMPLETE",
+      "stage": "finished",
+      "completed_tasks": 18,
+      "task": "transformer_F0-C_seed47_window120",
+      "epoch": 50,
+      "updated_at": "2026-10-01T22:46:44+0900",
+      "source": "outputs\\chum_window_extension_20261001\\LIVE_STATUS.json"
     }
   },
   "local_model": {
@@ -80,6 +84,17 @@
     "remote_branches": [
       "main"
     ],
-    "legacy_remote_deletion": "DELETED"
+    "legacy_remote_deletion": "DELETED",
+    "local_data_migration": "COMPLETE"
+  },
+  "graduation": {
+    "status": "REVIEW_DRAFT_NOT_SUBMITTED",
+    "advisor_approval": "UNKNOWN",
+    "defense_date": null,
+    "submission_deadline": null,
+    "school_template": null,
+    "publication_requirement": "UNKNOWN",
+    "recommendation": "Prioritize manuscript, evidence traceability and defense preparation. Add experiments only for a specific unresolved claim or confirmed advisor requirement.",
+    "source": "deliverables/CHUM_CLOSEOUT_KO.md"
   }
 }

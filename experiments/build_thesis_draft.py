@@ -1,7 +1,10 @@
 ﻿from pathlib import Path
 import re
+import csv
+import json
 from docx import Document
 from docx.shared import Pt
+from docx.oxml import OxmlElement
 import build_proposal_docx as renderer
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,11 +18,51 @@ def section(number, new_number, title):
     body = re.sub(rf'^(### ){number}\.', rf'\g<1>{new_number}.', body, flags=re.M)
     return f'## {new_number}. {title}\n\n{body}\n'
 
+def followup_results():
+    run = ROOT / 'outputs/chum_window_extension_20261001'
+    status = json.loads((run / 'REVIEW_20261002.json').read_text(encoding='utf-8'))
+    with (run / 'METRICS.csv').open(encoding='utf-8', newline='') as stream:
+        rows = list(csv.DictReader(stream))
+    keys = {(r['architecture'], r['variant'], int(r['window']), int(r['seed'])) for r in rows}
+    expected = {(a, v, w, 47) for a in ('tcn', 'transformer') for v in ('F0', 'F1', 'F0-C') for w in (20, 60, 120)}
+    if status['status'] != 'PASS' or status['task_count'] != 18 or len(rows) != 18 or keys != expected:
+        raise ValueError('Stage 1B requires all 18 unique completed tasks')
+    if not status.get('run_fingerprint') or any(r['run_fingerprint'] != status['run_fingerprint'] for r in rows):
+        raise ValueError('Stage 1B metric fingerprint differs from reviewed run')
+    if any(r['evaluation_role'] != 'development_benchmark' or r['test_evaluated'] != 'True' for r in rows):
+        raise ValueError('Unexpected evaluation role or unevaluated task')
+    with (ROOT / 'outputs/final_gate_exp1/artifacts/reinartz_split_manifest.csv').open(encoding='utf-8', newline='') as stream:
+        test_runs = {r['run_index'] for r in csv.DictReader(stream) if r['split'] == 'test'}
+    if len(test_runs) != 560:
+        raise ValueError('Unexpected development run count')
+    review = json.loads((ROOT / 'outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json').read_text(encoding='utf-8'))
+    prior = {r['architecture']: r for r in review['rows'] if r['variant'] == 'F1'}
+    table = ['| 구조 | Window | AUROC | AP (저장 필드 auprc) | 탐지 run 비율 | 탐지된 run 지연 | 미탐 패널티 포함 평균 지연 | 고장 이전 sample FPR |',
+             '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
+    for row in sorted((r for r in rows if r['variant'] == 'F1'), key=lambda r: (r['architecture'], int(r['window']))):
+        values = [row['architecture'], row['window']]
+        values.extend(f"{float(row[key]):.6f}" for key in ('auroc', 'auprc', 'detected_run_ratio', 'detection_delay_detected_only', 'censored_delay_mean', 'prefault_sample_fpr'))
+        table.append('| ' + ' | '.join(values) + ' |')
+    return f"""### 9.5 후속 학습 길이·window 개발 실험 (2026-10-02 보충)
+
+기존 핵심 결과와 구분하여 seed47의 후속 개발 실험을 보고한다. 1A에서는 정상 validation으로 checkpoint를 선택하며 학습 길이를 늘렸지만 F1 AUROC가 개선되지 않았다. TCN은 {prior['tcn']['auroc_10_epochs']:.6f}에서 {prior['tcn']['auroc_extended']:.6f}로, Transformer는 {prior['transformer']['auroc_10_epochs']:.6f}에서 {prior['transformer']['auroc_extended']:.6f}로 변했다. 근거는 `outputs/chum_harness_20261001/TRAINING_BUDGET_REVIEW.json`이며, 정상 예측 MSE 개선을 탐지력 개선으로 간주하지 않는다.
+
+1B는 두 구조 × F0/F1/F0-C × window 20/60/120의 18/18 작업을 완료했다. 아래 F1 여섯 행은 `outputs/chum_window_extension_20261001/METRICS.csv`에서 직접 생성했다. 동일한 기존 test 560 runs를 개발 벤치마크로 사용하고 window 사이의 평가 시작 sample을 121로 맞췄다. 지연 단위는 sample이며, 탐지된 run의 평균 지연과 미탐에 1,401 sample의 패널티를 부여한 평균을 구분한다. 후자는 생존분석의 검열 추정량이 아니다. AP는 non-interpolated average precision이며 분류 정확도가 아니다. 평가 구간의 이상 sample 비율은 약 74.52%이다.
+
+{chr(10).join(table)}
+
+F1의 탐지 run 비율은 약 67.86–68.75%로 미탐 run도 약 31–32% 남았다. 고장 이전 sample FPR은 약 0.99–1.02%이다. 3연속 경보의 고장 이전 run alarm 비율이 0이라는 결과는 sample FPR이 0이라는 뜻이 아니다. 정상 validation을 checkpoint 선택과 threshold 설정에 함께 사용했으며 별도 독립 calibration 자료를 둔 실험은 아니다.
+
+긴 window가 일관된 이득을 주지는 않았다. 이 표만으로 최적 window나 새로운 방법의 성능 우위를 확정하지 않는다. 1B는 단일 model seed47이고 이미 관찰한 개발 run을 재사용했으므로 독립적인 일반화 검증이나 새로운 통계적 유의성의 근거가 아니다. Transformer F0와 F0-C는 동일 구조이므로 독립적인 두 구조의 지지로 세지 않는다. 1B의 TCN은 1A의 두 층에서 여섯 층으로 바뀌었고 공통 평가 구간도 조정되었으므로 1A와 1B의 직접 수치 차이를 window만의 인과적 효과로 해석할 수 없다. 이 보충 결과는 학습 조건의 한계를 공개하는 자료이며 기존 채널 감사 결과의 수치를 대체하지 않는다.
+
+"""
+
+
 parts = ['''# 산업 시계열 이상 탐지에서 제어 이력의 조건부 유용성 감사
 
 CHUM: Architecture-Robust Auditing of Control-History Utility for Industrial Time-Series Anomaly Detection
 
-검토용 논문 초안 · 2026-09-21
+검토용 논문 초안 · 2026-09-21 작성 / 2026-10-02 후속 결과·범위 보충
 
 기존 연구의 방법과 결과를 논문 순서로 재구성한 초안이다. 제목과 최종 주장에 대한 지도교수 승인 또는 학교 제출 완료를 뜻하지 않는다. 2026-09-21에 보존 원자료 기반 18개 검증, 224-cell 다중비교, 민감도 bootstrap을 재실행했다. 모델 재학습과 원시 telemetry 전처리는 재실행하지 않았다.
 
@@ -97,6 +140,9 @@ text = text.replace('즉 순간 score gradient는', '즉 경로 적분 기반 at
 text = text.replace('local sensitivity와 conditional necessity', '경로 기반 score attribution과 조건부 탐지 utility')
 text = text.replace('공격을 직접 막는다', '해당 설정 범위에서의 강건성을 지지한다')
 text = text.replace('반론을 직접 차단한다', '가능성이 평가한 설정 범위에서는 관찰되지 않았음을 보여 준다')
+text = text.replace('모든 fault에서 두 architecture 모두 5/5 seed가 같은 방향이었다.', '해당 일곱 GAIN fault에서 두 architecture 모두 5/5 seed가 같은 방향이었다.')
+text = text.replace('5. test label은 metric 계산에만 사용하고 training·scaling·imputation·threshold selection에 사용하지 않는다.', '5. test label은 metric 계산에만 사용하고 training·scaling·imputation·threshold selection에 사용하지 않는다. 이 구분이 미사용 평가를 뜻하지는 않는다. 기존 TEP test는 후속 방법 개발에서 반복 관찰되었으므로 후속 결과에서는 개발 벤치마크이며 새로운 holdout이 아니다.')
+text = text.replace('## 10. 대치 민감도 분석', followup_results() + '## 10. 대치 민감도 분석')
 md = ROOT / 'deliverables/CHUM_THESIS_DRAFT_KO.md'
 md.write_text(text, encoding='utf-8')
 doc = Document()
@@ -116,6 +162,12 @@ while i < len(lines):
             table.append(lines[i])
             i += 1
         renderer.add_markdown_table(doc, table)
+        if 'Window' in table[0]:
+            # Keep the six-row follow-up comparison on one review page.
+            for row in doc.tables[-1].rows[:-1]:
+                for cell in row.cells:
+                    for paragraph in cell.paragraphs:
+                        paragraph.paragraph_format.keep_with_next = True
         continue
     heading = re.match(r'^(#{1,4})\s+(.*)$', line)
     if heading:
@@ -128,12 +180,19 @@ while i < len(lines):
             paragraph = doc.add_paragraph(style='List Bullet')
             line = bullet.group(1)
         elif numbered:
-            paragraph = doc.add_paragraph(style='List Number')
-            line = numbered.group(1)
+            # Preserve explicit Markdown numbering; Word otherwise continues
+            # a previous section's List Number sequence.
+            paragraph = doc.add_paragraph()
         else:
             paragraph = doc.add_paragraph()
         renderer.add_inline(paragraph, line.removeprefix('> '))
     i += 1
+footer = doc.sections[0].footer.paragraphs[0]
+footer.alignment = 1  # centered review page number
+page_field = OxmlElement('w:fldSimple')
+page_field.set(renderer.qn('w:instr'), 'PAGE')
+footer._p.append(page_field)
+
 doc.core_properties.title = 'CHUM 검토용 논문 초안'
 doc.core_properties.subject = '검증된 실험 결과와 주장 범위'
 doc.save(ROOT / 'deliverables/CHUM_THESIS_DRAFT_KO.docx')

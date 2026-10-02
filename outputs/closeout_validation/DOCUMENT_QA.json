@@ -1,15 +1,123 @@
 {
-  "date": "2026-09-21",
-  "status": "REVALIDATED_REVIEW_DRAFT_READY",
+  "date": "2026-10-02",
+  "status": "REVIEW_DRAFT_UPDATED_WITH_1A_1B",
   "document_checks": "PASS",
-  "word_tables": 12,
+  "word_tables": 13,
   "numbered_chapters": 13,
   "bh_candidates": 224,
   "sensitivity_settings": 72,
   "submission_complete": false,
   "remaining": [
     "Supervisor review of title, scope and manuscript",
-    "Institutional formatting and author metadata",
-    "Rendered page review and submission PDF"
-  ]
+    "Confirm institutional formatting, author metadata, deadlines and required publications",
+    "Apply confirmed submission format and repeat final rendered-page review",
+    "Prepare defense slides and rehearsal for confirmed presentation length"
+  ],
+  "rendered_review_pdf": {
+    "path": "deliverables/CHUM_THESIS_DRAFT_KO.pdf",
+    "renderer": "Microsoft Word ExportAsFixedFormat",
+    "pages": 16,
+    "followup_table_page": 12,
+    "page_checks": [
+      {
+        "page": 1,
+        "text_characters": 1246,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 2,
+        "text_characters": 1282,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 3,
+        "text_characters": 1203,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 4,
+        "text_characters": 1134,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 5,
+        "text_characters": 1162,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 6,
+        "text_characters": 1086,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 7,
+        "text_characters": 1225,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 8,
+        "text_characters": 1053,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 9,
+        "text_characters": 1354,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 10,
+        "text_characters": 1253,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 11,
+        "text_characters": 1132,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 12,
+        "text_characters": 1528,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 13,
+        "text_characters": 1281,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 14,
+        "text_characters": 1323,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 15,
+        "text_characters": 1652,
+        "text_outside_page": false,
+        "page_number_present": true
+      },
+      {
+        "page": 16,
+        "text_characters": 1455,
+        "text_outside_page": false,
+        "page_number_present": true
+      }
+    ],
+    "visual_review": "All initial pages reviewed on contact sheets and follow-up table at full size. Final changed pages inspected after layout repair.",
+    "institutional_template_applied": false,
+    "sha256": "d05975ba7bbbe5a9fdc1ab9b437029b3fc7afe803733a51cdb86e6162ed1a200"
+  }
 }

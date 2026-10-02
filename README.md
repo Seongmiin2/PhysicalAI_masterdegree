@@ -41,8 +41,8 @@ python experiments/run_chum_window_extension.py --config configs/chum_window_ext
 
 DeMo-Med, FAVE-Med, FAVE-RAG, 외부 reference/export checkout과 전체 Git bundle은 작업 공간의 형제 폴더 `C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001`에 보관합니다. 다른 프로젝트의 미커밋 변경도 유지합니다. 이 프로젝트에서 더 이상 자동 export용 nested 저장소를 만들지 않습니다.
 
-현재 GPU 작업은 이전 PhysicalAI 데이터 파일을 메모리 매핑하고 있습니다. 작업 종료 전에는 데이터를 옮기지 않고 `physical_ai/data`, `physical_ai/checkpoints`의 임시 junction으로 같은 파일을 사용합니다. `experiments/finalize_workspace_consolidation.py --wait`가 실행 잠금 해제 후 데이터를 프로젝트 안으로 옮기고 구 PhysicalAI 폴더를 바깥으로 보관합니다. 진행 상태는 `outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json`입니다.
+2026-10-01 22:46 KST에 1B 실험 18개가 모두 끝났고, 데이터와 체크포인트 이전도 완료됐습니다. `physical_ai/data`, `physical_ai/checkpoints`는 프로젝트 내부의 실제 디렉터리입니다. 구 PhysicalAI 폴더는 바깥 보관함으로 이동해 작업 공간에는 이 프로젝트만 남았습니다. 확인 기록은 `outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json`, [실험 결과 검토](outputs/chum_window_extension_20261001/REVIEW_20261002.json), [현재 마무리 작업](deliverables/CHUM_CLOSEOUT_KO.md)입니다.
 
-통합 전 실행 소스는 `outputs/chum_window_extension_20261001/EXECUTED_SOURCES`에 해시와 함께 보존했습니다. 현재 실행은 메모리에 로드한 원본으로 계속됩니다. 경로가 바뀐 코드로 기존 output에 재개하면 fingerprint 검증이 거부하는 것이 정상이며, 새 실행에는 새 output 디렉터리를 사용합니다.
+통합 전 실행 소스는 `outputs/chum_window_extension_20261001/EXECUTED_SOURCES`에 해시와 함께 보존했습니다. 완료된 실행은 보존된 원본 소스로 수행했습니다. 경로가 바뀐 코드로 기존 output에 재개하면 fingerprint 검증이 거부하는 것이 정상이며, 새 실행에는 새 output 디렉터리를 사용합니다.
 
 2026-10-01 통합 `main`을 공식 저장소에 게시하고 기본 브랜치를 `main`으로 변경했습니다. 양쪽 Git 이력을 확인한 뒤 옛 원격 브랜치 `master`, `agent/thesis-final-gate`를 삭제했습니다. 사용자 승인 후 중복 `Seongmiin2/Thesis-Orchestrator` 원격 저장소를 삭제하고 GitHub API의 404 응답을 확인했습니다. 해당 저장소의 모든 브랜치 이력은 공식 `main`과 별도 Git bundle에 보존되어 있습니다. 옛 가상환경과 중복 문서 등 22개 항목은 작업 공간 밖 `PhysicalAI_legacy_assets`에 보관했습니다. 원격 작업 결과는 통합 manifest와 Git remote 상태를 확인합니다.

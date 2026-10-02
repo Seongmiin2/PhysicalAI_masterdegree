@@ -213,7 +213,7 @@ def test_task_profile_rejects_arbitrary_paths(tmp_path):
 def make_work_state(root):
     path = root / "state/CHUM_WORK_STATE.json"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps({"next_authorized_work": {"status": "PLANNED", "blocker": "waiting"}}), encoding="utf-8")
+    path.write_text(json.dumps({"next_authorized_work": {"stage": "1B", "status": "PLANNED", "blocker": "waiting"}}), encoding="utf-8")
     return path
 
 
@@ -280,3 +280,31 @@ def test_gpu_lock_released_when_child_spawn_fails(store, tmp_path, monkeypatch):
         runtime.execute(store, Path(sys.executable), "pilot", root=root)
     assert store.acquire_resource("compute:gpu0", "finetune-next")
     assert store.list_tasks()[0]["status"] == "failed"
+
+
+@pytest.mark.parametrize("stage", ["GRADUATION_DRAFT_REVIEW", None])
+def test_work_state_refresh_preserves_other_stage_decision(tmp_path, stage):
+    path = make_work_state(tmp_path)
+    next_work = {
+        "status": "AWAITING_ADVISOR_AND_SUBMISSION_REQUIREMENTS",
+        "blocker": "Advisor review and submission requirements are pending",
+    }
+    if stage is not None:
+        next_work["stage"] = stage
+    path.write_text(json.dumps({"next_authorized_work": next_work}), encoding="utf-8")
+    source = write_live(tmp_path, "main", "COMPLETE")
+    runtime.refresh_work_state(tmp_path)
+    state = json.loads(path.read_text(encoding="utf-8"))
+    assert state["next_authorized_work"] == next_work
+    assert state["live_experiments"]["main"]["status"] == "COMPLETE"
+    assert state["live_experiments"]["main"]["source"] == str(source.relative_to(tmp_path))
+
+
+def test_work_state_refresh_completes_active_stage_1b(tmp_path):
+    path = make_work_state(tmp_path)
+    write_live(tmp_path, "main", "COMPLETE")
+    runtime.refresh_work_state(tmp_path)
+    state = json.loads(path.read_text(encoding="utf-8"))
+    assert state["next_authorized_work"]["stage"] == "1B"
+    assert state["next_authorized_work"]["status"] == "MAIN_COMPLETE"
+    assert state["next_authorized_work"]["blocker"] is None

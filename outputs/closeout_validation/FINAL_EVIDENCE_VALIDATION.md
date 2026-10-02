@@ -2,7 +2,7 @@
 
 ## Overall Assessment: PASS
 
-All final claims were recomputed from raw result tables rather than copied from generated reports.
+Effect summaries, task completeness, and decision checks were recomputed or checked against retained result tables and manifests. Existing G3 run confidence intervals were read from preserved summaries, not re-estimated. This validation excludes model retraining and raw telemetry preprocessing; HAI overlap removal and role assignments were checked through preserved manifests.
 
 | check                                           | status   | evidence                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |:------------------------------------------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

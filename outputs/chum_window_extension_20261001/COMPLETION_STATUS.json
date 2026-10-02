@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE",
+  "pid": 19476,
+  "config_sha256": "0979035d0796202fb14c76da99fa82e5ca7cf9ca0187797f6ba1ae2bad2cbd85",
+  "source_sha256": {
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\run_chum_window_extension.py": "34a8686c1c7c6d50e47138d1caf0050f23bfd872b3bbb41f5e3142434660e974",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\run_chum_training_budget.py": "2f5519664b4fa29baf7415fdd7eaff8815c86ff9a61a19d5ddf5ee209b2922c3",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\run_architecture_gate_g2.py": "bfc5d0c1fccc1f214e27571c10c048305dc60357dce4788c33850082e4a18dcc",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\experiments\\window_metrics.py": "cd168e82e89bc7d7cc4c38516387783cf55d5495eff7fb73fee66786c21f526f",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\PhysicalAI_mini\\src\\experiments\\reinartz_f0_f1.py": "83b8f49c15f4eb7b1b15bff209e617a7f6dc51f6d4a490e549b81f33e7ce9ba7",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\PhysicalAI_mini\\src\\data\\reinartz_f0_f1.py": "eac7fb24aa54a9df8bbab589982a3ae5465f7de9b800e843bced7e5819e3c7fb",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\final_gate_exp1\\artifacts\\reinartz_split_manifest.csv": "ae0df7f78d27e5edff805c8aa68205fa16c2c10749ea8bd6888610e75a105ddd",
+    "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\Thesis-Orchestrator\\outputs\\final_gate_exp1\\artifacts\\reinartz_scaler_parameters.csv": "38d5504ecbaf6d4cd821aeec6d9f99fed3dae5b29307f69ed68ce3bcd8dbf86f"
+  },
+  "cache_identity": {
+    "path": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree\\PhysicalAI_mini\\data\\processed\\reinartz_f0_f1",
+    "shape": [
+      2800,
+      2000,
+      52
+    ],
+    "dtype": "float32",
+    "size_bytes": 1164800128,
+    "mtime_ns": 1786602243926441400,
+    "metadata_sha256": "62af27fcdb98e424dbe8311e6492704fe89de6bca1513e86389445cd4d127d5f",
+    "feature_content_hashed": false
+  },
+  "runtime_versions": {
+    "python": "3.11.9",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "cuda": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5060 Ti"
+  },
+  "completed_tasks": 18,
+  "stage": "finished",
+  "updated_at": "2026-10-01T22:46:44+0900",
+  "task": "transformer_F0-C_seed47_window120",
+  "epoch": 50,
+  "best_epoch": 46
+}

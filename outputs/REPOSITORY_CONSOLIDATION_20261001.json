@@ -348,7 +348,7 @@
     }
   ],
   "legacy_git_archived": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\repository_backups\\PhysicalAI_mini.git",
-  "data_migration": "DEFERRED_UNTIL_RUNNING_EXPERIMENT_RELEASES_FILES",
+  "data_migration": "COMPLETE",
   "validation": {
     "project_tests": 139,
     "imported_engine_tests": 12,
@@ -365,7 +365,14 @@
     "worker_pid": 29340,
     "status_file": "outputs/harness/WORKSPACE_CONSOLIDATION_STATUS.json",
     "waits_for_pid": 19476,
-    "waits_for_resource": "compute:gpu0"
+    "waits_for_resource": "compute:gpu0",
+    "status": "COMPLETE",
+    "completed_at": "2026-10-01T22:46:50+0900",
+    "moved": [
+      "data",
+      "checkpoints"
+    ],
+    "retired": "C:\\Users\\FORYOUCOM\\Desktop\\master_degree_archive_20261001\\PhysicalAI_mini_retired"
   },
   "remote_default_branch": "main",
   "remote_branches": [
@@ -380,12 +387,7 @@
     "count": 22,
     "destination": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/PhysicalAI_legacy_assets",
     "journal": "C:/Users/FORYOUCOM/Desktop/master_degree_archive_20261001/PHYSICALAI_LEGACY_ASSET_MOVES.json",
-    "remaining_until_experiment_finishes": [
-      "checkpoints",
-      "configs",
-      "data",
-      "src"
-    ]
+    "remaining_until_experiment_finishes": []
   },
   "remote_deleted_at": "2026-10-01T17:58:16+09:00",
   "remote_deletion_verification": "gh repo delete succeeded; old repository API returns HTTP 404; canonical PhysicalAI_masterdegree remains accessible with default branch main.",
